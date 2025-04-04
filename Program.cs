@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.View;
 
 namespace ProjetoIntegrador
 {
@@ -16,6 +17,7 @@ namespace ProjetoIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new TelaLoadForms());
             Application.Run(new TelaLoginForm());
         }
     }
