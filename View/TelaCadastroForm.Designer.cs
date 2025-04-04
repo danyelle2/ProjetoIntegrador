@@ -50,6 +50,7 @@
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.MsgErrorSenha = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,7 +67,7 @@
             this.groupBox3.Controls.Add(this.MsgExplicacaoUsuario);
             this.groupBox3.Controls.Add(this.TxTExplicacaoModalidade);
             this.groupBox3.Controls.Add(this.btnModalidadeCadastro);
-            this.groupBox3.Location = new System.Drawing.Point(444, 125);
+            this.groupBox3.Location = new System.Drawing.Point(489, 217);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(519, 141);
             this.groupBox3.TabIndex = 73;
@@ -169,11 +170,12 @@
             // groupBox2
             // 
             this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox2.Controls.Add(this.MsgErrorSenha);
             this.groupBox2.Controls.Add(this.txtSenhaCadastro);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textSenhaConfirmada);
-            this.groupBox2.Location = new System.Drawing.Point(54, 281);
+            this.groupBox2.Location = new System.Drawing.Point(99, 373);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(364, 218);
             this.groupBox2.TabIndex = 74;
@@ -225,7 +227,7 @@
             this.groupBox1.Controls.Add(this.textNomeCadastro);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtUsuarioCadastro);
-            this.groupBox1.Location = new System.Drawing.Point(54, 125);
+            this.groupBox1.Location = new System.Drawing.Point(99, 217);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(364, 141);
             this.groupBox1.TabIndex = 72;
@@ -269,13 +271,14 @@
             // btnCadastro
             // 
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btnCadastro.Location = new System.Drawing.Point(-97, 528);
+            this.btnCadastro.Location = new System.Drawing.Point(619, 463);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(144, 38);
             this.btnCadastro.TabIndex = 71;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
             this.btnCadastro.UseWaitCursor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // btnVoltar
             // 
@@ -289,11 +292,21 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // MsgErrorSenha
+            // 
+            this.MsgErrorSenha.AutoSize = true;
+            this.MsgErrorSenha.ForeColor = System.Drawing.Color.IndianRed;
+            this.MsgErrorSenha.Location = new System.Drawing.Point(25, 151);
+            this.MsgErrorSenha.Name = "MsgErrorSenha";
+            this.MsgErrorSenha.Size = new System.Drawing.Size(16, 13);
+            this.MsgErrorSenha.TabIndex = 56;
+            this.MsgErrorSenha.Text = "...";
+            // 
             // TelaCadastroForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 527);
+            this.ClientSize = new System.Drawing.Size(1064, 710);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -334,5 +347,6 @@
         private System.Windows.Forms.TextBox txtUsuarioCadastro;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label MsgErrorSenha;
     }
 }

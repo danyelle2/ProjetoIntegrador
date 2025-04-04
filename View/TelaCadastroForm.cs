@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
-
+        CadastroProfessorController cadastroProfessorController = new CadastroProfessorController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             TelaLoginForm telaLogin = new TelaLoginForm();
@@ -52,6 +53,12 @@ namespace ProjetoIntegrador.View
         private void btnModalidadeCadastroDesapareceText(object sender, EventArgs e)
         {
             TxTExplicacaoModalidade.Visible = false;
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+            bool resultadoValidarCadastro = cadastroProfessorController.ValidarCadastro(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha, txtUsuarioCadastro, txtSenhaCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
+
         }
     }
 }
