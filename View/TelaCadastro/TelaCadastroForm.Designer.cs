@@ -281,14 +281,13 @@
             // btnCadastro
             // 
             this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastro.Location = new System.Drawing.Point(619, 463);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(144, 38);
             this.btnCadastro.TabIndex = 71;
             this.btnCadastro.Text = "Cadastrar";
             this.btnCadastro.UseVisualStyleBackColor = true;
-            this.btnCadastro.UseWaitCursor = true;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // btnVoltar
