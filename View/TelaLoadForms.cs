@@ -15,6 +15,18 @@ namespace ProjetoIntegrador.View
         public TelaLoadForms()
         {
             InitializeComponent();
+            FecharJanelaSplash();
+        }
+
+        private void TelaLoadForms_Load(object sender, EventArgs e)
+        {
+           
+        }
+        private async void FecharJanelaSplash()
+        {
+            await Task.Delay (5000);
+            
+            this.Close();            
         }
     }
 }

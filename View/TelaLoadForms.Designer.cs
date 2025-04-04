@@ -37,7 +37,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaLoadForms";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaLoadForms";
+            this.Load += new System.EventHandler(this.TelaLoadForms_Load);
             this.ResumeLayout(false);
 
         }
