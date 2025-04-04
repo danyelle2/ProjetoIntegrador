@@ -16,5 +16,42 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            TelaLoginForm telaLogin = new TelaLoginForm();
+            telaLogin.Show();
+            TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
+            telaCadastroForm.Hide();
+        }
+
+        private void msgTemporariaUsuarioAparece(object sender, EventArgs e)
+        {
+            MsgExplicacaoUsuario.Text = "Selecione usuário se você for professor\nSelecione Administrador se você for o dono do studio";
+            MsgExplicacaoUsuario.Visible = true;
+        }
+
+        private void msgTemporariaUsuarioDesaparece(object sender, EventArgs e)
+        {
+            MsgExplicacaoUsuario.Visible = false;
+
+        }
+
+        private void msgTemporariaUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModalidadeCadastroApareceText(object sender, EventArgs e)
+        {
+
+            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administradore\nProfessor, por favor, selecione a sua aula";
+            TxTExplicacaoModalidade.Visible = true;
+        }
+
+        private void btnModalidadeCadastroDesapareceText(object sender, EventArgs e)
+        {
+            TxTExplicacaoModalidade.Visible = false;
+        }
     }
 }
