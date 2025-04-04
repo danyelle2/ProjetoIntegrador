@@ -72,10 +72,10 @@
     <Compile Include="View\TelaGraficoForms.Designer.cs">
       <DependentUpon>TelaGraficoForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TelaInicialForm.cs">
+    <Compile Include="View\Tela inicial\TelaInicialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TelaInicialForm.Designer.cs">
+    <Compile Include="View\Tela inicial\TelaInicialForm.Designer.cs">
       <DependentUpon>TelaInicialForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TelaLoadForms.cs">
@@ -84,10 +84,10 @@
     <Compile Include="View\TelaLoadForms.Designer.cs">
       <DependentUpon>TelaLoadForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TelaLoginForm.cs">
+    <Compile Include="View\TelaLogin\TelaLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TelaLoginForm.Designer.cs">
+    <Compile Include="View\TelaLogin\TelaLoginForm.Designer.cs">
       <DependentUpon>TelaLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -113,13 +113,13 @@
     <EmbeddedResource Include="View\TelaGraficoForms.resx">
       <DependentUpon>TelaGraficoForms.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TelaInicialForm.resx">
+    <EmbeddedResource Include="View\Tela inicial\TelaInicialForm.resx">
       <DependentUpon>TelaInicialForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TelaLoadForms.resx">
       <DependentUpon>TelaLoadForms.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TelaLoginForm.resx">
+    <EmbeddedResource Include="View\TelaLogin\TelaLoginForm.resx">
       <DependentUpon>TelaLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -135,6 +135,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\TelaCadastro\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
