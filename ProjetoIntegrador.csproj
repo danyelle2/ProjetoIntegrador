@@ -78,6 +78,12 @@
     <Compile Include="View\TelaInicialForm.Designer.cs">
       <DependentUpon>TelaInicialForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TelaLoadForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaLoadForms.Designer.cs">
+      <DependentUpon>TelaLoadForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelaLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,11 +101,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\TelaAlterarDadosAlunosForms.resx">
+      <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastroAlunos.resx">
+      <DependentUpon>TelaCadastroAlunos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TelaCadastroForm.resx">
       <DependentUpon>TelaCadastroForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaGraficoForms.resx">
+      <DependentUpon>TelaGraficoForms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TelaInicialForm.resx">
       <DependentUpon>TelaInicialForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaLoadForms.resx">
+      <DependentUpon>TelaLoadForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TelaLoginForm.resx">
       <DependentUpon>TelaLoginForm.cs</DependentUpon>
