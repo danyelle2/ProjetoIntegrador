@@ -48,11 +48,29 @@
   <ItemGroup>
     <Compile Include="Controller\CadastroProfessorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="View\TelaAlterarDadosAlunosForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaAlterarDadosAlunosForms.Designer.cs">
+      <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastroAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroAlunos.Designer.cs">
+      <DependentUpon>TelaCadastroAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelaCadastroForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TelaCadastroForm.Designer.cs">
       <DependentUpon>TelaCadastroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaGraficoForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaGraficoForms.Designer.cs">
+      <DependentUpon>TelaGraficoForms.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TelaInicialForm.cs">
       <SubType>Form</SubType>

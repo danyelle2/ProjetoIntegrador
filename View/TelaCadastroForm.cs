@@ -58,7 +58,8 @@ namespace ProjetoIntegrador.View
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             bool resultadoValidarCadastro = cadastroProfessorController.ValidarCadastro(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha, txtUsuarioCadastro, txtSenhaCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-
+            //Colocar um if e adicionar o cpf da vanessa pro sistema
+            //identificar o tipo de usuário como adm e os outros como usuário padrão nessa função
         }
     }
 }

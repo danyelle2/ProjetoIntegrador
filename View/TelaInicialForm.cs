@@ -16,5 +16,63 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
+
+        private void pictureBoxCadastroAlunosAparecer(object sender, EventArgs e)
+        {
+            MsgExplicacaoCadastro.Visible = true;
+            MsgExplicacaoCadastro.Text = "Clique aqui para cadastrar um aluno";
+        }
+
+        private void pictureBoxCadastroAlunosDesaparece(object sender, EventArgs e)
+        {
+            MsgExplicacaoCadastro.Visible = false;
+
+        }
+
+        private void pictureBoxCadastroAlunos_Click(object sender, EventArgs e)
+        {
+            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos();
+            telaCadastroAluno.ShowDialog();
+        }
+
+        private void pictureBoxAlterarDadosAparece(object sender, EventArgs e)
+        {
+
+            MsgExplicacaoAlterarDados.Visible = true;
+            MsgExplicacaoAlterarDados.Text = "Clique aqui para alterar os dados do aluno";
+        }
+
+        private void pictureBoxAlterarDadosDesaparece(object sender, EventArgs e)
+        {
+            MsgExplicacaoAlterarDados.Visible = false;
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+            TelaAlterarDadosAlunosForms telaAlterarDados = new TelaAlterarDadosAlunosForms();
+            telaAlterarDados.ShowDialog();
+        }
+
+        private void pictureBoxGráficoAparece(object sender, EventArgs e)
+        {
+
+            MsgExplicacaoGrafico.Visible = true;
+            MsgExplicacaoGrafico.Text = "Clique aqui para visualizar o gráfico de entradas e saída dos alunos";
+        }
+
+        private void pictureBoxGráficoDesaparece(object sender, EventArgs e)
+        {
+
+            MsgExplicacaoGrafico.Visible = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+            TelaGraficoForms telaGrafico = new TelaGraficoForms();
+            telaGrafico.ShowDialog();
+        }
     }
 }
