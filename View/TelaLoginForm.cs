@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador
 {
-    public partial class Form1 : Form
+    public partial class TelaLoginForm : Form
     {
-        public Form1()
+        public TelaLoginForm()
         {
             InitializeComponent();
+        }
+
+        private void TelaLoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
