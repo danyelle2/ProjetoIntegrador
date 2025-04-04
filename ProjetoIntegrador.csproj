@@ -48,28 +48,28 @@
   <ItemGroup>
     <Compile Include="Controller\CadastroProfessorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="View\TelaAlterarDadosAlunosForms.cs">
+    <Compile Include="View\Tela inicial\TelaAlterarDadosAlunosForms.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TelaAlterarDadosAlunosForms.Designer.cs">
+    <Compile Include="View\Tela inicial\TelaAlterarDadosAlunosForms.Designer.cs">
       <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TelaCadastroAlunos.cs">
+    <Compile Include="View\Tela inicial\TelaCadastroAlunos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TelaCadastroAlunos.Designer.cs">
+    <Compile Include="View\Tela inicial\TelaCadastroAlunos.Designer.cs">
       <DependentUpon>TelaCadastroAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TelaCadastroForm.cs">
+    <Compile Include="View\TelaCadastro\TelaCadastroForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TelaCadastroForm.Designer.cs">
+    <Compile Include="View\TelaCadastro\TelaCadastroForm.Designer.cs">
       <DependentUpon>TelaCadastroForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TelaGraficoForms.cs">
+    <Compile Include="View\Tela inicial\TelaGraficoForms.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TelaGraficoForms.Designer.cs">
+    <Compile Include="View\Tela inicial\TelaGraficoForms.Designer.cs">
       <DependentUpon>TelaGraficoForms.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Tela inicial\TelaInicialForm.cs">
@@ -101,16 +101,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\TelaAlterarDadosAlunosForms.resx">
+    <EmbeddedResource Include="View\Tela inicial\TelaAlterarDadosAlunosForms.resx">
       <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TelaCadastroAlunos.resx">
+    <EmbeddedResource Include="View\Tela inicial\TelaCadastroAlunos.resx">
       <DependentUpon>TelaCadastroAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TelaCadastroForm.resx">
+    <EmbeddedResource Include="View\TelaCadastro\TelaCadastroForm.resx">
       <DependentUpon>TelaCadastroForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TelaGraficoForms.resx">
+    <EmbeddedResource Include="View\Tela inicial\TelaGraficoForms.resx">
       <DependentUpon>TelaGraficoForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Tela inicial\TelaInicialForm.resx">
@@ -135,8 +135,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\TelaCadastro\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
