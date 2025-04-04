@@ -59,6 +59,7 @@
             this.btnCadastro.TabIndex = 23;
             this.btnCadastro.Text = "Cadastre-se";
             this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // MsgErro
             // 
@@ -118,6 +119,7 @@
             this.btnLogin.TabIndex = 17;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // TelaLoginForm
             // 

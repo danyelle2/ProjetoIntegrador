@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace ProjetoIntegrador.Controller
                 return false;
             }
 
-            TelaInicial telaInicial = new TelaInicial();
+            TelaInicialForm telaInicial = new TelaInicialForm();
             telaInicial.Show();
             return true;
 
