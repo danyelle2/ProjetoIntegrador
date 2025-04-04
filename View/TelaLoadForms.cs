@@ -24,7 +24,7 @@ namespace ProjetoIntegrador.View
         }
         private async void FecharJanelaSplash()
         {
-            int delay = 5000; // 5 segundos
+            int delay = 4000; // 5 segundos
             int interval = 100; // Intervalo de 100ms
             int steps = delay / interval;
 
