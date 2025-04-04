@@ -42,7 +42,7 @@
             // 
             // MsgExplicacaoGrafico
             // 
-            this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
             this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(695, 224);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
@@ -52,7 +52,7 @@
             // 
             // MsgExplicacaoAlterarDados
             // 
-            this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados.AutoSize = true;
             this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(430, 224);
             this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
@@ -62,7 +62,7 @@
             // 
             // MsgExplicacaoCadastro
             // 
-            this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
             this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(164, 233);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
@@ -72,6 +72,7 @@
             // 
             // pictureBoxCadastroAlunos
             // 
+            this.pictureBoxCadastroAlunos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxCadastroAlunos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCadastroAlunos.Image")));
             this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(37, 175);
             this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
@@ -85,6 +86,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(290, 175);
             this.pictureBox1.Name = "pictureBox1";
@@ -98,6 +100,7 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(558, 176);
             this.pictureBox2.Name = "pictureBox2";
