@@ -39,6 +39,7 @@
             this.TxTExplicacaoModalidade = new System.Windows.Forms.Label();
             this.btnModalidadeCadastro = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.MsgErrorSenha = new System.Windows.Forms.Label();
             this.txtSenhaCadastro = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.MsgErrorSenha = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,7 +69,7 @@
             this.groupBox3.Controls.Add(this.btnModalidadeCadastro);
             this.groupBox3.Location = new System.Drawing.Point(489, 217);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(519, 141);
+            this.groupBox3.Size = new System.Drawing.Size(563, 141);
             this.groupBox3.TabIndex = 73;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipo usuário";
@@ -182,6 +182,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Login";
             // 
+            // MsgErrorSenha
+            // 
+            this.MsgErrorSenha.AutoSize = true;
+            this.MsgErrorSenha.ForeColor = System.Drawing.Color.IndianRed;
+            this.MsgErrorSenha.Location = new System.Drawing.Point(25, 151);
+            this.MsgErrorSenha.Name = "MsgErrorSenha";
+            this.MsgErrorSenha.Size = new System.Drawing.Size(16, 13);
+            this.MsgErrorSenha.TabIndex = 56;
+            this.MsgErrorSenha.Text = "...";
+            // 
             // txtSenhaCadastro
             // 
             this.txtSenhaCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -270,6 +280,7 @@
             // 
             // btnCadastro
             // 
+            this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnCadastro.Location = new System.Drawing.Point(619, 463);
             this.btnCadastro.Name = "btnCadastro";
@@ -282,28 +293,20 @@
             // 
             // btnVoltar
             // 
+            this.btnVoltar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVoltar.Location = new System.Drawing.Point(54, 45);
+            this.btnVoltar.Location = new System.Drawing.Point(47, 44);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(57, 38);
             this.btnVoltar.TabIndex = 75;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // MsgErrorSenha
-            // 
-            this.MsgErrorSenha.AutoSize = true;
-            this.MsgErrorSenha.ForeColor = System.Drawing.Color.IndianRed;
-            this.MsgErrorSenha.Location = new System.Drawing.Point(25, 151);
-            this.MsgErrorSenha.Name = "MsgErrorSenha";
-            this.MsgErrorSenha.Size = new System.Drawing.Size(16, 13);
-            this.MsgErrorSenha.TabIndex = 56;
-            this.MsgErrorSenha.Text = "...";
-            // 
             // TelaCadastroForm
             // 
+            this.AcceptButton = this.btnCadastro;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 710);
@@ -312,8 +315,11 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnCadastro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaCadastroForm";
             this.Text = "TelaCadastroForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.TelaCadastroForm_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
