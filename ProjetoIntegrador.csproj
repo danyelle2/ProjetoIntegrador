@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="View\TelaCadastroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroForm.Designer.cs">
+      <DependentUpon>TelaCadastroForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TelaInicialForm.cs">
       <SubType>Form</SubType>
     </Compile>
