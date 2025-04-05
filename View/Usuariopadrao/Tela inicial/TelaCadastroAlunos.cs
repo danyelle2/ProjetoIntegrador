@@ -26,10 +26,15 @@ namespace ProjetoIntegrador.View
         }
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
-        {
-            
+        {            
             bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8);
             bool resultadoIdadeInvalida= cadastroAlunoController.IdadeInvalida(textBox2);
+            bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
+            bool resultadoTelefoneValido= cadastroAlunoController.ValidarTelefone(txtTelefoneALuno);
+            bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
+            
         }
+
+        
     }
 }
