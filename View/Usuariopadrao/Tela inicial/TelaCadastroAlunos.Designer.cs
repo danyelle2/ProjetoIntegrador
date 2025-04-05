@@ -54,6 +54,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(140, 23);
             this.textBox3.TabIndex = 92;
+            this.textBox3.Visible = false;
             // 
             // label8
             // 
@@ -63,6 +64,7 @@
             this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 91;
             this.label8.Text = "Responsável";
+            this.label8.Visible = false;
             // 
             // textBox2
             // 

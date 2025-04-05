@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
+        CadastroAlunoController cadastroAlunoController = new CadastroAlunoController();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -25,9 +27,9 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
         {
-
             
-            
+            bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8);
+            bool resultadoIdadeInvalida= cadastroAlunoController.IdadeInvalida(textBox2);
         }
     }
 }
