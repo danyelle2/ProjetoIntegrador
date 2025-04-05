@@ -54,7 +54,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(140, 23);
             this.textBox3.TabIndex = 92;
-            this.textBox3.Visible = false;
             // 
             // label8
             // 
@@ -64,7 +63,6 @@
             this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 91;
             this.label8.Text = "Responsável";
-            this.label8.Visible = false;
             // 
             // textBox2
             // 
@@ -73,6 +71,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(140, 23);
             this.textBox2.TabIndex = 90;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
             // 
@@ -119,6 +118,7 @@
             this.btnCadastrarAluno.TabIndex = 85;
             this.btnCadastrarAluno.Text = "Cadastrar";
             this.btnCadastrarAluno.UseVisualStyleBackColor = true;
+            this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
             // txtTelefoneALuno
             // 
