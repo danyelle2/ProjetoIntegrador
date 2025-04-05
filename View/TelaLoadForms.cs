@@ -23,16 +23,8 @@ namespace ProjetoIntegrador.View
            
         }
         private async void FecharJanelaSplash()
-        {
-            int delay = 4000; // 5 segundos
-            int interval = 100; // Intervalo de 100ms
-            int steps = delay / interval;
-
-            for (int i = 0; i < steps; i++)
-            {
-                await Task.Delay(interval);
-                progressBar1.Value = (i + 1) * 100 / steps;
-            }
+        {                     
+                await Task.Delay(5000);           
 
             this.Dispose();
         }
