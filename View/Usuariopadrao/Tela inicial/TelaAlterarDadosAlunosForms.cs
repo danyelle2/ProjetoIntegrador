@@ -30,14 +30,17 @@ namespace ProjetoIntegrador.View
             bool resultadoCamposVazios = alterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
             bool resultadoTelefoneValido = alterarDadosAlunoController.ValidarTelefone(textBoxTelefoneAluno, textMsgErroTelefone);
             bool DataInvalida = alterarDadosAlunoController.ValidarDatas(textBoxDataEntrada, LabelMsgErroDataEntrada, textBoxDataSaida, textMsgErroDataSaida);
-            bool resultadoAparecerDataSaida = alterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida, textMsgErroDataSaida);
+            bool resultadoAparecerDataSaida = alterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida,LabelNomeDataSaida);
             bool resultadoNomeResponsavel = alterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel);
             // pedir ajuda para ver se ta faltando alguma coisa 
+            // Ta Entrando no login válido quando não era pra entrar, ver o que to fazendo de errado...
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel)
             {
                
                 bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
-
+                TelaInicialForm telainicialForm = new TelaInicialForm();
+                telainicialForm.Show();
+                this.Dispose();
             }
         }
 

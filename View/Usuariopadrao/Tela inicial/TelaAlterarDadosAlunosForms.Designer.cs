@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAlterarDadosAlunosForms));
             this.comboBoxPlano = new System.Windows.Forms.ComboBox();
             this.textBoxDataSaida = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.LabelNomeDataSaida = new System.Windows.Forms.Label();
             this.comboBoxStatusAlunos = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxDataEntrada = new System.Windows.Forms.TextBox();
@@ -77,15 +77,15 @@
             this.textBoxDataSaida.TabIndex = 113;
             this.textBoxDataSaida.Visible = false;
             // 
-            // label7
+            // LabelNomeDataSaida
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(449, 155);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(75, 13);
-            this.label7.TabIndex = 112;
-            this.label7.Text = "Data de saída";
-            this.label7.Visible = false;
+            this.LabelNomeDataSaida.AutoSize = true;
+            this.LabelNomeDataSaida.Location = new System.Drawing.Point(449, 155);
+            this.LabelNomeDataSaida.Name = "LabelNomeDataSaida";
+            this.LabelNomeDataSaida.Size = new System.Drawing.Size(75, 13);
+            this.LabelNomeDataSaida.TabIndex = 112;
+            this.LabelNomeDataSaida.Text = "Data de saída";
+            this.LabelNomeDataSaida.Visible = false;
             // 
             // comboBoxStatusAlunos
             // 
@@ -308,7 +308,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBoxPlano);
             this.Controls.Add(this.textBoxDataSaida);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.LabelNomeDataSaida);
             this.Controls.Add(this.comboBoxStatusAlunos);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBoxDataEntrada);
@@ -333,7 +333,7 @@
 
         private System.Windows.Forms.ComboBox comboBoxPlano;
         private System.Windows.Forms.TextBox textBoxDataSaida;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LabelNomeDataSaida;
         private System.Windows.Forms.ComboBox comboBoxStatusAlunos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxDataEntrada;
