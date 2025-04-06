@@ -17,7 +17,8 @@ namespace ProjetoIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaLoadForms());
+            //Application.Run(new TelaCadastroAlunos());
+            //Application.Run(new TelaLoadForms());
             Application.Run(new TelaLoginForm());
         }
     }
