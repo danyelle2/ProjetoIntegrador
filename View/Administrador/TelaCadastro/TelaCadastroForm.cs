@@ -57,8 +57,9 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            bool resultadoValidarCadastro = cadastroProfessorController.ValidarCadastro(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha, txtUsuarioCadastro, txtSenhaCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-            
+            bool resultadoValidarCadastro = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
+            bool resultadoCamposVazios = cadastroProfessorController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
+          
             //Somente adm fará o cadastro dos usuários, então devo criar uma função para a tela aparecer somente para ele
             // Ocultar para o usuário o botão de cadastro
         }

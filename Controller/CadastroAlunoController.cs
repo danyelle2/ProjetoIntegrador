@@ -99,7 +99,15 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
-        
+
+        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel)
+        {
+            // PERGUNTAR AO PROFESSOR COMO FAZER ISSO COM BANCO DE DADOS
+            // Aluno novoAluno = new Aluno(nome.Text, idade.Text, telefone.Text, data.Text, plano.SelectedItem.ToString(), nomeResponsavel.Text);
+            // alunos.Add(novoAluno);
+            return true;
+        }
+
         public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel)
         {         
               
