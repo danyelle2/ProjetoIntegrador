@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoIntegrador.View
@@ -22,7 +23,9 @@ namespace ProjetoIntegrador.View
         AlterarDadosAlunoController alterarDadosAlunoController =new AlterarDadosAlunoController();
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
-            bool resultadoMenorIdade = alterarDadosAlunoController.ValidarCadastroAlunoMenorIdade();
+            // pensar em como criar uma funcao para quando clicar na lista e no botao alterar apareca os 
+            // dados do aluno na tela de alterar dados
+            bool resultadoMenorIdade = alterarDadosAlunoController.ValidarAlteracaoAlunoMenorIdade(textBoxIdadeAluno, textBoxCampoNomeResponsavel, labelNomeResponsavel, textMsgErroIdade);
             //TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade
             bool resultadoIdadeInvalida = alterarDadosAlunoController.IdadeInvalida();
             bool resultadoCamposVazios = alterarDadosAlunoController.ValidarCamposVazios();
@@ -32,8 +35,8 @@ namespace ProjetoIntegrador.View
             // pedir ajuda para ver se ta faltando alguma coisa 
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel)
             {
-                bool resultadoLimparCampos = alterarDadosAlunoController.LimparCampos();
-                bool resultadoCadastrarAluno = alterarDadosAlunoController.CadastrarAluno();
+               
+                bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxCampoNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
 
             }
         }

@@ -29,53 +29,53 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAlterarDadosAlunosForms));
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBoxPlano = new System.Windows.Forms.ComboBox();
+            this.textBoxDataSaida = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxStatusAlunos = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDataEntrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAlterarDados = new System.Windows.Forms.Button();
-            this.txtTelefoneALuno = new System.Windows.Forms.TextBox();
-            this.txtNomeAluno = new System.Windows.Forms.TextBox();
+            this.textBoxTelefoneAluno = new System.Windows.Forms.TextBox();
+            this.textBoxNomeAluno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textMsgErroIdade = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxIdadeAluno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textMsgErroData = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textMsgErroResponsavel = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxCampoNomeResponsavel = new System.Windows.Forms.TextBox();
+            this.labelNomeResponsavel = new System.Windows.Forms.Label();
             this.textMsgErroTelefone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox2
+            // comboBoxPlano
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboBoxPlano.FormattingEnabled = true;
+            this.comboBoxPlano.Items.AddRange(new object[] {
             "Mensal",
             "Anual"});
-            this.comboBox2.Location = new System.Drawing.Point(207, 292);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 114;
+            this.comboBoxPlano.Location = new System.Drawing.Point(207, 292);
+            this.comboBoxPlano.Name = "comboBoxPlano";
+            this.comboBoxPlano.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxPlano.TabIndex = 114;
             // 
-            // textBox2
+            // textBoxDataSaida
             // 
-            this.textBox2.Location = new System.Drawing.Point(442, 190);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 23);
-            this.textBox2.TabIndex = 113;
-            this.textBox2.Visible = false;
+            this.textBoxDataSaida.Location = new System.Drawing.Point(442, 190);
+            this.textBoxDataSaida.Multiline = true;
+            this.textBoxDataSaida.Name = "textBoxDataSaida";
+            this.textBoxDataSaida.Size = new System.Drawing.Size(140, 23);
+            this.textBoxDataSaida.TabIndex = 113;
+            this.textBoxDataSaida.Visible = false;
             // 
             // label7
             // 
@@ -87,16 +87,16 @@
             this.label7.Text = "Data de saída";
             this.label7.Visible = false;
             // 
-            // comboBox1
+            // comboBoxStatusAlunos
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxStatusAlunos.FormattingEnabled = true;
+            this.comboBoxStatusAlunos.Items.AddRange(new object[] {
             "Ativo",
             "Inativo"});
-            this.comboBox1.Location = new System.Drawing.Point(452, 103);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 111;
+            this.comboBoxStatusAlunos.Location = new System.Drawing.Point(452, 103);
+            this.comboBoxStatusAlunos.Name = "comboBoxStatusAlunos";
+            this.comboBoxStatusAlunos.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStatusAlunos.TabIndex = 111;
             // 
             // label6
             // 
@@ -107,13 +107,13 @@
             this.label6.TabIndex = 110;
             this.label6.Text = "Status do aluno";
             // 
-            // textBox1
+            // textBoxDataEntrada
             // 
-            this.textBox1.Location = new System.Drawing.Point(207, 386);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 23);
-            this.textBox1.TabIndex = 109;
+            this.textBoxDataEntrada.Location = new System.Drawing.Point(207, 386);
+            this.textBoxDataEntrada.Multiline = true;
+            this.textBoxDataEntrada.Name = "textBoxDataEntrada";
+            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 23);
+            this.textBoxDataEntrada.TabIndex = 109;
             // 
             // label5
             // 
@@ -134,21 +134,21 @@
             this.btnAlterarDados.UseVisualStyleBackColor = true;
             this.btnAlterarDados.Click += new System.EventHandler(this.btnAlterarDados_Click);
             // 
-            // txtTelefoneALuno
+            // textBoxTelefoneAluno
             // 
-            this.txtTelefoneALuno.Location = new System.Drawing.Point(207, 190);
-            this.txtTelefoneALuno.Multiline = true;
-            this.txtTelefoneALuno.Name = "txtTelefoneALuno";
-            this.txtTelefoneALuno.Size = new System.Drawing.Size(140, 23);
-            this.txtTelefoneALuno.TabIndex = 106;
+            this.textBoxTelefoneAluno.Location = new System.Drawing.Point(207, 190);
+            this.textBoxTelefoneAluno.Multiline = true;
+            this.textBoxTelefoneAluno.Name = "textBoxTelefoneAluno";
+            this.textBoxTelefoneAluno.Size = new System.Drawing.Size(140, 23);
+            this.textBoxTelefoneAluno.TabIndex = 106;
             // 
-            // txtNomeAluno
+            // textBoxNomeAluno
             // 
-            this.txtNomeAluno.Location = new System.Drawing.Point(207, 89);
-            this.txtNomeAluno.Multiline = true;
-            this.txtNomeAluno.Name = "txtNomeAluno";
-            this.txtNomeAluno.Size = new System.Drawing.Size(140, 23);
-            this.txtNomeAluno.TabIndex = 105;
+            this.textBoxNomeAluno.Location = new System.Drawing.Point(207, 89);
+            this.textBoxNomeAluno.Multiline = true;
+            this.textBoxNomeAluno.Name = "textBoxNomeAluno";
+            this.textBoxNomeAluno.Size = new System.Drawing.Size(140, 23);
+            this.textBoxNomeAluno.TabIndex = 105;
             // 
             // label4
             // 
@@ -205,13 +205,13 @@
             this.textMsgErroIdade.TabIndex = 119;
             this.textMsgErroIdade.Text = "...";
             // 
-            // textBox3
+            // textBoxIdadeAluno
             // 
-            this.textBox3.Location = new System.Drawing.Point(442, 267);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(140, 23);
-            this.textBox3.TabIndex = 118;
+            this.textBoxIdadeAluno.Location = new System.Drawing.Point(442, 267);
+            this.textBoxIdadeAluno.Multiline = true;
+            this.textBoxIdadeAluno.Name = "textBoxIdadeAluno";
+            this.textBoxIdadeAluno.Size = new System.Drawing.Size(140, 23);
+            this.textBoxIdadeAluno.TabIndex = 118;
             // 
             // label8
             // 
@@ -262,24 +262,24 @@
             this.textMsgErroResponsavel.Text = "...";
             this.textMsgErroResponsavel.Visible = false;
             // 
-            // textBox4
+            // textBoxCampoNomeResponsavel
             // 
-            this.textBox4.Location = new System.Drawing.Point(442, 348);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 23);
-            this.textBox4.TabIndex = 123;
-            this.textBox4.Visible = false;
+            this.textBoxCampoNomeResponsavel.Location = new System.Drawing.Point(442, 348);
+            this.textBoxCampoNomeResponsavel.Multiline = true;
+            this.textBoxCampoNomeResponsavel.Name = "textBoxCampoNomeResponsavel";
+            this.textBoxCampoNomeResponsavel.Size = new System.Drawing.Size(140, 23);
+            this.textBoxCampoNomeResponsavel.TabIndex = 123;
+            this.textBoxCampoNomeResponsavel.Visible = false;
             // 
-            // label11
+            // labelNomeResponsavel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(468, 319);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 13);
-            this.label11.TabIndex = 122;
-            this.label11.Text = "Responsável";
-            this.label11.Visible = false;
+            this.labelNomeResponsavel.AutoSize = true;
+            this.labelNomeResponsavel.Location = new System.Drawing.Point(468, 319);
+            this.labelNomeResponsavel.Name = "labelNomeResponsavel";
+            this.labelNomeResponsavel.Size = new System.Drawing.Size(69, 13);
+            this.labelNomeResponsavel.TabIndex = 122;
+            this.labelNomeResponsavel.Text = "Responsável";
+            this.labelNomeResponsavel.Visible = false;
             // 
             // textMsgErroTelefone
             // 
@@ -299,25 +299,25 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textMsgErroTelefone);
             this.Controls.Add(this.textMsgErroResponsavel);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.textBoxCampoNomeResponsavel);
+            this.Controls.Add(this.labelNomeResponsavel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textMsgErroData);
             this.Controls.Add(this.textMsgErroIdade);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxIdadeAluno);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.comboBoxPlano);
+            this.Controls.Add(this.textBoxDataSaida);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxStatusAlunos);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAlterarDados);
-            this.Controls.Add(this.txtTelefoneALuno);
-            this.Controls.Add(this.txtNomeAluno);
+            this.Controls.Add(this.textBoxTelefoneAluno);
+            this.Controls.Add(this.textBoxNomeAluno);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -333,30 +333,30 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBoxPlano;
+        private System.Windows.Forms.TextBox textBoxDataSaida;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxStatusAlunos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDataEntrada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAlterarDados;
-        private System.Windows.Forms.TextBox txtTelefoneALuno;
-        private System.Windows.Forms.TextBox txtNomeAluno;
+        private System.Windows.Forms.TextBox textBoxTelefoneAluno;
+        private System.Windows.Forms.TextBox textBoxNomeAluno;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label textMsgErroIdade;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxIdadeAluno;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label textMsgErroData;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label textMsgErroResponsavel;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxCampoNomeResponsavel;
+        private System.Windows.Forms.Label labelNomeResponsavel;
         private System.Windows.Forms.Label textMsgErroTelefone;
     }
 }

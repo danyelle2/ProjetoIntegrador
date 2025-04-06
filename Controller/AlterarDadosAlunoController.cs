@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace ProjetoIntegrador.Controller
 {
     internal class AlterarDadosAlunoController
     {
-        public bool ValidarCadastroAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
+        public bool ValidarAlteracaoAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
             if (int.TryParse(idade.Text, out int idadeAluno))
             {
@@ -43,8 +44,9 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
+        public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
         {
+            // adicionar data saida
             if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -70,8 +72,9 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarData(TextBox dataentrada, Label MsgErroData,TextBox dataSaida)
+        public bool ValidarDatas(TextBox dataentrada, Label MsgErroData,TextBox dataSaida)
         {
+            // adicionar visibilidade na data saida se status for inativo
             DateTime dataEntrada, dataDeSaida;
          
             if (!DateTime.TryParse(dataentrada.Text, out dataEntrada ))
@@ -100,6 +103,7 @@ namespace ProjetoIntegrador.Controller
             {
                 if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
                 {
+                    MsgErroResponsavel.Visible = true;
                     MsgErroResponsavel.Text = "Preencha o nome do responsável.";
                     return false;
                 }
@@ -107,7 +111,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
+        public bool AlterarDadosAlunos(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
         {
             // PERGUNTAR AO PROFESSOR COMO FAZER ISSO COM BANCO DE DADOS
             // Aluno novoAluno = new Aluno(nome.Text, idade.Text, telefone.Text, data.Text, plano.SelectedItem.ToString(), nomeResponsavel.Text);
@@ -115,18 +119,11 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
+        public bool ValidarAlteracaoDados(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
         {
-
-            MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            nome.Clear();
-            idade.Clear();
-            telefone.Clear();
-            data.Clear();
-            plano.SelectedItem = null;
-            nomeResponsavel.Clear();
-            StatusAluno.SelectedItem = null;
+            MessageBox.Show("Alteração realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TelaInicialForm telaInicial = new TelaInicialForm();
+            telaInicial.Show();
             return true;
         }
     }
