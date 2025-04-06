@@ -15,6 +15,8 @@ namespace ProjetoIntegrador.View
     {
         public TelaCadastroForm()
         {
+            InitializeComponent();
+            
         }
         CadastroProfessorController cadastroProfessorController = new CadastroProfessorController();
         private void btnVoltar_Click(object sender, EventArgs e)
