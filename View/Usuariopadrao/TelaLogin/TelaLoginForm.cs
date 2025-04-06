@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,17 +17,15 @@ namespace ProjetoIntegrador
         public TelaLoginForm()
         {
             InitializeComponent();
-            AppClose();
+            InitializeComponent(); this.FormClosing += AppClose;
         }
 
-
-        private void AppClose()
-
+        public void AppClose(object sender, FormClosingEventArgs e)
         {
-            MessageBox.Show("Deseja encerrar a aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            Application.Exit();
+            Application.ExitThread();
+
+        }              
         
-        }
         LoginController loginController = new LoginController();
 
 
@@ -37,9 +36,9 @@ namespace ProjetoIntegrador
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            var telaCadastroForm = new View.TelaCadastroForm();
-            telaCadastroForm.Show();
-            this.Hide();
+                TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
+                telaCadastroForm.Show();
+                this.Hide();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

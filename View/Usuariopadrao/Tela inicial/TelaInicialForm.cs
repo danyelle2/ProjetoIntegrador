@@ -20,6 +20,7 @@ namespace ProjetoIntegrador.View
 
         public void AppClose(object sender, FormClosingEventArgs e)
         {
+            MessageBox.Show("Deseja encerrar a aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             Application.ExitThread();
         }
 

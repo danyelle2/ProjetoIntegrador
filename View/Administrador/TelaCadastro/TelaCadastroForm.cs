@@ -15,18 +15,11 @@ namespace ProjetoIntegrador.View
     {
         public TelaCadastroForm()
         {
-            InitializeComponent(); this.FormClosing += AppClose;
-        }
-
-        public void AppClose(object sender, FormClosingEventArgs e)
-        {
-            Application.ExitThread();
-        
         }
         CadastroProfessorController cadastroProfessorController = new CadastroProfessorController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Dispose();
             TelaLoginForm telalogin = new TelaLoginForm();
             telalogin.Show();
         }
