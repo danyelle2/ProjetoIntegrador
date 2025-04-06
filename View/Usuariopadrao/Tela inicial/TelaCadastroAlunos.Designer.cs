@@ -208,6 +208,7 @@
             this.textMsgErroResponsavel.Size = new System.Drawing.Size(16, 13);
             this.textMsgErroResponsavel.TabIndex = 96;
             this.textMsgErroResponsavel.Text = "...";
+            this.textMsgErroResponsavel.Visible = false;
             // 
             // textMsgErroTelefone
             // 

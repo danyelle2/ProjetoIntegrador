@@ -44,6 +44,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textMsgErroIdade = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textMsgErroData = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textMsgErroResponsavel = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textMsgErroTelefone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +75,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(140, 23);
             this.textBox2.TabIndex = 113;
+            this.textBox2.Visible = false;
             // 
             // label7
             // 
@@ -74,6 +85,7 @@
             this.label7.Size = new System.Drawing.Size(75, 13);
             this.label7.TabIndex = 112;
             this.label7.Text = "Data de saída";
+            this.label7.Visible = false;
             // 
             // comboBox1
             // 
@@ -114,12 +126,13 @@
             // 
             // btnAlterarDados
             // 
-            this.btnAlterarDados.Location = new System.Drawing.Point(474, 281);
+            this.btnAlterarDados.Location = new System.Drawing.Point(634, 377);
             this.btnAlterarDados.Name = "btnAlterarDados";
             this.btnAlterarDados.Size = new System.Drawing.Size(119, 32);
             this.btnAlterarDados.TabIndex = 107;
             this.btnAlterarDados.Text = "Alterar";
             this.btnAlterarDados.UseVisualStyleBackColor = true;
+            this.btnAlterarDados.Click += new System.EventHandler(this.btnAlterarDados_Click);
             // 
             // txtTelefoneALuno
             // 
@@ -182,11 +195,118 @@
             this.pictureBox1.TabIndex = 115;
             this.pictureBox1.TabStop = false;
             // 
+            // textMsgErroIdade
+            // 
+            this.textMsgErroIdade.AutoSize = true;
+            this.textMsgErroIdade.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroIdade.Location = new System.Drawing.Point(442, 296);
+            this.textMsgErroIdade.Name = "textMsgErroIdade";
+            this.textMsgErroIdade.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroIdade.TabIndex = 119;
+            this.textMsgErroIdade.Text = "...";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(442, 267);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(140, 23);
+            this.textBox3.TabIndex = 118;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(439, 238);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 117;
+            this.label8.Text = "Idade";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(439, 251);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 13);
+            this.label9.TabIndex = 116;
+            // 
+            // textMsgErroData
+            // 
+            this.textMsgErroData.AutoSize = true;
+            this.textMsgErroData.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroData.Location = new System.Drawing.Point(442, 216);
+            this.textMsgErroData.Name = "textMsgErroData";
+            this.textMsgErroData.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroData.TabIndex = 120;
+            this.textMsgErroData.Text = "...";
+            this.textMsgErroData.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(204, 412);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(16, 13);
+            this.label10.TabIndex = 121;
+            this.label10.Text = "...";
+            // 
+            // textMsgErroResponsavel
+            // 
+            this.textMsgErroResponsavel.AutoSize = true;
+            this.textMsgErroResponsavel.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroResponsavel.Location = new System.Drawing.Point(442, 378);
+            this.textMsgErroResponsavel.Name = "textMsgErroResponsavel";
+            this.textMsgErroResponsavel.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroResponsavel.TabIndex = 124;
+            this.textMsgErroResponsavel.Text = "...";
+            this.textMsgErroResponsavel.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(442, 348);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(140, 23);
+            this.textBox4.TabIndex = 123;
+            this.textBox4.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(468, 319);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 13);
+            this.label11.TabIndex = 122;
+            this.label11.Text = "Responsável";
+            this.label11.Visible = false;
+            // 
+            // textMsgErroTelefone
+            // 
+            this.textMsgErroTelefone.AutoSize = true;
+            this.textMsgErroTelefone.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroTelefone.Location = new System.Drawing.Point(204, 216);
+            this.textMsgErroTelefone.Name = "textMsgErroTelefone";
+            this.textMsgErroTelefone.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroTelefone.TabIndex = 125;
+            this.textMsgErroTelefone.Text = "...";
+            // 
             // TelaAlterarDadosAlunosForms
             // 
+            this.AcceptButton = this.btnAlterarDados;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textMsgErroTelefone);
+            this.Controls.Add(this.textMsgErroResponsavel);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textMsgErroData);
+            this.Controls.Add(this.textMsgErroIdade);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.textBox2);
@@ -204,6 +324,7 @@
             this.Controls.Add(this.label1);
             this.Name = "TelaAlterarDadosAlunosForms";
             this.Text = "TelaAlterarDadosAlunosForms";
+            this.Load += new System.EventHandler(this.TelaAlterarDadosAlunosForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -227,5 +348,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label textMsgErroIdade;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label textMsgErroData;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label textMsgErroResponsavel;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label textMsgErroTelefone;
     }
 }

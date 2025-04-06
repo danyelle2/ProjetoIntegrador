@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class CadastroAlunoController
+    internal class AlterarDadosAlunoController
     {
         public bool ValidarCadastroAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
@@ -41,12 +40,12 @@ namespace ProjetoIntegrador.Controller
                     MsgErroIdade.Text = "Idade inválida, favor colocar idade correta.";
                     return false;
                 }
-                     return true;
+            return true;
         }
 
-        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel,ComboBox statusAluno)
+        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
         {
-            if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem==null)
+            if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -60,30 +59,38 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-       
+
         public bool ValidarTelefone(TextBox telefone, Label MsgErroTelefone)
         {
             if (telefone.Text.Length < 10 || telefone.Text.Length > 11)
             {
-                MsgErroTelefone.Text= "Número de telefone deve ter 10 ou 11 dígitos.";
+                MsgErroTelefone.Text = "Número de telefone deve ter 10 ou 11 dígitos.";
                 return false;
             }
             return true;
         }
 
-        public bool ValidarData(TextBox data, Label MsgErroData)
+        public bool ValidarData(TextBox dataentrada, Label MsgErroData,TextBox dataSaida)
         {
-            DateTime dataEntrada;
-            if (!DateTime.TryParse(data.Text, out dataEntrada))
-            {
-               MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
-                return false;
-            }
-            else if (dataEntrada > DateTime.Now)
+            DateTime dataEntrada, dataDeSaida;
+         
+            if (!DateTime.TryParse(dataentrada.Text, out dataEntrada ))
             {
                 MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
                 return false;
             }
+            
+            if (!DateTime.TryParse(dataSaida.Text, out dataDeSaida))
+            {
+                MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
+                return false;
+            }
+            else if (dataEntrada > DateTime.Now && dataDeSaida > DateTime.Now)
+            {
+                MsgErroData.Text = "Data inválida. Favor inserir uma data que não ultrapasse a atual.";
+                return false;
+            }
+
             return true;
         }
 
@@ -93,16 +100,14 @@ namespace ProjetoIntegrador.Controller
             {
                 if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
                 {
-                    MsgErroResponsavel.Visible = true;
                     MsgErroResponsavel.Text = "Preencha o nome do responsável.";
-
                     return false;
-                }                      
+                }
             }
             return true;
         }
 
-        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel,ComboBox StatusAluno)
+        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
         {
             // PERGUNTAR AO PROFESSOR COMO FAZER ISSO COM BANCO DE DADOS
             // Aluno novoAluno = new Aluno(nome.Text, idade.Text, telefone.Text, data.Text, plano.SelectedItem.ToString(), nomeResponsavel.Text);
@@ -111,8 +116,8 @@ namespace ProjetoIntegrador.Controller
         }
 
         public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
-        {         
-              
+        {
+
             MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             nome.Clear();
@@ -122,14 +127,7 @@ namespace ProjetoIntegrador.Controller
             plano.SelectedItem = null;
             nomeResponsavel.Clear();
             StatusAluno.SelectedItem = null;
-            return true;            
+            return true;
         }
     }
 }
-
-
-
-
-
-
-

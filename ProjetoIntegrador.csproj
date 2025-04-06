@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\AlterarDadosAlunoController.cs" />
     <Compile Include="Controller\CadastroAlunoController.cs" />
     <Compile Include="Controller\CadastroProfessorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
