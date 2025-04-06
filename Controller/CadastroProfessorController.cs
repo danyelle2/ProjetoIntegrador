@@ -21,7 +21,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
         public bool CamposVazios(TextBox usuarioCadastro, TextBox confirmaSenhaCadastro, TextBox nomeCadastro, ComboBox tipocadastro, ComboBox modalidade)
-        { 
+        {
             if (string.IsNullOrWhiteSpace(usuarioCadastro.Text) || string.IsNullOrWhiteSpace(confirmaSenhaCadastro.Text) || string.IsNullOrWhiteSpace(nomeCadastro.Text) || tipocadastro.SelectedItem == null || modalidade.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -29,7 +29,8 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
-         public bool TipoUsuario(ComboBox tipocadastro, ComboBox modalidade)
+        public bool TipoUsuario(ComboBox tipocadastro, ComboBox modalidade)
+        {
             if (tipocadastro.SelectedItem.ToString() == "Administrador" && modalidade.SelectedItem.ToString() != "Geral")
             {
 
@@ -42,17 +43,9 @@ namespace ProjetoIntegrador.Controller
                 MessageBox.Show("Opção geral somente para Administrador", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-                return true;
-}
-
-            MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
-            telaCadastroForm.Close();
-            TelaLoginForm telalogin = new TelaLoginForm();
-            telalogin.Show();
             return true;
-
         }
+       
 
     }
 }
