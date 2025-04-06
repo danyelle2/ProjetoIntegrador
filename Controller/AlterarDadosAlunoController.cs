@@ -10,8 +10,10 @@ namespace ProjetoIntegrador.Controller
 {
     internal class AlterarDadosAlunoController
     {
-        public bool ValidarAlteracaoAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
+        public bool AparecerCampoResponsavel(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
+            //perguntar se precisa dessa funcao, coloquei pq se a pessoa colocar a idade errada no cadastro
+            // quando alterar idade errada vai aparecer nome do responsável.
             if (int.TryParse(idade.Text, out int idadeAluno))
             {
 
@@ -44,10 +46,10 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
+        public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno, TextBox dataSaida)
         {
             // adicionar data saida
-            if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
+            if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(dataEntrada.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -56,6 +58,12 @@ namespace ProjetoIntegrador.Controller
                 if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
                 {
                     MsgErroResponsavel.Text = "Preencha o nome do responsável.";
+                    return false;
+                }
+            if (dataSaida.Visible)
+                if (string.IsNullOrWhiteSpace(dataSaida.Text))
+                {
+                    MessageBox.Show("Preencha a data de saída.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }
             return true;
@@ -72,32 +80,49 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarDatas(TextBox dataentrada, Label MsgErroData,TextBox dataSaida)
+        public bool ValidarDatas(TextBox dataentrada, Label MsgErroDataEntrada,TextBox dataSaida, Label MsgErrodataSaida)
         {
             // adicionar visibilidade na data saida se status for inativo
             DateTime dataEntrada, dataDeSaida;
          
             if (!DateTime.TryParse(dataentrada.Text, out dataEntrada ))
             {
-                MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
+                MsgErroDataEntrada.Text = "Data inválida. Favor inserir uma data válida.";
                 return false;
+            }
+            if (dataSaida.Visible)
+            {
+                if (!DateTime.TryParse(dataSaida.Text, out dataDeSaida))
+                {
+                    MsgErrodataSaida.Text = "Data inválida. Favor inserir uma data válida.";
+                    return false;
+                }
+                else if (dataEntrada > DateTime.Now && dataDeSaida > DateTime.Now)
+                {
+                    MsgErrodataSaida.Text = "Data inválida. Favor inserir uma data que não ultrapasse a atual.";
+                    MsgErroDataEntrada.Text = "Data inválida. Favor inserir uma data que não ultrapasse a atual.";
+                    return false;
+                }
             }
             
-            if (!DateTime.TryParse(dataSaida.Text, out dataDeSaida))
-            {
-                MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
-                return false;
-            }
-            else if (dataEntrada > DateTime.Now && dataDeSaida > DateTime.Now)
-            {
-                MsgErroData.Text = "Data inválida. Favor inserir uma data que não ultrapasse a atual.";
-                return false;
-            }
-
             return true;
         }
-
-        public bool ValidarNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
+        public bool AparecerDataSaida (ComboBox statusAluno, TextBox dataSaida, Label MsgErrodataSaida)
+        {
+            if (statusAluno.SelectedItem.ToString() == "Inativo")
+            {
+                dataSaida.Visible = true;
+                MsgErrodataSaida.Visible = true;
+                return true;
+            }
+            else
+            {
+                dataSaida.Visible = false;
+                MsgErrodataSaida.Visible = false;
+            }
+            return false;
+        }
+        public bool VisibilidadeNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
             while (nomeResponsavel.Visible)
             {

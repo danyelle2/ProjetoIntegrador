@@ -48,11 +48,11 @@
             this.textBoxIdadeAluno = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textMsgErroData = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textMsgErroResponsavel = new System.Windows.Forms.Label();
-            this.textBoxCampoNomeResponsavel = new System.Windows.Forms.TextBox();
-            this.labelNomeResponsavel = new System.Windows.Forms.Label();
+            this.textMsgErroDataSaida = new System.Windows.Forms.Label();
+            this.LabelMsgErroDataEntrada = new System.Windows.Forms.Label();
+            this.labelMsgErroResponsavel = new System.Windows.Forms.Label();
+            this.textBoxNomeResponsavel = new System.Windows.Forms.TextBox();
+            this.labelNomeResponsavel1 = new System.Windows.Forms.Label();
             this.textMsgErroTelefone = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -230,56 +230,56 @@
             this.label9.Size = new System.Drawing.Size(0, 13);
             this.label9.TabIndex = 116;
             // 
-            // textMsgErroData
+            // textMsgErroDataSaida
             // 
-            this.textMsgErroData.AutoSize = true;
-            this.textMsgErroData.ForeColor = System.Drawing.Color.Red;
-            this.textMsgErroData.Location = new System.Drawing.Point(442, 216);
-            this.textMsgErroData.Name = "textMsgErroData";
-            this.textMsgErroData.Size = new System.Drawing.Size(16, 13);
-            this.textMsgErroData.TabIndex = 120;
-            this.textMsgErroData.Text = "...";
-            this.textMsgErroData.Visible = false;
+            this.textMsgErroDataSaida.AutoSize = true;
+            this.textMsgErroDataSaida.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroDataSaida.Location = new System.Drawing.Point(442, 216);
+            this.textMsgErroDataSaida.Name = "textMsgErroDataSaida";
+            this.textMsgErroDataSaida.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroDataSaida.TabIndex = 120;
+            this.textMsgErroDataSaida.Text = "...";
+            this.textMsgErroDataSaida.Visible = false;
             // 
-            // label10
+            // LabelMsgErroDataEntrada
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(204, 412);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 13);
-            this.label10.TabIndex = 121;
-            this.label10.Text = "...";
+            this.LabelMsgErroDataEntrada.AutoSize = true;
+            this.LabelMsgErroDataEntrada.ForeColor = System.Drawing.Color.Red;
+            this.LabelMsgErroDataEntrada.Location = new System.Drawing.Point(204, 412);
+            this.LabelMsgErroDataEntrada.Name = "LabelMsgErroDataEntrada";
+            this.LabelMsgErroDataEntrada.Size = new System.Drawing.Size(16, 13);
+            this.LabelMsgErroDataEntrada.TabIndex = 121;
+            this.LabelMsgErroDataEntrada.Text = "...";
             // 
-            // textMsgErroResponsavel
+            // labelMsgErroResponsavel
             // 
-            this.textMsgErroResponsavel.AutoSize = true;
-            this.textMsgErroResponsavel.ForeColor = System.Drawing.Color.Red;
-            this.textMsgErroResponsavel.Location = new System.Drawing.Point(442, 378);
-            this.textMsgErroResponsavel.Name = "textMsgErroResponsavel";
-            this.textMsgErroResponsavel.Size = new System.Drawing.Size(16, 13);
-            this.textMsgErroResponsavel.TabIndex = 124;
-            this.textMsgErroResponsavel.Text = "...";
-            this.textMsgErroResponsavel.Visible = false;
+            this.labelMsgErroResponsavel.AutoSize = true;
+            this.labelMsgErroResponsavel.ForeColor = System.Drawing.Color.Red;
+            this.labelMsgErroResponsavel.Location = new System.Drawing.Point(442, 378);
+            this.labelMsgErroResponsavel.Name = "labelMsgErroResponsavel";
+            this.labelMsgErroResponsavel.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroResponsavel.TabIndex = 124;
+            this.labelMsgErroResponsavel.Text = "...";
+            this.labelMsgErroResponsavel.Visible = false;
             // 
-            // textBoxCampoNomeResponsavel
+            // textBoxNomeResponsavel
             // 
-            this.textBoxCampoNomeResponsavel.Location = new System.Drawing.Point(442, 348);
-            this.textBoxCampoNomeResponsavel.Multiline = true;
-            this.textBoxCampoNomeResponsavel.Name = "textBoxCampoNomeResponsavel";
-            this.textBoxCampoNomeResponsavel.Size = new System.Drawing.Size(140, 23);
-            this.textBoxCampoNomeResponsavel.TabIndex = 123;
-            this.textBoxCampoNomeResponsavel.Visible = false;
+            this.textBoxNomeResponsavel.Location = new System.Drawing.Point(442, 348);
+            this.textBoxNomeResponsavel.Multiline = true;
+            this.textBoxNomeResponsavel.Name = "textBoxNomeResponsavel";
+            this.textBoxNomeResponsavel.Size = new System.Drawing.Size(140, 23);
+            this.textBoxNomeResponsavel.TabIndex = 123;
+            this.textBoxNomeResponsavel.Visible = false;
             // 
-            // labelNomeResponsavel
+            // labelNomeResponsavel1
             // 
-            this.labelNomeResponsavel.AutoSize = true;
-            this.labelNomeResponsavel.Location = new System.Drawing.Point(468, 319);
-            this.labelNomeResponsavel.Name = "labelNomeResponsavel";
-            this.labelNomeResponsavel.Size = new System.Drawing.Size(69, 13);
-            this.labelNomeResponsavel.TabIndex = 122;
-            this.labelNomeResponsavel.Text = "Responsável";
-            this.labelNomeResponsavel.Visible = false;
+            this.labelNomeResponsavel1.AutoSize = true;
+            this.labelNomeResponsavel1.Location = new System.Drawing.Point(468, 319);
+            this.labelNomeResponsavel1.Name = "labelNomeResponsavel1";
+            this.labelNomeResponsavel1.Size = new System.Drawing.Size(69, 13);
+            this.labelNomeResponsavel1.TabIndex = 122;
+            this.labelNomeResponsavel1.Text = "Responsável";
+            this.labelNomeResponsavel1.Visible = false;
             // 
             // textMsgErroTelefone
             // 
@@ -298,11 +298,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textMsgErroTelefone);
-            this.Controls.Add(this.textMsgErroResponsavel);
-            this.Controls.Add(this.textBoxCampoNomeResponsavel);
-            this.Controls.Add(this.labelNomeResponsavel);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.textMsgErroData);
+            this.Controls.Add(this.labelMsgErroResponsavel);
+            this.Controls.Add(this.textBoxNomeResponsavel);
+            this.Controls.Add(this.labelNomeResponsavel1);
+            this.Controls.Add(this.LabelMsgErroDataEntrada);
+            this.Controls.Add(this.textMsgErroDataSaida);
             this.Controls.Add(this.textMsgErroIdade);
             this.Controls.Add(this.textBoxIdadeAluno);
             this.Controls.Add(this.label8);
@@ -352,11 +352,11 @@
         private System.Windows.Forms.TextBox textBoxIdadeAluno;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label textMsgErroData;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label textMsgErroResponsavel;
-        private System.Windows.Forms.TextBox textBoxCampoNomeResponsavel;
-        private System.Windows.Forms.Label labelNomeResponsavel;
+        private System.Windows.Forms.Label textMsgErroDataSaida;
+        private System.Windows.Forms.Label LabelMsgErroDataEntrada;
+        private System.Windows.Forms.Label labelMsgErroResponsavel;
+        private System.Windows.Forms.TextBox textBoxNomeResponsavel;
+        private System.Windows.Forms.Label labelNomeResponsavel1;
         private System.Windows.Forms.Label textMsgErroTelefone;
     }
 }

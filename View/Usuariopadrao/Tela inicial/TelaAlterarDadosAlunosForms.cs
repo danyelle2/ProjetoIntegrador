@@ -25,18 +25,18 @@ namespace ProjetoIntegrador.View
         {
             // pensar em como criar uma funcao para quando clicar na lista e no botao alterar apareca os 
             // dados do aluno na tela de alterar dados
-            bool resultadoMenorIdade = alterarDadosAlunoController.ValidarAlteracaoAlunoMenorIdade(textBoxIdadeAluno, textBoxCampoNomeResponsavel, labelNomeResponsavel, textMsgErroIdade);
-            //TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade
-            bool resultadoIdadeInvalida = alterarDadosAlunoController.IdadeInvalida();
-            bool resultadoCamposVazios = alterarDadosAlunoController.ValidarCamposVazios();
-            bool resultadoTelefoneValido = alterarDadosAlunoController.ValidarTelefone();
-            bool DataInvalida = alterarDadosAlunoController.ValidarData();
-            bool resultadoNomeResponsavel = alterarDadosAlunoController.ValidarNomeResponsavel();
+            bool resultadoMenorIdade = alterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade);
+            bool resultadoIdadeInvalida = alterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade);
+            bool resultadoCamposVazios = alterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
+            bool resultadoTelefoneValido = alterarDadosAlunoController.ValidarTelefone(textBoxTelefoneAluno, textMsgErroTelefone);
+            bool DataInvalida = alterarDadosAlunoController.ValidarDatas(textBoxDataEntrada, LabelMsgErroDataEntrada, textBoxDataSaida, textMsgErroDataSaida);
+            bool DataInvalida = alterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida, textMsgErroDataSaida);
+            bool resultadoNomeResponsavel = alterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel);
             // pedir ajuda para ver se ta faltando alguma coisa 
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel)
             {
                
-                bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxCampoNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
+                bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
 
             }
         }
