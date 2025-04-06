@@ -54,18 +54,14 @@ namespace ProjetoIntegrador.Controller
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            if (nomeResponsavel.Visible)
-                if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
+            if (nomeResponsavel.Visible && dataSaida.Visible)
+                if (string.IsNullOrWhiteSpace(nomeResponsavel.Text) && string.IsNullOrWhiteSpace(dataSaida.Text))
                 {
                     MsgErroResponsavel.Text = "Preencha o nome do responsável.";
-                    return false;
-                }
-            if (dataSaida.Visible)
-                if (string.IsNullOrWhiteSpace(dataSaida.Text))
-                {
                     MessageBox.Show("Preencha a data de saída.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
-                }
+                }   
+                
             return true;
         }
 
@@ -107,7 +103,17 @@ namespace ProjetoIntegrador.Controller
             
             return true;
         }
-        public bool AparecerDataSaida ()
+        public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida)
+        {
+            if (statusAluno.SelectedItem != null && statusAluno.SelectedItem.ToString() == "Inativo")
+            {
+                dataSaida.Visible = true;
+                nomeDataSaida.Visible = true;
+                return true;
+            }
+           
+                return true;
+        }
         public bool VisibilidadeNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
             while (nomeResponsavel.Visible)
