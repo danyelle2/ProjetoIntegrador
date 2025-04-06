@@ -239,7 +239,6 @@
             this.textMsgErroDataSaida.Size = new System.Drawing.Size(16, 13);
             this.textMsgErroDataSaida.TabIndex = 120;
             this.textMsgErroDataSaida.Text = "...";
-            this.textMsgErroDataSaida.Visible = false;
             // 
             // LabelMsgErroDataEntrada
             // 
@@ -260,7 +259,6 @@
             this.labelMsgErroResponsavel.Size = new System.Drawing.Size(16, 13);
             this.labelMsgErroResponsavel.TabIndex = 124;
             this.labelMsgErroResponsavel.Text = "...";
-            this.labelMsgErroResponsavel.Visible = false;
             // 
             // textBoxNomeResponsavel
             // 

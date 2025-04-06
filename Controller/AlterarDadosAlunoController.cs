@@ -107,21 +107,7 @@ namespace ProjetoIntegrador.Controller
             
             return true;
         }
-        public bool AparecerDataSaida (ComboBox statusAluno, TextBox dataSaida, Label MsgErrodataSaida)
-        {
-            if (statusAluno.SelectedItem.ToString() == "Inativo")
-            {
-                dataSaida.Visible = true;
-                MsgErrodataSaida.Visible = true;
-                return true;
-            }
-            else
-            {
-                dataSaida.Visible = false;
-                MsgErrodataSaida.Visible = false;
-            }
-            return false;
-        }
+        public bool AparecerDataSaida ()
         public bool VisibilidadeNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
             while (nomeResponsavel.Visible)
