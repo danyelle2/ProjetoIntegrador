@@ -16,8 +16,9 @@ namespace ProjetoIntegrador
     {
         public TelaLoginForm()
         {
+            
             InitializeComponent();
-            InitializeComponent(); this.FormClosing += AppClose;
+            this.FormClosing += AppClose;
         }
 
         public void AppClose(object sender, FormClosingEventArgs e)

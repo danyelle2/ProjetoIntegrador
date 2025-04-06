@@ -133,11 +133,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(463, 179);
+            this.label1.Location = new System.Drawing.Point(488, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 24);
+            this.label1.Size = new System.Drawing.Size(52, 24);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Digite seu CPF";
+            this.label1.Text = "CPF:";
             // 
             // TelaLoginForm
             // 

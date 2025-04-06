@@ -58,7 +58,6 @@ namespace ProjetoIntegrador.View
         private void btnCadastro_Click(object sender, EventArgs e)
         {
             bool resultadoCamposVazios = cadastroProfessorController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-
             bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
             bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
 

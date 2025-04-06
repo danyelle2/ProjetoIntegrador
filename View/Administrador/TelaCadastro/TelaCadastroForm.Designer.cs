@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroForm));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.MsgErrorTipoUsuario = new System.Windows.Forms.Label();
             this.comboBoxModalidade = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBoxTipoUsuario = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.MsgErrorTipoUsuario = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -75,6 +75,16 @@
             this.groupBox3.TabIndex = 73;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipo usuário";
+            // 
+            // MsgErrorTipoUsuario
+            // 
+            this.MsgErrorTipoUsuario.AutoSize = true;
+            this.MsgErrorTipoUsuario.ForeColor = System.Drawing.Color.IndianRed;
+            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(34, 119);
+            this.MsgErrorTipoUsuario.Name = "MsgErrorTipoUsuario";
+            this.MsgErrorTipoUsuario.Size = new System.Drawing.Size(16, 13);
+            this.MsgErrorTipoUsuario.TabIndex = 57;
+            this.MsgErrorTipoUsuario.Text = "...";
             // 
             // comboBoxModalidade
             // 
@@ -177,7 +187,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.textSenhaConfirmada);
-            this.groupBox2.Location = new System.Drawing.Point(99, 373);
+            this.groupBox2.Location = new System.Drawing.Point(99, 390);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(364, 218);
             this.groupBox2.TabIndex = 74;
@@ -266,11 +276,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 34);
+            this.label1.Location = new System.Drawing.Point(22, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 13);
+            this.label1.Size = new System.Drawing.Size(169, 13);
             this.label1.TabIndex = 50;
-            this.label1.Text = "Insira seu CPF ";
+            this.label1.Text = "Insira seu CPF (Somente números)";
             // 
             // txtUsuarioCadastro
             // 
@@ -304,16 +314,6 @@
             this.btnVoltar.TabIndex = 75;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // MsgErrorTipoUsuario
-            // 
-            this.MsgErrorTipoUsuario.AutoSize = true;
-            this.MsgErrorTipoUsuario.ForeColor = System.Drawing.Color.IndianRed;
-            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(34, 119);
-            this.MsgErrorTipoUsuario.Name = "MsgErrorTipoUsuario";
-            this.MsgErrorTipoUsuario.Size = new System.Drawing.Size(16, 13);
-            this.MsgErrorTipoUsuario.TabIndex = 57;
-            this.MsgErrorTipoUsuario.Text = "...";
             // 
             // TelaCadastroForm
             // 

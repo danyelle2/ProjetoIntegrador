@@ -29,18 +29,23 @@ namespace ProjetoIntegrador.View
         {
             bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8, textMsgErroIdade);
             bool resultadoIdadeInvalida = cadastroAlunoController.IdadeInvalida(textBox2, textMsgErroIdade);
-            bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, textMsgErroResponsavel);
+            bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, textMsgErroResponsavel, comboBoxStatusAluno);
             bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
             bool DataInvalida = cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
             bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
             // pedir ajuda para só retornar quando for verdadeiro, ele ta retornado mesmo sendo falso
             if (true)
             {
-                bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
-                bool resultadoCadastrarAluno = cadastroAlunoController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
+                bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
+                bool resultadoCadastrarAluno = cadastroAlunoController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
 
             }
 
+
+        }
+
+        private void TelaCadastroAlunos_Load(object sender, EventArgs e)
+        {
 
         }
     }

@@ -48,6 +48,8 @@
             this.textMsgErroResponsavel = new System.Windows.Forms.Label();
             this.textMsgErroTelefone = new System.Windows.Forms.Label();
             this.textMsgErroData = new System.Windows.Forms.Label();
+            this.comboBoxStatusAluno = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,12 +229,33 @@
             this.textMsgErroData.TabIndex = 98;
             this.textMsgErroData.Text = "...";
             // 
+            // comboBoxStatusAluno
+            // 
+            this.comboBoxStatusAluno.FormattingEnabled = true;
+            this.comboBoxStatusAluno.Items.AddRange(new object[] {
+            "Ativo"});
+            this.comboBoxStatusAluno.Location = new System.Drawing.Point(431, 235);
+            this.comboBoxStatusAluno.Name = "comboBoxStatusAluno";
+            this.comboBoxStatusAluno.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxStatusAluno.TabIndex = 113;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(447, 205);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 13);
+            this.label6.TabIndex = 112;
+            this.label6.Text = "Status do aluno";
+            // 
             // TelaCadastroAlunos
             // 
             this.AcceptButton = this.btnCadastrarAluno;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBoxStatusAluno);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textMsgErroData);
             this.Controls.Add(this.textMsgErroTelefone);
             this.Controls.Add(this.textMsgErroResponsavel);
@@ -255,6 +278,7 @@
             this.Name = "TelaCadastroAlunos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaCadastroAlunos";
+            this.Load += new System.EventHandler(this.TelaCadastroAlunos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -282,5 +306,7 @@
         private System.Windows.Forms.Label textMsgErroResponsavel;
         private System.Windows.Forms.Label textMsgErroTelefone;
         private System.Windows.Forms.Label textMsgErroData;
+        private System.Windows.Forms.ComboBox comboBoxStatusAluno;
+        private System.Windows.Forms.Label label6;
     }
 }
