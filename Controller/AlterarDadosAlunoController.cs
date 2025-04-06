@@ -103,12 +103,13 @@ namespace ProjetoIntegrador.Controller
             
             return true;
         }
-        public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida)
+        public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida,Label MsgErrorDataSaida)
         {
             if (statusAluno.SelectedItem != null && statusAluno.SelectedItem.ToString() == "Inativo")
             {
                 dataSaida.Visible = true;
                 nomeDataSaida.Visible = true;
+                MsgErrorDataSaida.Text = "Preencha a data de saída.";
                 return false;
             }
            
@@ -126,6 +127,18 @@ namespace ProjetoIntegrador.Controller
                 }
             }
             return true;
+        }
+
+        public bool ValidarComboBox(ComboBox plano, ComboBox statusAluno)
+        {
+            if (plano.SelectedItem == null || (plano.SelectedItem.ToString() != "Anual" && plano.SelectedItem.ToString() != "Mensal") ||
+                statusAluno.SelectedItem == null || (statusAluno.SelectedItem.ToString() != "Ativo" && statusAluno.SelectedItem.ToString() != "Inativo"))
+            {
+                MessageBox.Show("Selecione uma opção válida para status ou plano.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        
         }
 
         public bool AlterarDadosAlunos(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
