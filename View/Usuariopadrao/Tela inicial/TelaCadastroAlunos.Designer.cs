@@ -44,6 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxCadastroAlunos = new System.Windows.Forms.PictureBox();
+            this.textMsgErroIdade = new System.Windows.Forms.Label();
+            this.textMsgErroResponsavel = new System.Windows.Forms.Label();
+            this.textMsgErroTelefone = new System.Windows.Forms.Label();
+            this.textMsgErroData = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,12 +187,56 @@
             this.pictureBoxCadastroAlunos.TabIndex = 93;
             this.pictureBoxCadastroAlunos.TabStop = false;
             // 
+            // textMsgErroIdade
+            // 
+            this.textMsgErroIdade.AutoSize = true;
+            this.textMsgErroIdade.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroIdade.Location = new System.Drawing.Point(235, 347);
+            this.textMsgErroIdade.Name = "textMsgErroIdade";
+            this.textMsgErroIdade.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroIdade.TabIndex = 95;
+            this.textMsgErroIdade.Text = "...";
+            // 
+            // textMsgErroResponsavel
+            // 
+            this.textMsgErroResponsavel.AutoSize = true;
+            this.textMsgErroResponsavel.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroResponsavel.Location = new System.Drawing.Point(428, 348);
+            this.textMsgErroResponsavel.Name = "textMsgErroResponsavel";
+            this.textMsgErroResponsavel.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroResponsavel.TabIndex = 96;
+            this.textMsgErroResponsavel.Text = "...";
+            // 
+            // textMsgErroTelefone
+            // 
+            this.textMsgErroTelefone.AutoSize = true;
+            this.textMsgErroTelefone.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroTelefone.Location = new System.Drawing.Point(235, 183);
+            this.textMsgErroTelefone.Name = "textMsgErroTelefone";
+            this.textMsgErroTelefone.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroTelefone.TabIndex = 97;
+            this.textMsgErroTelefone.Text = "...";
+            // 
+            // textMsgErroData
+            // 
+            this.textMsgErroData.AutoSize = true;
+            this.textMsgErroData.ForeColor = System.Drawing.Color.Red;
+            this.textMsgErroData.Location = new System.Drawing.Point(235, 414);
+            this.textMsgErroData.Name = "textMsgErroData";
+            this.textMsgErroData.Size = new System.Drawing.Size(16, 13);
+            this.textMsgErroData.TabIndex = 98;
+            this.textMsgErroData.Text = "...";
+            // 
             // TelaCadastroAlunos
             // 
             this.AcceptButton = this.btnCadastrarAluno;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textMsgErroData);
+            this.Controls.Add(this.textMsgErroTelefone);
+            this.Controls.Add(this.textMsgErroResponsavel);
+            this.Controls.Add(this.textMsgErroIdade);
             this.Controls.Add(this.pictureBoxCadastroAlunos);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label8);
@@ -230,5 +278,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxCadastroAlunos;
+        private System.Windows.Forms.Label textMsgErroIdade;
+        private System.Windows.Forms.Label textMsgErroResponsavel;
+        private System.Windows.Forms.Label textMsgErroTelefone;
+        private System.Windows.Forms.Label textMsgErroData;
     }
 }

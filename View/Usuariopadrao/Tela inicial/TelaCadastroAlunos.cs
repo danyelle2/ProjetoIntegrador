@@ -27,14 +27,21 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
         {            
-            bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8);
-            bool resultadoIdadeInvalida= cadastroAlunoController.IdadeInvalida(textBox2);
-            bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
-            bool resultadoTelefoneValido= cadastroAlunoController.ValidarTelefone(txtTelefoneALuno);
-            bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
-            
+            bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8, textMsgErroIdade);
+            bool resultadoIdadeInvalida= cadastroAlunoController.IdadeInvalida(textBox2, textMsgErroIdade);
+            bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, textMsgErroResponsavel);
+            bool resultadoTelefoneValido= cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
+            bool DataInvalida= cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
+           
+            // pedir ajuda para só retornar quando for verdadeiro
+            if(true) 
+            {
+                bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
+
+            }
+
         }
 
-        
+
     }
 }
