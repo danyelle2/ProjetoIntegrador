@@ -33,7 +33,7 @@ namespace ProjetoIntegrador.View
             bool resultadoTelefoneValido= cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
             bool DataInvalida= cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
            bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
-            // pedir ajuda para só retornar quando for verdadeiro
+            // pedir ajuda para só retornar quando for verdadeiro, ele ta retornado mesmo sendo falso
             if (true) 
             {
                 bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);

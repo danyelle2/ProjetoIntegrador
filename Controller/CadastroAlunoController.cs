@@ -99,6 +99,7 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
+        
         public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel)
         {         
               
