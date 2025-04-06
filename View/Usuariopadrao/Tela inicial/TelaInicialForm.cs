@@ -15,6 +15,12 @@ namespace ProjetoIntegrador.View
         public TelaInicialForm()
         {
             InitializeComponent();
+            this.FormClosing += AppClose;
+        }
+
+        public void AppClose(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
         }
 
         private void pictureBoxCadastroAlunosAparecer(object sender, EventArgs e)
@@ -73,6 +79,11 @@ namespace ProjetoIntegrador.View
 
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
             telaGrafico.ShowDialog();
+        }
+
+        private void TelaInicialForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

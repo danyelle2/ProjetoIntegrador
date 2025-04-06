@@ -51,6 +51,7 @@
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.MsgErrorTipoUsuario = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -59,6 +60,7 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.Controls.Add(this.MsgErrorTipoUsuario);
             this.groupBox3.Controls.Add(this.comboBoxModalidade);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.comboBoxTipoUsuario);
@@ -303,6 +305,16 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // MsgErrorTipoUsuario
+            // 
+            this.MsgErrorTipoUsuario.AutoSize = true;
+            this.MsgErrorTipoUsuario.ForeColor = System.Drawing.Color.IndianRed;
+            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(34, 119);
+            this.MsgErrorTipoUsuario.Name = "MsgErrorTipoUsuario";
+            this.MsgErrorTipoUsuario.Size = new System.Drawing.Size(16, 13);
+            this.MsgErrorTipoUsuario.TabIndex = 57;
+            this.MsgErrorTipoUsuario.Text = "...";
+            // 
             // TelaCadastroForm
             // 
             this.AcceptButton = this.btnCadastro;
@@ -353,5 +365,6 @@
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label MsgErrorSenha;
+        private System.Windows.Forms.Label MsgErrorTipoUsuario;
     }
 }

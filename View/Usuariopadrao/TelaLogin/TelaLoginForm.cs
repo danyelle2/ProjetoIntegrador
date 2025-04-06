@@ -16,6 +16,16 @@ namespace ProjetoIntegrador
         public TelaLoginForm()
         {
             InitializeComponent();
+            AppClose();
+        }
+
+
+        private void AppClose()
+
+        {
+            MessageBox.Show("Deseja encerrar a aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            Application.Exit();
+        
         }
         LoginController loginController = new LoginController();
 
@@ -40,6 +50,11 @@ namespace ProjetoIntegrador
             {
                 this.Hide();
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

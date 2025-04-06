@@ -21,26 +21,27 @@ namespace ProjetoIntegrador.View
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
-        {            
+        {
             bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8, textMsgErroIdade);
-            bool resultadoIdadeInvalida= cadastroAlunoController.IdadeInvalida(textBox2, textMsgErroIdade);
+            bool resultadoIdadeInvalida = cadastroAlunoController.IdadeInvalida(textBox2, textMsgErroIdade);
             bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, textMsgErroResponsavel);
-            bool resultadoTelefoneValido= cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
-            bool DataInvalida= cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
-           bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
+            bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
+            bool DataInvalida = cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
+            bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
             // pedir ajuda para só retornar quando for verdadeiro, ele ta retornado mesmo sendo falso
-            if (true) 
+            if (true)
             {
                 bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
                 bool resultadoCadastrarAluno = cadastroAlunoController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3);
-                
+
             }
 
 
+        }
     }
 }

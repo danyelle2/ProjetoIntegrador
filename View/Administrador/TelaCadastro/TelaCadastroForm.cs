@@ -15,15 +15,20 @@ namespace ProjetoIntegrador.View
     {
         public TelaCadastroForm()
         {
-            InitializeComponent();
+            InitializeComponent(); this.FormClosing += AppClose;
+        }
+
+        public void AppClose(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+        
         }
         CadastroProfessorController cadastroProfessorController = new CadastroProfessorController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
-            TelaLoginForm telaLogin = new TelaLoginForm();
-            telaLogin.Show();
-            TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
-            telaCadastroForm.Hide();
+            this.Close();
+            TelaLoginForm telalogin = new TelaLoginForm();
+            telalogin.Show();
         }
 
         private void msgTemporariaUsuarioAparece(object sender, EventArgs e)
@@ -57,16 +62,17 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
-            bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade);
             bool resultadoCamposVazios = cadastroProfessorController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
+
+            bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
+            bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
 
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais)
             {
 
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
-                telaCadastroForm.Close();
+                telaCadastroForm.Dispose();
                 TelaLoginForm telalogin = new TelaLoginForm();
                 telalogin.Show();
 
