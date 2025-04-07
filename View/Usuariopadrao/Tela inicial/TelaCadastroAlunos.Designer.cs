@@ -50,6 +50,8 @@
             this.textMsgErroData = new System.Windows.Forms.Label();
             this.comboBoxStatusAluno = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.labelMsgErroPlano = new System.Windows.Forms.Label();
+            this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -248,12 +250,34 @@
             this.label6.TabIndex = 112;
             this.label6.Text = "Status do aluno";
             // 
+            // labelMsgErroPlano
+            // 
+            this.labelMsgErroPlano.AutoSize = true;
+            this.labelMsgErroPlano.ForeColor = System.Drawing.Color.Red;
+            this.labelMsgErroPlano.Location = new System.Drawing.Point(235, 269);
+            this.labelMsgErroPlano.Name = "labelMsgErroPlano";
+            this.labelMsgErroPlano.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroPlano.TabIndex = 114;
+            this.labelMsgErroPlano.Text = "...";
+            // 
+            // labelMsgErroStatusAluno
+            // 
+            this.labelMsgErroStatusAluno.AutoSize = true;
+            this.labelMsgErroStatusAluno.ForeColor = System.Drawing.Color.Red;
+            this.labelMsgErroStatusAluno.Location = new System.Drawing.Point(428, 259);
+            this.labelMsgErroStatusAluno.Name = "labelMsgErroStatusAluno";
+            this.labelMsgErroStatusAluno.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroStatusAluno.TabIndex = 115;
+            this.labelMsgErroStatusAluno.Text = "...";
+            // 
             // TelaCadastroAlunos
             // 
             this.AcceptButton = this.btnCadastrarAluno;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelMsgErroStatusAluno);
+            this.Controls.Add(this.labelMsgErroPlano);
             this.Controls.Add(this.comboBoxStatusAluno);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textMsgErroData);
@@ -308,5 +332,7 @@
         private System.Windows.Forms.Label textMsgErroData;
         private System.Windows.Forms.ComboBox comboBoxStatusAluno;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelMsgErroPlano;
+        private System.Windows.Forms.Label labelMsgErroStatusAluno;
     }
 }

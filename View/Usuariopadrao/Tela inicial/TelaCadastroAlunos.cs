@@ -33,6 +33,7 @@ namespace ProjetoIntegrador.View
             bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
             bool DataInvalida = cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
             bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
+            bool resultadoComboBox=cadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno)
             // pedir ajuda para ver se ta faltando alguma coisa 
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel)
             {
