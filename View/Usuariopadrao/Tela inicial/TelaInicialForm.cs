@@ -79,7 +79,7 @@ namespace ProjetoIntegrador.View
         {
 
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
-            telaGrafico.ShowDialog();
+            telaGrafico.Show();
         }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
