@@ -60,8 +60,8 @@ namespace ProjetoIntegrador.View
             bool resultadoCamposVazios = cadastroProfessorController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
             bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
             bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
-
-            if (TipoUsuario && resultadoCamposVazios && Senhasiguais)
+            bool resultadoComboBox=cadastroProfessorController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario)
+            if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
 
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);

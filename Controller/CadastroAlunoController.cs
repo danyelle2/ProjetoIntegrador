@@ -100,6 +100,7 @@ namespace ProjetoIntegrador.Controller
                 return false;
             }
             return true;
+        }
                 
         public bool ValidarNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
