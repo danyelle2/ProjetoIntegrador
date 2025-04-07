@@ -35,7 +35,7 @@ namespace ProjetoIntegrador.View
             bool resultadoComboBoxValidado= alterarDadosAlunoController.ValidarComboBox(comboBoxPlano, comboBoxStatusAlunos,labelMsgErroPlano ,labelMsgErroStatusAluno);
             // pedir ajuda para ver se ta faltando alguma coisa 
             // Ta Entrando no login válido quando não era pra entrar, ver o que to fazendo de errado...
-            if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel)
+            if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel && resultadoComboBoxValidado) 
             {
                
                 bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
