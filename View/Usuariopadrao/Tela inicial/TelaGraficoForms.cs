@@ -16,5 +16,11 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
+
+        private void TelaGraficoForms_Load(object sender, EventArgs e)
+        {
+            //colocar janela como pagina e tirar o dialog 
+            //Amanda fazer o visual dela e do cadastro de professores 
+        }
     }
 }
