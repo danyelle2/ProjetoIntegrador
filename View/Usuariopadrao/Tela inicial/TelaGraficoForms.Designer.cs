@@ -61,7 +61,7 @@
             this.chartEntradaAlunos.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartEntradaAlunos.Legends.Add(legend1);
-            this.chartEntradaAlunos.Location = new System.Drawing.Point(292, 280);
+            this.chartEntradaAlunos.Location = new System.Drawing.Point(292, 267);
             this.chartEntradaAlunos.Name = "chartEntradaAlunos";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
@@ -78,7 +78,7 @@
             this.chartSaidaAlunos.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chartSaidaAlunos.Legends.Add(legend2);
-            this.chartSaidaAlunos.Location = new System.Drawing.Point(292, 30);
+            this.chartSaidaAlunos.Location = new System.Drawing.Point(292, 12);
             this.chartSaidaAlunos.Name = "chartSaidaAlunos";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
@@ -92,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(388, 11);
+            this.label1.Location = new System.Drawing.Point(177, 234);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 21;
