@@ -87,5 +87,16 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
+        {
+            MsgTemporariaPagamento.Visible = true;
+            MsgTemporariaPagamento.Text = "Status do pagamentos dos alunos";
+        }
+
+        private void MsgTemporariaPagamento_Desaparece(object sender, EventArgs e)
+        {
+            MsgTemporariaPagamento.Visible = false;
+        }
     }
 }
