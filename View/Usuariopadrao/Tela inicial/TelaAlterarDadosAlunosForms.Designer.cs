@@ -54,6 +54,8 @@
             this.textBoxNomeResponsavel = new System.Windows.Forms.TextBox();
             this.labelNomeResponsavel1 = new System.Windows.Forms.Label();
             this.textMsgErroTelefone = new System.Windows.Forms.Label();
+            this.labelMsgErroPlano = new System.Windows.Forms.Label();
+            this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -289,12 +291,34 @@
             this.textMsgErroTelefone.TabIndex = 125;
             this.textMsgErroTelefone.Text = "...";
             // 
+            // labelMsgErroPlano
+            // 
+            this.labelMsgErroPlano.AutoSize = true;
+            this.labelMsgErroPlano.ForeColor = System.Drawing.Color.Red;
+            this.labelMsgErroPlano.Location = new System.Drawing.Point(204, 319);
+            this.labelMsgErroPlano.Name = "labelMsgErroPlano";
+            this.labelMsgErroPlano.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroPlano.TabIndex = 126;
+            this.labelMsgErroPlano.Text = "...";
+            // 
+            // labelMsgErroStatusAluno
+            // 
+            this.labelMsgErroStatusAluno.AutoSize = true;
+            this.labelMsgErroStatusAluno.ForeColor = System.Drawing.Color.Red;
+            this.labelMsgErroStatusAluno.Location = new System.Drawing.Point(457, 127);
+            this.labelMsgErroStatusAluno.Name = "labelMsgErroStatusAluno";
+            this.labelMsgErroStatusAluno.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroStatusAluno.TabIndex = 127;
+            this.labelMsgErroStatusAluno.Text = "...";
+            // 
             // TelaAlterarDadosAlunosForms
             // 
             this.AcceptButton = this.btnAlterarDados;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labelMsgErroStatusAluno);
+            this.Controls.Add(this.labelMsgErroPlano);
             this.Controls.Add(this.textMsgErroTelefone);
             this.Controls.Add(this.labelMsgErroResponsavel);
             this.Controls.Add(this.textBoxNomeResponsavel);
@@ -356,5 +380,7 @@
         private System.Windows.Forms.TextBox textBoxNomeResponsavel;
         private System.Windows.Forms.Label labelNomeResponsavel1;
         private System.Windows.Forms.Label textMsgErroTelefone;
+        private System.Windows.Forms.Label labelMsgErroPlano;
+        private System.Windows.Forms.Label labelMsgErroStatusAluno;
     }
 }

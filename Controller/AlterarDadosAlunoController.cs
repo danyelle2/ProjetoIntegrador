@@ -129,15 +129,20 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarComboBox(ComboBox plano, ComboBox statusAluno)
+        public bool ValidarComboBox(ComboBox plano, ComboBox statusAluno, Label MsgErroPlano, Label MsgErroStatusAluno) //colocar essa função em todos as tela com combobox
         {
-            if (plano.SelectedItem == null || (plano.SelectedItem.ToString() != "Anual" && plano.SelectedItem.ToString() != "Mensal") ||
-                statusAluno.SelectedItem == null || (statusAluno.SelectedItem.ToString() != "Ativo" && statusAluno.SelectedItem.ToString() != "Inativo"))
+            if (plano.SelectedItem == null || (plano.SelectedItem.ToString() != "Anual" && plano.SelectedItem.ToString() != "Mensal"))
             {
-                MessageBox.Show("Selecione uma opção válida para status ou plano.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MsgErroPlano.Text = "Selecione uma opção válida.";
                 return false;
             }
-            return true;
+            if (statusAluno.SelectedItem == null || (statusAluno.SelectedItem.ToString() != "Ativo" && statusAluno.SelectedItem.ToString() != "Inativo"))
+            {
+                MsgErroStatusAluno.Text = "Selecione uma opção válida";
+            
+                return false;
+            }
+                return true;
         
         }
 

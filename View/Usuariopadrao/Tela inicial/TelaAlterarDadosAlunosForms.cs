@@ -32,7 +32,7 @@ namespace ProjetoIntegrador.View
             bool DataInvalida = alterarDadosAlunoController.ValidarDatas(textBoxDataEntrada, LabelMsgErroDataEntrada, textBoxDataSaida, textMsgErroDataSaida);
             bool resultadoAparecerDataSaida = alterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida,LabelNomeDataSaida, textMsgErroDataSaida);
             bool resultadoNomeResponsavel = alterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel);
-            bool resultadoComboBoxValidado=
+            bool resultadoComboBoxValidado= alterarDadosAlunoController.ValidarComboBox(comboBoxPlano, comboBoxStatusAlunos,labelMsgErroPlano ,labelMsgErroStatusAluno);
             // pedir ajuda para ver se ta faltando alguma coisa 
             // Ta Entrando no login válido quando não era pra entrar, ver o que to fazendo de errado...
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel)
