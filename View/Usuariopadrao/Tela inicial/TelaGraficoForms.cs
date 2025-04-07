@@ -22,5 +22,12 @@ namespace ProjetoIntegrador.View
             //colocar janela como pagina e tirar o dialog 
             //Amanda fazer o visual dela e do cadastro de professores 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            TelaInicialForm telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
     }
 }

@@ -77,7 +77,8 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            TelaInicialForm telaInicial = new TelaInicialForm();
+            telaInicial.Hide();
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
             telaGrafico.Show();
         }
