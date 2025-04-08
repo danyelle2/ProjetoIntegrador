@@ -54,6 +54,7 @@
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PagamentoController.cs" />
     <Compile Include="Model\Aluno.cs" />
+    <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.cs">
       <SubType>Form</SubType>
     </Compile>
