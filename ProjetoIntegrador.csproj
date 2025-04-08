@@ -102,6 +102,7 @@
   <ItemGroup>
     <Compile Include="BancoDeDados\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
+    <Compile Include="BancoDeDados\SessionUser.cs" />
     <Compile Include="Controller\AlterarDadosAlunoController.cs" />
     <Compile Include="Controller\CadastroAlunoController.cs" />
     <Compile Include="Controller\CadastroProfessorController.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Controller\PagamentoController.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
+    <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.cs">
       <SubType>Form</SubType>
     </Compile>
