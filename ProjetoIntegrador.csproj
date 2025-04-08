@@ -52,6 +52,8 @@
     <Compile Include="Controller\CadastroAlunoController.cs" />
     <Compile Include="Controller\CadastroProfessorController.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\PagamentoController.cs" />
+    <Compile Include="Model\Aluno.cs" />
     <Compile Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +90,12 @@
     <Compile Include="View\1 tela\TelaLoadForms.Designer.cs">
       <DependentUpon>TelaLoadForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Usuariopadrao\Tela inicial\TelaPagamentoAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Usuariopadrao\Tela inicial\TelaPagamentoAlunos.Designer.cs">
+      <DependentUpon>TelaPagamentoAlunos.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Usuariopadrao\TelaLogin\TelaLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\1 tela\TelaLoadForms.resx">
       <DependentUpon>TelaLoadForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaPagamentoAlunos.resx">
+      <DependentUpon>TelaPagamentoAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\TelaLogin\TelaLoginForm.resx">
       <DependentUpon>TelaLoginForm.cs</DependentUpon>
