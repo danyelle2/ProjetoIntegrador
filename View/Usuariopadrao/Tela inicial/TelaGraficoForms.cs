@@ -21,8 +21,6 @@ namespace ProjetoIntegrador.View
 
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
-            //colocar janela como pagina e tirar o dialog ok
-            //Amanda fazer o visual dela e do cadastro de professores 
             // não sei se coloca nessa tela ou abre um controller para ela 
             //teste se funcionar fazer a mesma coisa só que com ano
 

@@ -41,7 +41,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(40, 52);
+            this.pictureBox3.Location = new System.Drawing.Point(21, 43);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(119, 107);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -51,15 +51,15 @@
             // dataGridViewpagamento
             // 
             this.dataGridViewpagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewpagamento.Location = new System.Drawing.Point(210, 33);
+            this.dataGridViewpagamento.Location = new System.Drawing.Point(213, 91);
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
-            this.dataGridViewpagamento.Size = new System.Drawing.Size(428, 327);
+            this.dataGridViewpagamento.Size = new System.Drawing.Size(428, 415);
             this.dataGridViewpagamento.TabIndex = 22;
             this.dataGridViewpagamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpagamento_CellContentClick);
             // 
             // buttonPagamentoRealizado
             // 
-            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(678, 202);
+            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(711, 210);
             this.buttonPagamentoRealizado.Name = "buttonPagamentoRealizado";
             this.buttonPagamentoRealizado.Size = new System.Drawing.Size(75, 23);
             this.buttonPagamentoRealizado.TabIndex = 24;
@@ -69,7 +69,7 @@
             // 
             // buttonPendentePagamento
             // 
-            this.buttonPendentePagamento.Location = new System.Drawing.Point(678, 152);
+            this.buttonPendentePagamento.Location = new System.Drawing.Point(711, 158);
             this.buttonPendentePagamento.Name = "buttonPendentePagamento";
             this.buttonPendentePagamento.Size = new System.Drawing.Size(75, 23);
             this.buttonPendentePagamento.TabIndex = 23;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(864, 575);
             this.Controls.Add(this.buttonPagamentoRealizado);
             this.Controls.Add(this.buttonPendentePagamento);
             this.Controls.Add(this.dataGridViewpagamento);

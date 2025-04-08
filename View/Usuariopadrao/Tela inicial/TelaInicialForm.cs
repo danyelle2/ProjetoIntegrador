@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
 namespace ProjetoIntegrador.View
 {
@@ -102,6 +103,12 @@ namespace ProjetoIntegrador.View
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos();
+                telapagamento.Show();
         }
     }
 }
