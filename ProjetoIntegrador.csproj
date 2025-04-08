@@ -100,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BancoDeDados\AuthService.cs" />
     <Compile Include="BancoDeDados\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
     <Compile Include="BancoDeDados\SessionUser.cs" />
