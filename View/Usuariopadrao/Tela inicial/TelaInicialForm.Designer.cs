@@ -35,13 +35,16 @@
             this.pictureBoxCadastroAlunos = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewListaGeralAlunos = new System.Windows.Forms.DataGridView();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.textBoxPesquisa = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.MsgTemporariaPagamento = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // MsgExplicacaoGrafico
@@ -116,13 +119,14 @@
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBoxGráficoDesaparece);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBoxGráficoAparece);
             // 
-            // dataGridView1
+            // dataGridViewListaGeralAlunos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(250, 324);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(698, 255);
-            this.dataGridView1.TabIndex = 18;
+            this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(250, 324);
+            this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(698, 255);
+            this.dataGridViewListaGeralAlunos.TabIndex = 18;
+            this.dataGridViewListaGeralAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // directorySearcher1
             // 
@@ -137,13 +141,39 @@
             this.textBoxPesquisa.Size = new System.Drawing.Size(271, 20);
             this.textBoxPesquisa.TabIndex = 19;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(1008, 176);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(119, 107);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // MsgTemporariaPagamento
+            // 
+            this.MsgTemporariaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MsgTemporariaPagamento.AutoSize = true;
+            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(1145, 186);
+            this.MsgTemporariaPagamento.Name = "MsgTemporariaPagamento";
+            this.MsgTemporariaPagamento.Size = new System.Drawing.Size(16, 13);
+            this.MsgTemporariaPagamento.TabIndex = 21;
+            this.MsgTemporariaPagamento.Text = "...";
+            this.MsgTemporariaPagamento.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
+            this.MsgTemporariaPagamento.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
+            // 
             // TelaInicialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1227, 591);
+            this.Controls.Add(this.MsgTemporariaPagamento);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBoxPesquisa);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewListaGeralAlunos);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBoxCadastroAlunos);
@@ -157,7 +187,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,8 +202,10 @@
         private System.Windows.Forms.PictureBox pictureBoxCadastroAlunos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewListaGeralAlunos;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.TextBox textBoxPesquisa;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label MsgTemporariaPagamento;
     }
 }

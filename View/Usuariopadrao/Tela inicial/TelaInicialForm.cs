@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
 namespace ProjetoIntegrador.View
 {
@@ -77,14 +78,37 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-
+            TelaInicialForm telaInicial = new TelaInicialForm();
+            telaInicial.Hide();
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
-            telaGrafico.ShowDialog();
+            telaGrafico.Show();
         }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
+        {
+            MsgTemporariaPagamento.Visible = true;
+            MsgTemporariaPagamento.Text = "Status do pagamentos dos alunos";
+        }
+
+        private void MsgTemporariaPagamento_Desaparece(object sender, EventArgs e)
+        {
+            MsgTemporariaPagamento.Visible = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos();
+                telapagamento.Show();
         }
     }
 }

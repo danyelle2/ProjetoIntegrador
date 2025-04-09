@@ -67,6 +67,21 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
+        public bool ValidarComboBox(ComboBox Modalidade, ComboBox TipoUsuario, Label MsgErroModalidade, Label MsgErroTipoUsuario) //colocar essa função em todos as tela com combobox
+        {
+            if (Modalidade.SelectedItem == null || (Modalidade.SelectedItem.ToString() != "Anual" && Modalidade.SelectedItem.ToString() != "Mensal"))
+            {
+                MsgErroModalidade.Text = "Selecione uma opção válida.";
+                return false;
+            }
+            if (TipoUsuario.SelectedItem == null || (TipoUsuario.SelectedItem.ToString() != "Ativo" && TipoUsuario.SelectedItem.ToString() != "Inativo"))
+            {
+                MsgErroTipoUsuario.Text = "Selecione uma opção válida";
+
+                return false;
+            }
+            return true;
+        }
     }
 }
 

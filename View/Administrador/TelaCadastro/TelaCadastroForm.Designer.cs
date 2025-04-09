@@ -52,6 +52,7 @@
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.labelMsgErroModalidade = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,6 +61,7 @@
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox3.Controls.Add(this.labelMsgErroModalidade);
             this.groupBox3.Controls.Add(this.MsgErrorTipoUsuario);
             this.groupBox3.Controls.Add(this.comboBoxModalidade);
             this.groupBox3.Controls.Add(this.label6);
@@ -315,6 +317,16 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // labelMsgErroModalidade
+            // 
+            this.labelMsgErroModalidade.AutoSize = true;
+            this.labelMsgErroModalidade.ForeColor = System.Drawing.Color.IndianRed;
+            this.labelMsgErroModalidade.Location = new System.Drawing.Point(269, 125);
+            this.labelMsgErroModalidade.Name = "labelMsgErroModalidade";
+            this.labelMsgErroModalidade.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroModalidade.TabIndex = 68;
+            this.labelMsgErroModalidade.Text = "...";
+            // 
             // TelaCadastroForm
             // 
             this.AcceptButton = this.btnCadastro;
@@ -366,5 +378,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label MsgErrorSenha;
         private System.Windows.Forms.Label MsgErrorTipoUsuario;
+        private System.Windows.Forms.Label labelMsgErroModalidade;
     }
 }

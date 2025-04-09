@@ -33,8 +33,9 @@ namespace ProjetoIntegrador.View
             bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
             bool DataInvalida = cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
             bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
+            bool resultadoComboBox = cadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
             // pedir ajuda para ver se ta faltando alguma coisa 
-            if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel)
+            if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
             {
                 bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
                 bool resultadoCadastrarAluno = cadastroAlunoController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
