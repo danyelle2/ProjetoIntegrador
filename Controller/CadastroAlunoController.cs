@@ -119,9 +119,8 @@ namespace ProjetoIntegrador.Controller
 
         public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel,ComboBox StatusAluno)
         {
-            // PERGUNTAR AO PROFESSOR COMO FAZER ISSO COM BANCO DE DADOS
-            // Aluno novoAluno = new Aluno(nome.Text, idade.Text, telefone.Text, data.Text, plano.SelectedItem.ToString(), nomeResponsavel.Text);
-            // alunos.Add(novoAluno);
+            // Criar um repositorio que vai chamar o banco de dados aqui eu vou abrir uma classe chamada repositorio pro aluno e professor 
+            //nela chamar o banco de dados e depos 
             return true;
         }
 

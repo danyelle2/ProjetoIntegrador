@@ -66,6 +66,7 @@ namespace ProjetoIntegrador.View
             {
 
                 //colocar aqui o repositorio que vai chamar o banco de dados
+                //criar um repositorio para o aluno colocar datagride e colocar uma lista (Olhar o projeto do professor como base )
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
                 telaCadastroForm.Dispose();
