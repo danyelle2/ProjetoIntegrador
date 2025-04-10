@@ -22,7 +22,7 @@ namespace ProjetoIntegrador.View
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
             // não sei se coloca nessa tela ou abre um controller para ela 
-            //teste se funcionar fazer a mesma coisa só que com ano
+            //teste se funcionar fazer a mesma coisa só que com ano 
 
             var movimentacoes = new List<EntradaSaidaAlunos>
         {
