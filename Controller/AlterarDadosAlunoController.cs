@@ -12,8 +12,7 @@ namespace ProjetoIntegrador.Controller
     {
         public bool AparecerCampoResponsavel(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
-            //perguntar se precisa dessa funcao, coloquei pq se a pessoa colocar a idade errada no cadastro
-            // quando alterar idade errada vai aparecer nome do responsável.
+            
             if (int.TryParse(idade.Text, out int idadeAluno))
             {
 
@@ -48,7 +47,6 @@ namespace ProjetoIntegrador.Controller
 
         public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno, TextBox dataSaida)
         {
-            // adicionar data saida
             if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(dataEntrada.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -78,7 +76,6 @@ namespace ProjetoIntegrador.Controller
 
         public bool ValidarDatas(TextBox dataentrada, Label MsgErroDataEntrada,TextBox dataSaida, Label MsgErrodataSaida)
         {
-            // adicionar visibilidade na data saida se status for inativo
             DateTime dataEntrada, dataDeSaida;
          
             if (!DateTime.TryParse(dataentrada.Text, out dataEntrada ))
@@ -148,9 +145,9 @@ namespace ProjetoIntegrador.Controller
 
         public bool AlterarDadosAlunos(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
         {
-            // PERGUNTAR AO PROFESSOR COMO FAZER ISSO COM BANCO DE DADOS
-            // Aluno novoAluno = new Aluno(nome.Text, idade.Text, telefone.Text, data.Text, plano.SelectedItem.ToString(), nomeResponsavel.Text);
-            // alunos.Add(novoAluno);
+          
+            
+            //criar uma classe que chama o banco de dados e faz a alteração no cadastro do aluno
             return true;
         }
 

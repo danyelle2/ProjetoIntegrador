@@ -19,9 +19,9 @@ namespace ProjetoIntegrador
             
             InitializeComponent();
             this.FormClosing += AppClose;
-            LoginController loginController = new LoginController();
 
         }
+        LoginController loginController = new LoginController();
 
         public void AppClose(object sender, FormClosingEventArgs e)
         {

@@ -12,7 +12,6 @@ namespace ProjetoIntegrador.BancoDeDados
 
         public DatabaseService()
         {
-            // Configura a string de conexão no arquivo App.config
             string connectionString = ConfigurationManager.ConnectionStrings["MySqlConnection"].ConnectionString;
             _connection = new MySqlConnection(connectionString);
         }

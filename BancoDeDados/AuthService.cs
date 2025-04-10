@@ -1,6 +1,6 @@
 ﻿////-- Services/AuthService.cs
-using ConexaoMySQL.Models;
-using ConexaoMySQL.Services;
+//using ConexaoMySQL.Models;
+//using ConexaoMySQL.Services;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.BancoDeDados;
 using ProjetoIntegrador.Model;

@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,7 @@ namespace ProjetoIntegrador.View
             InitializeComponent();
             
         }
-        CadastroProfessorController cadastroProfessorController = new CadastroProfessorController();
+        BotoesCadastroController cadastroProfessorController = new BotoesCadastroController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -63,6 +64,7 @@ namespace ProjetoIntegrador.View
             bool resultadoComboBox = cadastroProfessorController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
+              
 
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
