@@ -107,7 +107,7 @@
     <Compile Include="Controller\AlterarDadosAlunoController.cs" />
     <Compile Include="Controller\CadastroAlunoController.cs" />
     <Compile Include="Controller\BotoesCadastroController.cs" />
-    <Compile Include="Controller\CadastroProfessorController.cs" />
+    <Compile Include="Controller\CadastroProfessorUserController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PagamentoController.cs" />
     <Compile Include="Model\Aluno.cs" />

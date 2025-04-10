@@ -20,7 +20,7 @@ namespace ProjetoIntegrador.BancoDeDados
             _databaseService = databaseService;
         }
 
-        public Usuario Authenticate(string email, string password)
+        public Usuario Authenticate(string usuario, string senha)
         {
             try
             {

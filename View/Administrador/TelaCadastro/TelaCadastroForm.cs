@@ -64,8 +64,8 @@ namespace ProjetoIntegrador.View
             bool resultadoComboBox = cadastroProfessorController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
-              
 
+                //colocar aqui o repositorio que vai chamar o banco de dados
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
                 telaCadastroForm.Dispose();
@@ -73,7 +73,7 @@ namespace ProjetoIntegrador.View
                 telalogin.Show();
 
                 //Somente adm fará o cadastro dos usuários, então devo criar uma função para a tela aparecer somente para ele
-                // Ocultar para o usuário o botão de cadastro. Será?
+                
             }
         }
 
