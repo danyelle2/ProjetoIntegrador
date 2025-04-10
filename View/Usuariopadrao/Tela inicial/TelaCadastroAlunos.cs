@@ -16,6 +16,7 @@ namespace ProjetoIntegrador.View
         public TelaCadastroAlunos()
         {
             InitializeComponent();
+
         }
         CadastroAlunoController cadastroAlunoController = new CadastroAlunoController();
 
