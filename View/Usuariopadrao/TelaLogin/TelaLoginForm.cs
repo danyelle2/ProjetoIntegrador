@@ -19,7 +19,9 @@ namespace ProjetoIntegrador
             
             InitializeComponent();
             this.FormClosing += AppClose;
+
         }
+        LoginController loginController = new LoginController();
 
         public void AppClose(object sender, FormClosingEventArgs e)
         {
@@ -27,7 +29,6 @@ namespace ProjetoIntegrador
 
         }              
         
-        LoginController loginController = new LoginController();
 
 
         private void TelaLoginForm_Load(object sender, EventArgs e)

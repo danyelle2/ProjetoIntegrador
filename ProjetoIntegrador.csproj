@@ -104,14 +104,23 @@
     <Compile Include="BancoDeDados\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
     <Compile Include="BancoDeDados\SessionUser.cs" />
-    <Compile Include="Controller\AlterarDadosAlunoController.cs" />
-    <Compile Include="Controller\CadastroAlunoController.cs" />
-    <Compile Include="Controller\CadastroProfessorController.cs" />
+    <Compile Include="Controller\CadastrarDadosAlunosController.cs" />
+    <Compile Include="Controller\BotoesAlterarDadosAlunoController.cs" />
+    <Compile Include="Controller\BotoesCadastroAlunoController.cs" />
+    <Compile Include="Controller\BotoesCadastroController.cs" />
+    <Compile Include="Controller\CadastroProfessorUserController.cs" />
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\PagamentoController.cs" />
+    <Compile Include="Controller\UsuarioRepositorio.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.Designer.cs">
+      <DependentUpon>TelaModalidadeEscolha.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +180,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.resx">
+      <DependentUpon>TelaModalidadeEscolha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.resx">
       <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
     </EmbeddedResource>
