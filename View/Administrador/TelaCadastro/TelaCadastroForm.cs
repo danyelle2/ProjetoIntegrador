@@ -14,12 +14,13 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaCadastroForm : Form
     {
+        BotoesCadastroController cadastroProfessorController;
         public TelaCadastroForm()
         {
             InitializeComponent();
-            
+            cadastroProfessorController = new BotoesCadastroController();
         }
-        BotoesCadastroController cadastroProfessorController = new BotoesCadastroController();
+         
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Dispose();
