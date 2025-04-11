@@ -10,9 +10,9 @@ namespace ProjetoIntegrador.Controller
 {
     internal class CadastroUserController
     {
-        private readonly AuthService _authService;
+        private readonly AutenticacaoLogin _authService;
         private readonly UsuarioRepositorio _usuarioRepositorio;
-        public CadastroUserController (AuthService authService, UsuarioRepositorio usuarioRepositorio)
+        public CadastroUserController (AutenticacaoLogin authService, UsuarioRepositorio usuarioRepositorio)
         {
             _authService = authService;
             _usuarioRepositorio = usuarioRepositorio;

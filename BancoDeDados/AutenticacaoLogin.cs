@@ -7,16 +7,16 @@ using System.Text;
 
 namespace ProjetoIntegrador.BancoDeDados
 {
-    public class AuthService
+    public class AutenticacaoLogin
     {
         private readonly DatabaseService _databaseService;
 
-        public AuthService(DatabaseService databaseService)
+        public AutenticacaoLogin(DatabaseService databaseService)
         {
             _databaseService = databaseService;
         }
 
-        public Usuario AuthenticateUsuario(string cpf, string senha, bool statusUsuario)
+        public Usuario AuthenticacaoUsuario(string cpf, string senha, bool statusUsuario)
         {
             try
             {

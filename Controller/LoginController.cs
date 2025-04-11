@@ -14,9 +14,9 @@ namespace ProjetoIntegrador.Controller
     public class LoginController
     {
 
-        private readonly AuthService _authService;
+        private readonly AutenticacaoLogin _authService;
         private readonly UsuarioRepositorio _usuarioRepositorio;
-        public LoginController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
+        public LoginController(AutenticacaoLogin authService, UsuarioRepositorio usuarioRepositorio)
         {
             _authService = authService;
             _usuarioRepositorio = usuarioRepositorio;
@@ -46,10 +46,10 @@ namespace ProjetoIntegrador.Controller
 
     public class AuthController
     {
-        private readonly AuthService _authService;
+        private readonly AutenticacaoLogin _authService;
         private readonly UsuarioRepositorio _usuarioRepositorio;
 
-        public AuthController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
+        public AuthController(AutenticacaoLogin authService, UsuarioRepositorio usuarioRepositorio)
         {
             _authService = authService;
             _usuarioRepositorio = usuarioRepositorio;

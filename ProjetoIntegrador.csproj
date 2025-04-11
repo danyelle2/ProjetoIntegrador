@@ -100,10 +100,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BancoDeDados\AuthService.cs" />
+    <Compile Include="BancoDeDados\AutenticacaoLogin.cs" />
     <Compile Include="BancoDeDados\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
     <Compile Include="BancoDeDados\SessionUser.cs" />
+    <Compile Include="Controller\Autenticacao\AutenticacaoLoginController.cs" />
+    <Compile Include="Controller\Repositorios\UsuarioRepositorio.cs" />
     <Compile Include="Controller\RepositorioUsuario.cs" />
     <Compile Include="Controller\LogicaBotoesController\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\LogicaBotoesController\BotoesCadastroAlunoController.cs" />
@@ -211,8 +213,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\Repositorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
