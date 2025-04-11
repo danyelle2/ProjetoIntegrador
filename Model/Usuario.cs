@@ -8,11 +8,14 @@ namespace ProjetoIntegrador.Model
 {
      public class Usuario
     {
-        // colocar do jeito que ta no banco de dados
+        // colocar do jeito que ta no banco de dados aqui é para ele identificar na autentificação de login
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public string SenhaHash { get; set; }
+        public string Senha { get; set; }
+        public string TipoUsuario { get; set; }
+        public int TipoMembro { get; set; }
+        public bool StatusUsuario { get; set; }
 
 
     }

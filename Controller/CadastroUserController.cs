@@ -8,11 +8,11 @@ using ProjetoIntegrador.Model;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class CadastroProfessorUserController
+    internal class CadastroUserController
     {
         private readonly AuthService _authService;
         private readonly UsuarioRepositorio _usuarioRepositorio;
-        public CadastroProfessorUserController (AuthService authService, UsuarioRepositorio usuarioRepositorio)
+        public CadastroUserController (AuthService authService, UsuarioRepositorio usuarioRepositorio)
         {
             _authService = authService;
             _usuarioRepositorio = usuarioRepositorio;

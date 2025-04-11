@@ -16,12 +16,12 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaAlterarDadosAlunosForms : Form
     {
-        AlterarDadosAlunoController alterarDadosAlunoController;
+        BotoesAlterarDadosAlunoController alterarDadosAlunoController;
 
         public TelaAlterarDadosAlunosForms()
         {
             InitializeComponent();
-            alterarDadosAlunoController = new AlterarDadosAlunoController();
+            alterarDadosAlunoController = new BotoesAlterarDadosAlunoController();
 
         }
 

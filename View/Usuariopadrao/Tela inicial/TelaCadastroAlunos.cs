@@ -13,11 +13,11 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaCadastroAlunos : Form
     {
-        CadastroAlunoController cadastroAlunoController;
+        BotoesCadastroAlunoController cadastroAlunoController;
         public TelaCadastroAlunos()
         {
             InitializeComponent();
-            cadastroAlunoController = new CadastroAlunoController();
+            cadastroAlunoController = new BotoesCadastroAlunoController();
 
         }
 

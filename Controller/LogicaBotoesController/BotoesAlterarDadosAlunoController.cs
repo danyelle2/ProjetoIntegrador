@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class AlterarDadosAlunoController
+    internal class BotoesAlterarDadosAlunoController
     {
         public bool AparecerCampoResponsavel(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
@@ -142,11 +142,10 @@ namespace ProjetoIntegrador.Controller
                 return true;
         
         }
-
         public bool AlterarDadosAlunos(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
         {
-          
-            
+
+
             //criar uma classe que chama o banco de dados e faz a alteração no cadastro do aluno
             return true;
         }
