@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class CadastroAlunoController
+    internal class BotoesCadastroAlunoController
     {
         public bool ValidarCadastroAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
@@ -41,12 +41,12 @@ namespace ProjetoIntegrador.Controller
                     MsgErroIdade.Text = "Idade inválida, favor colocar idade correta.";
                     return false;
                 }
-                     return true;
+            return true;
         }
 
-        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel,ComboBox statusAluno)
+        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
         {
-            if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem==null)
+            if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
@@ -60,12 +60,12 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-       
+
         public bool ValidarTelefone(TextBox telefone, Label MsgErroTelefone)
         {
             if (telefone.Text.Length < 10 || telefone.Text.Length > 11)
             {
-                MsgErroTelefone.Text= "Número de telefone deve ter 10 ou 11 dígitos.";
+                MsgErroTelefone.Text = "Número de telefone deve ter 10 ou 11 dígitos.";
                 return false;
             }
             return true;
@@ -76,7 +76,7 @@ namespace ProjetoIntegrador.Controller
             DateTime dataEntrada;
             if (!DateTime.TryParse(data.Text, out dataEntrada))
             {
-               MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
+                MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
                 return false;
             }
             else if (dataEntrada > DateTime.Now)
@@ -101,7 +101,7 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
-                
+
         public bool ValidarNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
             while (nomeResponsavel.Visible)
@@ -112,34 +112,14 @@ namespace ProjetoIntegrador.Controller
                     MsgErroResponsavel.Text = "Preencha o nome do responsável.";
 
                     return false;
-                }                      
+                }
             }
             return true;
         }
-
-        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel,ComboBox StatusAluno)
-        {
-            // Criar um repositorio que vai chamar o banco de dados aqui eu vou abrir uma classe chamada repositorio pro aluno e professor 
-            //nela chamar o banco de dados e depos 
-            return true;
-        }
-
-        public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
-        {         
-              
-            MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            nome.Clear();
-            idade.Clear();
-            telefone.Clear();
-            data.Clear();
-            plano.SelectedItem = null;
-            nomeResponsavel.Clear();
-            StatusAluno.SelectedItem = null;
-            return true;            
-        }
     }
 }
+
+      
 
 
 

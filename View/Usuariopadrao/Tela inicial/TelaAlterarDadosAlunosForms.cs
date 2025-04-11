@@ -20,7 +20,7 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
-        AlterarDadosAlunoController alterarDadosAlunoController =new AlterarDadosAlunoController();
+        BotoesAlterarDadosAlunoController alterarDadosAlunoController =new BotoesAlterarDadosAlunoController();
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
             // pensar em como criar uma funcao para quando clicar na lista e no botao alterar apareca os 

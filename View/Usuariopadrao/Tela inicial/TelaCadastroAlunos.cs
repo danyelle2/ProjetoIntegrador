@@ -18,7 +18,7 @@ namespace ProjetoIntegrador.View
             InitializeComponent();
 
         }
-        CadastroAlunoController cadastroAlunoController = new CadastroAlunoController();
+        BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {

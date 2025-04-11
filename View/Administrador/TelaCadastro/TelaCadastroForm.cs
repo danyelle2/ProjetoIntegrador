@@ -19,6 +19,7 @@ namespace ProjetoIntegrador.View
             InitializeComponent();
             
         }
+        CadastroProfessorUserController repositorioCadastroProfessor = new CadastroProfessorUserController();
         BotoesCadastroController cadastroProfessorController = new BotoesCadastroController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -62,6 +63,7 @@ namespace ProjetoIntegrador.View
             bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
             bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
             bool resultadoComboBox = cadastroProfessorController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
+            
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
 
@@ -73,7 +75,6 @@ namespace ProjetoIntegrador.View
                 TelaLoginForm telalogin = new TelaLoginForm();
                 telalogin.Show();
 
-                //Somente adm fará o cadastro dos usuários, então devo criar uma função para a tela aparecer somente para ele
                 
             }
         }

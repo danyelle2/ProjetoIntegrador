@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class AlterarDadosAlunoController
+    internal class BotoesAlterarDadosAlunoController
     {
         public bool AparecerCampoResponsavel(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
