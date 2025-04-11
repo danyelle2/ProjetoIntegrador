@@ -13,12 +13,13 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaCadastroAlunos : Form
     {
+        CadastroAlunoController cadastroAlunoController;
         public TelaCadastroAlunos()
         {
             InitializeComponent();
+            cadastroAlunoController = new CadastroAlunoController();
 
         }
-        CadastroAlunoController cadastroAlunoController = new CadastroAlunoController();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
