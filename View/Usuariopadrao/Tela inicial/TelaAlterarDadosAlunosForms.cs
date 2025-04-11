@@ -16,11 +16,15 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaAlterarDadosAlunosForms : Form
     {
+        AlterarDadosAlunoController alterarDadosAlunoController;
+
         public TelaAlterarDadosAlunosForms()
         {
             InitializeComponent();
+            alterarDadosAlunoController = new AlterarDadosAlunoController();
+
         }
-        AlterarDadosAlunoController alterarDadosAlunoController =new AlterarDadosAlunoController();
+
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
             // pensar em como criar uma funcao para quando clicar na lista e no botao alterar apareca os 
