@@ -43,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBoxCadastroAlunos = new System.Windows.Forms.PictureBox();
             this.textMsgErroIdade = new System.Windows.Forms.Label();
             this.textMsgErroResponsavel = new System.Windows.Forms.Label();
             this.textMsgErroTelefone = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelMsgErroPlano = new System.Windows.Forms.Label();
             this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox3
@@ -122,7 +120,7 @@
             // 
             // btnCadastrarAluno
             // 
-            this.btnCadastrarAluno.Location = new System.Drawing.Point(443, 157);
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(684, 404);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
             this.btnCadastrarAluno.Size = new System.Drawing.Size(75, 23);
             this.btnCadastrarAluno.TabIndex = 85;
@@ -180,16 +178,6 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 79;
             this.label1.Text = "Nome";
-            // 
-            // pictureBoxCadastroAlunos
-            // 
-            this.pictureBoxCadastroAlunos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCadastroAlunos.Image")));
-            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(64, 72);
-            this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
-            this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(100, 108);
-            this.pictureBoxCadastroAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxCadastroAlunos.TabIndex = 93;
-            this.pictureBoxCadastroAlunos.TabStop = false;
             // 
             // textMsgErroIdade
             // 
@@ -275,6 +263,8 @@
             this.AcceptButton = this.btnCadastrarAluno;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.labelMsgErroStatusAluno);
             this.Controls.Add(this.labelMsgErroPlano);
@@ -284,7 +274,6 @@
             this.Controls.Add(this.textMsgErroTelefone);
             this.Controls.Add(this.textMsgErroResponsavel);
             this.Controls.Add(this.textMsgErroIdade);
-            this.Controls.Add(this.pictureBoxCadastroAlunos);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox2);
@@ -303,7 +292,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaCadastroAlunos";
             this.Load += new System.EventHandler(this.TelaCadastroAlunos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,7 +313,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBoxCadastroAlunos;
         private System.Windows.Forms.Label textMsgErroIdade;
         private System.Windows.Forms.Label textMsgErroResponsavel;
         private System.Windows.Forms.Label textMsgErroTelefone;
