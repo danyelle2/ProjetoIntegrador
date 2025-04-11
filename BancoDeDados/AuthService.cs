@@ -30,7 +30,7 @@ namespace ProjetoIntegrador.BancoDeDados
                 var parameters = new MySqlParameter[]
                 {
 
-                    new MySqlParameter("@emailDigitado", email),
+                    new MySqlParameter("@emailDigitado", usuario),
 
                 };
 
@@ -41,7 +41,7 @@ namespace ProjetoIntegrador.BancoDeDados
                     {
                         // Verifica a senha
                         string storedHash = respostaBanco["senha_hash"].ToString();
-                        string inputHash = Criptografia.HashPassword(password);
+                        string inputHash = Criptografia.HashPassword(senha);
 
                         if (storedHash == inputHash)
                         {

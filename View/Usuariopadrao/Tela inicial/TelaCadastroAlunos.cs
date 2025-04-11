@@ -19,6 +19,7 @@ namespace ProjetoIntegrador.View
 
         }
         BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
+        CadastrarDadosAlunosController cadastrarDadosAlunosController = new CadastrarDadosAlunosController();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
@@ -38,8 +39,8 @@ namespace ProjetoIntegrador.View
             // pedir ajuda para ver se ta faltando alguma coisa 
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
             {
-                bool resultadoLimparCampos = cadastroAlunoController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
-                bool resultadoCadastrarAluno = cadastroAlunoController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
+                bool resultadoLimparCampos = cadastrarDadosAlunosController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
+                bool resultadoCadastrarAluno = cadastrarDadosAlunosController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
 
             }
 

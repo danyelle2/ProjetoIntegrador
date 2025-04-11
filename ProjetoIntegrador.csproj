@@ -104,7 +104,7 @@
     <Compile Include="BancoDeDados\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
     <Compile Include="BancoDeDados\SessionUser.cs" />
-    <Compile Include="Controller\AlterarDadosAlunosController.cs" />
+    <Compile Include="Controller\CadastrarDadosAlunosController.cs" />
     <Compile Include="Controller\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\BotoesCadastroController.cs" />

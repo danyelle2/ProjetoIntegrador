@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class AlterarDadosAlunosController
+    internal class CadastrarDadosAlunosController
     {
         public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
         {
@@ -32,5 +32,5 @@ namespace ProjetoIntegrador.Controller
         }
     }
 }
-    }
-}
+    
+

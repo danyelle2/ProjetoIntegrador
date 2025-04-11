@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.View;
 using System;
@@ -14,13 +15,13 @@ namespace ProjetoIntegrador.Controller
     public class LoginController
     {
 
-        private readonly AuthService _authService;
-        private readonly UsuarioRepositorio _usuarioRepositorio;
-        public LoginController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
-        {
-            _authService = authService;
-            _usuarioRepositorio = usuarioRepositorio;
-        }
+        //private readonly AuthService _authService;
+        //private readonly UsuarioRepositorio _usuarioRepositorio;
+        //public LoginController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
+        //{
+        //    _authService = authService;
+        //    _usuarioRepositorio = usuarioRepositorio;
+        //}
 
         public bool RealizarLogin(string usuario, string senha, Label labelMensagem)
         {
@@ -30,7 +31,7 @@ namespace ProjetoIntegrador.Controller
                 return false;
             }            
 
-             _authService.Authenticate(usuario, senha);
+             //_authService.Authenticate(usuario, senha);
 
             TelaInicialForm telaInicial = new TelaInicialForm();
             telaInicial.Show();
@@ -43,41 +44,41 @@ namespace ProjetoIntegrador.Controller
 
 
 
+//CÓDIGO DO REPOSITÓRIO DO PROFESSOR
+//public class AuthController
+//{
+//    private readonly AuthService _authService;
+//    private readonly UsuarioRepositorio _usuarioRepositorio;
 
-    public class AuthController
-    {
-        private readonly AuthService _authService;
-        private readonly UsuarioRepositorio _usuarioRepositorio;
+//    public AuthController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
+//    {
+//        _authService = authService;
+//        _usuarioRepositorio = usuarioRepositorio;
+//    }
 
-        public AuthController(AuthService authService, UsuarioRepositorio usuarioRepositorio)
-        {
-            _authService = authService;
-            _usuarioRepositorio = usuarioRepositorio;
-        }
+//    public Usuario Login(string email, string password)
+//    {
+//        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
+//        {
+//            throw new ArgumentException("Email e senha são obrigatórios");
+//        }
 
-        public Usuario Login(string email, string password)
-        {
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
-            {
-                throw new ArgumentException("Email e senha são obrigatórios");
-            }
+//        return _authService.Authenticate(email, password);
+//    }
 
-            return _authService.Authenticate(email, password);
-        }
+//    public bool Register(Usuario usuario, string password)
+//    {
 
-        public bool Register(Usuario usuario, string password)
-        {
+//        if (usuario == null)
+//        {
+//            throw new ArgumentNullException(nameof(usuario));
+//        }
 
-            if (usuario == null)
-            {
-                throw new ArgumentNullException(nameof(usuario));
-            }
+//        if (string.IsNullOrEmpty(password))
+//        {
+//            throw new ArgumentException("Senha é obrigatória");
+//        }
 
-            if (string.IsNullOrEmpty(password))
-            {
-                throw new ArgumentException("Senha é obrigatória");
-            }
-
-            return _usuarioRepositorio.Register(usuario, password);
-        }
-    }
+//        return _usuarioRepositorio.Register(usuario, password);
+//    }
+//}
