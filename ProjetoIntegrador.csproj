@@ -100,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Model\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
@@ -108,7 +109,6 @@
     <Compile Include="Controller\Aluno\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
-    <Compile Include="Controller\CadastroProfessorUserController.cs" />
     <Compile Include="Controller\PagamentoController.cs" />
     <Compile Include="Controller\UsuarioRepositorio.cs" />
     <Compile Include="Model\Aluno.cs" />

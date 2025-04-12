@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProjetoIntegrador.Controller.Usuario
+{
+    internal class LoginController
+    {
+         public bool CampoVazio(TextBox cpf, TextBox senha, Label mensagemError)
+        {
+            if (cpf == null || senha == null || mensagemError == null)
+            {
+                throw new ArgumentNullException("Os parâmetros não podem ser nulos");
+            }
+
+            {
+                mensagemError.Text="Por favor, preencha CPF e senha.";
+                return false;
+            }
+
+            return true;
+        }
+
+}
+
