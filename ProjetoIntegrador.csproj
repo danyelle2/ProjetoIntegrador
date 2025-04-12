@@ -100,19 +100,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BancoDeDados\AutenticacaoLogin.cs" />
+    <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="BancoDeDados\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
     <Compile Include="BancoDeDados\SessionUser.cs" />
     <Compile Include="Controller\Autenticacao\AutenticacaoLoginController.cs" />
-    <Compile Include="Controller\Repositorios\UsuarioRepositorio.cs" />
-    <Compile Include="Controller\RepositorioUsuario.cs" />
-    <Compile Include="Controller\LogicaBotoesController\BotoesAlterarDadosAlunoController.cs" />
-    <Compile Include="Controller\LogicaBotoesController\BotoesCadastroAlunoController.cs" />
-    <Compile Include="Controller\LogicaBotoesController\BotoesCadastroUserController.cs" />
-    <Compile Include="Controller\CadastroUserController.cs" />
-    <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\PagamentoController.cs" />
+    <Compile Include="Controller\Usuario\UsuarioRepositorio.cs" />
+    <Compile Include="Controller\Aluno\BotoesAlterarDadosAlunoController.cs" />
+    <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
+    <Compile Include="Controller\Usuario\BotoesCadastroUserController.cs" />
+    <Compile Include="Controller\Usuario\AutenticarLoginController.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Usuario.cs" />
