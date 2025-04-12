@@ -14,14 +14,15 @@ namespace ProjetoIntegrador
 {
     public partial class TelaLoginForm : Form
     {
+        LoginController loginController;
+
         public TelaLoginForm()
         {
             
             InitializeComponent();
             this.FormClosing += AppClose;
-
+            loginController = new LoginController();
         }
-        LoginController loginController = new LoginController();
 
         public void AppClose(object sender, FormClosingEventArgs e)
         {
