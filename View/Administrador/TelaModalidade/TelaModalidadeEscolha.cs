@@ -16,7 +16,10 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         public TelaModalidadeEscolha()
         {
             InitializeComponent();
+          
         }
+
+       
 
         public TelaModalidadeEscolha(Usuario usuario)
         {
