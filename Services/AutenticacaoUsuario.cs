@@ -2,7 +2,6 @@
 using ProjetoIntegrador.BancoDeDados;
 using ProjetoIntegrador.Model;
 using System;
-using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -17,7 +16,7 @@ namespace ProjetoIntegrador.BancoDeDados
             _databaseService = databaseService;
         }
 
-        public Usuario AutenticarUsuario(string cpf, string senha, bool statusUsuario)
+        public Usuario AutenticarUsuario(string cpf, string senha)
         {
             try
             {
@@ -33,14 +32,11 @@ namespace ProjetoIntegrador.BancoDeDados
                 {
                     if (respostaBanco.Read())
                     {
-                        bool status = Convert.ToBoolean(respostaBanco["status_usuario"]);
-                        if (status != statusUsuario)
-                            return null;
-
+                        
                         string storedHash = respostaBanco["senha"].ToString();
                         string inputHash = Criptografia.HashPassword(senha);
-
-                        if (SecureEquals(storedHash, inputHash))
+                        
+                        if (Criptografia.SecureEquals(storedHash, inputHash))
                         {
                             return new Usuario
                             {
@@ -48,7 +44,7 @@ namespace ProjetoIntegrador.BancoDeDados
                                 Nome = respostaBanco["nome"].ToString(),
                                 TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
                                 TipoMembro = Convert.ToInt32(respostaBanco["id_professor"]),
-                                StatusUsuario = status,
+                               
                             };
                         }
                     }
@@ -58,7 +54,8 @@ namespace ProjetoIntegrador.BancoDeDados
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro durante autenticação: " + ex.Message);
+                throw new Exception("Erro durante autenticação: " + ex.Message + "\n" + ex.StackTrace);
+
             }
         }
     }

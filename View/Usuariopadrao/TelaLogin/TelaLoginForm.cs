@@ -37,8 +37,10 @@ namespace ProjetoIntegrador
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
-        {
-                TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
+        {                     
+
+
+            TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
                 telaCadastroForm.Show();
                 this.Hide();
         }
