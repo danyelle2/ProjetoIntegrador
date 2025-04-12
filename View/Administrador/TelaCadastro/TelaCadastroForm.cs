@@ -14,13 +14,13 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaCadastroForm : Form
     {
+
+        BotoesCadastroController botoesCadastroController;
         public TelaCadastroForm()
         {
             InitializeComponent();
-            
+            botoesCadastroController = new BotoesCadastroController();
         }
-        CadastroProfessorUserController repositorioCadastroProfessor = new CadastroProfessorUserController();
-        BotoesCadastroController cadastroProfessorController = new BotoesCadastroController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -59,10 +59,10 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            bool resultadoCamposVazios = cadastroProfessorController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-            bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
-            bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
-            bool resultadoComboBox = cadastroProfessorController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
+            bool resultadoCamposVazios = botoesCadastroController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
+            bool Senhasiguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
+            bool TipoUsuario = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
+            bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
             
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
