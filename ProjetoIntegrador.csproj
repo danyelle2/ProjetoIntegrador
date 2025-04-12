@@ -101,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Services\AutenticacaoUsuario.cs" />
-    <Compile Include="BancoDeDados\Criptografia.cs" />
+    <Compile Include="Senha\Criptografia.cs" />
     <Compile Include="BancoDeDados\DataBaseService.cs" />
     <Compile Include="BancoDeDados\SessionUser.cs" />
     <Compile Include="Controller\Autenticacao\AutenticacaoLoginController.cs" />

@@ -2,53 +2,53 @@
 using ProjetoIntegrador.BancoDeDados;
 using ProjetoIntegrador.Model;
 using System;
+using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 
 namespace ProjetoIntegrador.BancoDeDados
 {
-    public class AutenticacaoUsuario
+    public class AutenticacaoLogin
     {
         private readonly DatabaseService _databaseService;
 
-        public AutenticacaoUsuario(DatabaseService databaseService)
+        public AutenticacaoLogin(DatabaseService databaseService)
         {
             _databaseService = databaseService;
         }
 
-        public Usuario AuthenticacaoUsuario(string cpf, string senha, bool statusUsuario)
+        public Usuario AutenticarUsuario(string cpf, string senha, bool statusUsuario)
         {
             try
             {
-                //  Fiz essa para autenticar login
-                string query = "SELECT * FROM usuario WHERE cpf = @cpfdigitado AND status_usuario = @StatusUsuario";
+                string query = "SELECT * FROM usuario WHERE cpf = @cpf";
                 var parameters = new MySqlParameter[]
                 {
-                   new MySqlParameter("@cpfdigitado", cpf),
-                   new MySqlParameter("@StatusUsuario", statusUsuario ? 1 : 0), 
+            new MySqlParameter("@cpf", cpf),
                 };
+
+
 
                 using (var respostaBanco = _databaseService.ExecuteQuery(query, parameters))
                 {
                     if (respostaBanco.Read())
                     {
-                        
-                        bool status = Convert.ToBoolean(respostaBanco["status_usuario"]); 
+                        bool status = Convert.ToBoolean(respostaBanco["status_usuario"]);
+                        if (status != statusUsuario)
+                            return null;
 
-                        
                         string storedHash = respostaBanco["senha"].ToString();
                         string inputHash = Criptografia.HashPassword(senha);
 
-                        if (storedHash == inputHash)
+                        if (SecureEquals(storedHash, inputHash))
                         {
                             return new Usuario
                             {
                                 Id = Convert.ToInt32(respostaBanco["id_usuario"]),
                                 Nome = respostaBanco["nome"].ToString(),
-                                Senha = respostaBanco["senha"].ToString(),
                                 TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
                                 TipoMembro = Convert.ToInt32(respostaBanco["id_professor"]),
-                                StatusUsuario = status, 
+                                StatusUsuario = status,
                             };
                         }
                     }
