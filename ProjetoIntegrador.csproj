@@ -100,7 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Services\AutenticacaoLogin.cs" />
+    <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Model\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />
