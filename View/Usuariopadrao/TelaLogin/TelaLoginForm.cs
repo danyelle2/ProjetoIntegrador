@@ -1,5 +1,7 @@
-﻿using ProjetoIntegrador.Controller;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.View;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,14 +16,12 @@ namespace ProjetoIntegrador
 {
     public partial class TelaLoginForm : Form
     {
-        LoginController loginController;
 
         public TelaLoginForm()
         {
             
             InitializeComponent();
             this.FormClosing += AppClose;
-            loginController = new LoginController();
         }
 
         public void AppClose(object sender, FormClosingEventArgs e)
@@ -46,13 +46,36 @@ namespace ProjetoIntegrador
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool resultadoLogin = loginController.RealizarLogin(TxtUsuario.Text, TxtSenha.Text, MsgErro);
+          
+            string cpf = TxtUsuario.Text.Trim();
+            string senha = TxtSenha.Text;
 
-            if (resultadoLogin)
+            try
             {
-                this.Hide();
+                var databaseService = new DatabaseService();
+                var autenticador = new AutenticacaoUsuario(databaseService);
+                var usuario = autenticador.AutenticarUsuario(cpf, senha);
+
+                if (usuario != null)
+                {
+                    MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Hide();
+
+                    var telaEscolhaModalidade = new TelaModalidadeEscolha(usuario);
+                    telaEscolhaModalidade.Show();
+                }
+                else
+                {
+                    MsgErro.Text = "CPF ou senha inválidos!";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao tentar fazer login:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+              
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

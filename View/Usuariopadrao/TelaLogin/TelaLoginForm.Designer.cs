@@ -121,7 +121,7 @@
             // 
             // TxtUsuario
             // 
-            this.TxtUsuario.Location = new System.Drawing.Point(412, 230);
+            this.TxtUsuario.Location = new System.Drawing.Point(412, 233);
             this.TxtUsuario.MaxLength = 11;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(216, 20);

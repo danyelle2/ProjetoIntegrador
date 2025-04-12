@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,18 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         public TelaModalidadeEscolha()
         {
             InitializeComponent();
+        }
+
+        public TelaModalidadeEscolha(Usuario usuario)
+        {
+            Usuario = usuario;
+        }
+
+        public Usuario Usuario { get; }
+
+        private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
