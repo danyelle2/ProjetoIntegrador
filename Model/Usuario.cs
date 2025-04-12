@@ -17,6 +17,8 @@ namespace ProjetoIntegrador.Model
         public string TipoUsuario { get; set; }
         public int TipoMembro { get; set; }
         public bool StatusUsuario { get; set; }
+        
+        public string Modalidade { get; set; }
 
 
     }

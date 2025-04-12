@@ -47,8 +47,9 @@ namespace ProjetoIntegrador
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
-        {
-            bool resultadoCamposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha,MsgErro);
+           {
+            bool camposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha, MsgErro);
+            if (camposVazios) return;
 
             string cpf = TxtUsuario.Text.Trim();
             string senha = TxtSenha.Text;
@@ -57,7 +58,7 @@ namespace ProjetoIntegrador
             {
                 var databaseService = new DatabaseService();
                 var autenticador = new AutenticacaoUsuario(databaseService);
-                var usuario = autenticador.AutenticarUsuario(cpf, senha);
+                var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true); 
 
                 if (usuario != null)
                 {
@@ -71,6 +72,7 @@ namespace ProjetoIntegrador
                 else
                 {
                     MsgErro.Text = "CPF ou senha inválidos!";
+                    return;
                 }
             }
             catch (Exception ex)
@@ -78,7 +80,7 @@ namespace ProjetoIntegrador
                 MessageBox.Show("Erro ao tentar fazer login:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-              
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
