@@ -1,5 +1,6 @@
 ﻿using ProjetoIntegrador.BancoDeDados;
 using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.View;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using System;
@@ -16,12 +17,13 @@ namespace ProjetoIntegrador
 {
     public partial class TelaLoginForm : Form
     {
-
+        LoginController loginController;
         public TelaLoginForm()
         {
             
             InitializeComponent();
             this.FormClosing += AppClose;
+            loginController = new LoginController();
         }
 
         public void AppClose(object sender, FormClosingEventArgs e)
@@ -46,7 +48,8 @@ namespace ProjetoIntegrador
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-          
+            bool resultadoCamposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha,MsgErro);
+
             string cpf = TxtUsuario.Text.Trim();
             string senha = TxtSenha.Text;
 
