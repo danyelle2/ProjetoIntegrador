@@ -102,9 +102,12 @@
   <ItemGroup>
     <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
+    <Compile Include="Controller\Usuario\UsuarioRepositorio.cs" />
+    <Compile Include="Model\Professor.cs" />
     <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Model\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\ListaProfessores.cs" />
     <Compile Include="Services\SessionUser.cs" />
     <Compile Include="Controller\CadastrarDadosAlunosController.cs" />
     <Compile Include="Controller\Aluno\BotoesAlterarDadosAlunoController.cs" />

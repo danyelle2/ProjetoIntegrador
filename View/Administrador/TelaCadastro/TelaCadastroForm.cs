@@ -1,4 +1,6 @@
-﻿using ProjetoIntegrador.Controller;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
@@ -67,8 +69,21 @@ namespace ProjetoIntegrador.View
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
 
-                //colocar aqui o repositorio que vai chamar o banco de dados
-                //criar um repositorio para o aluno colocar datagride e colocar uma lista (Olhar o projeto do professor como base )
+                var databaseService = new DatabaseService();
+                var repositorio = new UsuarioRepositorio(databaseService);
+
+                var novoUsuario = new Usuario
+                {
+                    Nome = textNomeCadastro.Text.Trim(),
+                    Cpf = txtUsuarioCadastro.Text.Trim(),
+                    Senha = txtSenhaCadastro.Text, 
+                    TipoUsuario = comboBoxTipoUsuario.SelectedItem.ToString().ToLower(),
+                    TipoMembro = Convert.ToInt32(comboBoxModalidade.SelectedValue) 
+                };
+
+                // Enviar para o banco
+                repositorio.CadastrarUsuario(novoUsuario);
+
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
                 telaCadastroForm.Dispose();
