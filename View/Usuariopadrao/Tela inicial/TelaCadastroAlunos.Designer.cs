@@ -128,12 +128,13 @@
             // btnCadastrarAluno
             // 
             this.btnCadastrarAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnCadastrarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAluno.BackgroundImage")));
+            this.btnCadastrarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastrarAluno.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarAluno.Location = new System.Drawing.Point(655, 395);
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(672, 373);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
-            this.btnCadastrarAluno.Size = new System.Drawing.Size(104, 34);
+            this.btnCadastrarAluno.Size = new System.Drawing.Size(104, 51);
             this.btnCadastrarAluno.TabIndex = 85;
-            this.btnCadastrarAluno.Text = "Cadastrar";
             this.btnCadastrarAluno.UseVisualStyleBackColor = false;
             this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
