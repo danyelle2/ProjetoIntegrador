@@ -45,11 +45,7 @@
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelMsgErroModalidade
@@ -58,7 +54,7 @@
             this.labelMsgErroModalidade.BackColor = System.Drawing.Color.Transparent;
             this.labelMsgErroModalidade.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMsgErroModalidade.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroModalidade.Location = new System.Drawing.Point(701, 980);
+            this.labelMsgErroModalidade.Location = new System.Drawing.Point(184, 984);
             this.labelMsgErroModalidade.Name = "labelMsgErroModalidade";
             this.labelMsgErroModalidade.Size = new System.Drawing.Size(16, 16);
             this.labelMsgErroModalidade.TabIndex = 68;
@@ -70,7 +66,7 @@
             this.MsgErrorTipoUsuario.BackColor = System.Drawing.Color.Transparent;
             this.MsgErrorTipoUsuario.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgErrorTipoUsuario.ForeColor = System.Drawing.Color.Maroon;
-            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(377, 822);
+            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(184, 828);
             this.MsgErrorTipoUsuario.Name = "MsgErrorTipoUsuario";
             this.MsgErrorTipoUsuario.Size = new System.Drawing.Size(16, 16);
             this.MsgErrorTipoUsuario.TabIndex = 57;
@@ -122,25 +118,23 @@
             // 
             this.MsgExplicacaoUsuario.AutoSize = true;
             this.MsgExplicacaoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoUsuario.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgExplicacaoUsuario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgExplicacaoUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.MsgExplicacaoUsuario.Location = new System.Drawing.Point(184, 822);
+            this.MsgExplicacaoUsuario.Location = new System.Drawing.Point(676, 701);
             this.MsgExplicacaoUsuario.Name = "MsgExplicacaoUsuario";
-            this.MsgExplicacaoUsuario.Size = new System.Drawing.Size(16, 16);
+            this.MsgExplicacaoUsuario.Size = new System.Drawing.Size(0, 20);
             this.MsgExplicacaoUsuario.TabIndex = 65;
-            this.MsgExplicacaoUsuario.Text = "...";
             // 
             // TxTExplicacaoModalidade
             // 
             this.TxTExplicacaoModalidade.AutoSize = true;
             this.TxTExplicacaoModalidade.BackColor = System.Drawing.Color.Transparent;
-            this.TxTExplicacaoModalidade.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxTExplicacaoModalidade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxTExplicacaoModalidade.ForeColor = System.Drawing.Color.Black;
-            this.TxTExplicacaoModalidade.Location = new System.Drawing.Point(184, 978);
+            this.TxTExplicacaoModalidade.Location = new System.Drawing.Point(676, 865);
             this.TxTExplicacaoModalidade.Name = "TxTExplicacaoModalidade";
-            this.TxTExplicacaoModalidade.Size = new System.Drawing.Size(16, 16);
+            this.TxTExplicacaoModalidade.Size = new System.Drawing.Size(0, 20);
             this.TxTExplicacaoModalidade.TabIndex = 67;
-            this.TxTExplicacaoModalidade.Text = "...";
             // 
             // btnModalidadeCadastro
             // 
@@ -164,51 +158,47 @@
             this.MsgErrorSenha.ForeColor = System.Drawing.Color.Maroon;
             this.MsgErrorSenha.Location = new System.Drawing.Point(1142, 634);
             this.MsgErrorSenha.Name = "MsgErrorSenha";
-            this.MsgErrorSenha.Size = new System.Drawing.Size(16, 16);
+            this.MsgErrorSenha.Size = new System.Drawing.Size(0, 16);
             this.MsgErrorSenha.TabIndex = 56;
-            this.MsgErrorSenha.Text = "...";
             // 
             // txtSenhaCadastro
             // 
             this.txtSenhaCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaCadastro.Location = new System.Drawing.Point(0, 0);
-            this.txtSenhaCadastro.Multiline = true;
+            this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenhaCadastro.Location = new System.Drawing.Point(1145, 419);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
             this.txtSenhaCadastro.PasswordChar = '*';
-            this.txtSenhaCadastro.Size = new System.Drawing.Size(532, 61);
+            this.txtSenhaCadastro.Size = new System.Drawing.Size(532, 35);
             this.txtSenhaCadastro.TabIndex = 49;
+            this.txtSenhaCadastro.TextChanged += new System.EventHandler(this.txtSenhaCadastro_TextChanged);
             // 
             // textSenhaConfirmada
             // 
             this.textSenhaConfirmada.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSenhaConfirmada.Location = new System.Drawing.Point(0, 0);
-            this.textSenhaConfirmada.Multiline = true;
+            this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textSenhaConfirmada.Location = new System.Drawing.Point(1145, 585);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
             this.textSenhaConfirmada.PasswordChar = '*';
-            this.textSenhaConfirmada.Size = new System.Drawing.Size(532, 61);
+            this.textSenhaConfirmada.Size = new System.Drawing.Size(532, 35);
             this.textSenhaConfirmada.TabIndex = 55;
             // 
             // textNomeCadastro
             // 
-            this.textNomeCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textNomeCadastro.Location = new System.Drawing.Point(187, 391);
+            this.textNomeCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNomeCadastro.Location = new System.Drawing.Point(187, 404);
             this.textNomeCadastro.MaxLength = 11;
-            this.textNomeCadastro.Multiline = true;
             this.textNomeCadastro.Name = "textNomeCadastro";
-            this.textNomeCadastro.Size = new System.Drawing.Size(530, 61);
+            this.textNomeCadastro.Size = new System.Drawing.Size(530, 35);
             this.textNomeCadastro.TabIndex = 51;
             this.textNomeCadastro.TextChanged += new System.EventHandler(this.textNomeCadastro_TextChanged);
             // 
             // txtUsuarioCadastro
             // 
-            this.txtUsuarioCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioCadastro.Location = new System.Drawing.Point(187, 237);
+            this.txtUsuarioCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuarioCadastro.Location = new System.Drawing.Point(187, 251);
             this.txtUsuarioCadastro.MaxLength = 11;
-            this.txtUsuarioCadastro.Multiline = true;
             this.txtUsuarioCadastro.Name = "txtUsuarioCadastro";
-            this.txtUsuarioCadastro.Size = new System.Drawing.Size(530, 63);
+            this.txtUsuarioCadastro.Size = new System.Drawing.Size(530, 35);
             this.txtUsuarioCadastro.TabIndex = 48;
             // 
             // btnCadastro
@@ -247,22 +237,6 @@
             this.panel2.Size = new System.Drawing.Size(243, 77);
             this.panel2.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtSenhaCadastro);
-            this.panel3.Location = new System.Drawing.Point(1145, 404);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(532, 61);
-            this.panel3.TabIndex = 77;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.textSenhaConfirmada);
-            this.panel4.Location = new System.Drawing.Point(1145, 570);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(532, 61);
-            this.panel4.TabIndex = 79;
-            // 
             // TelaCadastroForm
             // 
             this.AcceptButton = this.btnCadastro;
@@ -270,9 +244,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1870, 1061);
+            this.Controls.Add(this.txtSenhaCadastro);
+            this.Controls.Add(this.textSenhaConfirmada);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.MsgErrorSenha);
             this.Controls.Add(this.labelMsgErroModalidade);
             this.Controls.Add(this.btnVoltar);
@@ -291,10 +265,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaCadastroForm_Load);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,7 +287,5 @@
         private System.Windows.Forms.Label MsgErrorTipoUsuario;
         private System.Windows.Forms.Label labelMsgErroModalidade;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
     }
 }

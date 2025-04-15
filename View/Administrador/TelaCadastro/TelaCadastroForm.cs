@@ -98,5 +98,10 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void txtSenhaCadastro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
