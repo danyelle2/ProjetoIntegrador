@@ -83,5 +83,20 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textNomeCadastro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
