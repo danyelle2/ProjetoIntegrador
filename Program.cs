@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoIntegrador.View;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
+using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
 namespace ProjetoIntegrador
 {
@@ -18,7 +19,7 @@ namespace ProjetoIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaCadastroForm());
+            Application.Run(new TelaModalidadeEscolha());
             //Application.Run(new TelaLoginForm());
         }
     }
