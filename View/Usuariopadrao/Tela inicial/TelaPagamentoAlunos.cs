@@ -1,4 +1,6 @@
-﻿using ProjetoIntegrador.Model;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +18,8 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         public TelaPagamentoAlunos()
         {
             InitializeComponent();
+            DatabaseService dbService = new DatabaseService(); 
+            alunoController = new AlunoPagamentoController(dbService);
         }
 
         private void dataGridViewpagamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
