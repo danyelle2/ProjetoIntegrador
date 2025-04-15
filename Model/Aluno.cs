@@ -14,4 +14,4 @@ namespace ProjetoIntegrador.Model
         public bool StatusPagamento { get; set; }
     }
 }
-}
+
