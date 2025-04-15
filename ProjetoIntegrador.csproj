@@ -100,6 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Model\Criptografia.cs" />

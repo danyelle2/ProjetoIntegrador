@@ -20,6 +20,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 
         private void dataGridViewpagamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             // não sei se coloca nessa tela ou coloca na classe controller e só chamo aqui
             //teste de funcionamento
             List<Aluno> alunos = new List<Aluno>
