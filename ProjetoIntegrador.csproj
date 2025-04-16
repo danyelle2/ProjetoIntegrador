@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
+    <Compile Include="Controller\Aluno\AlunoRepositorio.cs" />
+    <Compile Include="Controller\Aluno\RepositorioGrafico.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Controller\Usuario\UsuarioRepositorio.cs" />
     <Compile Include="Model\Professor.cs" />

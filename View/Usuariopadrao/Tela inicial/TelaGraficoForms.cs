@@ -1,4 +1,5 @@
-﻿using ProjetoIntegrador.Model;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,51 +22,46 @@ namespace ProjetoIntegrador.View
 
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
-            // não sei se coloca nessa tela ou abre um controller para ela 
-            //teste se funcionar fazer a mesma coisa só que com ano 
+            var database = new DatabaseService();
+            var repositorio = new AlunoRepositorio(database);
 
-            var movimentacoes = new List<EntradaSaidaAlunos>
-        {
-            new EntradaSaidaAlunos { Mes = "Jan", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Fev", Entrada = 6, Saida = 1 },
-            new EntradaSaidaAlunos { Mes = "Mar", Entrada = 7, Saida = 1 },
-            new EntradaSaidaAlunos { Mes = "Abr", Entrada = 2, Saida = 5 },
-            new EntradaSaidaAlunos { Mes = "Mai", Entrada = 9, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Jun", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Jul", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos   { Mes = "Ago", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Set", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Out", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Nov", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Dez", Entrada = 0, Saida = 0 }
-        };
+            var entradas = repositorio.ObterEntradasPorMes();
+            var saidas = repositorio.ObterSaidasPorMes();
+
             chart1.Series.Clear();
-            var Entrada = new Series("Entradas")
-            {
-                ChartType = SeriesChartType.Column, 
-                Color = Color.Green, 
-                BorderWidth = 3
-            };
-            // qualquer coisa mudar a cor do gráfico colocar um azul não sei perguntar pro grupo. 
-             
-            var Saida = new Series("Saídas")
+
+            var serieEntrada = new Series("Entradas")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.Red, 
+                Color = Color.Green,
                 BorderWidth = 3
             };
 
-            foreach (var movimentacao in movimentacoes)
+            var serieSaida = new Series("Saídas")
             {
-                Entrada.Points.AddXY(movimentacao.Mes, movimentacao.Entrada);
-                Saida.Points.AddXY(movimentacao.Mes, movimentacao.Saida);
+                ChartType = SeriesChartType.Column,
+                Color = Color.Red,
+                BorderWidth = 3
+            };
+
+            string[] meses = { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez" };
+
+            for (int i = 1; i <= 12; i++)
+            {
+                int entrada = entradas.ContainsKey(i) ? entradas[i] : 0;
+                int saida = saidas.ContainsKey(i) ? saidas[i] : 0;
+
+                serieEntrada.Points.AddXY(meses[i - 1], entrada);
+                serieSaida.Points.AddXY(meses[i - 1], saida);
             }
-            chart1.Series.Add(Entrada);
-            chart1.Series.Add(Saida);
-            chart1.Titles.Add("Entrada e Saída de Alunos por Mês"); //pensar num texto melhor, mensal
+
+            chart1.Series.Add(serieEntrada);
+            chart1.Series.Add(serieSaida);
+            chart1.Titles.Add("Entrada e Saída de Alunos por Mês");
             chart1.ChartAreas[0].AxisX.Title = "Mês";
             chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
