@@ -73,7 +73,9 @@ namespace ProjetoIntegrador.Controller.Aluno
 
                 return resultado;
             }
-        }
+
+        
+    }
     }
 
 

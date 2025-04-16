@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,12 @@ namespace ProjetoIntegrador.View
             var database = new DatabaseService();
             var repositorio = new AlunoRepositorio(database);
 
-            var entradas = repositorio.ObterEntradasPorMes();
-            var saidas = repositorio.ObterSaidasPorMes();
+            int anoAtual = DateTime.Now.Year;
+            var entradas = repositorio.ObterEntradasPorMes(anoAtual);
+            var saidas = repositorio.ObterSaidasPorMes(anoAtual);
 
             chart1.Series.Clear();
-
+            //MUDAR AS CORES DO GRÁFICO
             var serieEntrada = new Series("Entradas")
             {
                 ChartType = SeriesChartType.Column,
