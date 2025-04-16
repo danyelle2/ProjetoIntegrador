@@ -61,14 +61,14 @@ namespace ProjetoIntegrador.View
                 serieSaida.Points.AddXY(nomeMes, saida);
             }
 
-            chart1.Series.Add(serieEntrada);
-            chart1.Series.Add(serieSaida);
+            chartSaidaAlunos.Series.Add(serieEntrada);
+            chartSaidaAlunos.Series.Add(serieSaida);
 
-            chart1.Titles.Clear();
-            chart1.Titles.Add("Entradas e Saídas de Alunos por Mês");
+            chartSaidaAlunos.Titles.Clear();
+            chartSaidaAlunos.Titles.Add("Entradas e Saídas de Alunos por Mês");
 
-            chart1.ChartAreas[0].AxisX.Title = "Mês";
-            chart1.ChartAreas[0].AxisY.Title = "Quantidade de Alunos";
+            chartSaidaAlunos.ChartAreas[0].AxisX.Title = "Mês";
+            chartSaidaAlunos.ChartAreas[0].AxisY.Title = "Quantidade de Alunos";
         }
 
 

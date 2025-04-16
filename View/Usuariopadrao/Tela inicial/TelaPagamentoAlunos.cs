@@ -62,5 +62,10 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 
             CarregarAlunos();
         }
+
+        private void dataGridViewpagamento_Click(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
