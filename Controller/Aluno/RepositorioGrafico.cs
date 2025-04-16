@@ -50,6 +50,23 @@ namespace ProjetoIntegrador.Controller.Aluno
                 }
                 return resultado;
             }
+        public Dictionary<int, (int Entradas, int Saidas)> ObterMovimentacaoPorMes()
+        {
+            var entradas = ObterEntradasPorMes();
+            var saidas = ObterSaidasPorMes();
+
+            var movimentacao = new Dictionary<int, (int Entradas, int Saidas)>();
+
+            for (int mes = 1; mes <= 12; mes++)
+            {
+                int entrada = entradas.ContainsKey(mes) ? entradas[mes] : 0;
+                int saida = saidas.ContainsKey(mes) ? saidas[mes] : 0;
+
+                movimentacao[mes] = (entrada, saida);
+            }
+
+            return movimentacao;
+        }
     }
 
 }

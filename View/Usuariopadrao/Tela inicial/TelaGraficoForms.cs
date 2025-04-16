@@ -16,22 +16,23 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaGraficoForms : Form
     {
-        public TelaGraficoForms()
+        private Usuario usuario;
+
+        public TelaGraficoForms(Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
         }
+
 
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
-            var database = new DatabaseService();
-            var repositorio = new AlunoRepositorio(database);
+            var repositorio = new RepositorioGrafico(new DatabaseService());
 
-            int anoAtual = DateTime.Now.Year;
-            var entradas = repositorio.ObterEntradasPorMes(anoAtual);
-            var saidas = repositorio.ObterSaidasPorMes(anoAtual);
+            var dadosMensais = repositorio.ObterMovimentacaoPorMes();
 
             chart1.Series.Clear();
-            //MUDAR AS CORES DO GRÁFICO
+
             var serieEntrada = new Series("Entradas")
             {
                 ChartType = SeriesChartType.Column,
@@ -46,22 +47,25 @@ namespace ProjetoIntegrador.View
                 BorderWidth = 3
             };
 
-            string[] meses = { "Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez" };
-
-            for (int i = 1; i <= 12; i++)
+            for (int mes = 1; mes <= 12; mes++)
             {
-                int entrada = entradas.ContainsKey(i) ? entradas[i] : 0;
-                int saida = saidas.ContainsKey(i) ? saidas[i] : 0;
+                string nomeMes = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(mes);
 
-                serieEntrada.Points.AddXY(meses[i - 1], entrada);
-                serieSaida.Points.AddXY(meses[i - 1], saida);
+                int entrada = dadosMensais.ContainsKey(mes) ? dadosMensais[mes].Entradas : 0;
+                int saida = dadosMensais.ContainsKey(mes) ? dadosMensais[mes].Saidas : 0;
+
+                serieEntrada.Points.AddXY(nomeMes, entrada);
+                serieSaida.Points.AddXY(nomeMes, saida);
             }
 
             chart1.Series.Add(serieEntrada);
             chart1.Series.Add(serieSaida);
-            chart1.Titles.Add("Entrada e Saída de Alunos por Mês");
+
+            chart1.Titles.Clear();
+            chart1.Titles.Add("Entradas e Saídas de Alunos por Mês");
+
             chart1.ChartAreas[0].AxisX.Title = "Mês";
-            chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
+            chart1.ChartAreas[0].AxisY.Title = "Quantidade de Alunos";
         }
 
 
