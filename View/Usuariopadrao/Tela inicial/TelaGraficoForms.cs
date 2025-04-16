@@ -31,6 +31,9 @@ namespace ProjetoIntegrador.View
 
             var dadosMensais = repositorio.ObterMovimentacaoPorMes();
 
+            CarregarGraficoMensal(repositorio);
+            CarregarGraficoAnual(repositorio);
+
             chart1.Series.Clear();
 
             var serieEntrada = new Series("Entradas")
@@ -75,5 +78,11 @@ namespace ProjetoIntegrador.View
             TelaInicialForm telaInicial = new TelaInicialForm();
             telaInicial.Show();
         }
+
+        private void chartSaidaAlunos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+//nome do gráfico chartSaidaAlunos
