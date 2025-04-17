@@ -7,7 +7,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 {
     internal class AlterarDadosAlunoController
     {
-        public bool AlterarDadosAlunos(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
+        public bool ValidarAlteracaoDados(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
         {
             var alunoEditando = new ProjetoIntegrador.Model.Aluno();  
             alunoEditando.Nome = nome.Text;
@@ -18,20 +18,8 @@ namespace ProjetoIntegrador.Controller.Aluno
             alunoEditando.Plano = plano.SelectedItem.ToString();
             alunoEditando.Status = StatusAluno.SelectedItem.ToString();
             alunoEditando.DataSaida = DateTime.Parse(dataSaida.Text);
-            var repositorio = new RepositorioAluno(new DatabaseService());
-            bool sucesso = repositorio.AtualizarAluno(alunoEditando);
 
-
-            if (sucesso)
-            {
-                MessageBox.Show("Aluno alterado com sucesso!");
-                return true; 
-            }
-            else
-            {
-                MessageBox.Show("Erro ao alterar aluno.");
-                return false; 
-            }
+            return true;
         }
            
     }

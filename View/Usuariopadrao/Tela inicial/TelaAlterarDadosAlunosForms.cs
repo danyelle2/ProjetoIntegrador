@@ -1,4 +1,5 @@
-﻿using ProjetoIntegrador.Controller;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
 using System;
 using System.Collections.Generic;
@@ -27,8 +28,7 @@ namespace ProjetoIntegrador.View
         }
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
-            // pensar em como criar uma funcao para quando clicar na lista e no botao alterar apareca os 
-            // dados do aluno na tela de alterar dados
+          
             bool resultadoMenorIdade = botoesAlterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade);
             bool resultadoIdadeInvalida = botoesAlterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade);
             bool resultadoCamposVazios = botoesAlterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
@@ -42,6 +42,16 @@ namespace ProjetoIntegrador.View
             {
                
                 bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
+                var repositorio = new RepositorioAluno(new DatabaseService());
+               
+                    MessageBox.Show("Aluno alterado com sucesso!");
+                
+
+            }
+            else
+            {
+                MessageBox.Show("Erro ao alterar aluno.");
+                
             }
         }
 
