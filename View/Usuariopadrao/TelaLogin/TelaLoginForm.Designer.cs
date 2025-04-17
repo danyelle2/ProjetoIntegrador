@@ -29,53 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLoginForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.MsgErro = new System.Windows.Forms.Label();
-            this.btnCadastro = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.TxtSenha = new System.Windows.Forms.TextBox();
+            this.TxtUsuario = new System.Windows.Forms.TextBox();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.MsgErro = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1060, 674);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(437, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 37);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "StudioV";
-            // 
-            // TxtSenha
-            // 
-            this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtSenha.Location = new System.Drawing.Point(789, 380);
-            this.TxtSenha.Multiline = true;
-            this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.PasswordChar = '*';
-            this.TxtSenha.Size = new System.Drawing.Size(217, 29);
-            this.TxtSenha.TabIndex = 19;
             // 
             // label2
             // 
@@ -85,56 +48,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 24);
             this.label2.TabIndex = 21;
-            // 
-            // MsgErro
-            // 
-            this.MsgErro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MsgErro.AutoSize = true;
-            this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgErro.ForeColor = System.Drawing.Color.Red;
-            this.MsgErro.Location = new System.Drawing.Point(786, 614);
-            this.MsgErro.Name = "MsgErro";
-            this.MsgErro.Size = new System.Drawing.Size(19, 15);
-            this.MsgErro.TabIndex = 22;
-            this.MsgErro.Text = "...";
-            // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(170, 492);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(86, 23);
-            this.btnCadastro.TabIndex = 23;
-            this.btnCadastro.UseVisualStyleBackColor = false;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Location = new System.Drawing.Point(479, 603);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(101, 38);
-            this.btnLogin.TabIndex = 17;
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // TxtUsuario
-            // 
-            this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtUsuario.Location = new System.Drawing.Point(757, 208);
-            this.TxtUsuario.MaxLength = 11;
-            this.TxtUsuario.Multiline = true;
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(217, 29);
-            this.TxtUsuario.TabIndex = 18;
             // 
             // label1
             // 
@@ -149,50 +62,113 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(351, 126);
+            this.panel1.Controls.Add(this.TxtSenha);
+            this.panel1.Controls.Add(this.TxtUsuario);
+            this.panel1.Controls.Add(this.btnCadastro);
+            this.panel1.Controls.Add(this.MsgErro);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.ForeColor = System.Drawing.Color.Transparent;
+            this.panel1.Location = new System.Drawing.Point(605, 168);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 421);
-            this.panel1.TabIndex = 26;
+            this.panel1.Size = new System.Drawing.Size(731, 799);
+            this.panel1.TabIndex = 28;
+            // 
+            // TxtSenha
+            // 
+            this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtSenha.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSenha.Location = new System.Drawing.Point(141, 489);
+            this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.PasswordChar = '*';
+            this.TxtSenha.Size = new System.Drawing.Size(446, 48);
+            this.TxtSenha.TabIndex = 19;
+            // 
+            // TxtUsuario
+            // 
+            this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtUsuario.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Location = new System.Drawing.Point(141, 198);
+            this.TxtUsuario.MaxLength = 11;
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(446, 48);
+            this.TxtUsuario.TabIndex = 18;
+            // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.FlatAppearance.BorderSize = 0;
+            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.Location = new System.Drawing.Point(16, 621);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(190, 50);
+            this.btnCadastro.TabIndex = 23;
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            // 
+            // MsgErro
+            // 
+            this.MsgErro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgErro.AutoSize = true;
+            this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErro.ForeColor = System.Drawing.Color.Red;
+            this.MsgErro.Location = new System.Drawing.Point(339, 555);
+            this.MsgErro.Name = "MsgErro";
+            this.MsgErro.Size = new System.Drawing.Size(19, 15);
+            this.MsgErro.TabIndex = 22;
+            this.MsgErro.Text = "...";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Location = new System.Drawing.Point(236, 672);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(193, 74);
+            this.btnLogin.TabIndex = 17;
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // TelaLoginForm
             // 
-            this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1060, 674);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1857, 1022);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.MsgErro);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnCadastro);
-            this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TxtUsuario);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "TelaLoginForm";
             this.Text = "login";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaLoginForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label MsgErro;
-        private System.Windows.Forms.Button btnCadastro;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox TxtSenha;
+        private System.Windows.Forms.TextBox TxtUsuario;
+        private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.Label MsgErro;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 
