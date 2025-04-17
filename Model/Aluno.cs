@@ -15,6 +15,7 @@ namespace ProjetoIntegrador.Model
         public int Idade { get; set; }
         public string Telefone { get; set; }
         public DateTime DataEntrada { get; set; }
+        public DateTime DataSaida { get; set; }
         public string Plano { get; set; }
         public string NomeResponsavel { get; set; }
         public string Status { get; set; }

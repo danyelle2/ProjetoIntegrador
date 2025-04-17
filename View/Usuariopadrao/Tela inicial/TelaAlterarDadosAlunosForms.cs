@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Aluno;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,10 +18,12 @@ namespace ProjetoIntegrador.View
     public partial class TelaAlterarDadosAlunosForms : Form
     {
         BotoesAlterarDadosAlunoController botoesAlterarDadosAlunoController;
-        public TelaAlterarDadosAlunosForms()
+        AlterarDadosAlunoController alterarDadosAlunoController;
+        public TelaAlterarDadosAlunosForms(Model.Aluno aluno)
         {
             InitializeComponent();
             botoesAlterarDadosAlunoController = new BotoesAlterarDadosAlunoController();
+            alterarDadosAlunoController = new AlterarDadosAlunoController();
         }
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
@@ -34,15 +37,11 @@ namespace ProjetoIntegrador.View
             bool resultadoAparecerDataSaida = botoesAlterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida,LabelNomeDataSaida, textMsgErroDataSaida);
             bool resultadoNomeResponsavel = botoesAlterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel);
             bool resultadoComboBoxValidado= botoesAlterarDadosAlunoController.ValidarComboBox(comboBoxPlano, comboBoxStatusAlunos,labelMsgErroPlano ,labelMsgErroStatusAluno);
-            // pedir ajuda para ver se ta faltando alguma coisa 
-            // Ta Entrando no login válido quando não era pra entrar, ver o que to fazendo de errado...
+            
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel && resultadoComboBoxValidado) 
             {
                
-                bool ValidarAlteracaoDados = botoesAlterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
-                TelaInicialForm telainicialForm = new TelaInicialForm();
-                telainicialForm.Show();
-                this.Dispose();
+                bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
             }
         }
 
