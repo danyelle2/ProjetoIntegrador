@@ -18,7 +18,7 @@ namespace ProjetoIntegrador.Controller.Usuario
             _databaseService = databaseService;
         }
 
-        public void CadastrarUsuario(Usuario usuario)
+        public void CadastrarUsuario(ProjetoIntegrador.Model.Usuario usuario)
         {
             if (usuario == null)
             {

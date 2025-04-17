@@ -14,7 +14,7 @@ namespace ProjetoIntegrador.Controller.Aluno
         private readonly DatabaseService _databaseService;
 
         public RepositorioGrafico(DatabaseService databaseService)
-        {//banco ligação não esquecer _databaseService = databaseService;
+        {//banco ligação NÃO esquecer _databaseService = databaseService;
             _databaseService = databaseService;
         }
 
