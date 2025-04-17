@@ -51,7 +51,7 @@ namespace ProjetoIntegrador.Controller.Aluno
             }
             return resultado;
         }
-        public Dictionary<int, (int Entradas, int Saidas)> ObterMovimentacaoPorMes()
+        public Dictionary<int, (int Entradas, int Saidas)> ObterMovimentacaoPorMes(string modalidade)
         {
             var entradas = ObterEntradasPorMes();
             var saidas = ObterSaidasPorMes();
