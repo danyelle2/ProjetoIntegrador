@@ -51,7 +51,7 @@
             // 
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(681, 723);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(352, 713);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoGrafico.TabIndex = 14;
@@ -61,7 +61,7 @@
             // 
             this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados.AutoSize = true;
-            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(715, 487);
+            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(352, 487);
             this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
             this.MsgExplicacaoAlterarDados.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoAlterarDados.TabIndex = 13;
@@ -71,7 +71,7 @@
             // 
             this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(715, 233);
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(352, 245);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
             this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoCadastro.TabIndex = 12;
@@ -139,7 +139,8 @@
             // 
             // textBoxPesquisa
             // 
-            this.textBoxPesquisa.Location = new System.Drawing.Point(1016, 233);
+            this.textBoxPesquisa.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxPesquisa.Location = new System.Drawing.Point(1010, 301);
             this.textBoxPesquisa.Multiline = true;
             this.textBoxPesquisa.Name = "textBoxPesquisa";
             this.textBoxPesquisa.Size = new System.Drawing.Size(699, 71);
@@ -162,7 +163,7 @@
             // 
             this.MsgTemporariaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgTemporariaPagamento.AutoSize = true;
-            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(1483, 186);
+            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(352, 951);
             this.MsgTemporariaPagamento.Name = "MsgTemporariaPagamento";
             this.MsgTemporariaPagamento.Size = new System.Drawing.Size(16, 13);
             this.MsgTemporariaPagamento.TabIndex = 21;
