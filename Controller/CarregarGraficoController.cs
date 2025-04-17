@@ -45,7 +45,7 @@ namespace ProjetoIntegrador.Controller
             chart.Titles.Add("Movimentação Mensal");
         }
 
-        public void CarregarGraficoAnual(RepositorioGrafico repositorio, Chart chart, Usuario usuario)
+        public void CarregarGraficoAnual(RepositorioGrafico repositorio, Chart chart, Model.Usuario usuario)
         {
             var dadosAnuais = repositorio.ObterMovimentacaoPorAno(usuario.Modalidade);
 
