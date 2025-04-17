@@ -31,8 +31,8 @@ namespace ProjetoIntegrador.View
             var repositorio = new RepositorioGrafico(new DatabaseService());
             var controller = new CarregarGraficoController();
 
-            controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);
-            controller.CarregarGraficoAnual(chart1, repositorio, usuario.Modalidade);
+            controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);//colocar professor e não usuario
+            controller.CarregarGraficoAnual(repositorio, chart1, usuario.Modalidade);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

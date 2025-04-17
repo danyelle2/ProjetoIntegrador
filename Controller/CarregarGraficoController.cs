@@ -8,9 +8,9 @@ namespace ProjetoIntegrador.Controller
 {
     public class CarregarGraficoController
     {
-        public void CarregarGraficoMensal(RepositorioGrafico repositorio, Chart chart, ProjetoIntegrador.Model.Usuario usuario)
+        public void CarregarGraficoMensal(RepositorioGrafico repositorio, Chart chart, ProjetoIntegrador.Model.Professor professor)
         {
-            var dadosMensais = repositorio.ObterMovimentacaoPorMes(usuario.Modalidade);
+            var dadosMensais = repositorio.ObterMovimentacaoPorMes(Professor.Modalidade);
 
             chart.Series.Clear();
 

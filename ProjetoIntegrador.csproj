@@ -107,6 +107,7 @@
     <Compile Include="Controller\Aluno\RepositorioAluno.cs" />
     <Compile Include="Controller\RepositorioGrafico.cs" />
     <Compile Include="Controller\CarregarGraficoController.cs" />
+    <Compile Include="Controller\RepositorioProfessor.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Controller\Usuario\UsuarioRepositorio.cs" />
     <Compile Include="Model\Professor.cs" />
