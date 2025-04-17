@@ -102,6 +102,7 @@
   <ItemGroup>
     <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
     <Compile Include="Controller\Aluno\AlunoRepositorio.cs" />
+    <Compile Include="Controller\Aluno\EntradaSaidaAlunos.cs" />
     <Compile Include="Controller\Aluno\RepositorioGrafico.cs" />
     <Compile Include="Controller\CarregarGraficoController.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
@@ -112,11 +113,10 @@
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\ListaProfessores.cs" />
     <Compile Include="Services\SessionUser.cs" />
-    <Compile Include="Controller\CadastrarDadosAlunosController.cs" />
+    <Compile Include="Controller\Aluno\CadastrarDadosAlunosController.cs" />
     <Compile Include="Controller\Aluno\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
-    <Compile Include="Controller\PagamentoController.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.cs">

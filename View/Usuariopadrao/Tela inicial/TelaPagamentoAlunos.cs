@@ -66,9 +66,10 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         private void dataGridViewpagamento_Click(object sender, DataGridViewCellEventArgs e)
         
         {
-            if (e.RowIndex >= 0) // Verifica se o clique foi em uma célula válida
+            
+            if (e.RowIndex >= 0)
             {
-                var aluno = (Aluno)dataGridViewpagamento.Rows[e.RowIndex].DataBoundItem; // Obtém o objeto Aluno da linha clicada
+                var aluno = (Aluno)dataGridViewpagamento.Rows[e.RowIndex].DataBoundItem; 
                 MessageBox.Show($"Aluno selecionado: {aluno.Nome}, Status de Pagamento: {(aluno.StatusPagamento ? "Realizado" : "Pendente")}");
             }
         }

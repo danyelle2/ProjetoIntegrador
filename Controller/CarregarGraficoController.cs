@@ -1,15 +1,15 @@
 ﻿using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Model;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProjetoIntegrador.Controller
 {
     public class CarregarGraficoController
     {
-        public void CarregarGraficoMensal(RepositorioGrafico repositorio, Chart chart, Usuario usuario)
+        public void CarregarGraficoMensal(RepositorioGrafico repositorio, Chart chart, Model.Usuario usuario1, Usuario usuario)
         {
             var dadosMensais = repositorio.ObterMovimentacaoPorMes(usuario.Modalidade);
 
@@ -45,5 +45,34 @@ namespace ProjetoIntegrador.Controller
             chart.Titles.Clear();
             chart.Titles.Add("Movimentação Mensal");
         }
+
+        internal void CarregarGraficoMensal(RepositorioGrafico repositorio, Chart chartSaidaAlunos, Model.Usuario usuario)
+        {
+            throw new NotImplementedException();
+        }
+       
+           
+        public void CarregarGraficoAnual(Chart chart, RepositorioGrafico repositorio, string modalidade)
+            {
+            var dadosAnuais = repositorio.ObterMovimentacaoPorAno(usuario.Modalidade);
+
+            chart.Series.Clear();
+                var entrada = new Series("Entradas") { ChartType = SeriesChartType.Column, Color = Color.Blue };
+                var saida = new Series("Saídas") { ChartType = SeriesChartType.Column, Color = Color.Orange };
+
+                foreach (var ano in dadosAnuais.Keys)
+                {
+                    entrada.Points.AddXY(ano, dadosAnuais[ano].Entradas);
+                    saida.Points.AddXY(ano, dadosAnuais[ano].Saidas);
+                }
+
+                chart.Series.Add(entrada);
+                chart.Series.Add(saida);
+                chart.Titles.Clear();
+                chart.Titles.Add("Movimentação Anual");
+            }
+        }
     }
+
+}
 }
