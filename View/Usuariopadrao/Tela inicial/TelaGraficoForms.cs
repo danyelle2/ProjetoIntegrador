@@ -28,10 +28,11 @@ namespace ProjetoIntegrador.View
 
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
+
             var repositorio = new RepositorioGrafico(new DatabaseService());
             var controller = new CarregarGraficoController();
 
-            controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);//colocar professor e não usuario
+            controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);//sessionuser aqui vou mudar sessionUser.idmodalidade
             controller.CarregarGraficoAnual(repositorio, chart1, usuario.Modalidade);
         }
 

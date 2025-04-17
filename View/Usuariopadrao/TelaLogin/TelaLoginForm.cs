@@ -63,6 +63,7 @@ namespace ProjetoIntegrador
                 if (usuario != null)
                 {
                     MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SessionUser.Login(usuario);
 
                     this.Hide();
 

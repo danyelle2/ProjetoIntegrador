@@ -1,4 +1,6 @@
-﻿using ProjetoIntegrador.Model;
+﻿using MySqlX.XDevAPI;
+using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,8 +31,16 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         public Usuario Usuario { get; }
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
-        {
+        {// aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
+            //vou cadastrar a modalidade colocar um comboBox para selecionar a modalidade
+           Usuario usuario = SessionUser.userLogado;
+
+            if (usuario.IdModalidade == 3) {
+                pictureBox1.Visible = false;
+                pictureBox2.Visible = false;
+            } else if () { }
 
         }
     }
 }
+

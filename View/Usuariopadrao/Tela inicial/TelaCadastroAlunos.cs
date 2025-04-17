@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Aluno;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ProjetoIntegrador.View
 {
@@ -16,7 +18,7 @@ namespace ProjetoIntegrador.View
 
         BotoesCadastroAlunoController cadastroAlunoController;
         CadastrarDadosAlunosController cadastrarDadosAlunosController;
-     
+
         public TelaCadastroAlunos()
         {
             InitializeComponent();
@@ -39,16 +41,42 @@ namespace ProjetoIntegrador.View
             bool DataInvalida = cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
             bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
             bool resultadoComboBox = cadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
-            // pedir ajuda para ver se ta faltando alguma coisa 
+
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
             {
                 bool resultadoLimparCampos = cadastrarDadosAlunosController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
-                bool resultadoCadastrarAluno = cadastrarDadosAlunosController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
+                //bool resultadoCadastrarAluno = cadastrarDadosAlunosController.CadastrarAluno();
+                public bool CadastrarAluno(Model.Aluno aluno)
+        {
+            //arrumar esse COLOCAR O NOME DOS BOTÕES QUE ESTÃ NA TELA CADASTRO ALUNO
+            try
+            {
+                var aluno = new ProjetoIntegrador.Model.Aluno
+                {
+                    Nome = nome.Text,
+                    Idade = int.Parse(idade.Text),
+                    Telefone = telefone.Text,
+                    DataEntrada = DateTime.Parse(data.Text),
+                    Plano = plano.SelectedItem?.ToString(),
+                    NomeResponsavel = nomeResponsavel.Text,
+                    Status = statusAluno.SelectedItem?.ToString()
+                };
 
+                var repositorio = new RepositorioAluno(new BancoDeDados.DatabaseService());
+                return repositorio.CadastrarAluno(aluno);
             }
-
-
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
+
+
+
+
+
+
 
         private void TelaCadastroAlunos_Load(object sender, EventArgs e)
         {

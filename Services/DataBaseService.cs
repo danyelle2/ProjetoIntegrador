@@ -34,7 +34,6 @@ namespace ProjetoIntegrador.BancoDeDados
                 _connection.Close();
             }
         }
-        //coloquei aqui para não dar erro de conexão no gráfico
         
 
 

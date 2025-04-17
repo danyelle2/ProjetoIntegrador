@@ -96,7 +96,7 @@ namespace ProjetoIntegrador.View
 
         private void TelaCadastroForm_Load(object sender, EventArgs e)
         {
-
+                    
         }
     }
 }

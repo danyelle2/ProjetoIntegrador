@@ -30,5 +30,4 @@ namespace ProjetoIntegrador.Services
 
             return professores;
         }
-    }
 }

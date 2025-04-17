@@ -15,6 +15,7 @@ namespace ProjetoIntegrador.Controller.Aluno
             _databaseService = databaseService;
         }
 
+
         public List<ModelAluno> AlunosAtivos()
         {
             List<ModelAluno> lista = new List<ModelAluno>();

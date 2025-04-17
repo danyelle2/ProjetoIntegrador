@@ -80,7 +80,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             var resultado = new Dictionary<int, EntradaSaidaAlunos>();
 
-            _databaseService.OpenConnection(); // Abre a conexão com o banco de dados
+            _databaseService.OpenConnection(); 
             try
             {
                 string query = @"
@@ -92,7 +92,7 @@ namespace ProjetoIntegrador.Controller.Aluno
             GROUP BY YEAR(data_entrada)
             ORDER BY Ano";
 
-                using (var cmd = new MySqlCommand(query, _databaseService.Connection)) // Use a conexão válida
+                using (var cmd = new MySqlCommand(query, _databaseService.Connection)) 
                 {
                     cmd.Parameters.AddWithValue("@modalidade", modalidade);
 
@@ -119,7 +119,7 @@ namespace ProjetoIntegrador.Controller.Aluno
             }
             finally
             {
-                _databaseService.CloseConnection(); // Fecha a conexão com o banco de dados
+                _databaseService.CloseConnection(); 
             }
 
             return resultado;

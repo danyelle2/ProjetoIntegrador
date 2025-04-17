@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroForm));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.labelMsgErroModalidade = new System.Windows.Forms.Label();
             this.MsgErrorTipoUsuario = new System.Windows.Forms.Label();
             this.comboBoxModalidade = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.labelMsgErroModalidade = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -77,6 +77,16 @@
             this.groupBox3.TabIndex = 73;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tipo usuário";
+            // 
+            // labelMsgErroModalidade
+            // 
+            this.labelMsgErroModalidade.AutoSize = true;
+            this.labelMsgErroModalidade.ForeColor = System.Drawing.Color.IndianRed;
+            this.labelMsgErroModalidade.Location = new System.Drawing.Point(269, 125);
+            this.labelMsgErroModalidade.Name = "labelMsgErroModalidade";
+            this.labelMsgErroModalidade.Size = new System.Drawing.Size(16, 13);
+            this.labelMsgErroModalidade.TabIndex = 68;
+            this.labelMsgErroModalidade.Text = "...";
             // 
             // MsgErrorTipoUsuario
             // 
@@ -316,16 +326,6 @@
             this.btnVoltar.TabIndex = 75;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // labelMsgErroModalidade
-            // 
-            this.labelMsgErroModalidade.AutoSize = true;
-            this.labelMsgErroModalidade.ForeColor = System.Drawing.Color.IndianRed;
-            this.labelMsgErroModalidade.Location = new System.Drawing.Point(269, 125);
-            this.labelMsgErroModalidade.Name = "labelMsgErroModalidade";
-            this.labelMsgErroModalidade.Size = new System.Drawing.Size(16, 13);
-            this.labelMsgErroModalidade.TabIndex = 68;
-            this.labelMsgErroModalidade.Text = "...";
             // 
             // TelaCadastroForm
             // 

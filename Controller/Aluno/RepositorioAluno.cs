@@ -17,7 +17,7 @@ namespace ProjetoIntegrador.Controller.Aluno
         }
 
         public bool CadastrarAluno(ProjetoIntegrador.Model.Aluno aluno)
-        { //FIZ EM CASA VERIFICAR SE TA DE ACORDO COM O BANCO DE DADOS NA SALA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        { 
             string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,plano, responsavel, status) 
                          VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status)";
 
