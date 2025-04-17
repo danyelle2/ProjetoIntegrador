@@ -48,7 +48,7 @@ namespace ProjetoIntegrador.Controller
 
         public void CarregarGraficoAnual(RepositorioGrafico repositorio, Chart chart, Model.Usuario usuario)
         {
-            var dadosAnuais = repositorio.ObterMovimentacaoPorAno(usuario.Modalidade);
+            var dadosAnuais = repositorio.ObterMovimentacaoPorAno(SessionUser.userLogado.Modalidade);
 
             chart.Series.Clear();
 
