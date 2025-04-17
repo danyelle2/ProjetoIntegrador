@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoIntegrador.Controller.Aluno;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,12 +10,32 @@ namespace ProjetoIntegrador.Controller
 {
     internal class CadastrarDadosAlunosController
     {
-        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
+        
+            public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox statusAluno)
         {
-            // Criar um repositorio que vai chamar o banco de dados aqui eu vou abrir uma classe chamada repositorio pro aluno e professor 
-            //nela chamar o banco de dados e depos 
-            return true;
+            try
+            {
+                var aluno = new ProjetoIntegrador.Model.Aluno
+                {
+                    Nome = nome.Text,
+                    Idade = int.Parse(idade.Text),
+                    Telefone = telefone.Text,
+                    DataEntrada = DateTime.Parse(data.Text),
+                    Plano = plano.SelectedItem?.ToString(),
+                    NomeResponsavel = nomeResponsavel.Text,
+                    Status = statusAluno.SelectedItem?.ToString()
+                };
+
+                var repositorio = new RepositorioAluno(new BancoDeDados.DatabaseService());
+                return repositorio.CadastrarAluno(aluno);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
+
 
         public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
         {

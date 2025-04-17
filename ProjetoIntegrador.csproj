@@ -103,7 +103,8 @@
     <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
     <Compile Include="Controller\Aluno\AlunoRepositorio.cs" />
     <Compile Include="Controller\Aluno\EntradaSaidaAlunos.cs" />
-    <Compile Include="Controller\Aluno\RepositorioGrafico.cs" />
+    <Compile Include="Controller\Aluno\RepositorioAluno.cs" />
+    <Compile Include="Controller\RepositorioGrafico.cs" />
     <Compile Include="Controller\CarregarGraficoController.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Controller\Usuario\UsuarioRepositorio.cs" />
