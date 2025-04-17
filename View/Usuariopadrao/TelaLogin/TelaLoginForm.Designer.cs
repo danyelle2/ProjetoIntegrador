@@ -79,7 +79,7 @@
             // 
             this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtSenha.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSenha.Location = new System.Drawing.Point(141, 489);
+            this.TxtSenha.Location = new System.Drawing.Point(107, 463);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '*';
             this.TxtSenha.Size = new System.Drawing.Size(446, 48);
@@ -89,7 +89,7 @@
             // 
             this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtUsuario.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(141, 198);
+            this.TxtUsuario.Location = new System.Drawing.Point(107, 199);
             this.TxtUsuario.MaxLength = 11;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(446, 48);
@@ -117,7 +117,7 @@
             this.MsgErro.AutoSize = true;
             this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgErro.ForeColor = System.Drawing.Color.Red;
-            this.MsgErro.Location = new System.Drawing.Point(339, 555);
+            this.MsgErro.Location = new System.Drawing.Point(313, 531);
             this.MsgErro.Name = "MsgErro";
             this.MsgErro.Size = new System.Drawing.Size(19, 15);
             this.MsgErro.TabIndex = 22;
@@ -138,6 +138,7 @@
             this.btnLogin.Size = new System.Drawing.Size(193, 74);
             this.btnLogin.TabIndex = 17;
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // TelaLoginForm
             // 
