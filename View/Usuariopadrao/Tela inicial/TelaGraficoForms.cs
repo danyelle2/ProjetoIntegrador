@@ -33,7 +33,7 @@ namespace ProjetoIntegrador.View
             var controller = new CarregarGraficoController();
 
             controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);//sessionuser aqui vou mudar sessionUser.idmodalidade
-            controller.CarregarGraficoAnual(repositorio, chart1, usuario.Modalidade);
+            controller.CarregarGraficoAnual(repositorio, chart1, SessionUser.userLogado.Modalidade);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

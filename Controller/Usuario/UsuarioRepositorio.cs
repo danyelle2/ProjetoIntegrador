@@ -40,7 +40,7 @@ namespace ProjetoIntegrador.Controller.Usuario
                 new MySqlParameter("@senha", senhaHash),
                 new MySqlParameter("@tipo_usuario", usuario.TipoUsuario),
                 new MySqlParameter("@status_usuario", true),
-                new MySqlParameter("@id_professor", usuario.TipoMembro)
+                new MySqlParameter("@id_professor", usuario.IdProfessor)
             };
 
             try
