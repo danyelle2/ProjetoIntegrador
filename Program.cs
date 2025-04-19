@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjetoIntegrador.View;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
+using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
 namespace ProjetoIntegrador
 {
@@ -17,8 +19,8 @@ namespace ProjetoIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaLoadForms());
             Application.Run(new TelaLoginForm());
+            //Application.Run(new TelaLoginForm());
         }
     }
 }

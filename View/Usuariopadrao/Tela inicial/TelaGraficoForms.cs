@@ -43,7 +43,7 @@ namespace ProjetoIntegrador.View
             var Entrada = new Series("Entradas")
             {
                 ChartType = SeriesChartType.Column, 
-                Color = Color.Green, 
+                Color = Color.DarkBlue, 
                 BorderWidth = 3
             };
             // qualquer coisa mudar a cor do gráfico colocar um azul não sei perguntar pro grupo. 
@@ -51,7 +51,7 @@ namespace ProjetoIntegrador.View
             var Saida = new Series("Saídas")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.Red, 
+                Color = Color.PowderBlue, 
                 BorderWidth = 3
             };
 
@@ -72,6 +72,11 @@ namespace ProjetoIntegrador.View
             this.Dispose();
             TelaInicialForm telaInicial = new TelaInicialForm();
             telaInicial.Show();
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
