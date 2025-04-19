@@ -122,6 +122,12 @@
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\Usuario.cs" />
+    <Compile Include="View\Administrador\TelaModalidade\TelaCadastroModalidadeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Administrador\TelaModalidade\TelaCadastroModalidadeForm.Designer.cs">
+      <DependentUpon>TelaCadastroModalidadeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\Administrador\TelaModalidade\TelaCadastroModalidadeForm.resx">
+      <DependentUpon>TelaCadastroModalidadeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.resx">
       <DependentUpon>TelaModalidadeEscolha.cs</DependentUpon>
     </EmbeddedResource>

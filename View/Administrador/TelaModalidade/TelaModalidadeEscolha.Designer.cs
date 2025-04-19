@@ -126,6 +126,7 @@
             this.btnCadastrarModalidade.Text = "Cadastrar Modalidade";
             this.btnCadastrarModalidade.UseVisualStyleBackColor = true;
             this.btnCadastrarModalidade.Visible = false;
+            this.btnCadastrarModalidade.Click += new System.EventHandler(this.btnCadastrarModalidade_Click);
             // 
             // TelaModalidadeEscolha
             // 

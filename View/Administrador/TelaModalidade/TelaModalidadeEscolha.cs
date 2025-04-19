@@ -36,7 +36,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
            Usuario usuario = SessionUser.userLogado;
             //esse ta ok!! 
             //perguntar para o professor se é certo por aqui mesmo.
-            if (usuario.TipoUsuario == "Administrador")
+            if (usuario.TipoUsuario == "administrador")
             {
                 btnCadastrarModalidade.Visible = true;
                 btnCadastro.Visible = true;
@@ -66,6 +66,12 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
                 this.Hide();
             
 
+        }
+
+        private void btnCadastrarModalidade_Click(object sender, EventArgs e)
+        {
+            var telaCadastroModalidade = new TelaCadastroModalidadeForm();
+            telaCadastroModalidade.ShowDialog();
         }
     }
 }
