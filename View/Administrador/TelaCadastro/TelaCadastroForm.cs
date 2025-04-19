@@ -51,7 +51,7 @@ namespace ProjetoIntegrador.View
         private void btnModalidadeCadastroApareceText(object sender, EventArgs e)
         {
 
-            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administradore\nProfessor, por favor, selecione a sua aula";
+            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administrador\nProfessor, por favor, selecione a sua aula";
             TxTExplicacaoModalidade.Visible = true;
         }
 
