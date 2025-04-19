@@ -2,6 +2,7 @@
 using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.Model;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,8 +27,8 @@ namespace ProjetoIntegrador.View
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            TelaLoginForm telalogin = new TelaLoginForm();
-            telalogin.Show();
+            TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
+            telaModalidadeEscolha.Show();
         }
 
         private void msgTemporariaUsuarioAparece(object sender, EventArgs e)
