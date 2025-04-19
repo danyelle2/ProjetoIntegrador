@@ -32,29 +32,54 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
         {// aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
-            //vou cadastrar a modalidade colocar um comboBox para selecionar a modalidade
-           Usuario usuario = SessionUser.userLogado;
+         //vou cadastrar a modalidade colocar um comboBox para selecionar a modalidade
+            Usuario usuario = SessionUser.userLogado;
             //esse ta ok!! 
             //perguntar para o professor se é certo por aqui mesmo.
             if (usuario.TipoUsuario == "administrador")
             {
-                btnCadastrarModalidade.Visible = true;
                 btnCadastro.Visible = true;
             }
             else
             {
-                btnCadastrarModalidade.Visible = false;
                 btnCadastro.Visible = false;
             }
             //Falta esse Cadastrar a modalidade e depois colocar ela aqui 
-            if (usuario.IdModalidade == 1)
-            {
-                if (usuario.IdModalidade == 3) {
-                pictureBox1.Visible = false;
-                pictureBox2.Visible = false;
-            } else if () { }
 
-        }
+
+            if (usuario.TipoUsuario == "administrador")
+            {
+                // Administrador vê tudo
+                Zumba.Visible = true;
+                grupoMuayThai.Visible = true;
+                grupoFuncional.Visible = true;
+            }
+            else if (usuario.TipoUsuario == "professor")
+            {
+                if (usuario.Modalidade == "zumba")
+                {
+                    grupoZumba.Visible = true;
+                    grupoMuayThai.Visible = false;
+                    grupoFuncional.Visible = false;
+                }
+                else if (usuario.Modalidade == "muay_thai")
+                {
+                    grupoZumba.Visible = false;
+                    grupoMuayThai.Visible = true;
+                    grupoFuncional.Visible = false;
+                }
+                else if (usuario.Modalidade == "funcional")
+                {
+                    grupoZumba.Visible = false;
+                    grupoMuayThai.Visible = false;
+                    grupoFuncional.Visible = true;
+                }
+            }
+
+
+
+
+
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
@@ -66,13 +91,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
                 this.Hide();
             
 
-        }
-
-        private void btnCadastrarModalidade_Click(object sender, EventArgs e)
-        {
-            var telaCadastroModalidade = new TelaCadastroModalidadeForm();
-            telaCadastroModalidade.ShowDialog();
-        }
+        }       
     }
 }
 
