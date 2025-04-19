@@ -11,11 +11,14 @@ namespace ProjetoIntegrador.Controller
 {
     public class CadastrarDadosAlunosController
     {
-            
-        
+        public bool CadastrarAluno(Model.Aluno aluno)
+        {
+          
+        }
+
             // Aqui vou deixar assim.
-            
-            
+
+
 
 
         public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)

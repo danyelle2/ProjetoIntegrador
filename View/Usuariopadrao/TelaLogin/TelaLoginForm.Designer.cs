@@ -34,7 +34,6 @@
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.MsgErro = new System.Windows.Forms.Label();
-            this.btnCadastro = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -94,18 +93,6 @@
             this.MsgErro.TabIndex = 22;
             this.MsgErro.Text = "...";
             // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastro.Location = new System.Drawing.Point(365, 456);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(75, 23);
-            this.btnCadastro.TabIndex = 23;
-            this.btnCadastro.Text = "Cadastre-se";
-            this.btnCadastro.UseVisualStyleBackColor = true;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
-            // 
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
@@ -149,7 +136,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.MsgErro);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.TxtSenha);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtUsuario);
@@ -171,7 +157,6 @@
         private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label MsgErro;
-        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label label1;

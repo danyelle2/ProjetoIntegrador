@@ -34,11 +34,29 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {// aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
             //vou cadastrar a modalidade colocar um comboBox para selecionar a modalidade
            Usuario usuario = SessionUser.userLogado;
+            if (SessionUser.userLogado.TipoUsuario == "Administrador")
+                btnCadastro.Visible = true;
+            else btnCadastro.Visible = false;
 
-            if (usuario.IdModalidade == 3) {
+
+            if (usuario.IdModalidade == 1)
+            {
+                if (usuario.IdModalidade == 3) {
                 pictureBox1.Visible = false;
                 pictureBox2.Visible = false;
             } else if () { }
+
+        }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+
+           
+            
+                TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
+                telaCadastroForm.Show();
+                this.Hide();
+            
 
         }
     }
