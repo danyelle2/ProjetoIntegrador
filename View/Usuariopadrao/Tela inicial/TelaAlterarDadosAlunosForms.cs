@@ -1,6 +1,7 @@
 ﻿using ProjetoIntegrador.BancoDeDados;
 using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,16 +20,20 @@ namespace ProjetoIntegrador.View
     public partial class TelaAlterarDadosAlunosForms : Form
     {
         BotoesAlterarDadosAlunoController botoesAlterarDadosAlunoController;
-        AlterarDadosAlunoController alterarDadosAlunoController;
         public TelaAlterarDadosAlunosForms(Model.Aluno aluno)
         {
             InitializeComponent();
             botoesAlterarDadosAlunoController = new BotoesAlterarDadosAlunoController();
-            alterarDadosAlunoController = new AlterarDadosAlunoController();
+        }
+
+        private void TelaAlterarDadosAlunosForms_Load(object sender, EventArgs e)
+        {
+
         }
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
-          
+            Model.Aluno aluno = new Model.Aluno();
+
             bool resultadoMenorIdade = botoesAlterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade);
             bool resultadoIdadeInvalida = botoesAlterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade);
             bool resultadoCamposVazios = botoesAlterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
@@ -37,20 +42,29 @@ namespace ProjetoIntegrador.View
             bool resultadoAparecerDataSaida = botoesAlterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida,LabelNomeDataSaida, textMsgErroDataSaida);
             bool resultadoNomeResponsavel = botoesAlterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel);
             bool resultadoComboBoxValidado= botoesAlterarDadosAlunoController.ValidarComboBox(comboBoxPlano, comboBoxStatusAlunos,labelMsgErroPlano ,labelMsgErroStatusAluno);
-            
+
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel && resultadoComboBoxValidado) 
             {
-               
-                bool ValidarAlteracaoDados = alterarDadosAlunoController.ValidarAlteracaoDados(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
-                var repositorio = new RepositorioAluno(new DatabaseService());
-               
-                    MessageBox.Show("Aluno alterado com sucesso!");
-                
 
+                var alunoEditando = new Aluno();
+                alunoEditando.Nome = textBoxNomeAluno.Text;
+                alunoEditando.Idade = int.Parse(textBoxIdadeAluno.Text);
+                alunoEditando.Telefone = textBoxTelefoneAluno.Text;
+                alunoEditando.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
+                alunoEditando.NomeResponsavel = textBoxNomeResponsavel.Text;
+                alunoEditando.Plano = comboBoxPlano.SelectedItem.ToString();
+                alunoEditando.Status = comboBoxStatusAlunos.SelectedItem.ToString();
+                alunoEditando.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
+
+                var repositorio = new RepositorioAluno(new DatabaseService());
+                repositorio.AlterarDadosAlunos(aluno);
+
+                MessageBox.Show($"Dados do aluno {aluno.Nome}, alterado com sucesso!","Alteraçao de dados");
+                
             }
             else
             {
-                MessageBox.Show("Erro ao alterar aluno.");
+                MessageBox.Show($"Erro ao alterar os dados do aluno{aluno.Nome}.", "Alteração de dados");
                 
             }
         }
@@ -60,7 +74,8 @@ namespace ProjetoIntegrador.View
 
         }
 
-        private void TelaAlterarDadosAlunosForms_Load(object sender, EventArgs e)
+
+        private void textBoxDataSaida_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -78,6 +78,7 @@
             this.textBoxDataSaida.Size = new System.Drawing.Size(140, 23);
             this.textBoxDataSaida.TabIndex = 113;
             this.textBoxDataSaida.Visible = false;
+            this.textBoxDataSaida.TextChanged += new System.EventHandler(this.textBoxDataSaida_TextChanged);
             // 
             // LabelNomeDataSaida
             // 

@@ -100,10 +100,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Aluno\AlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
     <Compile Include="Controller\Aluno\AlunoRepositorio.cs" />
-    <Compile Include="Controller\Aluno\EntradaSaidaAlunos.cs" />
+    <Compile Include="Controller\Graficos\EntradaSaidaAlunos.cs" />
     <Compile Include="Controller\Aluno\RepositorioAluno.cs" />
     <Compile Include="Controller\Graficos\RepositorioGrafico.cs" />
     <Compile Include="Controller\Graficos\CarregarGraficoController.cs" />
@@ -116,9 +115,9 @@
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\ListaProfessores.cs" />
     <Compile Include="Services\SessionUser.cs" />
-    <Compile Include="Controller\Aluno\LimparCamposController.cs" />
+    <Compile Include="Controller\Aluno\Cadastro\LimparCamposController.cs" />
     <Compile Include="Controller\Aluno\BotoesAlterarDadosAlunoController.cs" />
-    <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
+    <Compile Include="Controller\Aluno\Cadastro\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\Usuario.cs" />

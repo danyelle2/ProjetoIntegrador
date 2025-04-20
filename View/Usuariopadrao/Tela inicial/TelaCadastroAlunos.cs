@@ -41,6 +41,7 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
         {
+            //TEM QUE VE SE FUNCIONAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             try
             {
                 bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBoxIdade, textBoxNomeResponsavel, label8, textMsgErroIdade);
