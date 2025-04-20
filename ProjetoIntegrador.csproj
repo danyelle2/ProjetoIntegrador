@@ -100,12 +100,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\Aluno\AlunoPagamentoController.cs" />
-    <Compile Include="Controller\Aluno\AlunoRepositorio.cs" />
-    <Compile Include="Controller\Graficos\EntradaSaidaAlunos.cs" />
-    <Compile Include="Controller\Aluno\RepositorioAluno.cs" />
-    <Compile Include="Controller\Graficos\RepositorioGrafico.cs" />
-    <Compile Include="Controller\Graficos\CarregarGraficoController.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\RepositorioPagamento.cs" />
+    <Compile Include="Model\EntradaSaidaAlunos.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\RepositorioAluno.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\RepositorioGrafico.cs" />
+    <Compile Include="Controller\Aluno\Graficos\CarregarGraficoController.cs" />
     <Compile Include="Controller\RepositorioProfessor.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Controller\Usuario\UsuarioRepositorio.cs" />
@@ -116,7 +115,7 @@
     <Compile Include="Services\ListaProfessores.cs" />
     <Compile Include="Services\SessionUser.cs" />
     <Compile Include="Controller\Aluno\Cadastro\LimparCamposController.cs" />
-    <Compile Include="Controller\Aluno\BotoesAlterarDadosAlunoController.cs" />
+    <Compile Include="Controller\Aluno\AlterarDados\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Aluno\Cadastro\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
     <Compile Include="Model\Aluno.cs" />

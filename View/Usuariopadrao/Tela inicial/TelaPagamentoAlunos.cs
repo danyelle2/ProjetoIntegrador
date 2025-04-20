@@ -10,13 +10,13 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 {
     public partial class TelaPagamentoAlunos : Form
     {
-        private AlunoPagamentoController alunoController;
+        private RepositorioPagamento alunoController;
 
         public TelaPagamentoAlunos()
         {
             InitializeComponent();
             DatabaseService dbService = new DatabaseService(); 
-            alunoController = new AlunoPagamentoController(dbService); 
+            alunoController = new RepositorioPagamento(dbService); 
         }
 
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)

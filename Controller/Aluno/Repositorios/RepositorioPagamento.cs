@@ -6,11 +6,11 @@ using ModelAluno = ProjetoIntegrador.Model.Aluno;
 
 namespace ProjetoIntegrador.Controller.Aluno
 {
-    internal class AlunoPagamentoController
+    internal class RepositorioPagamento
     {
         private readonly DatabaseService _databaseService;
         //"DatabaseService databaseService" é a conexão com o banco de dados
-        public AlunoPagamentoController(DatabaseService databaseService)
+        public RepositorioPagamento(DatabaseService databaseService)
         {
             _databaseService = databaseService;
         }
