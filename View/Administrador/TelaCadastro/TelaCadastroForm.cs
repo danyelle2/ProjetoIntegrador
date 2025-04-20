@@ -69,7 +69,7 @@ namespace ProjetoIntegrador.View
             
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
-
+                //TEM QUE VE SE FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 var databaseService = new DatabaseService();
                 var repositorio = new UsuarioRepositorio(databaseService);
 
@@ -82,7 +82,6 @@ namespace ProjetoIntegrador.View
                     IdProfessor = Convert.ToInt32(comboBoxModalidade.SelectedValue) 
                 };
 
-                // Enviar para o banco
                 repositorio.CadastrarUsuario(novoUsuario);
 
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
