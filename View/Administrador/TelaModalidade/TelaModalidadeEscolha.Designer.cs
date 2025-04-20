@@ -48,6 +48,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(112, 99);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -56,6 +57,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(112, 99);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -64,6 +66,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(112, 99);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label1
             // 

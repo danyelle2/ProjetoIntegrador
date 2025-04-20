@@ -45,7 +45,7 @@ namespace ProjetoIntegrador.BancoDeDados
                                 Id = Convert.ToInt32(respostaBanco["id_usuario"]),
                                 Nome = respostaBanco["nome"].ToString(),
                                 TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
-                                TipoMembro = Convert.ToInt32(respostaBanco["id_professor"]),
+                                IdProfessor = Convert.ToInt32(respostaBanco["id_professor"]),
                                 StatusUsuario = status,
                                 Modalidade = respostaBanco["tipo_modalidade"].ToString().ToLower()
                             };

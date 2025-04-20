@@ -17,13 +17,13 @@ namespace ProjetoIntegrador
 {
     public partial class TelaLoginForm : Form
     {
-        LoginController loginController;
+        LimparCamposLoginController loginController;
         public TelaLoginForm()
         {
             
             InitializeComponent();
             this.FormClosing += AppClose;
-            loginController = new LoginController();
+            loginController = new LimparCamposLoginController();
         }
 
         public void AppClose(object sender, FormClosingEventArgs e)
@@ -61,7 +61,7 @@ namespace ProjetoIntegrador
 
                     this.Hide();
 
-                    var telaEscolhaModalidade = new TelaModalidadeEscolha(usuario);
+                    var telaEscolhaModalidade = new TelaModalidadeEscolha();
                     telaEscolhaModalidade.Show();
                 }
                 else

@@ -64,7 +64,25 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
                 TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
                 telaCadastroForm.Show();
                 this.Hide();
-        }       
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            var telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            var telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            var telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
     }
 }
 

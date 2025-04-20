@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller.Usuario
 {
-    public class LoginController
+    public class LimparCamposLoginController
     {
         public bool CampoVazio(TextBox cpf, TextBox senha, Label mensagemError)
         {
