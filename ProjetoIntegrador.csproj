@@ -107,8 +107,7 @@
     <Compile Include="Controller\Repositorio\RepositorioPagamento.cs" />
     <Compile Include="Controller\Repositorio\UsuarioRepositorio.cs" />
     <Compile Include="Model\Criptografia.cs" />
-    <Compile Include="Services\AuthService.cs" />
-    <Compile Include="Services\Criptografia.cs" />
+    <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />
     <Compile Include="Controller\Aluno\cadastro\BotoesCadastrarDadosAlunosController.cs" />
