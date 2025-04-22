@@ -24,7 +24,7 @@ namespace ProjetoIntegrador.View
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
             // pensar em como criar uma funcao para quando clicar na lista e no botao alterar apareca os 
-            // dados do aluno na tela de alterar dados
+            // dados do aluno na tela de alterar dados...
             bool resultadoMenorIdade = alterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade);
             bool resultadoIdadeInvalida = alterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade);
             bool resultadoCamposVazios = alterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
