@@ -26,6 +26,10 @@ namespace ProjetoIntegrador.View
             this.usuario = usuario;
         }
 
+        public TelaGraficoForms()
+        {
+        }
+
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
 
@@ -33,7 +37,7 @@ namespace ProjetoIntegrador.View
             var controller = new CarregarGraficoController();
 
             controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);//sessionuser aqui vou mudar sessionUser.idmodalidade
-            controller.CarregarGraficoAnual(repositorio, chart1, SessionUser.userLogado.Modalidade);
+            controller.CarregarGraficoAnual(repositorio, chart1, usuario);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
