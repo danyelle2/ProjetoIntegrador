@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjetoIntegrador.Model;
 
-namespace ProjetoIntegrador.BancoDeDados
+namespace ProjetoIntegrador.Services
 {
     public static class SessionUser
     {

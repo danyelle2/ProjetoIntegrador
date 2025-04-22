@@ -5,7 +5,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace ProjetoIntegrador.BancoDeDados
+namespace ProjetoIntegrador.Services
 {
     public class AutenticacaoUsuario
     {

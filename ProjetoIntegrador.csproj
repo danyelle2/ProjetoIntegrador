@@ -107,15 +107,15 @@
     <Compile Include="Controller\Repositorio\RepositorioPagamento.cs" />
     <Compile Include="Controller\Repositorio\UsuarioRepositorio.cs" />
     <Compile Include="Model\Criptografia.cs" />
+    <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Services\AutenticacaoUsuario.cs" />
-    <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\DatabaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />
     <Compile Include="Controller\Aluno\cadastro\BotoesCadastrarDadosAlunosController.cs" />
     <Compile Include="Controller\Aluno\alterarDados\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroUsuarioController.cs" />
     <Compile Include="Controller\Usuario\LimparCamposLoginController.cs" />
     <Compile Include="Model\Aluno.cs" />
-    <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.cs">
       <SubType>Form</SubType>
