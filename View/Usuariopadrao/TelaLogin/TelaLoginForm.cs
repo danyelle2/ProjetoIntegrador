@@ -1,5 +1,8 @@
-﻿using ProjetoIntegrador.Controller;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.View;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,21 +17,21 @@ namespace ProjetoIntegrador
 {
     public partial class TelaLoginForm : Form
     {
+        LimparCamposLoginController loginController;
         public TelaLoginForm()
         {
-            
+
             InitializeComponent();
             this.FormClosing += AppClose;
-
+            loginController = new LimparCamposLoginController();
         }
-        LoginController loginController = new LoginController();
 
         public void AppClose(object sender, FormClosingEventArgs e)
         {
             Application.ExitThread();
 
-        }              
-        
+        }
+
 
 
         private void TelaLoginForm_Load(object sender, EventArgs e)
@@ -36,34 +39,45 @@ namespace ProjetoIntegrador
 
         }
 
-        private void btnCadastro_Click(object sender, EventArgs e)
-        {
-                TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
-                telaCadastroForm.Show();
-                this.Hide();
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool resultadoLogin = loginController.RealizarLogin(TxtUsuario.Text, TxtSenha.Text, MsgErro);
+            bool camposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha, MsgErro);
+            if (camposVazios) return;
 
-            if (resultadoLogin)
+            string cpf = TxtUsuario.Text.Trim();
+            string senha = TxtSenha.Text;
+
+            try
             {
-                this.Hide();
+                var databaseService = new DatabaseService();
+                var autenticador = new AutenticacaoUsuario(databaseService);
+                var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true);
+
+                if (usuario != null)
+                {
+                    MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SessionUser.Login(usuario);
+
+                    this.Hide();
+
+                    var telaEscolhaModalidade = new TelaModalidadeEscolha();
+                    telaEscolhaModalidade.Show();
+                }
+                else
+                {
+                    MsgErro.Text = "CPF ou senha inválidos!";
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao tentar fazer login:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

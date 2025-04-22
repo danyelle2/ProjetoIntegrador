@@ -100,18 +100,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BancoDeDados\AuthService.cs" />
-    <Compile Include="BancoDeDados\Criptografia.cs" />
-    <Compile Include="BancoDeDados\DataBaseService.cs" />
-    <Compile Include="BancoDeDados\SessionUser.cs" />
-    <Compile Include="Controller\CadastrarDadosAlunosController.cs" />
-    <Compile Include="Controller\BotoesAlterarDadosAlunoController.cs" />
-    <Compile Include="Controller\BotoesCadastroAlunoController.cs" />
-    <Compile Include="Controller\BotoesCadastroController.cs" />
-    <Compile Include="Controller\CadastroProfessorUserController.cs" />
-    <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\PagamentoController.cs" />
-    <Compile Include="Controller\UsuarioRepositorio.cs" />
+    <Compile Include="Services\AuthService.cs" />
+    <Compile Include="Services\Criptografia.cs" />
+    <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\SessionUser.cs" />
+    <Compile Include="Controller\Aluno\cadastro\CadastrarDadosAlunosController.cs" />
+    <Compile Include="Controller\Aluno\alterarDados\BotoesAlterarDadosAlunoController.cs" />
+    <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
+    <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
+    <Compile Include="Controller\Usuario\CadastroProfessorUserController.cs" />
+    <Compile Include="Controller\Usuario\LoginController.cs" />
+    <Compile Include="Controller\Aluno\PagamentoController.cs" />
+    <Compile Include="Controller\Repositorio\UsuarioRepositorio.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Usuario.cs" />
@@ -221,6 +221,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controller\Aluno\graficos\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
