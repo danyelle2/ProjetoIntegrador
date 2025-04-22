@@ -102,18 +102,18 @@
   <ItemGroup>
     <Compile Include="Controller\Aluno\cadastro\LimparCamposController.cs" />
     <Compile Include="Controller\Aluno\graficos\CarregarGraficosController.cs" />
+    <Compile Include="Controller\Repositorio\RepositorioAluno.cs" />
+    <Compile Include="Controller\Repositorio\RepositorioGrafico.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />
     <Compile Include="Controller\Aluno\cadastro\BotoesCadastrarDadosAlunosController.cs" />
     <Compile Include="Controller\Aluno\alterarDados\BotoesAlterarDadosAlunoController.cs" />
-    <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
     <Compile Include="Controller\Usuario\CadastroProfessorUserController.cs" />
     <Compile Include="Controller\Usuario\LoginController.cs" />
     <Compile Include="Controller\Aluno\PagamentoController.cs" />
-    <Compile Include="Controller\Repositorio\UsuarioRepositorio.cs" />
     <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Usuario.cs" />
