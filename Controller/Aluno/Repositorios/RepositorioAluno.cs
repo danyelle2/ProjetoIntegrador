@@ -19,7 +19,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public bool CadastrarAluno(ProjetoIntegrador.Model.Aluno aluno)
         {
-            string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status) 
+            string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status_aluno) 
                          VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status)";
 
             var parametros = new MySql.Data.MySqlClient.MySqlParameter[]
