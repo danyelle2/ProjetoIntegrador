@@ -104,7 +104,7 @@
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />
-    <Compile Include="Controller\Aluno\cadastro\CadastrarDadosAlunosController.cs" />
+    <Compile Include="Controller\Aluno\cadastro\BotoesCadastrarDadosAlunosController.cs" />
     <Compile Include="Controller\Aluno\alterarDados\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Aluno\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroController.cs" />
