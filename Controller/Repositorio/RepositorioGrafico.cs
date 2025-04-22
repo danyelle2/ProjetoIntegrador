@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoIntegrador.BancoDeDados;
 using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;

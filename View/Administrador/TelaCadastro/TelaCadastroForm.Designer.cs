@@ -52,7 +52,7 @@
             // 
             this.labelMsgErroModalidade.AutoSize = true;
             this.labelMsgErroModalidade.BackColor = System.Drawing.Color.Transparent;
-            this.labelMsgErroModalidade.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMsgErroModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMsgErroModalidade.ForeColor = System.Drawing.Color.Maroon;
             this.labelMsgErroModalidade.Location = new System.Drawing.Point(184, 984);
             this.labelMsgErroModalidade.Name = "labelMsgErroModalidade";
@@ -64,7 +64,7 @@
             // 
             this.MsgErrorTipoUsuario.AutoSize = true;
             this.MsgErrorTipoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.MsgErrorTipoUsuario.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErrorTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgErrorTipoUsuario.ForeColor = System.Drawing.Color.Maroon;
             this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(184, 828);
             this.MsgErrorTipoUsuario.Name = "MsgErrorTipoUsuario";
@@ -118,7 +118,7 @@
             // 
             this.MsgExplicacaoUsuario.AutoSize = true;
             this.MsgExplicacaoUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoUsuario.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgExplicacaoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgExplicacaoUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.MsgExplicacaoUsuario.Location = new System.Drawing.Point(676, 701);
             this.MsgExplicacaoUsuario.Name = "MsgExplicacaoUsuario";
@@ -129,7 +129,7 @@
             // 
             this.TxTExplicacaoModalidade.AutoSize = true;
             this.TxTExplicacaoModalidade.BackColor = System.Drawing.Color.Transparent;
-            this.TxTExplicacaoModalidade.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxTExplicacaoModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxTExplicacaoModalidade.ForeColor = System.Drawing.Color.Black;
             this.TxTExplicacaoModalidade.Location = new System.Drawing.Point(676, 865);
             this.TxTExplicacaoModalidade.Name = "TxTExplicacaoModalidade";
@@ -154,7 +154,7 @@
             // 
             this.MsgErrorSenha.AutoSize = true;
             this.MsgErrorSenha.BackColor = System.Drawing.Color.Transparent;
-            this.MsgErrorSenha.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErrorSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgErrorSenha.ForeColor = System.Drawing.Color.Maroon;
             this.MsgErrorSenha.Location = new System.Drawing.Point(1142, 634);
             this.MsgErrorSenha.Name = "MsgErrorSenha";
@@ -165,7 +165,7 @@
             // 
             this.txtSenhaCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaCadastro.Location = new System.Drawing.Point(1145, 419);
+            this.txtSenhaCadastro.Location = new System.Drawing.Point(903, 283);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
             this.txtSenhaCadastro.PasswordChar = '*';
             this.txtSenhaCadastro.Size = new System.Drawing.Size(532, 35);
@@ -176,7 +176,7 @@
             // 
             this.textSenhaConfirmada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSenhaConfirmada.Location = new System.Drawing.Point(1145, 585);
+            this.textSenhaConfirmada.Location = new System.Drawing.Point(903, 449);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
             this.textSenhaConfirmada.PasswordChar = '*';
             this.textSenhaConfirmada.Size = new System.Drawing.Size(532, 35);
@@ -224,7 +224,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVoltar.Location = new System.Drawing.Point(62, 57);
+            this.btnVoltar.Location = new System.Drawing.Point(-180, -79);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(57, 38);
             this.btnVoltar.TabIndex = 75;
@@ -246,7 +246,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1870, 1061);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.txtSenhaCadastro);
             this.Controls.Add(this.textSenhaConfirmada);
             this.Controls.Add(this.panel2);
