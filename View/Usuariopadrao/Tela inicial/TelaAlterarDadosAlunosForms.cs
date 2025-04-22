@@ -83,5 +83,25 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxStatusAlunos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textMsgErroTelefone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LabelNomeDataSaida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

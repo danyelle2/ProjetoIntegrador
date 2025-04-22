@@ -51,7 +51,7 @@
             // 
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(908, 224);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(352, 713);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoGrafico.TabIndex = 14;
@@ -61,7 +61,7 @@
             // 
             this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados.AutoSize = true;
-            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(643, 224);
+            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(352, 487);
             this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
             this.MsgExplicacaoAlterarDados.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoAlterarDados.TabIndex = 13;
@@ -71,7 +71,7 @@
             // 
             this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(377, 233);
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(352, 245);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
             this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoCadastro.TabIndex = 12;
@@ -80,10 +80,11 @@
             // pictureBoxCadastroAlunos
             // 
             this.pictureBoxCadastroAlunos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxCadastroAlunos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCadastroAlunos.Image")));
-            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(250, 175);
+            this.pictureBoxCadastroAlunos.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCadastroAlunos.ErrorImage = null;
+            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(100, 32);
             this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
-            this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(100, 108);
+            this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(246, 226);
             this.pictureBoxCadastroAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCadastroAlunos.TabIndex = 15;
             this.pictureBoxCadastroAlunos.TabStop = false;
@@ -94,10 +95,11 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(503, 175);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(100, 264);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 108);
+            this.pictureBox1.Size = new System.Drawing.Size(246, 236);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
@@ -108,10 +110,11 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(771, 176);
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.ErrorImage = null;
+            this.pictureBox2.Location = new System.Drawing.Point(100, 506);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(119, 107);
+            this.pictureBox2.Size = new System.Drawing.Size(246, 220);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
@@ -122,9 +125,9 @@
             // dataGridViewListaGeralAlunos
             // 
             this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(250, 324);
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(877, 301);
             this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
-            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(698, 255);
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(983, 677);
             this.dataGridViewListaGeralAlunos.TabIndex = 18;
             this.dataGridViewListaGeralAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -136,18 +139,21 @@
             // 
             // textBoxPesquisa
             // 
-            this.textBoxPesquisa.Location = new System.Drawing.Point(458, 342);
+            this.textBoxPesquisa.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.textBoxPesquisa.Location = new System.Drawing.Point(1010, 301);
+            this.textBoxPesquisa.Multiline = true;
             this.textBoxPesquisa.Name = "textBoxPesquisa";
-            this.textBoxPesquisa.Size = new System.Drawing.Size(271, 20);
+            this.textBoxPesquisa.Size = new System.Drawing.Size(699, 71);
             this.textBoxPesquisa.TabIndex = 19;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(1008, 176);
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.ErrorImage = null;
+            this.pictureBox3.Location = new System.Drawing.Point(100, 732);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(119, 107);
+            this.pictureBox3.Size = new System.Drawing.Size(246, 232);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
@@ -157,7 +163,7 @@
             // 
             this.MsgTemporariaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgTemporariaPagamento.AutoSize = true;
-            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(1145, 186);
+            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(352, 951);
             this.MsgTemporariaPagamento.Name = "MsgTemporariaPagamento";
             this.MsgTemporariaPagamento.Size = new System.Drawing.Size(16, 13);
             this.MsgTemporariaPagamento.TabIndex = 21;
@@ -169,7 +175,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1227, 591);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1903, 1061);
             this.Controls.Add(this.MsgTemporariaPagamento);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBoxPesquisa);

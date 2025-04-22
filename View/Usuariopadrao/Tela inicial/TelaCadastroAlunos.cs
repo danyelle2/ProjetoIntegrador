@@ -84,6 +84,28 @@ namespace ProjetoIntegrador.View
             }
         }
 
+<<<<<<< HEAD
        
+=======
+        private void TelaCadastroAlunos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxStatusAluno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> origin/master
     }
 }
