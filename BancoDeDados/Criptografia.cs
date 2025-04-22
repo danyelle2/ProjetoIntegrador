@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProjetoIntegrador.BancoDeDados
 {
-    public class Criptografia
+    internal class Criptografia
     {
 
         public static string HashPassword(string password)
@@ -17,18 +17,6 @@ namespace ProjetoIntegrador.BancoDeDados
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
-        }
-        public static bool SecureEquals(string a, string b)
-        {
-            if (a.Length != b.Length) return false;
-
-            int result = 0;
-            for (int i = 0; i < a.Length; i++)
-            {
-                result |= a[i] ^ b[i];
-            }
-
-            return result == 0;
         }
     }
 }

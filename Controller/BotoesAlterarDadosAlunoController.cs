@@ -12,7 +12,7 @@ namespace ProjetoIntegrador.Controller
     {
         public bool AparecerCampoResponsavel(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
-
+            
             if (int.TryParse(idade.Text, out int idadeAluno))
             {
 
@@ -58,8 +58,8 @@ namespace ProjetoIntegrador.Controller
                     MsgErroResponsavel.Text = "Preencha o nome do responsável.";
                     MessageBox.Show("Preencha a data de saída.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
-                }
-
+                }   
+                
             return true;
         }
 
@@ -74,11 +74,11 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarDatas(TextBox dataentrada, Label MsgErroDataEntrada, TextBox dataSaida, Label MsgErrodataSaida)
+        public bool ValidarDatas(TextBox dataentrada, Label MsgErroDataEntrada,TextBox dataSaida, Label MsgErrodataSaida)
         {
             DateTime dataEntrada, dataDeSaida;
-
-            if (!DateTime.TryParse(dataentrada.Text, out dataEntrada))
+         
+            if (!DateTime.TryParse(dataentrada.Text, out dataEntrada ))
             {
                 MsgErroDataEntrada.Text = "Data inválida. Favor inserir uma data válida.";
                 return false;
@@ -97,10 +97,10 @@ namespace ProjetoIntegrador.Controller
                     return false;
                 }
             }
-
+            
             return true;
         }
-        public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida, Label MsgErrorDataSaida)
+        public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida,Label MsgErrorDataSaida)
         {
             if (statusAluno.SelectedItem != null && statusAluno.SelectedItem.ToString() == "Inativo")
             {
@@ -109,8 +109,8 @@ namespace ProjetoIntegrador.Controller
                 MsgErrorDataSaida.Text = "Preencha a data de saída.";
                 return false;
             }
-
-            return true;
+           
+                return true;
         }
         public bool VisibilidadeNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
@@ -136,12 +136,27 @@ namespace ProjetoIntegrador.Controller
             if (statusAluno.SelectedItem == null || (statusAluno.SelectedItem.ToString() != "Ativo" && statusAluno.SelectedItem.ToString() != "Inativo"))
             {
                 MsgErroStatusAluno.Text = "Selecione uma opção válida";
-
+            
                 return false;
             }
-            return true;
-
+                return true;
+        
         }
 
+        public bool AlterarDadosAlunos(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
+        {
+          
+            
+            //criar uma classe que chama o banco de dados e faz a alteração no cadastro do aluno
+            return true;
+        }
+
+        public bool ValidarAlteracaoDados(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno, TextBox dataSaida)
+        {
+            MessageBox.Show("Alteração realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            TelaInicialForm telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+            return true;
+        }
     }
 }
