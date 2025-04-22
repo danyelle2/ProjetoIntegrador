@@ -104,6 +104,8 @@
     <Compile Include="Controller\Aluno\graficos\CarregarGraficosController.cs" />
     <Compile Include="Controller\Repositorio\RepositorioAluno.cs" />
     <Compile Include="Controller\Repositorio\RepositorioGrafico.cs" />
+    <Compile Include="Controller\Repositorio\RepositorioPagamento.cs" />
+    <Compile Include="Controller\Repositorio\RepositorioUsuario.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
