@@ -146,6 +146,7 @@
             this.textBoxPesquisa.Name = "textBoxPesquisa";
             this.textBoxPesquisa.Size = new System.Drawing.Size(699, 53);
             this.textBoxPesquisa.TabIndex = 19;
+            this.textBoxPesquisa.TextChanged += new System.EventHandler(this.textBoxPesquisa_TextChanged);
             // 
             // pictureBox3
             // 

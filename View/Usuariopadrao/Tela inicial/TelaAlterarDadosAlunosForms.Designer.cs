@@ -193,7 +193,7 @@
             this.textMsgErroIdade.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroIdade.Font = new System.Drawing.Font("Arial", 9.75F);
             this.textMsgErroIdade.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroIdade.Location = new System.Drawing.Point(445, 204);
+            this.textMsgErroIdade.Location = new System.Drawing.Point(483, 204);
             this.textMsgErroIdade.Name = "textMsgErroIdade";
             this.textMsgErroIdade.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroIdade.TabIndex = 119;

@@ -60,6 +60,7 @@
             // buttonPagamentoRealizado
             // 
             this.buttonPagamentoRealizado.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPagamentoRealizado.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.buttonPagamentoRealizado.FlatAppearance.BorderSize = 0;
             this.buttonPagamentoRealizado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.buttonPagamentoRealizado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
