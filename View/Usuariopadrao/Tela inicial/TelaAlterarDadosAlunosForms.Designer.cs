@@ -112,13 +112,18 @@
             // 
             // btnAlterarDados
             // 
-            this.btnAlterarDados.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.btnAlterarDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlterarDados.BackgroundImage")));
+            this.btnAlterarDados.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAlterarDados.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarDados.Location = new System.Drawing.Point(659, 380);
+            this.btnAlterarDados.FlatAppearance.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnAlterarDados.FlatAppearance.BorderSize = 0;
+            this.btnAlterarDados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAlterarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnAlterarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarDados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnAlterarDados.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAlterarDados.Location = new System.Drawing.Point(656, 368);
             this.btnAlterarDados.Name = "btnAlterarDados";
-            this.btnAlterarDados.Size = new System.Drawing.Size(119, 44);
+            this.btnAlterarDados.Size = new System.Drawing.Size(102, 44);
             this.btnAlterarDados.TabIndex = 107;
             this.btnAlterarDados.UseVisualStyleBackColor = false;
             this.btnAlterarDados.Click += new System.EventHandler(this.btnAlterarDados_Click);

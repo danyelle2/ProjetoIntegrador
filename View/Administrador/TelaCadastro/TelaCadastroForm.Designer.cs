@@ -206,7 +206,10 @@
             this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastro.FlatAppearance.BorderSize = 0;
+            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
             this.btnCadastro.Location = new System.Drawing.Point(0, 0);
             this.btnCadastro.Name = "btnCadastro";
