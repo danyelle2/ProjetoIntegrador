@@ -19,7 +19,6 @@ namespace ProjetoIntegrador.View
 
         }
         BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
-        BotoesCadastrarDadosAlunosController cadastrarDadosAlunosController = new BotoesCadastrarDadosAlunosController();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
