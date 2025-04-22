@@ -1,4 +1,7 @@
-﻿namespace ProjetoIntegrador
+﻿using System;
+using System.Windows.Forms;
+
+namespace ProjetoIntegrador
 {
     partial class TelaLoginForm
     {
@@ -70,30 +73,29 @@
             this.panel1.Controls.Add(this.MsgErro);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(605, 168);
+            this.panel1.Location = new System.Drawing.Point(362, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(731, 799);
             this.panel1.TabIndex = 28;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // TxtSenha
             // 
             this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtSenha.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSenha.Location = new System.Drawing.Point(107, 463);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '*';
-            this.TxtSenha.Size = new System.Drawing.Size(446, 48);
+            this.TxtSenha.Size = new System.Drawing.Size(446, 47);
             this.TxtSenha.TabIndex = 19;
             // 
             // TxtUsuario
             // 
             this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtUsuario.Font = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtUsuario.Location = new System.Drawing.Point(107, 199);
             this.TxtUsuario.MaxLength = 11;
             this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(446, 48);
+            this.TxtUsuario.Size = new System.Drawing.Size(446, 47);
             this.TxtUsuario.TabIndex = 18;
             // 
             // btnCadastro
@@ -111,7 +113,6 @@
             this.btnCadastro.Size = new System.Drawing.Size(190, 50);
             this.btnCadastro.TabIndex = 23;
             this.btnCadastro.UseVisualStyleBackColor = false;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // MsgErro
             // 
@@ -148,7 +149,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1857, 1022);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -169,9 +170,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.TextBox TxtUsuario;
-        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Label MsgErro;
         private System.Windows.Forms.Button btnLogin;
+        private PaintEventHandler panel1_Paint;
+        private EventHandler btnCadastro_Click;
+        private Button btnCadastro;
     }
 }
 

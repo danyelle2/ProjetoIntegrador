@@ -26,18 +26,18 @@ namespace ProjetoIntegrador.View
 
             var movimentacoes = new List<EntradaSaidaAlunos>
         {
-            new EntradaSaidaAlunos { Mes = "Jan", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Fev", Entrada = 6, Saida = 1 },
-            new EntradaSaidaAlunos { Mes = "Mar", Entrada = 7, Saida = 1 },
-            new EntradaSaidaAlunos { Mes = "Abr", Entrada = 2, Saida = 5 },
-            new EntradaSaidaAlunos { Mes = "Mai", Entrada = 9, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Jun", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Jul", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos   { Mes = "Ago", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Set", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Out", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Nov", Entrada = 0, Saida = 0 },
-            new EntradaSaidaAlunos { Mes = "Dez", Entrada = 0, Saida = 0 }
+            //new EntradaSaidaAlunos { Mes = "Jan", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Fev", Entrada = 6, Saida = 1 },
+            //new EntradaSaidaAlunos { Mes = "Mar", Entrada = 7, Saida = 1 },
+            //new EntradaSaidaAlunos { Mes = "Abr", Entrada = 2, Saida = 5 },
+            //new EntradaSaidaAlunos { Mes = "Mai", Entrada = 9, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Jun", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Jul", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos   { Mes = "Ago", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Set", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Out", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Nov", Entrada = 0, Saida = 0 },
+            //new EntradaSaidaAlunos { Mes = "Dez", Entrada = 0, Saida = 0 }
         };
             chart1.Series.Clear();
             var Entrada = new Series("Entradas")

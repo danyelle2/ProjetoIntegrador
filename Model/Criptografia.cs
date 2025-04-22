@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProjetoIntegrador.BancoDeDados
+namespace ProjetoIntegrador.Services
 {
     public class Criptografia
     {

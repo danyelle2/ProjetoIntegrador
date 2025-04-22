@@ -1,4 +1,4 @@
-﻿using ProjetoIntegrador.BancoDeDados;
+﻿using ProjetoIntegrador.Services;
 using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Model;
 using System.Drawing;

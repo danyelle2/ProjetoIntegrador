@@ -1,5 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
-using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Services;
 using ProjetoIntegrador.Model;
 using System;
 using System.Security.Cryptography;

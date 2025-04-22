@@ -1,8 +1,6 @@
-﻿using ProjetoIntegrador.BancoDeDados;
-using ProjetoIntegrador.Controller;
-using ProjetoIntegrador.Controller.Usuario;
-using ProjetoIntegrador.View;
-using ProjetoIntegrador.View.Administrador.TelaModalidade;
+﻿using MySqlX.XDevAPI;
+using ProjetoIntegrador.Services;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
