@@ -1,5 +1,8 @@
-﻿using ProjetoIntegrador.Controller;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.Model;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,18 +17,18 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaCadastroForm : Form
     {
+
+        BotoesCadastroUsuarioController botoesCadastroController;
         public TelaCadastroForm()
         {
             InitializeComponent();
-            
+            botoesCadastroController = new BotoesCadastroUsuarioController();
         }
-        CadastroProfessorUserController repositorioCadastroProfessor = new CadastroProfessorUserController();
-        BotoesCadastroController cadastroProfessorController = new BotoesCadastroController();
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             this.Dispose();
-            TelaLoginForm telalogin = new TelaLoginForm();
-            telalogin.Show();
+            TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
+            telaModalidadeEscolha.Show();
         }
 
         private void msgTemporariaUsuarioAparece(object sender, EventArgs e)
@@ -48,7 +51,7 @@ namespace ProjetoIntegrador.View
         private void btnModalidadeCadastroApareceText(object sender, EventArgs e)
         {
 
-            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administradore\nProfessor, por favor, selecione a sua aula";
+            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administrador\nProfessor, por favor, selecione a sua aula";
             TxTExplicacaoModalidade.Visible = true;
         }
 
@@ -59,29 +62,36 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            bool resultadoCamposVazios = cadastroProfessorController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-            bool Senhasiguais = cadastroProfessorController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
-            bool TipoUsuario = cadastroProfessorController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
-            bool resultadoComboBox = cadastroProfessorController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
+            bool resultadoCamposVazios = botoesCadastroController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
+            bool Senhasiguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
+            bool TipoUsuario = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
+            bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
             
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
+                //TEM QUE VE SE FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                var databaseService = new DatabaseService();
+                var repositorio = new UsuarioRepositorio(databaseService);
 
-                //colocar aqui o repositorio que vai chamar o banco de dados
-                //criar um repositorio para o aluno colocar datagride e colocar uma lista (Olhar o projeto do professor como base )
+                var novoUsuario = new Usuario
+                {
+                    Nome = textNomeCadastro.Text.Trim(),
+                    Cpf = txtUsuarioCadastro.Text.Trim(),
+                    Senha = txtSenhaCadastro.Text, 
+                    TipoUsuario = comboBoxTipoUsuario.SelectedItem.ToString().ToLower(),
+                    IdProfessor = Convert.ToInt32(comboBoxModalidade.SelectedValue) 
+                };
+
+                repositorio.CadastrarUsuario(novoUsuario);
+
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                TelaCadastroForm telaCadastroForm = new TelaCadastroForm();
-                telaCadastroForm.Dispose();
-                TelaLoginForm telalogin = new TelaLoginForm();
-                telalogin.Show();
-
-                
+                               
             }
         }
 
         private void TelaCadastroForm_Load(object sender, EventArgs e)
         {
-
+                    
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

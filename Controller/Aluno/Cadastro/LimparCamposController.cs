@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,15 +9,8 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class CadastrarDadosAlunosController
+    public class LimparCamposController
     {
-        public bool CadastrarAluno(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
-        {
-            // Criar um repositorio que vai chamar o banco de dados aqui eu vou abrir uma classe chamada repositorio pro aluno e professor 
-            //nela chamar o banco de dados e depos 
-            return true;
-        }
-
         public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
         {
 
@@ -30,6 +25,7 @@ namespace ProjetoIntegrador.Controller
             StatusAluno.SelectedItem = null;
             return true;
         }
+
     }
 }
     

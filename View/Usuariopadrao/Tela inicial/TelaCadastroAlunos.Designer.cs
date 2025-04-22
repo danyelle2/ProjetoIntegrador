@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastroAlunos));
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxNomeResponsavel = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxIdade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAssinaturaAluno = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDataEntrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.txtTelefoneALuno = new System.Windows.Forms.TextBox();
@@ -53,14 +53,23 @@
             this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox3
+            // textBoxNomeResponsavel
             // 
+<<<<<<< HEAD
+            this.textBoxNomeResponsavel.Location = new System.Drawing.Point(428, 318);
+            this.textBoxNomeResponsavel.Multiline = true;
+            this.textBoxNomeResponsavel.Name = "textBoxNomeResponsavel";
+            this.textBoxNomeResponsavel.Size = new System.Drawing.Size(140, 23);
+            this.textBoxNomeResponsavel.TabIndex = 92;
+            this.textBoxNomeResponsavel.Visible = false;
+=======
             this.textBox3.Location = new System.Drawing.Point(436, 233);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(140, 23);
             this.textBox3.TabIndex = 92;
             this.textBox3.Visible = false;
+>>>>>>> origin/master
             // 
             // label8
             // 
@@ -74,14 +83,14 @@
             this.label8.Text = "Responsável";
             this.label8.Visible = false;
             // 
-            // textBox2
+            // textBoxIdade
             // 
-            this.textBox2.Location = new System.Drawing.Point(235, 318);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(140, 23);
-            this.textBox2.TabIndex = 90;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBoxIdade.Location = new System.Drawing.Point(235, 318);
+            this.textBoxIdade.Multiline = true;
+            this.textBoxIdade.Name = "textBoxIdade";
+            this.textBoxIdade.Size = new System.Drawing.Size(140, 23);
+            this.textBoxIdade.TabIndex = 90;
+            this.textBoxIdade.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label7
             // 
@@ -105,13 +114,21 @@
             this.txtAssinaturaAluno.Size = new System.Drawing.Size(140, 21);
             this.txtAssinaturaAluno.TabIndex = 88;
             // 
-            // textBox1
+            // textBoxDataEntrada
             // 
+<<<<<<< HEAD
+            this.textBoxDataEntrada.Location = new System.Drawing.Point(235, 388);
+            this.textBoxDataEntrada.Multiline = true;
+            this.textBoxDataEntrada.Name = "textBoxDataEntrada";
+            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 23);
+            this.textBoxDataEntrada.TabIndex = 87;
+=======
             this.textBox1.Location = new System.Drawing.Point(436, 56);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(140, 23);
             this.textBox1.TabIndex = 87;
+>>>>>>> origin/master
             // 
             // label5
             // 
@@ -300,12 +317,17 @@
             this.Controls.Add(this.textMsgErroTelefone);
             this.Controls.Add(this.textMsgErroResponsavel);
             this.Controls.Add(this.textMsgErroIdade);
+<<<<<<< HEAD
+            this.Controls.Add(this.pictureBoxCadastroAlunos);
+            this.Controls.Add(this.textBoxNomeResponsavel);
+=======
             this.Controls.Add(this.textBox3);
+>>>>>>> origin/master
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxIdade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAssinaturaAluno);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrarAluno);
             this.Controls.Add(this.txtTelefoneALuno);
@@ -325,12 +347,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxNomeResponsavel;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxIdade;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox txtAssinaturaAluno;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDataEntrada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCadastrarAluno;
         private System.Windows.Forms.TextBox txtTelefoneALuno;

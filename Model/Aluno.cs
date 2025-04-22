@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 
 namespace ProjetoIntegrador.Model
 {
-    internal class Aluno
+    public class Aluno
     {
-        //ve se essa classe ainda vai ser util quando tiver o banco de dados 
-        // ela é usada no dataGridView da tela de pagamento
+        public int Id { get; set; } 
         public string Nome { get; set; }
         public bool StatusAtivo { get; set; }
         public bool StatusPagamento { get; set; }
-    }
+        public int Idade { get; set; }
+        public string Telefone { get; set; }
+        public DateTime DataEntrada { get; set; }
+        public DateTime DataSaida { get; set; }
+        public string Plano { get; set; }
+        public string NomeResponsavel { get; set; }
+        public string Status { get; set; }
+    
 }
+}
+

@@ -100,20 +100,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BancoDeDados\AuthService.cs" />
-    <Compile Include="BancoDeDados\Criptografia.cs" />
-    <Compile Include="BancoDeDados\DataBaseService.cs" />
-    <Compile Include="BancoDeDados\SessionUser.cs" />
-    <Compile Include="Controller\CadastrarDadosAlunosController.cs" />
-    <Compile Include="Controller\BotoesAlterarDadosAlunoController.cs" />
-    <Compile Include="Controller\BotoesCadastroAlunoController.cs" />
-    <Compile Include="Controller\BotoesCadastroController.cs" />
-    <Compile Include="Controller\CadastroProfessorUserController.cs" />
-    <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\PagamentoController.cs" />
-    <Compile Include="Controller\UsuarioRepositorio.cs" />
-    <Compile Include="Model\Aluno.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\RepositorioPagamento.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\RepositorioAluno.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\RepositorioGrafico.cs" />
+    <Compile Include="Controller\Aluno\Graficos\CarregarGraficoController.cs" />
+    <Compile Include="Controller\Usuario\LimparCamposLoginController.cs" />
+    <Compile Include="Controller\Aluno\Repositorios\UsuarioRepositorio.cs" />
+    <Compile Include="Services\AutenticacaoUsuario.cs" />
+    <Compile Include="Model\Criptografia.cs" />
+    <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Services\ListaProfessores.cs" />
+    <Compile Include="Services\SessionUser.cs" />
+    <Compile Include="Controller\Aluno\Cadastro\LimparCamposController.cs" />
+    <Compile Include="Controller\Aluno\AlterarDados\BotoesAlterarDadosAlunoController.cs" />
+    <Compile Include="Controller\Aluno\Cadastro\BotoesCadastroAlunoController.cs" />
+    <Compile Include="Controller\Usuario\BotoesCadastroUsuarioController.cs" />
+    <Compile Include="Model\Aluno.cs" />
     <Compile Include="Model\Usuario.cs" />
     <Compile Include="View\Administrador\TelaModalidade\TelaModalidadeEscolha.cs">
       <SubType>Form</SubType>
@@ -163,10 +166,10 @@
     <Compile Include="View\Usuariopadrao\Tela inicial\TelaPagamentoAlunos.Designer.cs">
       <DependentUpon>TelaPagamentoAlunos.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Usuariopadrao\TelaLogin\TelaLoginForm.cs">
+    <Compile Include="View\TelaLogin\TelaLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Usuariopadrao\TelaLogin\TelaLoginForm.Designer.cs">
+    <Compile Include="View\TelaLogin\TelaLoginForm.Designer.cs">
       <DependentUpon>TelaLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -204,7 +207,7 @@
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaPagamentoAlunos.resx">
       <DependentUpon>TelaPagamentoAlunos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Usuariopadrao\TelaLogin\TelaLoginForm.resx">
+    <EmbeddedResource Include="View\TelaLogin\TelaLoginForm.resx">
       <DependentUpon>TelaLoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />

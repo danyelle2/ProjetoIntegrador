@@ -68,6 +68,29 @@
             this.comboBoxPlano.Size = new System.Drawing.Size(121, 21);
             this.comboBoxPlano.TabIndex = 114;
             // 
+<<<<<<< HEAD
+            // textBoxDataSaida
+            // 
+            this.textBoxDataSaida.Location = new System.Drawing.Point(442, 190);
+            this.textBoxDataSaida.Multiline = true;
+            this.textBoxDataSaida.Name = "textBoxDataSaida";
+            this.textBoxDataSaida.Size = new System.Drawing.Size(140, 23);
+            this.textBoxDataSaida.TabIndex = 113;
+            this.textBoxDataSaida.Visible = false;
+            this.textBoxDataSaida.TextChanged += new System.EventHandler(this.textBoxDataSaida_TextChanged);
+            // 
+            // LabelNomeDataSaida
+            // 
+            this.LabelNomeDataSaida.AutoSize = true;
+            this.LabelNomeDataSaida.Location = new System.Drawing.Point(449, 155);
+            this.LabelNomeDataSaida.Name = "LabelNomeDataSaida";
+            this.LabelNomeDataSaida.Size = new System.Drawing.Size(75, 13);
+            this.LabelNomeDataSaida.TabIndex = 112;
+            this.LabelNomeDataSaida.Text = "Data de saída";
+            this.LabelNomeDataSaida.Visible = false;
+            // 
+=======
+>>>>>>> origin/master
             // comboBoxStatusAlunos
             // 
             this.comboBoxStatusAlunos.FormattingEnabled = true;

@@ -1,4 +1,7 @@
-﻿using ProjetoIntegrador.Model;
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,18 +15,28 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProjetoIntegrador.View
 {
+
     public partial class TelaGraficoForms : Form
     {
-        public TelaGraficoForms()
+        private Usuario usuario;
+
+        public TelaGraficoForms(Usuario usuario)
         {
             InitializeComponent();
+            this.usuario = usuario;
+        }
+
+        public TelaGraficoForms()
+        {
         }
 
         private void TelaGraficoForms_Load(object sender, EventArgs e)
         {
-            // não sei se coloca nessa tela ou abre um controller para ela 
-            //teste se funcionar fazer a mesma coisa só que com ano 
 
+<<<<<<< HEAD
+            var repositorio = new RepositorioGrafico(new DatabaseService());
+            var controller = new CarregarGraficoController();
+=======
             var movimentacoes = new List<EntradaSaidaAlunos>
         {
             new EntradaSaidaAlunos { Mes = "Jan", Entrada = 0, Saida = 0 },
@@ -54,17 +67,10 @@ namespace ProjetoIntegrador.View
                 Color = Color.PowderBlue, 
                 BorderWidth = 3
             };
+>>>>>>> origin/master
 
-            foreach (var movimentacao in movimentacoes)
-            {
-                Entrada.Points.AddXY(movimentacao.Mes, movimentacao.Entrada);
-                Saida.Points.AddXY(movimentacao.Mes, movimentacao.Saida);
-            }
-            chart1.Series.Add(Entrada);
-            chart1.Series.Add(Saida);
-            chart1.Titles.Add("Entrada e Saída de Alunos por Mês"); //pensar num texto melhor, mensal
-            chart1.ChartAreas[0].AxisX.Title = "Mês";
-            chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
+            controller.CarregarGraficoMensal(repositorio, chartSaidaAlunos, usuario);//sessionuser aqui vou mudar sessionUser.idmodalidade
+            controller.CarregarGraficoAnual(repositorio, chart1, usuario);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -74,9 +80,15 @@ namespace ProjetoIntegrador.View
             telaInicial.Show();
         }
 
+<<<<<<< HEAD
+        private void chartSaidaAlunos_Click(object sender, EventArgs e)
+        {
+=======
         private void chart1_Click(object sender, EventArgs e)
         {
 
+>>>>>>> origin/master
         }
     }
 }
+

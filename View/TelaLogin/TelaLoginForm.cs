@@ -1,0 +1,85 @@
+﻿using ProjetoIntegrador.BancoDeDados;
+using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Usuario;
+using ProjetoIntegrador.View;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ProjetoIntegrador
+{
+    public partial class TelaLoginForm : Form
+    {
+        LimparCamposLoginController loginController;
+        public TelaLoginForm()
+        {
+            
+            InitializeComponent();
+            this.FormClosing += AppClose;
+            loginController = new LimparCamposLoginController();
+        }
+
+        public void AppClose(object sender, FormClosingEventArgs e)
+        {
+            Application.ExitThread();
+
+        }              
+        
+
+
+        private void TelaLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
+              
+
+        private void btnLogin_Click(object sender, EventArgs e)
+           {
+            bool camposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha, MsgErro);
+            if (camposVazios) return;
+
+            string cpf = TxtUsuario.Text.Trim();
+            string senha = TxtSenha.Text;
+
+            try
+            {
+                var databaseService = new DatabaseService();
+                var autenticador = new AutenticacaoUsuario(databaseService);
+                var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true); 
+
+                if (usuario != null)
+                {
+                    MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SessionUser.Login(usuario);
+
+                    this.Hide();
+
+                    var telaEscolhaModalidade = new TelaModalidadeEscolha();
+                    telaEscolhaModalidade.Show();
+                }
+                else
+                {
+                    MsgErro.Text = "CPF ou senha inválidos!";
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao tentar fazer login:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

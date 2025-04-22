@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class BotoesCadastroController
+    public class BotoesCadastroUsuarioController
     {
         public bool SenhasIguais(TextBox senha, TextBox confirmaSenha, Label labelmensagemError)
         {
