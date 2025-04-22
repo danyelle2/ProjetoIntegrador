@@ -1,4 +1,5 @@
-﻿using ProjetoIntegrador.View;
+﻿
+using ProjetoIntegrador.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller
 {
-    internal class BotoesCadastroController
+    public class BotoesCadastroUsuarioController
     {
         public bool SenhasIguais(TextBox senha, TextBox confirmaSenha, Label labelmensagemError)
         {
@@ -50,7 +51,7 @@ namespace ProjetoIntegrador.Controller
 
             if (tipocadastro.SelectedItem == null || modalidade.SelectedItem == null)
             {
-                MsgErrorTipoUsuario.Text="Selecione uma opção válida";
+                MsgErrorTipoUsuario.Text = "Selecione uma opção válida";
                 return false;
             }
 
@@ -84,4 +85,3 @@ namespace ProjetoIntegrador.Controller
         }
     }
 }
-
