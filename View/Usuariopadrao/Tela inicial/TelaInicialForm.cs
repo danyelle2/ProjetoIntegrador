@@ -110,5 +110,10 @@ namespace ProjetoIntegrador.View
             TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos();
                 telapagamento.Show();
         }
+
+        private void textBoxPesquisa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

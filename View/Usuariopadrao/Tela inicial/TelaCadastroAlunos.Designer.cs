@@ -36,7 +36,6 @@
             this.txtAssinaturaAluno = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.txtTelefoneALuno = new System.Windows.Forms.TextBox();
             this.txtNomeAluno = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.labelMsgErroPlano = new System.Windows.Forms.Label();
             this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
+            this.btnCadastrarAluno = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox3
@@ -124,19 +124,6 @@
             this.label5.TabIndex = 86;
             this.label5.Text = "Data de entrada";
             this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // btnCadastrarAluno
-            // 
-            this.btnCadastrarAluno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnCadastrarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAluno.BackgroundImage")));
-            this.btnCadastrarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarAluno.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarAluno.Location = new System.Drawing.Point(672, 373);
-            this.btnCadastrarAluno.Name = "btnCadastrarAluno";
-            this.btnCadastrarAluno.Size = new System.Drawing.Size(104, 51);
-            this.btnCadastrarAluno.TabIndex = 85;
-            this.btnCadastrarAluno.UseVisualStyleBackColor = false;
-            this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
             // txtTelefoneALuno
             // 
@@ -284,6 +271,25 @@
             this.labelMsgErroStatusAluno.Size = new System.Drawing.Size(0, 16);
             this.labelMsgErroStatusAluno.TabIndex = 115;
             // 
+            // btnCadastrarAluno
+            // 
+            this.btnCadastrarAluno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCadastrarAluno.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarAluno.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnCadastrarAluno.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarAluno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAluno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btnCadastrarAluno.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(650, 369);
+            this.btnCadastrarAluno.Name = "btnCadastrarAluno";
+            this.btnCadastrarAluno.Size = new System.Drawing.Size(114, 37);
+            this.btnCadastrarAluno.TabIndex = 85;
+            this.btnCadastrarAluno.UseVisualStyleBackColor = false;
+            this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
+            // 
             // TelaCadastroAlunos
             // 
             this.AcceptButton = this.btnCadastrarAluno;
@@ -332,7 +338,6 @@
         private System.Windows.Forms.ComboBox txtAssinaturaAluno;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnCadastrarAluno;
         private System.Windows.Forms.TextBox txtTelefoneALuno;
         private System.Windows.Forms.TextBox txtNomeAluno;
         private System.Windows.Forms.Label label4;
@@ -347,5 +352,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label labelMsgErroPlano;
         private System.Windows.Forms.Label labelMsgErroStatusAluno;
+        private System.Windows.Forms.Button btnCadastrarAluno;
     }
 }

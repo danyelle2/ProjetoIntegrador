@@ -124,10 +124,11 @@
             // 
             // dataGridViewListaGeralAlunos
             // 
+            this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(877, 301);
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(875, 215);
             this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
-            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(983, 677);
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(985, 882);
             this.dataGridViewListaGeralAlunos.TabIndex = 18;
             this.dataGridViewListaGeralAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -140,11 +141,12 @@
             // textBoxPesquisa
             // 
             this.textBoxPesquisa.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.textBoxPesquisa.Location = new System.Drawing.Point(1010, 301);
+            this.textBoxPesquisa.Location = new System.Drawing.Point(1016, 242);
             this.textBoxPesquisa.Multiline = true;
             this.textBoxPesquisa.Name = "textBoxPesquisa";
-            this.textBoxPesquisa.Size = new System.Drawing.Size(699, 71);
+            this.textBoxPesquisa.Size = new System.Drawing.Size(699, 53);
             this.textBoxPesquisa.TabIndex = 19;
+            this.textBoxPesquisa.TextChanged += new System.EventHandler(this.textBoxPesquisa_TextChanged);
             // 
             // pictureBox3
             // 

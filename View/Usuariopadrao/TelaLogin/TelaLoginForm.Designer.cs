@@ -74,6 +74,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(731, 799);
             this.panel1.TabIndex = 28;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // TxtSenha
             // 
@@ -110,6 +111,7 @@
             this.btnCadastro.Size = new System.Drawing.Size(190, 50);
             this.btnCadastro.TabIndex = 23;
             this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // MsgErro
             // 

@@ -60,11 +60,15 @@
             // buttonPagamentoRealizado
             // 
             this.buttonPagamentoRealizado.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPagamentoRealizado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPagamentoRealizado.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.buttonPagamentoRealizado.FlatAppearance.BorderSize = 0;
+            this.buttonPagamentoRealizado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonPagamentoRealizado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonPagamentoRealizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPagamentoRealizado.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(187, 491);
+            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(199, 491);
             this.buttonPagamentoRealizado.Name = "buttonPagamentoRealizado";
-            this.buttonPagamentoRealizado.Size = new System.Drawing.Size(111, 51);
+            this.buttonPagamentoRealizado.Size = new System.Drawing.Size(99, 51);
             this.buttonPagamentoRealizado.TabIndex = 24;
             this.buttonPagamentoRealizado.UseVisualStyleBackColor = false;
             this.buttonPagamentoRealizado.Click += new System.EventHandler(this.buttonPagamentoRealizado_Click);
@@ -72,7 +76,10 @@
             // buttonPendentePagamento
             // 
             this.buttonPendentePagamento.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPendentePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonPendentePagamento.FlatAppearance.BorderSize = 0;
+            this.buttonPendentePagamento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonPendentePagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonPendentePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPendentePagamento.ForeColor = System.Drawing.Color.Transparent;
             this.buttonPendentePagamento.Location = new System.Drawing.Point(532, 491);
             this.buttonPendentePagamento.Name = "buttonPendentePagamento";
