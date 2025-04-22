@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaLoginForm));
             this.label2 = new System.Windows.Forms.Label();
-<<<<<<< HEAD:View/TelaLogin/TelaLoginForm.Designer.cs
-            this.MsgErro = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.TxtUsuario = new System.Windows.Forms.TextBox();
-=======
->>>>>>> origin/master:View/Usuariopadrao/TelaLogin/TelaLoginForm.Designer.cs
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtSenha = new System.Windows.Forms.TextBox();
@@ -54,42 +48,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 24);
             this.label2.TabIndex = 21;
-<<<<<<< HEAD:View/TelaLogin/TelaLoginForm.Designer.cs
-            this.label2.Text = "Senha";
-            // 
-            // MsgErro
-            // 
-            this.MsgErro.AutoSize = true;
-            this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgErro.ForeColor = System.Drawing.Color.Red;
-            this.MsgErro.Location = new System.Drawing.Point(421, 421);
-            this.MsgErro.Name = "MsgErro";
-            this.MsgErro.Size = new System.Drawing.Size(19, 15);
-            this.MsgErro.TabIndex = 22;
-            this.MsgErro.Text = "...";
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogin.Location = new System.Drawing.Point(479, 491);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
-            this.btnLogin.TabIndex = 17;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // TxtUsuario
-            // 
-            this.TxtUsuario.Location = new System.Drawing.Point(412, 233);
-            this.TxtUsuario.MaxLength = 11;
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(216, 20);
-            this.TxtUsuario.TabIndex = 18;
-=======
->>>>>>> origin/master:View/Usuariopadrao/TelaLogin/TelaLoginForm.Designer.cs
             // 
             // label1
             // 
@@ -191,13 +149,6 @@
             this.ClientSize = new System.Drawing.Size(1857, 1022);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-<<<<<<< HEAD:View/TelaLogin/TelaLoginForm.Designer.cs
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.MsgErro);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.TxtSenha);
-=======
->>>>>>> origin/master:View/Usuariopadrao/TelaLogin/TelaLoginForm.Designer.cs
             this.Controls.Add(this.label2);
             this.Name = "TelaLoginForm";
             this.Text = "login";
@@ -212,12 +163,6 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-<<<<<<< HEAD:View/TelaLogin/TelaLoginForm.Designer.cs
-        private System.Windows.Forms.Label MsgErro;
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox TxtUsuario;
-=======
->>>>>>> origin/master:View/Usuariopadrao/TelaLogin/TelaLoginForm.Designer.cs
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox TxtSenha;

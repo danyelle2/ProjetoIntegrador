@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ProjetoIntegrador.Model;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
 namespace ProjetoIntegrador.View
@@ -102,33 +101,9 @@ namespace ProjetoIntegrador.View
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {//ve se funciona é para alterar od dados dos alunos quando clicar !!
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewListaGeralAlunos.Rows[e.RowIndex];
-
-                var aluno = new Aluno
-                {
-                    Id = Convert.ToInt32(row.Cells["Id"].Value),
-                    Nome = row.Cells["Nome"].Value.ToString(),
-                    Idade = Convert.ToInt32(row.Cells["Idade"].Value),
-                    Telefone = row.Cells["Telefone"].Value.ToString(),
-                    DataEntrada = Convert.ToDateTime(row.Cells["DataEntrada"].Value),
-                    NomeResponsavel = row.Cells["Responsavel"].Value.ToString(),
-                    Plano = row.Cells["Plano"].Value.ToString(),
-                    Status = row.Cells["Status"].Value.ToString()
-                };
-                var formAlterar = new TelaAlterarDadosAlunosForms(aluno);
-                formAlterar.ShowDialog();
-                CarregarAlunosNoGrid(); 
-            }
-        }
-
-        private void CarregarAlunosNoGrid()
         {
-            throw new NotImplementedException();
+
         }
-        
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {

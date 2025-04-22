@@ -7,8 +7,7 @@ namespace ProjetoIntegrador.BancoDeDados
 {
     public class DatabaseService : IDisposable
     {
-        public readonly MySqlConnection _connection;
-        public MySqlConnection Connection => _connection;
+        private readonly MySqlConnection _connection;
         private bool _disposed = false;
 
         public DatabaseService()
@@ -22,9 +21,7 @@ namespace ProjetoIntegrador.BancoDeDados
             if (_connection.State != System.Data.ConnectionState.Open)
             {
                 _connection.Open();
-
             }
-
         }
 
         public void CloseConnection()
@@ -34,9 +31,6 @@ namespace ProjetoIntegrador.BancoDeDados
                 _connection.Close();
             }
         }
-        
-
-
 
         public MySqlDataReader ExecuteQuery(string query, MySqlParameter[] parameters = null)
 
