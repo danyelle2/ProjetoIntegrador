@@ -101,6 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Aluno\cadastro\LimparCamposController.cs" />
+    <Compile Include="Controller\Aluno\graficos\CarregarGraficosController.cs" />
     <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\Criptografia.cs" />
     <Compile Include="Services\DataBaseService.cs" />
@@ -222,8 +223,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\Aluno\graficos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
