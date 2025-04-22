@@ -37,7 +37,6 @@ namespace ProjetoIntegrador
             this.panel1 = new System.Windows.Forms.Panel();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
-            this.btnCadastro = new System.Windows.Forms.Button();
             this.MsgErro = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -69,7 +68,6 @@ namespace ProjetoIntegrador
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.TxtSenha);
             this.panel1.Controls.Add(this.TxtUsuario);
-            this.panel1.Controls.Add(this.btnCadastro);
             this.panel1.Controls.Add(this.MsgErro);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
@@ -97,22 +95,6 @@ namespace ProjetoIntegrador
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(446, 47);
             this.TxtUsuario.TabIndex = 18;
-            // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastro.FlatAppearance.BorderSize = 0;
-            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(16, 621);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(190, 50);
-            this.btnCadastro.TabIndex = 23;
-            this.btnCadastro.UseVisualStyleBackColor = false;
             // 
             // MsgErro
             // 
@@ -174,7 +156,6 @@ namespace ProjetoIntegrador
         private System.Windows.Forms.Button btnLogin;
         private PaintEventHandler panel1_Paint;
         private EventHandler btnCadastro_Click;
-        private Button btnCadastro;
     }
 }
 

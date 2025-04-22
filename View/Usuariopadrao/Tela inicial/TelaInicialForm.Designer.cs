@@ -40,18 +40,22 @@
             this.textBoxPesquisa = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MsgTemporariaPagamento = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
             this.SuspendLayout();
             // 
             // MsgExplicacaoGrafico
             // 
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(352, 713);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(86, 713);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoGrafico.TabIndex = 14;
@@ -61,7 +65,7 @@
             // 
             this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados.AutoSize = true;
-            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(352, 487);
+            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(86, 487);
             this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
             this.MsgExplicacaoAlterarDados.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoAlterarDados.TabIndex = 13;
@@ -71,7 +75,7 @@
             // 
             this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(352, 245);
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(86, 245);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
             this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoCadastro.TabIndex = 12;
@@ -82,7 +86,7 @@
             this.pictureBoxCadastroAlunos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxCadastroAlunos.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxCadastroAlunos.ErrorImage = null;
-            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(100, 32);
+            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(-166, 32);
             this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
             this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(246, 226);
             this.pictureBoxCadastroAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +101,7 @@
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(100, 264);
+            this.pictureBox1.Location = new System.Drawing.Point(-166, 264);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(246, 236);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +116,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(100, 506);
+            this.pictureBox2.Location = new System.Drawing.Point(-166, 506);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(246, 220);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -153,7 +157,7 @@
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.ErrorImage = null;
-            this.pictureBox3.Location = new System.Drawing.Point(100, 732);
+            this.pictureBox3.Location = new System.Drawing.Point(-166, 732);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(246, 232);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -165,7 +169,7 @@
             // 
             this.MsgTemporariaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgTemporariaPagamento.AutoSize = true;
-            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(352, 951);
+            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(86, 951);
             this.MsgTemporariaPagamento.Name = "MsgTemporariaPagamento";
             this.MsgTemporariaPagamento.Size = new System.Drawing.Size(16, 13);
             this.MsgTemporariaPagamento.TabIndex = 21;
@@ -173,12 +177,32 @@
             this.MsgTemporariaPagamento.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
             this.MsgTemporariaPagamento.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBoxVoltar);
+            this.panel1.Location = new System.Drawing.Point(551, 32);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 100);
+            this.panel1.TabIndex = 22;
+            // 
+            // pictureBoxVoltar
+            // 
+            this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
+            this.pictureBoxVoltar.Location = new System.Drawing.Point(33, 21);
+            this.pictureBoxVoltar.Name = "pictureBoxVoltar";
+            this.pictureBoxVoltar.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxVoltar.TabIndex = 27;
+            this.pictureBoxVoltar.TabStop = false;
+            this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
+            // 
             // TelaInicialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1903, 1061);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MsgTemporariaPagamento);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.textBoxPesquisa);
@@ -198,6 +222,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,5 +242,7 @@
         private System.Windows.Forms.TextBox textBoxPesquisa;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label MsgTemporariaPagamento;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBoxVoltar;
     }
 }

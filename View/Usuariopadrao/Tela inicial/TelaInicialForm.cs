@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
 namespace ProjetoIntegrador.View
@@ -114,6 +115,12 @@ namespace ProjetoIntegrador.View
         private void textBoxPesquisa_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBoxVoltar_Click(object sender, EventArgs e)
+        {
+            var telaModalidadeEscolha = new TelaModalidadeEscolha();
+            telaModalidadeEscolha.Show();
         }
     }
 }
