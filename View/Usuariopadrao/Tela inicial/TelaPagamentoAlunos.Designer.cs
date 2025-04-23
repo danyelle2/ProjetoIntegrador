@@ -55,7 +55,7 @@
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
             this.dataGridViewpagamento.Size = new System.Drawing.Size(464, 413);
             this.dataGridViewpagamento.TabIndex = 22;
-            this.dataGridViewpagamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpagamento_CellContentClick);
+            //this.dataGridViewpagamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpagamento_CellContentClick);
             // 
             // buttonPagamentoRealizado
             // 
