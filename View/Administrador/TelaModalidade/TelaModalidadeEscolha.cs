@@ -37,18 +37,17 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         }
              private void VisibilidadeTelaUsuario(Usuario usuario)
         {
-            //Colocar i nome dos botoes nao esquecer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //if (usuario.TipoUsuario == "administrador")
+            if (usuario.TipoUsuario == "administrador")
             {
-                //    grupoZumba.Visible = true;
-                //    grupoMuayThai.Visible = true;
-                //    grupoFuncional.Visible = true;
-                //}
-                //else
-                //{
-                //    grupoZumba.Visible = (usuario.Modalidade == "zumba");
-                //    grupoMuayThai.Visible = (usuario.Modalidade == "muay_thai");
-                //    grupoFuncional.Visible = (usuario.Modalidade == "funcional");
+                BtnZumba.Visible = true;
+                BtnFuncional.Visible = true;
+                BtnMuayThai.Visible = true;
+            }
+                else
+            {
+                BtnZumba.Visible = (usuario.Modalidade == "zumba");
+                BtnMuayThai.Visible = (usuario.Modalidade == "muay_thai");
+                BtnFuncional.Visible = (usuario.Modalidade == "funcional");
             }
         }                    
         
