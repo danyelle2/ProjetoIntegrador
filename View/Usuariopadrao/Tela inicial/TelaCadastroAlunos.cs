@@ -1,4 +1,6 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,15 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaCadastroAlunos : Form
     {
+
+        BotoesCadastroAlunoController BotoescadastroAlunoController;
+        LimparCamposController limparCamposController;
+
         public TelaCadastroAlunos()
         {
             InitializeComponent();
+            cadastroAlunoController = new BotoesCadastroAlunoController();
+            limparCamposController = new LimparCamposController();
 
         }
         BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
@@ -28,19 +36,45 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastrarAluno_Click(object sender, EventArgs e)
         {
-            bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBox2, textBox3, label8, textMsgErroIdade);
-            bool resultadoIdadeInvalida = cadastroAlunoController.IdadeInvalida(textBox2, textMsgErroIdade);
-            bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, textMsgErroResponsavel, comboBoxStatusAluno);
-            bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
-            bool DataInvalida = cadastroAlunoController.ValidarData(textBox1, textMsgErroData);
-            bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBox3, textMsgErroResponsavel);
-            bool resultadoComboBox = cadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
-            // pedir ajuda para ver se ta faltando alguma coisa 
-            if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
+            try
             {
-                //bool resultadoLimparCampos = cadastrarDadosAlunosController.LimparCampos(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
-                //bool resultadoCadastrarAluno = cadastrarDadosAlunosController.CadastrarAluno(txtNomeAluno, textBox2, txtTelefoneALuno, textBox1, txtAssinaturaAluno, textBox3, comboBoxStatusAluno);
+                bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBoxIdade, textBoxNomeResponsavel, label8, textMsgErroIdade);
+                bool resultadoIdadeInvalida = cadastroAlunoController.IdadeInvalida(textBoxIdade, textMsgErroIdade);
+                bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, textMsgErroResponsavel, comboBoxStatusAluno);
+                bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
+                bool DataInvalida = cadastroAlunoController.ValidarData(textBoxDataEntrada, textMsgErroData);
+                bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBoxNomeResponsavel, textMsgErroResponsavel);
+                bool resultadoComboBox = cadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
 
+                if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
+                {
+                    var databaseService = new DatabaseService();
+                    var repositorio = new RepositorioAluno(databaseService);
+
+                    var aluno = new Model.Aluno
+                    {
+                        Nome = txtNomeAluno.Text,
+                        Idade = int.Parse(textBoxIdade.Text),
+                        Telefone = txtTelefoneALuno.Text,
+                        DataEntrada = DateTime.Parse(textBoxDataEntrada.Text),
+                        Plano = txtAssinaturaAluno.SelectedItem?.ToString(),
+                        NomeResponsavel = textBoxNomeResponsavel.Text,
+                        Status = comboBoxStatusAluno.SelectedItem?.ToString()
+                    };
+
+                    repositorio.CadastrarAluno(aluno);
+
+                    MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao cadastrar aluno. Verifique os campos e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 

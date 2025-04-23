@@ -1,10 +1,12 @@
-﻿
+﻿using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Aluno;
 
 namespace ProjetoIntegrador.Controller.Aluno
 {
@@ -17,7 +19,7 @@ namespace ProjetoIntegrador.Controller.Aluno
             _databaseService = databaseService;
         }
 
-        public bool CadastrarAluno(ProjetoIntegrador.Model.Aluno aluno)
+        public bool CadastrarAluno(Model.Aluno aluno)
         {
             string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status_aluno) 
                          VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status)";
