@@ -92,7 +92,7 @@ namespace ProjetoIntegrador.View
             chart2.Titles.Add("Movimentação Anual de Alunos");
             chart2.ChartAreas[0].AxisX.Title = "Ano";
             chart2.ChartAreas[0].AxisY.Title = "Número de Alunos";
-        }        
+            }        
 
 
         private void pictureBox1_Click(object sender, EventArgs e)

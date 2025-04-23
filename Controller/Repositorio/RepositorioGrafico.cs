@@ -98,15 +98,10 @@ namespace ProjetoIntegrador.Controller.Aluno
             return movimentacao;
         }
 
-
-
-        //ALTERAR ESSE AQUI TAMBÉM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111
-        public Dictionary<int, EntradaSaidaAlunos> ObterMovimentacaoPorAno(string modalidade)
+        public Dictionary<int, EntradaSaidaAlunos> ObterMovimentacaoPorAno(string modalidade, int? anoInicial = null, int? anoFinal = null)
         {
             if (string.IsNullOrWhiteSpace(modalidade))
-            {
                 throw new ArgumentException("O parâmetro 'modalidade' não pode ser nulo ou vazio.", nameof(modalidade));
-            }
 
             var resultado = new Dictionary<int, EntradaSaidaAlunos>();
 
@@ -118,14 +113,23 @@ namespace ProjetoIntegrador.Controller.Aluno
                    COUNT(CASE WHEN data_entrada IS NOT NULL THEN 1 END) AS Entradas,
                    COUNT(CASE WHEN data_saida IS NOT NULL THEN 1 END) AS Saidas
             FROM aluno
-            WHERE modalidade = @modalidade
-            GROUP BY YEAR(data_entrada)
-            ORDER BY Ano"
-                ;
+            WHERE modalidade = @modalidade ";
+
+                if (anoInicial.HasValue)
+                    query += " AND YEAR(data_entrada) >= @anoInicial ";
+
+                if (anoFinal.HasValue)
+                    query += " AND YEAR(data_entrada) <= @anoFinal ";
+
+                query += " GROUP BY YEAR(data_entrada) ORDER BY Ano";
 
                 using (var cmd = new MySqlCommand(query, _databaseService.Connection))
                 {
                     cmd.Parameters.AddWithValue("@modalidade", modalidade);
+                    if (anoInicial.HasValue)
+                        cmd.Parameters.AddWithValue("@anoInicial", anoInicial);
+                    if (anoFinal.HasValue)
+                        cmd.Parameters.AddWithValue("@anoFinal", anoFinal);
 
                     using (var reader = cmd.ExecuteReader())
                     {
@@ -155,5 +159,6 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             return resultado;
         }
+
     }
 }
