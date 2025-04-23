@@ -65,6 +65,7 @@ namespace ProjetoIntegrador.View
                     repositorio.CadastrarAluno(aluno);
 
                     MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //VE SE LIMPA APÓS O CADASTRO
                     limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
                 }
                 else
