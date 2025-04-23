@@ -52,7 +52,7 @@ namespace ProjetoIntegrador
             {
                 var databaseService = new DatabaseService();
                 var autenticador = new AutenticacaoUsuario(databaseService);
-                var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true);
+                var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador");
 
                 if (usuario != null)
                 {
@@ -63,6 +63,9 @@ namespace ProjetoIntegrador
 
                     var telaEscolhaModalidade = new TelaModalidadeEscolha();
                     telaEscolhaModalidade.Show();
+
+                    MessageBox.Show("Erro ao tentar fazer login:\n" , "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
                 else
                 {
@@ -78,6 +81,11 @@ namespace ProjetoIntegrador
 
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

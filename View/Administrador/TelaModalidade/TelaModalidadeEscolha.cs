@@ -38,7 +38,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
              private void VisibilidadeTelaUsuario(Usuario usuario)
         {
             //Colocar i nome dos botoes nao esquecer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            if (usuario.TipoUsuario == "administrador")
+            //if (usuario.TipoUsuario == "administrador")
             {
                 //    grupoZumba.Visible = true;
                 //    grupoMuayThai.Visible = true;
