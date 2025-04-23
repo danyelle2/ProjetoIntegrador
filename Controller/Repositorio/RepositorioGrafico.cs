@@ -20,43 +20,70 @@ namespace ProjetoIntegrador.Controller.Aluno
             _databaseService = databaseService;
         }
 
-        public Dictionary<int, int> ObterEntradasPorMes()
+        public Dictionary<int, int> ObterEntradasPorMes(string modalidade)
         {
             var resultado = new Dictionary<int, int>();
-            string query = "SELECT MONTH(data_entrada) AS mes, COUNT(*) AS entradas FROM aluno WHERE YEAR(data_entrada) = YEAR(CURDATE()) GROUP BY MONTH(data_entrada)";
+            string query = @"
+        SELECT MONTH(data_entrada) AS mes, COUNT(*) AS entradas 
+        FROM aluno 
+        WHERE YEAR(data_entrada) = YEAR(CURDATE()) 
+          AND modalidade = @modalidade
+        GROUP BY MONTH(data_entrada)";
 
-            using (var reader = _databaseService.ExecuteQuery(query))
+            using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
-                while (reader.Read())
+                cmd.Parameters.AddWithValue("@modalidade", modalidade);
+                _databaseService.OpenConnection();
+                using (var reader = cmd.ExecuteReader())
                 {
-                    int mes = Convert.ToInt32(reader["mes"]);
-                    int entradas = Convert.ToInt32(reader["entradas"]);
-                    resultado[mes] = entradas;
+                    while (reader.Read())
+                    {
+                        int mes = Convert.ToInt32(reader["mes"]);
+                        int entradas = Convert.ToInt32(reader["entradas"]);
+                        resultado[mes] = entradas;
+                    }
                 }
+                _databaseService.CloseConnection();
             }
+
             return resultado;
         }
 
-        public Dictionary<int, int> ObterSaidasPorMes()
+
+        public Dictionary<int, int> ObterSaidasPorMes(string modalidade)
         {
             var resultado = new Dictionary<int, int>();
-            string query = "SELECT MONTH(data_saida) AS mes, COUNT(*) AS saidas FROM aluno WHERE data_saida IS NOT NULL AND YEAR(data_saida) = YEAR(CURDATE()) GROUP BY MONTH(data_saida)";
+            string query = @"
+        SELECT MONTH(data_saida) AS mes, COUNT(*) AS saidas 
+        FROM aluno 
+        WHERE data_saida IS NOT NULL 
+          AND YEAR(data_saida) = YEAR(CURDATE())
+          AND modalidade = @modalidade
+        GROUP BY MONTH(data_saida)";
 
-            using (var reader = _databaseService.ExecuteQuery(query))
+            using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
-                while (reader.Read())
+                cmd.Parameters.AddWithValue("@modalidade", modalidade);
+                _databaseService.OpenConnection();
+                using (var reader = cmd.ExecuteReader())
                 {
-                    int mes = Convert.ToInt32(reader["mes"]);
-                    int saidas = Convert.ToInt32(reader["saidas"]);
-                    resultado[mes] = saidas;
+                    while (reader.Read())
+                    {
+                        int mes = Convert.ToInt32(reader["mes"]);
+                        int saidas = Convert.ToInt32(reader["saidas"]);
+                        resultado[mes] = saidas;
+                    }
                 }
+                _databaseService.CloseConnection();
             }
+
             return resultado;
         }
+
         public Dictionary<int, (int Entradas, int Saidas)> ObterMovimentacaoPorMes(string modalidade)
         {
-            var entradas = ObterEntradasPorMes();
-            var saidas = ObterSaidasPorMes();
+            var entradas = ObterEntradasPorMes(modalidade);
+            var saidas = ObterSaidasPorMes(modalidade);
 
             var movimentacao = new Dictionary<int, (int Entradas, int Saidas)>();
 
@@ -73,6 +100,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 
 
 
+        //ALTERAR ESSE AQUI TAMBÉM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!111
         public Dictionary<int, EntradaSaidaAlunos> ObterMovimentacaoPorAno(string modalidade)
         {
             if (string.IsNullOrWhiteSpace(modalidade))

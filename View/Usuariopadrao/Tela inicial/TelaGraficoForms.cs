@@ -1,4 +1,7 @@
-﻿using ProjetoIntegrador.Model;
+﻿using MySqlX.XDevAPI;
+using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,58 +21,83 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
         }
-
-        private void TelaGraficoForms_Load(object sender, EventArgs e)
-        {
-            // não sei se coloca nessa tela ou abre um controller para ela 
-            //teste se funcionar fazer a mesma coisa só que com ano 
-
-            var movimentacoes = new List<EntradaSaidaAlunos>
-        {
-            //new EntradaSaidaAlunos { Mes = "Jan", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Fev", Entrada = 6, Saida = 1 },
-            //new EntradaSaidaAlunos { Mes = "Mar", Entrada = 7, Saida = 1 },
-            //new EntradaSaidaAlunos { Mes = "Abr", Entrada = 2, Saida = 5 },
-            //new EntradaSaidaAlunos { Mes = "Mai", Entrada = 9, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Jun", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Jul", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos   { Mes = "Ago", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Set", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Out", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Nov", Entrada = 0, Saida = 0 },
-            //new EntradaSaidaAlunos { Mes = "Dez", Entrada = 0, Saida = 0 }
-        };
-            chart1.Series.Clear();
-            var Entrada = new Series("Entradas")
+        
+     
+            private void TelaGraficoForms_Load(object sender, EventArgs e)
             {
-                ChartType = SeriesChartType.Column, 
-                Color = Color.DarkBlue, 
-                BorderWidth = 3
-            };
-            // qualquer coisa mudar a cor do gráfico colocar um azul não sei perguntar pro grupo. 
-             
-            var Saida = new Series("Saídas")
+            string modalidade = SessionUser.userLogado.Modalidade;
+            
+
+            var repositorio = new RepositorioGrafico(new DatabaseService());
+
+            var movimentacoesMes = repositorio.ObterMovimentacaoPorMes(modalidade);
+
+            chart1.Series.Clear();
+            var entradaMes = new Series("Entradas")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.PowderBlue, 
+                Color = Color.DarkBlue,
                 BorderWidth = 3
             };
 
-            foreach (var movimentacao in movimentacoes)
+            var saidaMes = new Series("Saídas")
             {
-                Entrada.Points.AddXY(movimentacao.Mes, movimentacao.Entrada);
-                Saida.Points.AddXY(movimentacao.Mes, movimentacao.Saida);
+                ChartType = SeriesChartType.Column,
+                Color = Color.PowderBlue,
+                BorderWidth = 3
+            };
+
+            foreach (var item in movimentacoesMes)
+            {
+                string nomeMes = new DateTime(1, item.Key, 1).ToString("MMM");
+                entradaMes.Points.AddXY(nomeMes, item.Value.Entradas);
+                saidaMes.Points.AddXY(nomeMes, item.Value.Saidas);
             }
-            chart1.Series.Add(Entrada);
-            chart1.Series.Add(Saida);
-            chart1.Titles.Add("Entrada e Saída de Alunos por Mês"); //pensar num texto melhor, mensal
+
+            chart1.Series.Add(entradaMes);
+            chart1.Series.Add(saidaMes);
+            chart1.Titles.Clear();
+            chart1.Titles.Add("Movimentação Mensal de Alunos");
             chart1.ChartAreas[0].AxisX.Title = "Mês";
             chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
-        }
+
+           
+            var movimentacoesAno = repositorio.ObterMovimentacaoPorAno(modalidade);
+
+            chart2.Series.Clear();
+            var entradaAno = new Series("Entradas")
+            {
+                ChartType = SeriesChartType.Column,
+                Color = Color.BlueViolet,
+                BorderWidth = 3
+            };
+
+            var saidaAno = new Series("Saídas")
+            {
+                ChartType = SeriesChartType.Column,
+                Color = Color.AliceBlue,
+                BorderWidth = 3
+            };
+
+            foreach (var item in movimentacoesAno)
+            {
+                string ano = item.Key.ToString();
+                entradaAno.Points.AddXY(ano, item.Value.Entradas);
+                saidaAno.Points.AddXY(ano, item.Value.Saidas);
+            }
+
+            chart2.Series.Add(entradaAno);
+            chart2.Series.Add(saidaAno);
+            chart2.Titles.Clear();
+            chart2.Titles.Add("Movimentação Anual de Alunos");
+            chart2.ChartAreas[0].AxisX.Title = "Ano";
+            chart2.ChartAreas[0].AxisY.Title = "Número de Alunos";
+        }        
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-        // Tirar o comentario caso fique em tela inteira
+        // Tirar o comentario caso fique em tela inteira !!!!!!!!!!!!!!!!!!!!!!!!
             //this.Dispose();
             //TelaInicialForm telaInicial = new TelaInicialForm();
             //telaInicial.Show();
