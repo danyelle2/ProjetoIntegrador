@@ -19,6 +19,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public List<ModelAluno> AlunosAtivos()
         {
+            //mudar aqui e por o join
             List<ModelAluno> lista = new List<ModelAluno>();
             string query = "SELECT id_aluno, nome, status_aluno, status_pagamento FROM aluno WHERE status_aluno = 1";
 
