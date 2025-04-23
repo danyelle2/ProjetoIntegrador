@@ -10,6 +10,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.View.Administrador.TelaModalidade;
+using ProjetoIntegrador.Controller.Usuario;
 
 namespace ProjetoIntegrador
 {
