@@ -83,6 +83,24 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         }
 
+        private void BtnZumba_Click(object sender, EventArgs e)
+        {
+            var telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
+
+        private void BtnFuncional_Click(object sender, EventArgs e)
+        {
+            var telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
+
+        private void BtnMuayThai_Click(object sender, EventArgs e)
+        {
+            var telaInicial = new TelaInicialForm();
+            telaInicial.Show();
+        }
+
         //private void pictureBoxVoltar_Click(object sender, EventArgs e)
         //{
 

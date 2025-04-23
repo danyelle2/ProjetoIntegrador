@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnMuayThai = new System.Windows.Forms.Button();
+            this.BtnFuncional = new System.Windows.Forms.Button();
+            this.BtnZumba = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -66,54 +66,57 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.BtnMuayThai);
+            this.panel1.Controls.Add(this.BtnFuncional);
+            this.panel1.Controls.Add(this.BtnZumba);
             this.panel1.Location = new System.Drawing.Point(3, 527);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1364, 219);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button3
+            // BtnMuayThai
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(1230, 35);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(209, 56);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnMuayThai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnMuayThai.FlatAppearance.BorderSize = 0;
+            this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMuayThai.Location = new System.Drawing.Point(1230, 35);
+            this.BtnMuayThai.Name = "BtnMuayThai";
+            this.BtnMuayThai.Size = new System.Drawing.Size(209, 56);
+            this.BtnMuayThai.TabIndex = 2;
+            this.BtnMuayThai.UseVisualStyleBackColor = true;
+            this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
             // 
-            // button2
+            // BtnFuncional
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(587, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(216, 56);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
+            this.BtnFuncional.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnFuncional.BackColor = System.Drawing.Color.Transparent;
+            this.BtnFuncional.FlatAppearance.BorderSize = 0;
+            this.BtnFuncional.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFuncional.Location = new System.Drawing.Point(587, 35);
+            this.BtnFuncional.Name = "BtnFuncional";
+            this.BtnFuncional.Size = new System.Drawing.Size(216, 56);
+            this.BtnFuncional.TabIndex = 1;
+            this.BtnFuncional.UseVisualStyleBackColor = false;
+            this.BtnFuncional.Click += new System.EventHandler(this.BtnFuncional_Click);
             // 
-            // button1
+            // BtnZumba
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(-24, 35);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 56);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnZumba.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnZumba.FlatAppearance.BorderSize = 0;
+            this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnZumba.Location = new System.Drawing.Point(-24, 35);
+            this.BtnZumba.Name = "BtnZumba";
+            this.BtnZumba.Size = new System.Drawing.Size(194, 56);
+            this.BtnZumba.TabIndex = 0;
+            this.BtnZumba.UseVisualStyleBackColor = true;
+            this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
             // 
             // panel2
             // 
@@ -164,9 +167,9 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnMuayThai;
+        private System.Windows.Forms.Button BtnFuncional;
+        private System.Windows.Forms.Button BtnZumba;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnCadastro;
     }
