@@ -69,9 +69,10 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            TelaInicialForm telaInicial = new TelaInicialForm();
-            telaInicial.Show();
+        // Tirar o comentario caso fique em tela inteira
+            //this.Dispose();
+            //TelaInicialForm telaInicial = new TelaInicialForm();
+            //telaInicial.Show();
         }
 
         private void chart1_Click(object sender, EventArgs e)

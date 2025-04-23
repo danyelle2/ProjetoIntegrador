@@ -71,7 +71,7 @@ namespace ProjetoIntegrador
             this.panel1.Controls.Add(this.MsgErro);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(523, 133);
+            this.panel1.Location = new System.Drawing.Point(527, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(731, 799);
             this.panel1.TabIndex = 28;
