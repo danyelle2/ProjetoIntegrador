@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjetoIntegrador.Services
 {
     public class Criptografia
     {
-
         public static string HashPassword(string password)
         {
             using (var sha256 = SHA256.Create())
@@ -18,6 +15,7 @@ namespace ProjetoIntegrador.Services
                 return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
             }
         }
+
         public static bool SecureEquals(string a, string b)
         {
             if (a.Length != b.Length) return false;
@@ -29,6 +27,44 @@ namespace ProjetoIntegrador.Services
             }
 
             return result == 0;
+        }
+
+        //Tentar inserir a senha manualmente pelo visual
+        public static void InserirSenhaCriptografada(string senha)
+        {
+            string senhaCriptografada = HashPassword(senha);
+
+            // Conexão com o banco de dados (ajuste a string de conexão conforme necessário)
+            string connectionString = "Server=localhost;Port=3307;Database=studio_academico;Uid=root;Pwd=senac;";
+
+            // SQL para inserir a senha criptografada na tabela de usuários
+            string query = "INSERT INTO Usuarios (senha) VALUES (@SenhaHash)";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@SenhaHash", senhaCriptografada);
+
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine("Senha criptografada inserida com sucesso!");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Erro ao inserir a senha no banco: " + ex.Message);
+                }
+            }
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string senha = "Dab2479";
+            Criptografia.InserirSenhaCriptografada(senha);
         }
     }
 }
