@@ -1,86 +1,67 @@
-﻿using ProjetoIntegrador.Model;
+﻿using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 {
     public partial class TelaPagamentoAlunos : Form
     {
+        private readonly RepositorioPagamento _repositorioPagamento;
+
         public TelaPagamentoAlunos()
         {
             InitializeComponent();
+            _repositorioPagamento = new RepositorioPagamento(new DatabaseService()); 
         }
 
-        private void dataGridViewpagamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // não sei se coloca nessa tela ou coloca na classe controller e só chamo aqui
-            //teste de funcionamento
-            List<Aluno> alunos = new List<Aluno>
-        {
-            new Aluno { Nome = "fulano", StatusAtivo = true, StatusPagamento = false },
-            new Aluno { Nome = "teste", StatusAtivo = true, StatusPagamento = true },
-            new Aluno { Nome = "aaaa", StatusAtivo = false, StatusPagamento = false },
-            new Aluno { Nome = "bbbbb", StatusAtivo = true, StatusPagamento = false }
-        };
-
-            var alunosAtivos = alunos.Where(a => a.StatusAtivo).ToList();
-
-            dataGridViewpagamento.DataSource = alunosAtivos;
-
-            foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
-            {
-                bool statusPagamento = (bool)row.Cells["StatusPagamento"].Value;
-                row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.Green : Color.Red;
-            }
-
-            dataGridViewpagamento.DataSource = alunosAtivos;
-
-            dataGridViewpagamento.CellFormatting += (s, ev) =>
-            {
-                if (ev.RowIndex >= 0 && dataGridViewpagamento.Columns[ev.ColumnIndex].Name == "StatusPagamento")
-                {
-                    bool statusPagamento = (bool)dataGridViewpagamento.Rows[ev.RowIndex].Cells[ev.ColumnIndex].Value;
-                    ev.CellStyle.BackColor = statusPagamento ? Color.Green : Color.Red;
-                }
-            };
-        }
-        
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)
         {
+            CarregarAlunos();
+        }
 
+        private void CarregarAlunos()
+        {
+            var alunosAtivos = _repositorioPagamento.AlunosAtivos();
+            dataGridViewpagamento.DataSource = alunosAtivos;
+
+            AplicarFormatoStatusPagamento();
+        }
+
+        private void AplicarFormatoStatusPagamento()
+        {
+            foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
+            {
+                if (row.Cells["StatusPagamento"].Value != null)
+                {
+                    bool statusPagamento = (bool)row.Cells["StatusPagamento"].Value;
+                    row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.Green : Color.Red;
+                }
+            }
         }
 
         private void buttonPagamentoRealizado_Click(object sender, EventArgs e)
         {
-            // teste de funcionamento
-            //tem que ver como colocar isso quando tiver o banco de dados
             foreach (DataGridViewRow row in dataGridViewpagamento.SelectedRows)
             {
-                var aluno = (Aluno)row.DataBoundItem;
-                aluno.StatusPagamento = true; 
+                var aluno = (Model.Aluno)row.DataBoundItem;
+                _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, true);
             }
-            dataGridViewpagamento.Refresh();
-
-        }
+            CarregarAlunos();
+            }
 
         private void buttonPendentePagamento_Click(object sender, EventArgs e)
         {
-
-            // teste de funcionamento
-            //tem que ver como colocar isso quando tiver o banco de dados
             foreach (DataGridViewRow row in dataGridViewpagamento.SelectedRows)
             {
-                var aluno = (Aluno)row.DataBoundItem;
-                aluno.StatusPagamento = false;
+                var aluno = (Model.Aluno)row.DataBoundItem;
+                _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, false);
             }
-            dataGridViewpagamento.Refresh();
+            CarregarAlunos(); 
         }
     }
 }
