@@ -4,6 +4,7 @@ using ProjetoIntegrador.Model;
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Collections.Generic;
 
 namespace ProjetoIntegrador.Services
 {
@@ -18,6 +19,14 @@ namespace ProjetoIntegrador.Services
 
         public Usuario AutenticarUsuarionaModalidade(string cpf, string senha, bool statusUsuario, string tipoUsuario)
         {
+            // Validação de entrada
+            if (string.IsNullOrWhiteSpace(cpf))
+                throw new ArgumentException("O CPF não pode estar vazio.", nameof(cpf));
+            if (string.IsNullOrWhiteSpace(senha))
+                throw new ArgumentException("A senha não pode estar vazia.", nameof(senha));
+            if (string.IsNullOrWhiteSpace(tipoUsuario))
+                throw new ArgumentException("O tipo de usuário não pode estar vazio.", nameof(tipoUsuario));
+
             try
             {
                 string query = @"
@@ -45,35 +54,39 @@ namespace ProjetoIntegrador.Services
                 {
                     if (respostaBanco.Read())
                     {
+                        // Verifica o status do usuário
                         bool status = Convert.ToBoolean(respostaBanco["status_usuario"]);
                         if (status != statusUsuario)
-                            return null;
+                            throw new UnauthorizedAccessException("O status do usuário não é válido.");
 
+                        // Valida a senha
                         string storedHash = respostaBanco["senha"].ToString();
                         string inputHash = Criptografia.HashPassword(senha);
 
-                        if (Criptografia.SecureEquals(storedHash, inputHash))
+                        if (!Criptografia.SecureEquals(storedHash, inputHash))
+                            throw new UnauthorizedAccessException("Senha incorreta.");
+
+                        // Retorna o usuário autenticado
+                        return new Usuario
                         {
-                            return new Usuario
-                            {
-                                Id = Convert.ToInt32(respostaBanco["id_usuario"]),
-                                Nome = respostaBanco["nome"].ToString(),
-                                TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
-                                IdProfessor = Convert.ToInt32(respostaBanco["id_professor"]),
-                                StatusUsuario = status,
-                                Modalidade = respostaBanco["tipo_modalidade"].ToString().ToLower()
-                            };
-                        }
+                            Id = Convert.ToInt32(respostaBanco["id_usuario"]),
+                            Nome = respostaBanco["nome"].ToString(),
+                            TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
+                            IdProfessor = Convert.ToInt32(respostaBanco["id_professor"]),
+                            StatusUsuario = status,
+                            Modalidade = respostaBanco["tipo_modalidade"].ToString().ToLower()
+                        };
+                    }
+                    else
+                    {
+                        throw new KeyNotFoundException("Usuário não encontrado.");
                     }
                 }
-
-                return null;
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro durante autenticação: " + ex.Message);
+                throw new Exception("Erro durante autenticação: " + ex.Message, ex);
             }
         }
-
     }
 }

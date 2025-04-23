@@ -43,40 +43,43 @@ namespace ProjetoIntegrador
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool camposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha, MsgErro);
-            
-
-            string cpf = TxtUsuario.Text.Trim();
-            string senha = TxtSenha.Text;
-
-            try
+            if (camposVazios)
             {
-                var databaseService = new DatabaseService();
-                var autenticador = new AutenticacaoUsuario(databaseService);
-                var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador");
 
-                if (camposVazios && databaseService && autenticador && usuario)
 
+
+                string cpf = TxtUsuario.Text.Trim();
+                string senha = TxtSenha.Text;
+
+                try
                 {
-                    MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    SessionUser.Login(usuario);
+                    using (var databaseService = new DatabaseService())
+                    {
+                        var autenticador = new AutenticacaoUsuario(databaseService);
 
-                    this.Hide();
+                        var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador");
+                        MessageBox.Show("chegou aqui:\n", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    var telaEscolhaModalidade = new TelaModalidadeEscolha();
-                    telaEscolhaModalidade.Show();
+                        if (usuario != null)
+                        {
+                            MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            SessionUser.Login(usuario);
 
-                    MessageBox.Show("Erro :\n" , "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Hide();
+                            var telaEscolhaModalidade = new TelaModalidadeEscolha();
+                            telaEscolhaModalidade.Show();
+                        }
+                        else
+                        {
 
+                            MsgErro.Text = "CPF ou senha inválidos!";
+                        }
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MsgErro.Text = "CPF ou senha inválidos!";
-                    return;
+                    MessageBox.Show("Erro ao tentar fazer login:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao tentar fazer login:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

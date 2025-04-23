@@ -83,7 +83,6 @@ namespace ProjetoIntegrador
             this.TxtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtSenha.Location = new System.Drawing.Point(107, 463);
             this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.PasswordChar = '*';
             this.TxtSenha.Size = new System.Drawing.Size(446, 47);
             this.TxtSenha.TabIndex = 19;
             // 
