@@ -1,6 +1,7 @@
 ﻿// Services/DatabaseService.cs
 using System;
 using System.Configuration;
+using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
 namespace ProjetoIntegrador.Services
@@ -34,10 +35,6 @@ namespace ProjetoIntegrador.Services
                 _connection.Close();
             }
         }
-
-
-
-
         public MySqlDataReader ExecuteQuery(string query, MySqlParameter[] parameters = null)
 
 
