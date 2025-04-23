@@ -43,7 +43,7 @@ namespace ProjetoIntegrador
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool camposVazios = loginController.CampoVazio(TxtUsuario, TxtSenha, MsgErro);
-            if (camposVazios) return;
+            
 
             string cpf = TxtUsuario.Text.Trim();
             string senha = TxtSenha.Text;
@@ -54,7 +54,8 @@ namespace ProjetoIntegrador
                 var autenticador = new AutenticacaoUsuario(databaseService);
                 var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador");
 
-                if (usuario != null)
+                if (camposVazios && databaseService && autenticador && usuario)
+
                 {
                     MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     SessionUser.Login(usuario);
@@ -64,7 +65,7 @@ namespace ProjetoIntegrador
                     var telaEscolhaModalidade = new TelaModalidadeEscolha();
                     telaEscolhaModalidade.Show();
 
-                    MessageBox.Show("Erro ao tentar fazer login:\n" , "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Erro :\n" , "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else
