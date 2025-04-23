@@ -26,6 +26,11 @@ namespace ProjetoIntegrador.View
             InitializeComponent();
             botoesAlterarDadosAlunoController = new BotoesAlterarDadosAlunoController();
         }
+
+        public TelaAlterarDadosAlunosForms()
+        {
+        }
+
         BotoesAlterarDadosAlunoController alterarDadosAlunoController =new BotoesAlterarDadosAlunoController();
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {

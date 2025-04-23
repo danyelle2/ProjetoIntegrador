@@ -16,13 +16,13 @@ namespace ProjetoIntegrador.View
     public partial class TelaCadastroAlunos : Form
     {
 
-        BotoesCadastroAlunoController BotoescadastroAlunoController;
+        BotoesCadastroAlunoController botoesCadastroAlunoController;
         LimparCamposController limparCamposController;
 
         public TelaCadastroAlunos()
         {
             InitializeComponent();
-            cadastroAlunoController = new BotoesCadastroAlunoController();
+            botoesCadastroAlunoController = new BotoesCadastroAlunoController();
             limparCamposController = new LimparCamposController();
 
         }
@@ -38,13 +38,13 @@ namespace ProjetoIntegrador.View
         {
             try
             {
-                bool resultadoMenorIdade = cadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBoxIdade, textBoxNomeResponsavel, label8, textMsgErroIdade);
-                bool resultadoIdadeInvalida = cadastroAlunoController.IdadeInvalida(textBoxIdade, textMsgErroIdade);
-                bool resultadoCamposVazios = cadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, textMsgErroResponsavel, comboBoxStatusAluno);
-                bool resultadoTelefoneValido = cadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
-                bool DataInvalida = cadastroAlunoController.ValidarData(textBoxDataEntrada, textMsgErroData);
-                bool resultadoNomeResponsavel = cadastroAlunoController.ValidarNomeResponsavel(textBoxNomeResponsavel, textMsgErroResponsavel);
-                bool resultadoComboBox = cadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
+                bool resultadoMenorIdade = botoesCadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBoxIdade, textBoxNomeResponsavel, label8, textMsgErroIdade);
+                bool resultadoIdadeInvalida = botoesCadastroAlunoController.IdadeInvalida(textBoxIdade, textMsgErroIdade);
+                bool resultadoCamposVazios = botoesCadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, textMsgErroResponsavel, comboBoxStatusAluno);
+                bool resultadoTelefoneValido = botoesCadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
+                bool DataInvalida = botoesCadastroAlunoController.ValidarData(textBoxDataEntrada, textMsgErroData);
+                bool resultadoNomeResponsavel = botoesCadastroAlunoController.ValidarNomeResponsavel(textBoxNomeResponsavel, textMsgErroResponsavel);
+                bool resultadoComboBox = botoesCadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
 
                 if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
                 {

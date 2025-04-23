@@ -111,7 +111,7 @@
     <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Services\DatabaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />
-    <Compile Include="Controller\Aluno\cadastro\BotoesCadastrarDadosAlunosController.cs" />
+    <Compile Include="Controller\Aluno\cadastro\BotoesCadastroAlunoController.cs" />
     <Compile Include="Controller\Aluno\alterarDados\BotoesAlterarDadosAlunoController.cs" />
     <Compile Include="Controller\Usuario\BotoesCadastroUsuarioController.cs" />
     <Compile Include="Controller\Usuario\LimparCamposLoginController.cs" />

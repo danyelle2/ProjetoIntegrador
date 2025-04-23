@@ -59,8 +59,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            TelaAlterarDadosAlunosForms telaAlterarDados = new TelaAlterarDadosAlunosForms();
+            var telaAlterarDados = new TelaAlterarDadosAlunosForms();
             telaAlterarDados.ShowDialog();
         }
 
@@ -78,11 +77,10 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            TelaInicialForm telaInicial = new TelaInicialForm();
-            telaInicial.Hide();
+        {            
+            //Qualquer coisa mudar para show normal em tela inteira mesmo
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
-            telaGrafico.Show();
+            telaGrafico.ShowDialog();
         }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
