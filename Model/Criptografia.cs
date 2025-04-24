@@ -30,41 +30,37 @@ namespace ProjetoIntegrador.Services
         }
 
         //Tentar inserir a senha manualmente pelo visual
-        public static void InserirSenhaCriptografada(string senha)
-        {
-            string senhaCriptografada = HashPassword(senha);
+    //    public static void InserirSenhaCriptografada(string senha)
+    //    {
+    //        string senhaCriptografada = HashPassword(senha);
 
-            // Conexão com o banco de dados (ajuste a string de conexão conforme necessário)
-            string connectionString = "Server=localhost;Port=3307;Database=studio_academico;Uid=root;Pwd=senac;";
+    //        string query = "INSERT INTO Usuarios (senha) VALUES (@SenhaHash)";
 
-            // SQL para inserir a senha criptografada na tabela de usuários
-            string query = "INSERT INTO Usuarios (senha) VALUES (@SenhaHash)";
+    //        using (SqlConnection conn = new SqlConnection(connectionString))
+    //        {
+    //            SqlCommand cmd = new SqlCommand(query, conn);
+    //            cmd.Parameters.AddWithValue("@SenhaHash", senhaCriptografada);
 
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@SenhaHash", senhaCriptografada);
+    //            try
+    //            {
+    //                conn.Open();
+    //                cmd.ExecuteNonQuery();
+    //                Console.WriteLine("Senha criptografada inserida com sucesso!");
+    //            }
+    //            catch (Exception ex)
+    //            {
+    //                Console.WriteLine("Erro ao inserir a senha no banco: " + ex.Message);
+    //            }
+    //        }
+    //    }
+    //}
 
-                try
-                {
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    Console.WriteLine("Senha criptografada inserida com sucesso!");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Erro ao inserir a senha no banco: " + ex.Message);
-                }
-            }
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            string senha = "Dab2479";
-            Criptografia.InserirSenhaCriptografada(senha);
-        }
+    //class Program
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        string senha = "Dab2479";
+    //        Criptografia.InserirSenhaCriptografada(senha);
+    //    }
     }
 }
