@@ -29,25 +29,28 @@ namespace ProjetoIntegrador.Services
 
             try
             {
-                string query = @"
-            SELECT 
-                u.id_usuario, 
-                u.nome, 
-                u.cpf, 
-                u.senha, 
-                u.tipo_usuario, 
-                u.status_usuario, 
-                p.id_professor, 
-                m.tipo_modalidade 
-            FROM usuario u 
-            JOIN professor p ON p.id_usuario = u.id_usuario 
-            JOIN modalidade m ON p.id_modalidade = m.id_modalidade 
-            WHERE u.cpf = @cpf AND u.tipo_usuario = @tipo";
+                //    string query = @"
+                //SELECT 
+                //    u.id_usuario, 
+                //    u.nome, 
+                //    u.cpf, 
+                //    u.senha, 
+                //    u.tipo_usuario, 
+                //    u.status_usuario, 
+                //    p.id_professor, 
+                //    m.tipo_modalidade 
+                //FROM usuario u 
+                //JOIN professor p ON p.id_usuario = u.id_usuario 
+                //JOIN modalidade m ON p.id_modalidade = m.id_modalidade 
+                //WHERE u.cpf = @cpf AND u.tipo_usuario = @tipo";
+
+                string query = "SELECT * FROM usuario WHERE cpf = @cpf AND senha = @senha AND tipo_usuario = @tipo";
 
                 var parameters = new MySqlParameter[]
                 {
             new MySqlParameter("@cpf", cpf),
-            new MySqlParameter("@tipo", tipoUsuario)
+            new MySqlParameter("@tipo", tipoUsuario),
+            new MySqlParameter("@senha", senha)
                 };
 
                 using (var respostaBanco = _databaseService.ExecuteQuery(query, parameters))
@@ -60,11 +63,11 @@ namespace ProjetoIntegrador.Services
                             throw new UnauthorizedAccessException("O status do usuário não é válido.");
 
                         // Valida a senha
-                        string storedHash = respostaBanco["senha"].ToString();
-                        string inputHash = Criptografia.HashPassword(senha);
+                        //string storedHash = respostaBanco["senha"].ToString();
+                        //string inputHash = Criptografia.HashPassword(senha);
 
-                        if (!Criptografia.SecureEquals(storedHash, inputHash))
-                            throw new UnauthorizedAccessException("Senha incorreta.");
+                        //if (!Criptografia.SecureEquals(storedHash, inputHash))
+                        //    throw new UnauthorizedAccessException("Senha incorreta.");
 
                         // Retorna o usuário autenticado
                         return new Usuario

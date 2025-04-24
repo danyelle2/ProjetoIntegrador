@@ -71,7 +71,7 @@ namespace ProjetoIntegrador
             this.panel1.Controls.Add(this.MsgErro);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(527, 12);
+            this.panel1.Location = new System.Drawing.Point(524, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(731, 799);
             this.panel1.TabIndex = 28;
@@ -131,7 +131,7 @@ namespace ProjetoIntegrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1364, 749);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
