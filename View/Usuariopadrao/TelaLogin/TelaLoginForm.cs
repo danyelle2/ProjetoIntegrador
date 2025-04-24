@@ -57,7 +57,7 @@ namespace ProjetoIntegrador
                     {
                         var autenticador = new AutenticacaoUsuario(databaseService);
 
-                        var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador");
+                        Usuario usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador" ); //LEMBRRAR DE COLOCAR PADRÃO AQUI TAMBÉM
                         MessageBox.Show("chegou aqui:\n", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         if (usuario != null)
