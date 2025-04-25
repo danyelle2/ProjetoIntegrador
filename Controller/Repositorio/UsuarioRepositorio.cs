@@ -54,10 +54,11 @@ namespace ProjetoIntegrador.Controller.Usuario
             try
             {
                 int idProfessor = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
+                int idModalidade = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
 
                 string query2 = @" 
-                INSERT INTO professor (id_modalidade, )
-                VALUES (@id_professor, @id_modalidade)";
+                INSERT INTO professor (id_modalidade, id_professor)
+                VALUES (@id_modalidade, @id_professor)";
 
                 _databaseService.ExecuteScalarTransaction(query, parameters);
 

@@ -73,16 +73,16 @@ namespace ProjetoIntegrador.View
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
                 //TEM QUE VE SE FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                var databaseService = new DatabaseService();
-                var repositorio = new UsuarioRepositorio(databaseService);
+                DatabaseService databaseService = new DatabaseService();
+                UsuarioRepositorio repositorio = new UsuarioRepositorio(databaseService);
 
-                var novoUsuario = new Usuario
+                Usuario novoUsuario = new Usuario
                 {
                     Nome = textNomeCadastro.Text.Trim(),
                     Cpf = txtUsuarioCadastro.Text.Trim(),
                     Senha = txtSenhaCadastro.Text,
                     TipoUsuario = comboBoxTipoUsuario.SelectedItem.ToString().ToLower(),
-                    IdProfessor = Convert.ToInt32(comboBoxModalidade.SelectedValue)
+                    IdModalidade = Convert.ToInt32(comboBoxModalidade.SelectedValue)
                 };
 
                 repositorio.CadastrarUsuario(novoUsuario);
