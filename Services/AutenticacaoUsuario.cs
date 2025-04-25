@@ -68,7 +68,7 @@ namespace ProjetoIntegrador.Services
                             Nome = respostaBanco["nome"].ToString(),
                             TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
                             StatusUsuario = status,
-                            Modalidade = respostaBanco["tipo_modalidade"]?.ToString().ToLower() 
+                            Modalidade = respostaBanco["tipo_modalidade"]?.ToString().ToLower()
                         };
                     }
                     throw new KeyNotFoundException("Usuário não encontrado.");
@@ -79,3 +79,5 @@ namespace ProjetoIntegrador.Services
                 throw new Exception("Erro durante autenticação: " + ex.Message, ex);
             }
         }
+    }
+}
