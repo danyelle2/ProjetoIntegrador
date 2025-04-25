@@ -53,15 +53,17 @@ namespace ProjetoIntegrador.Controller.Usuario
 
             try
             {
-                int idProfessor = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
-                int idModalidade = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
+                int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
 
-                string query2 = @" 
-                INSERT INTO professor (id_modalidade, id_professor)
-                VALUES (@id_modalidade, @id_professor)";
+                if (usuario.TipoUsuario == "usuario_padrao")
+                {
+                    string query2 = @" 
+                      INSERT INTO professor (id_usuario, id_modalidade)
+                      VALUES (@id_usuario, @id_modalidade)";
 
-                _databaseService.ExecuteScalarTransaction(query, parameters);
+                    _databaseService.ExecuteScalarTransaction(query2, parameters);
 
+                }
             }
             catch (Exception ex)
             {
