@@ -76,11 +76,6 @@
             // 
             this.comboBoxModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxModalidade.FormattingEnabled = true;
-            this.comboBoxModalidade.Items.AddRange(new object[] {
-            "Zumba",
-            "Funcional",
-            "Muay thai",
-            "Geral"});
             this.comboBoxModalidade.Location = new System.Drawing.Point(187, 926);
             this.comboBoxModalidade.Name = "comboBoxModalidade";
             this.comboBoxModalidade.Size = new System.Drawing.Size(530, 33);
@@ -165,7 +160,7 @@
             // 
             this.txtSenhaCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaCadastro.Location = new System.Drawing.Point(903, 283);
+            this.txtSenhaCadastro.Location = new System.Drawing.Point(903, 373);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
             this.txtSenhaCadastro.PasswordChar = '*';
             this.txtSenhaCadastro.Size = new System.Drawing.Size(532, 35);
@@ -176,7 +171,7 @@
             // 
             this.textSenhaConfirmada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSenhaConfirmada.Location = new System.Drawing.Point(903, 449);
+            this.textSenhaConfirmada.Location = new System.Drawing.Point(903, 539);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
             this.textSenhaConfirmada.PasswordChar = '*';
             this.textSenhaConfirmada.Size = new System.Drawing.Size(532, 35);
@@ -224,7 +219,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVoltar.Location = new System.Drawing.Point(-180, -79);
+            this.btnVoltar.Location = new System.Drawing.Point(-180, 11);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(57, 38);
             this.btnVoltar.TabIndex = 75;
@@ -246,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1386, 968);
             this.Controls.Add(this.txtSenhaCadastro);
             this.Controls.Add(this.textSenhaConfirmada);
             this.Controls.Add(this.panel2);
@@ -264,7 +259,7 @@
             this.Controls.Add(this.MsgExplicacaoUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaCadastroForm";
-            this.Text = "TelaCadastroForm";
+            this.Text = "               ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaCadastroForm_Load);
             this.panel2.ResumeLayout(false);

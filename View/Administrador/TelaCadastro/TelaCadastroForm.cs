@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Repositorio;
 using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
@@ -19,10 +20,12 @@ namespace ProjetoIntegrador.View
     {
 
         BotoesCadastroUsuarioController botoesCadastroController;
+        RepositorioModalidade repositorioModalidade;
         public TelaCadastroForm()
         {
             InitializeComponent();
             botoesCadastroController = new BotoesCadastroUsuarioController();
+            repositorioModalidade = new RepositorioModalidade(new DatabaseService());
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -91,7 +94,11 @@ namespace ProjetoIntegrador.View
 
         private void TelaCadastroForm_Load(object sender, EventArgs e)
         {
-
+            //ele mostra em forma de lista os dados que puxei do banco de dados
+          List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
+            comboBoxModalidade.DataSource = listaModalidades;
+            comboBoxModalidade.DisplayMember = "Tipo_Modalidade";
+            comboBoxModalidade.ValueMember = "Id_Modalidade";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -106,7 +113,7 @@ namespace ProjetoIntegrador.View
 
         private void comboBoxTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            MessageBox.Show(comboBoxTipoUsuario.SelectedItem.ToString());
         }
 
         private void txtSenhaCadastro_TextChanged(object sender, EventArgs e)

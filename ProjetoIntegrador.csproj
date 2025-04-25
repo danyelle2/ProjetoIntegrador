@@ -113,10 +113,12 @@
     <Compile Include="Controller\Aluno\graficos\CarregarGraficosController.cs" />
     <Compile Include="Controller\Repositorio\RepositorioAluno.cs" />
     <Compile Include="Controller\Repositorio\RepositorioGrafico.cs" />
+    <Compile Include="Controller\Repositorio\RepositorioModalidade.cs" />
     <Compile Include="Controller\Repositorio\RepositorioPagamento.cs" />
     <Compile Include="Controller\Repositorio\UsuarioRepositorio.cs" />
     <Compile Include="Model\Criptografia.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
+    <Compile Include="Model\Modalidade.cs" />
     <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Services\DatabaseService.cs" />
     <Compile Include="Services\SessionUser.cs" />

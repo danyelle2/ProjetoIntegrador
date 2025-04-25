@@ -33,13 +33,11 @@ namespace ProjetoIntegrador.Controller.Usuario
             }
 
             string query = @"
-            INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario, id_usuario)
-            VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario, @id_usuario); 
+            INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario)
+            VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario); 
             SELECT LAST_INSERT_ID ();";
 
-            string query2 = @" 
-                INSERT INTO professor (id_professor,id_modalidade)
-                VALUES (@id_professor, @id_modalidade)";
+           
             
             // parametros é só quando o usuario for digitar um dado. Quando é autoincrement não precisa
             // parametros serve para segurança do código.
@@ -55,7 +53,14 @@ namespace ProjetoIntegrador.Controller.Usuario
 
             try
             {
-                _databaseService.ExecuteNonQuery(query, parameters);
+                int idProfessor = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
+
+                string query2 = @" 
+                INSERT INTO professor (id_modalidade, )
+                VALUES (@id_professor, @id_modalidade)";
+
+                _databaseService.ExecuteScalarTransaction(query, parameters);
+
             }
             catch (Exception ex)
             {
