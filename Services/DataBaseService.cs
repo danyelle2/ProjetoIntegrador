@@ -105,6 +105,32 @@ namespace ProjetoIntegrador.Services
                 CloseConnection();
             }
         }
+        public object ExecuteScalarTransaction(string commandText, MySqlParameter[] parameters = null)
+        {
+            // Executa o comando em uma transação para eu conseguir ligar duas tabelas do banco de dados 
+            try
+            {
+                MySqlTransaction transaction = _connection.BeginTransaction();
+
+                OpenConnection();
+                var command = new MySqlCommand(commandText, _connection, transaction);
+
+                if (parameters != null)
+                {
+                    command.Parameters.AddRange(parameters);
+                }
+
+                return command.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao executar scalar: " + ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+        }
 
         protected virtual void Dispose(bool disposing)
         {

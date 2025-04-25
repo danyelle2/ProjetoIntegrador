@@ -39,6 +39,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         }
         private void VisibilidadeTelaUsuario(Usuario usuario)
         {
+            //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE 
             //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
             //if (usuario.TipoUsuario == "administrador")
             //{

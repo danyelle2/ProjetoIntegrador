@@ -32,7 +32,17 @@ namespace ProjetoIntegrador.Controller.Usuario
                 throw new InvalidOperationException("A senha criptografada não pode ser nula ou vazia.");
             }
 
-            string query = @"INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario, id_professor)VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario, @id_professor)";
+            string query = @"
+            INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario, id_usuario)
+            VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario, @id_usuario); 
+            SELECT LAST_INSERT_ID ();";
+
+            string query2 = @" 
+                INSERT INTO professor (id_professor,id_modalidade)
+                VALUES (@id_professor, @id_modalidade)";
+            
+            // parametros é só quando o usuario for digitar um dado. Quando é autoincrement não precisa
+            // parametros serve para segurança do código.
 
             var parameters = new MySqlParameter[]
             {
@@ -41,7 +51,6 @@ namespace ProjetoIntegrador.Controller.Usuario
                 new MySqlParameter("@senha", senhaHash),
                 new MySqlParameter("@tipo_usuario", usuario.TipoUsuario),
                 new MySqlParameter("@status_usuario", true),
-                new MySqlParameter("@id_professor", usuario.IdProfessor)
             };
 
             try
