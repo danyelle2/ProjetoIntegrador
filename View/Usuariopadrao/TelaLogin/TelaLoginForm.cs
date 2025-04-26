@@ -26,6 +26,19 @@ namespace ProjetoIntegrador
             loginController = new LimparCamposLoginController();
         }
 
+        //LimparCamposLoginController loginController;
+        //DatabaseService _dataBaseService;
+        //AutenticacaoUsuario _autenticador;
+        //public TelaLoginForm()
+        //{
+
+        //    InitializeComponent();
+        //    this.FormClosing += AppClose;
+        //    loginController = new LimparCamposLoginController();
+        //    _dataBaseService = new DatabaseService();
+        //    _autenticador = new AutenticacaoUsuario(_dataBaseService);
+        //} DEPOIS COLOCAR ASSIM PRA CHAMAR QUANDO INICIAR 
+
         public void AppClose(object sender, FormClosingEventArgs e)
         {
             Application.ExitThread();
@@ -57,7 +70,7 @@ namespace ProjetoIntegrador
                     {
                         var autenticador = new AutenticacaoUsuario(databaseService);
 
-                        var usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador");
+                        Usuario usuario = autenticador.AutenticarUsuarionaModalidade(cpf, senha, true, "administrador" ); //LEMBRRAR DE COLOCAR PADRÃO AQUI TAMBÉM
                         MessageBox.Show("chegou aqui:\n", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         if (usuario != null)

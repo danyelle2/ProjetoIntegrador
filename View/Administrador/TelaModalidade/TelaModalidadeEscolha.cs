@@ -26,29 +26,33 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
             // aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
             //perguntar para o professor se é certo por aqui mesmo.
-            if (usuario.TipoUsuario == "administrador")
-            {
-                btnCadastro.Visible = true;
-            }
-            else
-            {
-                btnCadastro.Visible = false;
-            }
+
+            //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
+            //if (usuario.TipoUsuario == "administrador")
+            //{
+            //    btnCadastro.Visible = true;
+            //}
+            //else
+            //{
+            //    btnCadastro.Visible = false;
+            //}
         }
-             private void VisibilidadeTelaUsuario(Usuario usuario)
+        private void VisibilidadeTelaUsuario(Usuario usuario)
         {
-            if (usuario.TipoUsuario == "administrador")
-            {
-                BtnZumba.Visible = true;
-                BtnFuncional.Visible = true;
-                BtnMuayThai.Visible = true;
-            }
-                else
-            {
-                BtnZumba.Visible = (usuario.Modalidade == "zumba");
-                BtnMuayThai.Visible = (usuario.Modalidade == "muay_thai");
-                BtnFuncional.Visible = (usuario.Modalidade == "funcional");
-            }
+            //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE 
+            //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
+            //if (usuario.TipoUsuario == "administrador")
+            //{
+            //    BtnZumba.Visible = true;
+            //    BtnFuncional.Visible = true;
+            //    BtnMuayThai.Visible = true;
+            //}
+            //    else
+            //{
+            //    BtnZumba.Visible = (usuario.Modalidade == "zumba");
+            //    BtnMuayThai.Visible = (usuario.Modalidade == "muay_thai");
+            //    BtnFuncional.Visible = (usuario.Modalidade == "funcional");
+            //}
         }                    
         
 

@@ -32,7 +32,16 @@ namespace ProjetoIntegrador.Controller.Usuario
                 throw new InvalidOperationException("A senha criptografada não pode ser nula ou vazia.");
             }
 
-            string query = @"INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario, id_professor)VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario, @id_professor)";
+            string query = @"
+            INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario)
+            VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario); 
+            SELECT LAST_INSERT_ID ();";
+
+
+
+            // parametros é só quando o usuario for digitar um dado. Quando é autoincrement não precisa
+            // todavia quando o id não for da tabela, como o id_modalidade, ele precisa ser passado por isso é passado no query2
+            // parametros serve para segurança do código.
 
             var parameters = new MySqlParameter[]
             {
@@ -41,12 +50,41 @@ namespace ProjetoIntegrador.Controller.Usuario
                 new MySqlParameter("@senha", senhaHash),
                 new MySqlParameter("@tipo_usuario", usuario.TipoUsuario),
                 new MySqlParameter("@status_usuario", true),
-                new MySqlParameter("@id_professor", usuario.IdProfessor)
             };
+
+            int idModalidade;
+
+            if (usuario.TipoUsuario == "usuario_padrao")
+            {
+                idModalidade = usuario.IdModalidade; 
+            }
+            else
+            {
+                idModalidade = 5; 
+                //modalidade 5 é GERAL DO ADM
+            }
+
 
             try
             {
-                _databaseService.ExecuteNonQuery(query, parameters);
+                int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
+
+                if (usuario.TipoUsuario == "usuario_padrao")
+                {
+                    string query2 = @" 
+                         INSERT INTO professor (id_usuario, id_modalidade)
+                         VALUES (@id_usuario, @id_modalidade)";
+
+                    var parameters2 = new MySqlParameter[]
+                    {
+                          new MySqlParameter("@id_usuario", idUsuario),
+                      new MySqlParameter("@id_modalidade", idModalidade),
+                    };
+
+                    _databaseService.ExecuteNonQuery(query2, parameters2);
+                }
+            
+
             }
             catch (Exception ex)
             {

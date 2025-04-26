@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller;
+using ProjetoIntegrador.Controller.Repositorio;
 using ProjetoIntegrador.Controller.Usuario;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
@@ -12,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ProjetoIntegrador.Model.TipoUsuario;
 
 namespace ProjetoIntegrador.View
 {
@@ -19,10 +21,14 @@ namespace ProjetoIntegrador.View
     {
 
         BotoesCadastroUsuarioController botoesCadastroController;
+        RepositorioModalidade repositorioModalidade;
+        TipoUsuarioItem tipoUsuarioItem;
         public TelaCadastroForm()
         {
             InitializeComponent();
             botoesCadastroController = new BotoesCadastroUsuarioController();
+            repositorioModalidade = new RepositorioModalidade(new DatabaseService());
+            tipoUsuarioItem = new TipoUsuarioItem();
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -69,28 +75,38 @@ namespace ProjetoIntegrador.View
 
             if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
             {
-                //TEM QUE VE SE FUNCIONA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                var databaseService = new DatabaseService();
-                var repositorio = new UsuarioRepositorio(databaseService);
+                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem; // <- esta linha é a correção!
 
-                var novoUsuario = new Usuario
+                DatabaseService databaseService = new DatabaseService();
+                UsuarioRepositorio repositorio = new UsuarioRepositorio(databaseService);
+
+                Usuario novoUsuario = new Usuario
                 {
                     Nome = textNomeCadastro.Text.Trim(),
                     Cpf = txtUsuarioCadastro.Text.Trim(),
                     Senha = txtSenhaCadastro.Text,
-                    TipoUsuario = comboBoxTipoUsuario.SelectedItem.ToString().ToLower(),
-                    IdProfessor = Convert.ToInt32(comboBoxModalidade.SelectedValue)
+                    TipoUsuario = tipoSelecionado.ValorBanco, 
+                    IdModalidade = Convert.ToInt32(comboBoxModalidade.SelectedValue)
                 };
 
                 repositorio.CadastrarUsuario(novoUsuario);
 
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
         }
 
+
         private void TelaCadastroForm_Load(object sender, EventArgs e)
         {
+            //ele mostra em forma de lista os dados que puxei do banco de dados
+            // FAZER A MESMA COISA COM A TELA PAGAMENTO E INICIAL 
+          List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
+            comboBoxModalidade.DataSource = listaModalidades;
+            comboBoxModalidade.DisplayMember = "Tipo_Modalidade";
+            comboBoxModalidade.ValueMember = "Id_Modalidade";
+
+            comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Usuário Padrão", ValorBanco = "usuario_padrao" });
+            comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Administrador", ValorBanco = "administrador" });
 
         }
 
@@ -106,7 +122,6 @@ namespace ProjetoIntegrador.View
 
         private void comboBoxTipoUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtSenhaCadastro_TextChanged(object sender, EventArgs e)
