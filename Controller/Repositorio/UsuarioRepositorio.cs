@@ -60,8 +60,9 @@ namespace ProjetoIntegrador.Controller.Usuario
             }
             else
             {
-                idModalidade = 5; 
-                //modalidade 5 é GERAL DO ADM
+                idModalidade = 1; 
+                //modalidade 1 é GERAL DO ADM
+                // 2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
             }
 
 

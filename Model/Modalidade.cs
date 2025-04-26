@@ -20,7 +20,7 @@ namespace ProjetoIntegrador.Model
             return new Modalidade
             {
                 TipoModalidade = reader["tipo_modalidade"].ToString(),
-                IdModalidade = Convert.ToInt32(reader["id_professor"])
+                IdModalidade = Convert.ToInt32(reader["id_modalidade"])
             };
         
         }

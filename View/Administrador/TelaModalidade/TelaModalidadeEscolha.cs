@@ -41,7 +41,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE 
             //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
-            //if (usuario.TipoUsuario == "administrador")
+            //if (usuario.idModalidade == 1)
             //{
             //    BtnZumba.Visible = true;
             //    BtnFuncional.Visible = true;
@@ -49,10 +49,15 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             //}
             //    else
             //{
-            //    BtnZumba.Visible = (usuario.Modalidade == "zumba");
-            //    BtnMuayThai.Visible = (usuario.Modalidade == "muay_thai");
-            //    BtnFuncional.Visible = (usuario.Modalidade == "funcional");
+            //    BtnZumba.Visible = (usuario.IdModalidade == 2);
+            //    BtnMuayThai.Visible = (usuario.idModalidade == 3);
+            //    BtnFuncional.Visible = (usuario.IdModalidade == 4);
             //}
+
+
+            //modalidade 1 é GERAL DO ADM
+            // 2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
+        }
         }                    
         
 

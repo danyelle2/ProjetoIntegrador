@@ -24,7 +24,7 @@ namespace ProjetoIntegrador.Controller.Repositorio
             List<Modalidade> listModalidades = new List<Modalidade>();
 
             string query = @"
-            SELECT * FROM professor;";
+            SELECT * FROM modalidade;";
             // ExecuteQuery faz somente a leitura do banco de dados 
             MySqlDataReader reader = _databaseService.ExecuteQuery(query);
 
