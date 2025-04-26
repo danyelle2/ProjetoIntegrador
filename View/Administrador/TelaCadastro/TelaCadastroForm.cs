@@ -85,7 +85,7 @@ namespace ProjetoIntegrador.View
                     Nome = textNomeCadastro.Text.Trim(),
                     Cpf = txtUsuarioCadastro.Text.Trim(),
                     Senha = txtSenhaCadastro.Text,
-                    TipoUsuario = tipoSelecionado.ValorBanco, // usa "usuario_padrao" ou "administrador"
+                    TipoUsuario = tipoSelecionado.ValorBanco, 
                     IdModalidade = Convert.ToInt32(comboBoxModalidade.SelectedValue)
                 };
 
