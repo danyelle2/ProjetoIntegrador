@@ -37,9 +37,10 @@ namespace ProjetoIntegrador.Controller.Usuario
             VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario); 
             SELECT LAST_INSERT_ID ();";
 
-           
-            
+
+
             // parametros é só quando o usuario for digitar um dado. Quando é autoincrement não precisa
+            // todavia quando o id não for da tabela, como o id_modalidade, ele precisa ser passado por isso é passado no query2
             // parametros serve para segurança do código.
 
             var parameters = new MySqlParameter[]
@@ -51,6 +52,18 @@ namespace ProjetoIntegrador.Controller.Usuario
                 new MySqlParameter("@status_usuario", true),
             };
 
+            int idModalidade;
+
+            if (usuario.TipoUsuario == "usuario_padrao")
+            {
+                idModalidade = usuario.IdModalidade; 
+            }
+            else
+            {
+                idModalidade = 1; 
+            }
+
+
             try
             {
                 int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
@@ -58,12 +71,19 @@ namespace ProjetoIntegrador.Controller.Usuario
                 if (usuario.TipoUsuario == "usuario_padrao")
                 {
                     string query2 = @" 
-                      INSERT INTO professor (id_usuario, id_modalidade)
-                      VALUES (@id_usuario, @id_modalidade)";
+                         INSERT INTO professor (id_usuario, id_modalidade)
+                         VALUES (@id_usuario, @id_modalidade)";
 
-                    _databaseService.ExecuteScalarTransaction(query2, parameters);
+                    var parameters2 = new MySqlParameter[]
+                    {
+                          new MySqlParameter("@id_usuario", idUsuario),
+                      new MySqlParameter("@id_modalidade", idModalidade),
+                    };
 
+                    _databaseService.ExecuteNonQuery(query2, parameters2);
                 }
+            
+
             }
             catch (Exception ex)
             {
