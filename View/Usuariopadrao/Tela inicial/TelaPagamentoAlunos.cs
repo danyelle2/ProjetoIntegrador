@@ -17,16 +17,13 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         public TelaPagamentoAlunos()
         {
             InitializeComponent();
-            _repositorioPagamento = new RepositorioPagamento(new DatabaseService()); 
+            _repositorioPagamento = new RepositorioPagamento(new DatabaseService());
         }
 
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)
         {
-            CarregarAlunos();
-
-            List<Aluno> listaModalidades = RepositorioAluno.ListarAlunos();
-
             dataGridViewpagamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            CarregarAlunos();
         }
 
         private void CarregarAlunos()
@@ -41,9 +38,9 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
             {
-                if (row.Cells["StatusPagamento"].Value != null)
+                //MUDAR AS CORES DEPOIS.
+                if (row.Cells["StatusPagamento"].Value != null && bool.TryParse(row.Cells["StatusPagamento"].Value.ToString(), out bool statusPagamento))
                 {
-                    bool statusPagamento = (bool)row.Cells["StatusPagamento"].Value;
                     row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.Green : Color.Red;
                 }
             }
@@ -53,20 +50,26 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.SelectedRows)
             {
-                var aluno = (Model.Aluno)row.DataBoundItem;
-                _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, true);
+                if (row.DataBoundItem is Model.Aluno aluno)
+                {
+                    _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, true);
+                }
             }
+
             CarregarAlunos();
-            }
+        }
 
         private void buttonPendentePagamento_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.SelectedRows)
             {
-                var aluno = (Model.Aluno)row.DataBoundItem;
-                _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, false);
+                if (row.DataBoundItem is Model.Aluno aluno)
+                {
+                    _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, false);
+                }
             }
-            CarregarAlunos(); 
+
+            CarregarAlunos();
         }
     }
 }

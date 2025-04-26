@@ -54,14 +54,15 @@ namespace ProjetoIntegrador.Controller.Usuario
 
             int idModalidade;
 
-            if (usuario.TipoUsuario == "usuario_padrao")
+            if (usuario.TipoUsuario == "administrador")
             {
-                idModalidade = usuario.IdModalidade; 
+                idModalidade = 5;
+                //modalidade 5 é GERAL DO ADM
             }
             else
             {
-                idModalidade = 5; 
-                //modalidade 5 é GERAL DO ADM
+                
+                idModalidade = usuario.IdModalidade;
             }
 
 
@@ -72,19 +73,17 @@ namespace ProjetoIntegrador.Controller.Usuario
                 if (usuario.TipoUsuario == "usuario_padrao")
                 {
                     string query2 = @" 
-                         INSERT INTO professor (id_usuario, id_modalidade)
-                         VALUES (@id_usuario, @id_modalidade)";
+                         INSERT INTO modalidade (tipo_modalidade)
+                         VALUES (@tipo_modalidade)";
 
                     var parameters2 = new MySqlParameter[]
                     {
-                          new MySqlParameter("@id_usuario", idUsuario),
-                      new MySqlParameter("@id_modalidade", idModalidade),
+                      new MySqlParameter("@tipo_modalidade", idModalidade),
                     };
 
                     _databaseService.ExecuteNonQuery(query2, parameters2);
                 }
-            
-
+                
             }
             catch (Exception ex)
             {

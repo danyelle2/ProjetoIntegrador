@@ -19,7 +19,6 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public List<ModelAluno> AlunosAtivos()
         {
-            //mudar aqui e por o join
             List<Model.Aluno> lista = new List<Model.Aluno>();
             string query = "SELECT * FROM aluno id_aluno, nome, status_aluno, status_pagamento WHERE status_aluno = 1";
 
@@ -40,18 +39,22 @@ namespace ProjetoIntegrador.Controller.Aluno
             return lista;
         }
 
-        public void AtualizarStatusPagamento( bool statusPagamento)
+        public void AtualizarStatusPagamento(int idAluno, bool statusPagamento)
         {
-            string query = "UPDATE assinatura SET status_pagamento = @status";
+            // coloquei now para atualizar com a data atual que a pessoa atualizou o pagamento
+            string query = @"
+        UPDATE pagamento 
+        SET data_pagamento = NOW(), status_pagamento = @status 
+        WHERE id_aluno = @idAluno";
+
             MySqlParameter[] parameters =
             {
-                new MySqlParameter("@status", statusPagamento),
-             
-            };
+        new MySqlParameter("@status", statusPagamento),
+        new MySqlParameter("@idAluno", idAluno),
+    };
 
             _databaseService.ExecuteNonQuery(query, parameters);
         }
-
 
     }
 }
