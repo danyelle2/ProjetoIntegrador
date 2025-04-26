@@ -9,6 +9,7 @@ namespace ProjetoIntegrador.Model
     public class Aluno
     {
         public int Id { get; set; }
+        public string Assinatura { get; set; }
         public string Nome { get; set; }
         public bool StatusAtivo { get; set; }
         public bool StatusPagamento { get; set; }

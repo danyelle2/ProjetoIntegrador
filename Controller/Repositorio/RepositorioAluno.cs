@@ -21,8 +21,8 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public bool CadastrarAluno(Model.Aluno aluno)
         {
-            string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status_aluno) 
-                         VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status)";
+            string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status_aluno, assinatura_aluno) 
+                         VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status,@assinatura)";
 
             var parametros = new MySql.Data.MySqlClient.MySqlParameter[]
             {
@@ -33,7 +33,8 @@ namespace ProjetoIntegrador.Controller.Aluno
             new MySql.Data.MySqlClient.MySqlParameter("@data_saida", aluno.DataSaida),
             new MySql.Data.MySqlClient.MySqlParameter("@plano", aluno.Plano),
             new MySql.Data.MySqlClient.MySqlParameter("@responsavel", aluno.NomeResponsavel),
-            new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status)
+            new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status),
+            new MySql.Data.MySqlClient.MySqlParameter("@assinatura", aluno.Assinatura)
             };
 
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
@@ -65,6 +66,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
         }
-    }
+
+            }
 }
 

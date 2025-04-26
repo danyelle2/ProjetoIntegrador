@@ -1,4 +1,5 @@
 ﻿using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Controller.Repositorio;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
@@ -22,6 +23,10 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)
         {
             CarregarAlunos();
+
+            List<Aluno> listaModalidades = RepositorioAluno.ListarAlunos();
+
+            dataGridViewpagamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
         private void CarregarAlunos()
