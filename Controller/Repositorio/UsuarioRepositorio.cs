@@ -60,7 +60,8 @@ namespace ProjetoIntegrador.Controller.Usuario
             }
             else
             {
-                idModalidade = 1; 
+                idModalidade = 5; 
+                //modalidade 5 é GERAL DO ADM
             }
 
 
