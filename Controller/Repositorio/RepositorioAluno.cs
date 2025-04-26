@@ -21,8 +21,8 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public bool CadastrarAluno(Model.Aluno aluno)
         {
-            string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status_aluno) 
-                         VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status)";
+            string query = @"INSERT INTO aluno (nome, idade, telefone, data_entrada, data_saida,assinatura , responsavel, status_aluno, assinatura_aluno) 
+                         VALUES (@nome, @idade, @telefone, @data_entrada,@data_saida @plano, @responsavel, @status,@assinatura_aluno)";
 
             var parametros = new MySql.Data.MySqlClient.MySqlParameter[]
             {
@@ -33,7 +33,8 @@ namespace ProjetoIntegrador.Controller.Aluno
             new MySql.Data.MySqlClient.MySqlParameter("@data_saida", aluno.DataSaida),
             new MySql.Data.MySqlClient.MySqlParameter("@plano", aluno.Plano),
             new MySql.Data.MySqlClient.MySqlParameter("@responsavel", aluno.NomeResponsavel),
-            new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status)
+            new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status),
+            new MySql.Data.MySqlClient.MySqlParameter("@assinatura_aluno", aluno.Assinatura)
             };
 
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
@@ -48,6 +49,7 @@ namespace ProjetoIntegrador.Controller.Aluno
                             data_entrada = @dataEntrada,
                             data_saida = @dataSaida,
                             status_aluno = @status
+                            assinatura_aluno = @assinatur_aluno, 
                          WHERE id_aluno = @id";
 
             var parametros = new MySql.Data.MySqlClient.MySqlParameter[]
@@ -60,11 +62,13 @@ namespace ProjetoIntegrador.Controller.Aluno
                     new MySql.Data.MySqlClient.MySqlParameter("@nomeResponsavel", aluno.NomeResponsavel),
                     new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status),
                     new MySql.Data.MySqlClient.MySqlParameter("@dataSaida", aluno.DataSaida),
-                new MySql.Data.MySqlClient.MySqlParameter("@id", aluno.Id)
+                new MySql.Data.MySqlClient.MySqlParameter("@id", aluno.Id),
+                new MySql.Data.MySqlClient.MySqlParameter("@assinatura_aluno", aluno.Assinatura)
             };
 
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
         }
-    }
+
+            }
 }
 
