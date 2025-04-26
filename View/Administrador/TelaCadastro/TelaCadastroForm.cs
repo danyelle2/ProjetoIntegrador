@@ -99,6 +99,7 @@ namespace ProjetoIntegrador.View
         private void TelaCadastroForm_Load(object sender, EventArgs e)
         {
             //ele mostra em forma de lista os dados que puxei do banco de dados
+            // FAZER A MESMA COISA COM A TELA PAGAMENTO E INICIAL 
           List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
             comboBoxModalidade.DataSource = listaModalidades;
             comboBoxModalidade.DisplayMember = "Tipo_Modalidade";
@@ -106,8 +107,6 @@ namespace ProjetoIntegrador.View
 
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Usuário Padrão", ValorBanco = "usuario_padrao" });
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Administrador", ValorBanco = "administrador" });
-
-
 
         }
 
