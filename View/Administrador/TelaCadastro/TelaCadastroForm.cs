@@ -75,33 +75,31 @@ namespace ProjetoIntegrador.View
 
             if (tipoUsuarioValido && resultadoCamposVazios && senhasIguais && resultadoComboBox)
             {
-                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem; 
+                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem;
 
                 DatabaseService databaseService = new DatabaseService();
                 UsuarioRepositorio repositorio = new UsuarioRepositorio(databaseService);
 
-                Usuario novoUsuario = new Usuario
+                try
                 {
-                    Nome = textNomeCadastro.Text.Trim(),
-                    Cpf = txtUsuarioCadastro.Text.Trim(),
-                    Senha = txtSenhaCadastro.Text,
-                    TipoUsuario = tipoSelecionado.ValorBanco,
-                    IdModalidade = Convert.ToInt32(comboBoxModalidade1.SelectedValue)
-                };
+                    repositorio.CadastrarUsuario(new Usuario());
 
-                repositorio.CadastrarUsuario(novoUsuario);
+                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
+                    telaModalidadeEscolha.Show();
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao cadastrar usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-               TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
-                telaModalidadeEscolha.Show();
-                this.Hide();
-                 
+            }
             }
 
-        }
 
-       
+
 
 
         private void TelaCadastroForm_Load(object sender, EventArgs e)
