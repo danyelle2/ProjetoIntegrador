@@ -94,6 +94,7 @@ namespace ProjetoIntegrador.Controller.Usuario
             {
                 throw new InvalidOperationException("Erro ao cadastrar usuário.", ex);
             }
+            //Colocar uma função update para usuario mudar os status dele para inativo.
         }
     }
 }

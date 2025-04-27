@@ -36,8 +36,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxModalidade1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.TxTExplicacaoModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoUsuario = new System.Windows.Forms.Label();
             this.msgTemporariaUsuario = new System.Windows.Forms.Button();
@@ -50,6 +48,8 @@
             this.textSenhaConfirmada = new System.Windows.Forms.TextBox();
             this.textNomeCadastro = new System.Windows.Forms.TextBox();
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
+            this.MsgErrorSenha1 = new System.Windows.Forms.Label();
+            this.labelMsgErroModalidade1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,11 +89,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelMsgErroModalidade1);
+            this.panel1.Controls.Add(this.MsgErrorSenha1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.comboBoxModalidade1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.TxTExplicacaoModalidade);
             this.panel1.Controls.Add(this.MsgExplicacaoUsuario);
             this.panel1.Controls.Add(this.msgTemporariaUsuario);
@@ -144,35 +144,13 @@
             this.comboBoxModalidade1.TabIndex = 73;
             this.comboBoxModalidade1.SelectedIndexChanged += new System.EventHandler(this.comboBoxModalidade1_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(693, 454);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 72;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(693, 290);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 20);
-            this.label2.TabIndex = 71;
-            // 
             // TxTExplicacaoModalidade
             // 
             this.TxTExplicacaoModalidade.AutoSize = true;
             this.TxTExplicacaoModalidade.BackColor = System.Drawing.Color.Transparent;
             this.TxTExplicacaoModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxTExplicacaoModalidade.ForeColor = System.Drawing.Color.Black;
-            this.TxTExplicacaoModalidade.Location = new System.Drawing.Point(685, 446);
+            this.TxTExplicacaoModalidade.Location = new System.Drawing.Point(26, 709);
             this.TxTExplicacaoModalidade.Name = "TxTExplicacaoModalidade";
             this.TxTExplicacaoModalidade.Size = new System.Drawing.Size(0, 20);
             this.TxTExplicacaoModalidade.TabIndex = 70;
@@ -218,7 +196,7 @@
             this.MsgErrorTipoUsuario.BackColor = System.Drawing.Color.Transparent;
             this.MsgErrorTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgErrorTipoUsuario.ForeColor = System.Drawing.Color.Maroon;
-            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(387, 365);
+            this.MsgErrorTipoUsuario.Location = new System.Drawing.Point(43, 502);
             this.MsgErrorTipoUsuario.Name = "MsgErrorTipoUsuario";
             this.MsgErrorTipoUsuario.Size = new System.Drawing.Size(16, 16);
             this.MsgErrorTipoUsuario.TabIndex = 63;
@@ -260,7 +238,6 @@
             this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaCadastro.Location = new System.Drawing.Point(866, 121);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
-            this.txtSenhaCadastro.PasswordChar = '*';
             this.txtSenhaCadastro.Size = new System.Drawing.Size(532, 35);
             this.txtSenhaCadastro.TabIndex = 57;
             // 
@@ -270,7 +247,6 @@
             this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSenhaConfirmada.Location = new System.Drawing.Point(889, 327);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
-            this.textSenhaConfirmada.PasswordChar = '*';
             this.textSenhaConfirmada.Size = new System.Drawing.Size(532, 35);
             this.textSenhaConfirmada.TabIndex = 59;
             // 
@@ -291,6 +267,30 @@
             this.txtUsuarioCadastro.Name = "txtUsuarioCadastro";
             this.txtUsuarioCadastro.Size = new System.Drawing.Size(530, 35);
             this.txtUsuarioCadastro.TabIndex = 56;
+            // 
+            // MsgErrorSenha1
+            // 
+            this.MsgErrorSenha1.AutoSize = true;
+            this.MsgErrorSenha1.BackColor = System.Drawing.Color.Transparent;
+            this.MsgErrorSenha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErrorSenha1.ForeColor = System.Drawing.Color.Maroon;
+            this.MsgErrorSenha1.Location = new System.Drawing.Point(892, 365);
+            this.MsgErrorSenha1.Name = "MsgErrorSenha1";
+            this.MsgErrorSenha1.Size = new System.Drawing.Size(16, 16);
+            this.MsgErrorSenha1.TabIndex = 76;
+            this.MsgErrorSenha1.Text = "...";
+            // 
+            // labelMsgErroModalidade1
+            // 
+            this.labelMsgErroModalidade1.AutoSize = true;
+            this.labelMsgErroModalidade1.BackColor = System.Drawing.Color.Transparent;
+            this.labelMsgErroModalidade1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMsgErroModalidade1.ForeColor = System.Drawing.Color.Maroon;
+            this.labelMsgErroModalidade1.Location = new System.Drawing.Point(12, 709);
+            this.labelMsgErroModalidade1.Name = "labelMsgErroModalidade1";
+            this.labelMsgErroModalidade1.Size = new System.Drawing.Size(16, 16);
+            this.labelMsgErroModalidade1.TabIndex = 77;
+            this.labelMsgErroModalidade1.Text = "...";
             // 
             // TelaCadastroForm
             // 
@@ -330,11 +330,11 @@
         private System.Windows.Forms.Label MsgErrorTipoUsuario;
         private System.Windows.Forms.ComboBox comboBoxTipoUsuario;
         private System.Windows.Forms.ComboBox comboBoxModalidade1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label TxTExplicacaoModalidade;
         private System.Windows.Forms.Label MsgExplicacaoUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label MsgErrorSenha1;
+        private System.Windows.Forms.Label labelMsgErroModalidade1;
     }
 }
