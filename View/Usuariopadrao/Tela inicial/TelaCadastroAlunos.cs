@@ -57,7 +57,7 @@ namespace ProjetoIntegrador.View
                         Idade = int.Parse(textBoxIdade.Text),
                         Telefone = txtTelefoneALuno.Text,
                         DataEntrada = DateTime.Parse(textBoxDataEntrada.Text),
-                        Plano = txtAssinaturaAluno.SelectedItem?.ToString(),
+                        Assinatura = txtAssinaturaAluno.SelectedItem?.ToString(),
                         NomeResponsavel = textBoxNomeResponsavel.Text,
                         Status = comboBoxStatusAluno.SelectedItem?.ToString()
                     };

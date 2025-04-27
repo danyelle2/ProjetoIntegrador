@@ -103,7 +103,7 @@ namespace ProjetoIntegrador.View
           List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
             comboBoxModalidade.DataSource = listaModalidades;
             comboBoxModalidade.DisplayMember = "Tipo_Modalidade";
-            comboBoxModalidade.ValueMember = "Id_Modalidade";
+            comboBoxModalidade.ValueMember = "IdModalidade";
 
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Usuário Padrão", ValorBanco = "usuario_padrao" });
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Administrador", ValorBanco = "administrador" });

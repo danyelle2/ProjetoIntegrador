@@ -145,6 +145,7 @@
             this.btnCadastro.TabIndex = 25;
             this.btnCadastro.Text = "Botão Cadastro de Professor";
             this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click_1);
             // 
             // TelaModalidadeEscolha
             // 
@@ -154,7 +155,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TelaModalidadeEscolha";
             this.Text = "TelaModalidadeEscolha";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaModalidadeEscolha_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

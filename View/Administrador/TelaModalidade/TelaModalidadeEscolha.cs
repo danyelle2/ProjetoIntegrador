@@ -21,8 +21,8 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
         {
-            Usuario usuario = SessionUser.userLogado;
-            VisibilidadeTelaUsuario(usuario);
+            //Usuario usuario = SessionUser.userLogado;
+            //VisibilidadeTelaUsuario(usuario);
 
             // aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
             //perguntar para o professor se é certo por aqui mesmo.
@@ -58,7 +58,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             //modalidade 1 é GERAL DO ADM
             // 2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
         }
-        }                    
+                            
         
 
         private void button1_Click(object sender, EventArgs e)
@@ -95,18 +95,28 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             var telaInicial = new TelaInicialForm();
             telaInicial.Show();
+            this.Hide();
         }
 
         private void BtnFuncional_Click(object sender, EventArgs e)
         {
             var telaInicial = new TelaInicialForm();
             telaInicial.Show();
+            this.Hide();
         }
 
         private void BtnMuayThai_Click(object sender, EventArgs e)
         {
             var telaInicial = new TelaInicialForm();
             telaInicial.Show();
+            this.Hide();
+        }
+
+        private void btnCadastro_Click_1(object sender, EventArgs e)
+        {
+            TelaCadastroForm telaCadastro = new TelaCadastroForm();
+            telaCadastro.ShowDialog();
+            
         }
 
         //private void pictureBoxVoltar_Click(object sender, EventArgs e)

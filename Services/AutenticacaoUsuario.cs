@@ -68,7 +68,7 @@ namespace ProjetoIntegrador.Services
                             Nome = respostaBanco["nome"].ToString(),
                             TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
                             StatusUsuario = status,
-                            Modalidade = respostaBanco["tipo_modalidade"]?.ToString().ToLower()
+                            Modalidade = respostaBanco["id_modalidade"]?.ToString().ToLower()
                         };
                     }
                     throw new KeyNotFoundException("Usuário não encontrado.");

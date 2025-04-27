@@ -55,7 +55,7 @@ namespace ProjetoIntegrador.View
                 alunoEditando.Telefone = textBoxTelefoneAluno.Text;
                 alunoEditando.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
                 alunoEditando.NomeResponsavel = textBoxNomeResponsavel.Text;
-                alunoEditando.Plano = comboBoxPlano.SelectedItem.ToString();
+                alunoEditando.Assinatura = comboBoxPlano.SelectedItem.ToString();
                 alunoEditando.Status = comboBoxStatusAlunos.SelectedItem.ToString();
                 alunoEditando.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
 
