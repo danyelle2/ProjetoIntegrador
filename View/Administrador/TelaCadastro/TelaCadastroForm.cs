@@ -82,7 +82,16 @@ namespace ProjetoIntegrador.View
 
                 try
                 {
-                    repositorio.CadastrarUsuario(new Usuario());
+                    Usuario novoUsuario = new Usuario
+                    {
+                        Nome = textNomeCadastro.Text.Trim(),
+                        Cpf = txtUsuarioCadastro.Text.Trim(),
+                        Senha = txtSenhaCadastro.Text,
+                        TipoUsuario = tipoSelecionado.ValorBanco,
+                        IdModalidade = (int)comboBoxModalidade1.SelectedValue
+                    };
+
+                    repositorio.CadastrarUsuario(novoUsuario);
 
                     MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -94,9 +103,10 @@ namespace ProjetoIntegrador.View
                 {
                     MessageBox.Show($"Erro ao cadastrar usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
             }
-            }
+        }
+    
+            
 
 
 
@@ -106,11 +116,11 @@ namespace ProjetoIntegrador.View
         {
             //ele mostra em forma de lista os dados que puxei do banco de dados
             // FAZER A MESMA COISA COM A TELA PAGAMENTO E INICIAL 
-          List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
+            List<Modalidade> listaModalidades = repositorioModalidade.GetModalidades();
             comboBoxModalidade1.DataSource = listaModalidades;
             comboBoxModalidade1.DisplayMember = "TipoModalidade";
             comboBoxModalidade1.ValueMember = "IdModalidade";
-              comboBoxModalidade1.SelectedIndex = -1; 
+            comboBoxModalidade1.SelectedIndex = -1;
 
 
 
@@ -118,6 +128,7 @@ namespace ProjetoIntegrador.View
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Administrador", ValorBanco = "administrador" });
 
         }
+            
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
