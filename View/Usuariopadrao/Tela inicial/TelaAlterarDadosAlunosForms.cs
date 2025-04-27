@@ -58,7 +58,7 @@ namespace ProjetoIntegrador.View
                 alunoEditando.Assinatura = comboBoxPlano.SelectedItem.ToString();
                 alunoEditando.Status = comboBoxStatusAlunos.SelectedItem.ToString();
                 alunoEditando.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
-
+                
                 var repositorio = new RepositorioAluno(new DatabaseService());
                 repositorio.AlterarDadosAlunos(aluno);
 

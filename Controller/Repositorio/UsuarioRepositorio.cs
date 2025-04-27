@@ -46,7 +46,7 @@ namespace ProjetoIntegrador.Controller.Usuario
             }
 
             string query = @"
-                INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario, id_modalidade)
+                INSERT INTO usuario (nome, cpf,senha, tipo_usuario, status_usuario, id_modalidade)
                   VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario, @id_modalidade); 
                     SELECT LAST_INSERT_ID();";
 

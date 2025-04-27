@@ -40,7 +40,7 @@ namespace ProjetoIntegrador.Controller.Aluno
                 new MySql.Data.MySqlClient.MySqlParameter("@telefone", aluno.Telefone),
                 new MySql.Data.MySqlClient.MySqlParameter("@data_entrada", aluno.DataEntrada),
                 new MySql.Data.MySqlClient.MySqlParameter("@responsavel", aluno.NomeResponsavel),
-                new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status),
+                new MySql.Data.MySqlClient.MySqlParameter("@status", true),
                 new MySql.Data.MySqlClient.MySqlParameter("@assinatura_aluno", aluno.Assinatura)
             };
 
