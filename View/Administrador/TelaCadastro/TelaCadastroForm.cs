@@ -68,14 +68,14 @@ namespace ProjetoIntegrador.View
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            bool resultadoCamposVazios = botoesCadastroController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-            bool Senhasiguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
-            bool TipoUsuario = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
-            bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
+            bool resultadoCamposVazios = botoesCadastroController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade1);
+            bool senhasIguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
+            bool tipoUsuarioValido = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade1, MsgErrorTipoUsuario);
+            bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade1, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
 
-            if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
+            if (tipoUsuarioValido && resultadoCamposVazios && senhasIguais && resultadoComboBox)
             {
-                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem; // <- esta linha é a correção!
+                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem; 
 
                 DatabaseService databaseService = new DatabaseService();
                 UsuarioRepositorio repositorio = new UsuarioRepositorio(databaseService);
@@ -85,15 +85,23 @@ namespace ProjetoIntegrador.View
                     Nome = textNomeCadastro.Text.Trim(),
                     Cpf = txtUsuarioCadastro.Text.Trim(),
                     Senha = txtSenhaCadastro.Text,
-                    TipoUsuario = tipoSelecionado.ValorBanco, 
-                    IdModalidade = Convert.ToInt32(comboBoxModalidade.SelectedValue)
+                    TipoUsuario = tipoSelecionado.ValorBanco,
+                    IdModalidade = Convert.ToInt32(comboBoxModalidade1.SelectedValue)
                 };
 
                 repositorio.CadastrarUsuario(novoUsuario);
 
-                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+               TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
+                telaModalidadeEscolha.Show();
+                this.Hide();
+                 
             }
+
         }
+
+       
 
 
         private void TelaCadastroForm_Load(object sender, EventArgs e)
@@ -101,9 +109,12 @@ namespace ProjetoIntegrador.View
             //ele mostra em forma de lista os dados que puxei do banco de dados
             // FAZER A MESMA COISA COM A TELA PAGAMENTO E INICIAL 
           List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
-            comboBoxModalidade.DataSource = listaModalidades;
-            comboBoxModalidade.DisplayMember = "Tipo_Modalidade";
-            comboBoxModalidade.ValueMember = "IdModalidade";
+            comboBoxModalidade1.DataSource = listaModalidades;
+            comboBoxModalidade1.DisplayMember = "TipoModalidade";
+            comboBoxModalidade1.ValueMember = "IdModalidade";
+              comboBoxModalidade1.SelectedIndex = -1; 
+
+
 
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Usuário Padrão", ValorBanco = "usuario_padrao" });
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Administrador", ValorBanco = "administrador" });
@@ -127,6 +138,15 @@ namespace ProjetoIntegrador.View
         private void txtSenhaCadastro_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBoxModalidade1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

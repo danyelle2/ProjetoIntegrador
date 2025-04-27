@@ -25,7 +25,18 @@ namespace ProjetoIntegrador.Model
         
         }
 
-
+        // public class TipoModalidade
+        //{
+        //        public int IdModalidade { get; set; }
+        //        public string Tipo_Modalidade { get; set; }
+        //        public string TextoExibido { get; set; }
+        //        public int ValorBanco { get; set; }
+        //        public override string ToString()
+        //        {
+        //            return Tipo_Modalidade;
+        //        }
+            
+        //}
     }
 
     

@@ -55,13 +55,13 @@ namespace ProjetoIntegrador.Controller
                 return false;
             }
 
-            if (tipocadastro.SelectedItem.ToString() == "Administrador" && modalidade.SelectedItem.ToString() != "Geral")
+            if (tipocadastro.SelectedItem.ToString() == "Administrador" && ((Model.Modalidade)modalidade.SelectedItem).IdModalidade != 1)
             {
                 MessageBox.Show("Administrador favor escolher a opção Geral", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            }
+            } 
 
-            if (tipocadastro.SelectedItem.ToString() == "Usuário Padrão" && modalidade.SelectedItem.ToString() == "Geral")
+            if (tipocadastro.SelectedItem.ToString() == "Usuário Padrão" && ((Model.Modalidade) modalidade.SelectedItem).IdModalidade == 1)
             {
                 MessageBox.Show("Opção geral somente para Administrador", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
