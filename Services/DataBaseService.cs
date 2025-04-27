@@ -105,14 +105,17 @@ namespace ProjetoIntegrador.Services
                 CloseConnection();
             }
         }
-        public object ExecuteScalarTransaction(string commandText, MySqlParameter[] parameters = null)
+        
+         
+           public object ExecuteScalarTransaction(string commandText, MySqlParameter[] parameters = null)
         {
             // Executa o comando em uma transação para eu conseguir ligar duas tabelas do banco de dados 
             try
             {
-                MySqlTransaction transaction = _connection.BeginTransaction();
+                OpenConnection(); // <- ABRE PRIMEIRO!
 
-                OpenConnection();
+                MySqlTransaction transaction = _connection.BeginTransaction(); // <- DEPOIS COMEÇA A TRANSAÇÃO
+
                 var command = new MySqlCommand(commandText, _connection, transaction);
 
                 if (parameters != null)
@@ -120,11 +123,15 @@ namespace ProjetoIntegrador.Services
                     command.Parameters.AddRange(parameters);
                 }
 
-                return command.ExecuteScalar();
+                var result = command.ExecuteScalar(); // Executa o insert
+
+                transaction.Commit(); // COMITA A TRANSAÇÃO!!! (esse passo é importante, senão não salva!)
+
+                return result;
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao executar scalar: " + ex.Message);
+                throw new Exception("Erro ao executar scalar transaction: " + ex.Message);
             }
             finally
             {

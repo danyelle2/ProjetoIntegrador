@@ -32,38 +32,41 @@ namespace ProjetoIntegrador.Controller.Usuario
                 throw new InvalidOperationException("A senha criptografada não pode ser nula ou vazia.");
             }
 
-            string query = @"
-            INSERT INTO usuario (nome, cpf, senha, tipo_usuario, status_usuario)
-            VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario); 
-            SELECT LAST_INSERT_ID ();";
-
-
-
-            // parametros é só quando o usuario for digitar um dado. Quando é autoincrement não precisa
-            // todavia quando o id não for da tabela, como o id_modalidade, ele precisa ser passado por isso é passado no query2
-            // parametros serve para segurança do código.
-
-            var parameters = new MySqlParameter[]
-            {
-                new MySqlParameter("@nome", usuario.Nome),
-                new MySqlParameter("@cpf", usuario.Cpf),
-                new MySqlParameter("@senha", senhaHash),
-                new MySqlParameter("@tipo_usuario", usuario.TipoUsuario),
-                new MySqlParameter("@status_usuario", true),
-            };
-
             int idModalidade;
 
             if (usuario.TipoUsuario == "usuario_padrao")
             {
-                idModalidade = usuario.IdModalidade; 
+                idModalidade = usuario.IdModalidade;
             }
             else
             {
-                idModalidade = 1; 
+                idModalidade = 1;
                 //modalidade 1 é GERAL DO ADM
                 // 2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
             }
+
+            string query = @"
+                INSERT INTO usuario (nome, cpf,senha, tipo_usuario, status_usuario, id_modalidade)
+                  VALUES (@nome, @cpf, @senha, @tipo_usuario, @status_usuario, @id_modalidade); 
+                    SELECT LAST_INSERT_ID();";
+
+            var parameters = new MySqlParameter[]
+
+            {
+
+             new MySqlParameter("@nome", usuario.Nome),
+                new MySqlParameter("@cpf", usuario.Cpf),
+                   new MySqlParameter("@senha", senhaHash),
+                     new MySqlParameter("@tipo_usuario", usuario.TipoUsuario),
+                       new MySqlParameter("@status_usuario", true),
+                         new MySqlParameter("@id_modalidade", idModalidade),
+            };
+            // parametros é só quando o usuario for digitar um dado. Quando é autoincrement não precisa
+            // todavia quando o id não for da tabela, como o id_modalidade, ele precisa ser passado por isso é passado no query2
+            // parametros serve para segurança do código.
+
+
+           
 
 
             try
@@ -91,6 +94,7 @@ namespace ProjetoIntegrador.Controller.Usuario
             {
                 throw new InvalidOperationException("Erro ao cadastrar usuário.", ex);
             }
+            //Colocar uma função update para usuario mudar os status dele para inativo.
         }
     }
 }

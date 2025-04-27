@@ -39,13 +39,13 @@ namespace ProjetoIntegrador.View
 
         private void msgTemporariaUsuarioAparece(object sender, EventArgs e)
         {
-            MsgExplicacaoUsuario.Text = "Selecione usuário se você for professor\nSelecione Administrador se você for o dono do studio";
-            MsgExplicacaoUsuario.Visible = true;
+            MsgExplicacaoUsuario1.Text = "Usuário Padrão disponível somente para professores\n Administrador somente dono ou sócios do studio";
+            MsgExplicacaoUsuario1.Visible = true;
         }
 
         private void msgTemporariaUsuarioDesaparece(object sender, EventArgs e)
         {
-            MsgExplicacaoUsuario.Visible = false;
+            MsgExplicacaoUsuario1.Visible = false;
 
         }
 
@@ -57,58 +57,78 @@ namespace ProjetoIntegrador.View
         private void btnModalidadeCadastroApareceText(object sender, EventArgs e)
         {
 
-            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administrador\nProfessor, por favor, selecione a sua aula";
-            TxTExplicacaoModalidade.Visible = true;
+            MsgExplicacaoModalidade1.Text = "Opção Geral disponível somente para administrador";
+            MsgExplicacaoModalidade1.Visible = true;
         }
 
         private void btnModalidadeCadastroDesapareceText(object sender, EventArgs e)
         {
-            TxTExplicacaoModalidade.Visible = false;
+            MsgExplicacaoModalidade1.Visible = false;
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-            bool resultadoCamposVazios = botoesCadastroController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade);
-            bool Senhasiguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha);
-            bool TipoUsuario = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade, MsgErrorTipoUsuario);
-            bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade, comboBoxTipoUsuario, labelMsgErroModalidade, MsgErrorTipoUsuario);
-
-            if (TipoUsuario && resultadoCamposVazios && Senhasiguais && resultadoComboBox)
+            bool resultadoCamposVazios = botoesCadastroController.CamposVazios(txtUsuarioCadastro, textSenhaConfirmada, textNomeCadastro, comboBoxTipoUsuario, comboBoxModalidade1);
+            bool senhasIguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha1);
+            bool tipoUsuarioValido = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade1, MsgErrorTipoUsuario);
+            bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade1, comboBoxTipoUsuario, labelMsgErroModalidade1, MsgErrorTipoUsuario);
+            bool resultadoValidacaoCpf = botoesCadastroController.ValidarCpf(txtUsuarioCadastro, labelMsgErroCpf1);
+            if (tipoUsuarioValido && resultadoCamposVazios && senhasIguais && resultadoComboBox)
             {
-                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem; // <- esta linha é a correção!
+                TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem;
 
                 DatabaseService databaseService = new DatabaseService();
                 UsuarioRepositorio repositorio = new UsuarioRepositorio(databaseService);
 
-                Usuario novoUsuario = new Usuario
+                try
                 {
-                    Nome = textNomeCadastro.Text.Trim(),
-                    Cpf = txtUsuarioCadastro.Text.Trim(),
-                    Senha = txtSenhaCadastro.Text,
-                    TipoUsuario = tipoSelecionado.ValorBanco, 
-                    IdModalidade = Convert.ToInt32(comboBoxModalidade.SelectedValue)
-                };
+                    Usuario novoUsuario = new Usuario
+                    {
+                        Nome = textNomeCadastro.Text.Trim(),
+                        Cpf = txtUsuarioCadastro.Text.Trim(),
+                        Senha = txtSenhaCadastro.Text,
+                        TipoUsuario = tipoSelecionado.ValorBanco,
+                        IdModalidade = (int)comboBoxModalidade1.SelectedValue
+                    };
 
-                repositorio.CadastrarUsuario(novoUsuario);
+                    repositorio.CadastrarUsuario(novoUsuario);
 
-                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Usuário cadastrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
+                    telaModalidadeEscolha.Show();
+                    this.Hide();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erro ao cadastrar usuário: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
+    
+            
+
+
+
 
 
         private void TelaCadastroForm_Load(object sender, EventArgs e)
         {
             //ele mostra em forma de lista os dados que puxei do banco de dados
             // FAZER A MESMA COISA COM A TELA PAGAMENTO E INICIAL 
-          List<Modalidade> listaModalidades =  repositorioModalidade.GetModalidades();
-            comboBoxModalidade.DataSource = listaModalidades;
-            comboBoxModalidade.DisplayMember = "Tipo_Modalidade";
-            comboBoxModalidade.ValueMember = "IdModalidade";
+            List<Modalidade> listaModalidades = repositorioModalidade.GetModalidades();
+            comboBoxModalidade1.DataSource = listaModalidades;
+            comboBoxModalidade1.DisplayMember = "TipoModalidade";
+            comboBoxModalidade1.ValueMember = "IdModalidade";
+            comboBoxModalidade1.SelectedIndex = -1;
+
+
 
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Usuário Padrão", ValorBanco = "usuario_padrao" });
             comboBoxTipoUsuario.Items.Add(new TipoUsuarioItem { TextoExibido = "Administrador", ValorBanco = "administrador" });
 
         }
+            
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -125,6 +145,20 @@ namespace ProjetoIntegrador.View
         }
 
         private void txtSenhaCadastro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBoxModalidade1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void txtUsuarioCadastro_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -1,4 +1,5 @@
 ﻿
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.View;
 using System;
 using System.Collections.Generic;
@@ -55,30 +56,47 @@ namespace ProjetoIntegrador.Controller
                 return false;
             }
 
-            if (tipocadastro.SelectedItem.ToString() == "Administrador" && modalidade.SelectedItem.ToString() != "Geral")
+            if (tipocadastro.SelectedItem.ToString() == "Administrador" && ((Model.Modalidade)modalidade.SelectedItem).IdModalidade != 1)
             {
                 MessageBox.Show("Administrador favor escolher a opção Geral", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
-            }
+            } 
 
-            if (tipocadastro.SelectedItem.ToString() == "Usuário Padrão" && modalidade.SelectedItem.ToString() == "Geral")
+            if (tipocadastro.SelectedItem.ToString() == "Usuário Padrão" && ((Model.Modalidade) modalidade.SelectedItem).IdModalidade == 1)
             {
                 MessageBox.Show("Opção geral somente para Administrador", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
         }
-        public bool ValidarComboBox(ComboBox Modalidade, ComboBox TipoUsuario, Label MsgErroModalidade, Label MsgErroTipoUsuario) //colocar essa função em todos as tela com combobox
+        public bool ValidarComboBox(ComboBox Modalidade, ComboBox TipoUsuario, Label MsgErroModalidade, Label MsgErroTipoUsuario) 
         {
-            if (Modalidade.SelectedItem == null || (Modalidade.SelectedItem.ToString() != "Anual" && Modalidade.SelectedItem.ToString() != "Mensal"))
+            if (Modalidade.SelectedItem == null || !new[] { 1, 2, 3, 4 }.Contains(((Model.Modalidade)Modalidade.SelectedItem).IdModalidade))
             {
                 MsgErroModalidade.Text = "Selecione uma opção válida.";
                 return false;
             }
-            if (TipoUsuario.SelectedItem == null || (TipoUsuario.SelectedItem.ToString() != "Ativo" && TipoUsuario.SelectedItem.ToString() != "Inativo"))
+            return true;
+        }
+        public bool ValidarCpf (TextBox cpf, Label MsgErroCpf)
+        {
+            if (cpf == null || MsgErroCpf == null)
             {
-                MsgErroTipoUsuario.Text = "Selecione uma opção válida";
-
+                throw new ArgumentNullException("Os parâmetros não podem ser nulos");
+            }
+            if (string.IsNullOrWhiteSpace(cpf.Text))
+            {
+                MsgErroCpf.Text = "Campo CPF não pode ser vazio";
+                return false;
+            }
+            if (cpf.Text.Length != 11)
+            {
+                MsgErroCpf.Text = "CPF deve ter 11 dígitos";
+                return false;
+            }
+            if (!long.TryParse(cpf.Text, out long cpfNumerico))
+            {
+                MsgErroCpf.Text = "CPF deve conter apenas números";
                 return false;
             }
             return true;
