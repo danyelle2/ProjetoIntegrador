@@ -160,7 +160,7 @@
             // 
             this.txtSenhaCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaCadastro.Location = new System.Drawing.Point(1153, 283);
+            this.txtSenhaCadastro.Location = new System.Drawing.Point(1145, 263);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
             this.txtSenhaCadastro.PasswordChar = '*';
             this.txtSenhaCadastro.Size = new System.Drawing.Size(532, 35);
@@ -171,7 +171,7 @@
             // 
             this.textSenhaConfirmada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSenhaConfirmada.Location = new System.Drawing.Point(1153, 449);
+            this.textSenhaConfirmada.Location = new System.Drawing.Point(1145, 429);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
             this.textSenhaConfirmada.PasswordChar = '*';
             this.textSenhaConfirmada.Size = new System.Drawing.Size(532, 35);
@@ -219,7 +219,7 @@
             this.btnVoltar.BackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVoltar.Location = new System.Drawing.Point(70, -79);
+            this.btnVoltar.Location = new System.Drawing.Point(62, -99);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(57, 38);
             this.btnVoltar.TabIndex = 75;
@@ -241,7 +241,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.txtSenhaCadastro);
             this.Controls.Add(this.textSenhaConfirmada);
             this.Controls.Add(this.panel2);
@@ -257,7 +257,7 @@
             this.Controls.Add(this.btnModalidadeCadastro);
             this.Controls.Add(this.comboBoxTipoUsuario);
             this.Controls.Add(this.MsgExplicacaoUsuario);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "TelaCadastroForm";
             this.Text = "               ";
             this.Load += new System.EventHandler(this.TelaCadastroForm_Load);

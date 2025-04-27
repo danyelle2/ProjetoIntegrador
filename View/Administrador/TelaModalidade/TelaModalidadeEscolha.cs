@@ -21,8 +21,8 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
         {
-            Usuario usuario = SessionUser.userLogado;
-            VisibilidadeTelaUsuario(usuario);
+            //Usuario usuario = SessionUser.userLogado;
+            //VisibilidadeTelaUsuario(usuario);
 
             // aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
             //perguntar para o professor se é certo por aqui mesmo.
@@ -41,7 +41,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE 
             //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
-            //if (usuario.TipoUsuario == "administrador")
+            //if (usuario.idModalidade == 1)
             //{
             //    BtnZumba.Visible = true;
             //    BtnFuncional.Visible = true;
@@ -49,11 +49,16 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             //}
             //    else
             //{
-            //    BtnZumba.Visible = (usuario.Modalidade == "zumba");
-            //    BtnMuayThai.Visible = (usuario.Modalidade == "muay_thai");
-            //    BtnFuncional.Visible = (usuario.Modalidade == "funcional");
+            //    BtnZumba.Visible = (usuario.IdModalidade == 2);
+            //    BtnMuayThai.Visible = (usuario.idModalidade == 3);
+            //    BtnFuncional.Visible = (usuario.IdModalidade == 4);
             //}
-        }                    
+
+
+            //modalidade 1 é GERAL DO ADM
+            // 2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
+        }
+                            
         
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,18 +95,28 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             var telaInicial = new TelaInicialForm();
             telaInicial.Show();
+            this.Hide();
         }
 
         private void BtnFuncional_Click(object sender, EventArgs e)
         {
             var telaInicial = new TelaInicialForm();
             telaInicial.Show();
+            this.Hide();
         }
 
         private void BtnMuayThai_Click(object sender, EventArgs e)
         {
             var telaInicial = new TelaInicialForm();
             telaInicial.Show();
+            this.Hide();
+        }
+
+        private void btnCadastro_Click_1(object sender, EventArgs e)
+        {
+            TelaCadastroForm telaCadastro = new TelaCadastroForm();
+            telaCadastro.ShowDialog();
+            
         }
 
         //private void pictureBoxVoltar_Click(object sender, EventArgs e)
