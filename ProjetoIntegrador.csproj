@@ -199,15 +199,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.resx">
       <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaCadastroAlunos.resx">
       <DependentUpon>TelaCadastroAlunos.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Administrador\TelaCadastro\TelaCadastroForm.resx">
       <DependentUpon>TelaCadastroForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaGraficoForms.resx">
       <DependentUpon>TelaGraficoForms.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaInicialForm.resx">
       <DependentUpon>TelaInicialForm.cs</DependentUpon>

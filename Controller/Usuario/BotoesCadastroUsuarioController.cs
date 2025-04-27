@@ -78,5 +78,28 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
+        public bool ValidarCpf (TextBox cpf, Label MsgErroCpf)
+        {
+            if (cpf == null || MsgErroCpf == null)
+            {
+                throw new ArgumentNullException("Os parâmetros não podem ser nulos");
+            }
+            if (string.IsNullOrWhiteSpace(cpf.Text))
+            {
+                MsgErroCpf.Text = "Campo CPF não pode ser vazio";
+                return false;
+            }
+            if (cpf.Text.Length != 11)
+            {
+                MsgErroCpf.Text = "CPF deve ter 11 dígitos";
+                return false;
+            }
+            if (!long.TryParse(cpf.Text, out long cpfNumerico))
+            {
+                MsgErroCpf.Text = "CPF deve conter apenas números";
+                return false;
+            }
+            return true;
+        }
     }
 }

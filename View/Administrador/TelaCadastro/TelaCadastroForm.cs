@@ -39,13 +39,13 @@ namespace ProjetoIntegrador.View
 
         private void msgTemporariaUsuarioAparece(object sender, EventArgs e)
         {
-            MsgExplicacaoUsuario.Text = "Selecione usuário se você for professor\nSelecione Administrador se você for o dono do studio";
-            MsgExplicacaoUsuario.Visible = true;
+            MsgExplicacaoUsuario1.Text = "Usuário Padrão disponível somente para professores\n Administrador somente dono ou sócios do studio";
+            MsgExplicacaoUsuario1.Visible = true;
         }
 
         private void msgTemporariaUsuarioDesaparece(object sender, EventArgs e)
         {
-            MsgExplicacaoUsuario.Visible = false;
+            MsgExplicacaoUsuario1.Visible = false;
 
         }
 
@@ -57,13 +57,13 @@ namespace ProjetoIntegrador.View
         private void btnModalidadeCadastroApareceText(object sender, EventArgs e)
         {
 
-            TxTExplicacaoModalidade.Text = "A opção geral está disponível somente para administrador\nProfessor, por favor, selecione a sua aula";
-            TxTExplicacaoModalidade.Visible = true;
+            MsgExplicacaoModalidade1.Text = "Opção Geral disponível somente para administrador";
+            MsgExplicacaoModalidade1.Visible = true;
         }
 
         private void btnModalidadeCadastroDesapareceText(object sender, EventArgs e)
         {
-            TxTExplicacaoModalidade.Visible = false;
+            MsgExplicacaoModalidade1.Visible = false;
         }
 
         private void btnCadastro_Click(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace ProjetoIntegrador.View
             bool senhasIguais = botoesCadastroController.SenhasIguais(txtSenhaCadastro, textSenhaConfirmada, MsgErrorSenha1);
             bool tipoUsuarioValido = botoesCadastroController.TipoUsuario(comboBoxTipoUsuario, comboBoxModalidade1, MsgErrorTipoUsuario);
             bool resultadoComboBox = botoesCadastroController.ValidarComboBox(comboBoxModalidade1, comboBoxTipoUsuario, labelMsgErroModalidade1, MsgErrorTipoUsuario);
-
+            bool resultadoValidacaoCpf = botoesCadastroController.ValidarCpf(txtUsuarioCadastro, labelMsgErroCpf1);
             if (tipoUsuarioValido && resultadoCamposVazios && senhasIguais && resultadoComboBox)
             {
                 TipoUsuarioItem tipoSelecionado = (TipoUsuarioItem)comboBoxTipoUsuario.SelectedItem;
@@ -156,6 +156,11 @@ namespace ProjetoIntegrador.View
 
         private void comboBoxModalidade1_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void txtUsuarioCadastro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
