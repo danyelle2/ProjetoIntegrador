@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
@@ -14,10 +15,13 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaInicialForm : Form
     {
+        private int idModalidade;
+
         public TelaInicialForm()
         {
             InitializeComponent();
             this.FormClosing += AppClose;
+            this.idModalidade = idModalidade;
         }
 
         public void AppClose(object sender, FormClosingEventArgs e)
@@ -85,7 +89,22 @@ namespace ProjetoIntegrador.View
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
-
+            //mudar por os nomes dos botões
+            switch (idModalidade)
+            {
+                case 2:
+                    labelTitulo.Text = "Área da Zumba";
+                    break;
+                case 3:
+                    labelTitulo.Text = "Área Funcional";
+                    break;
+                case 4:
+                    labelTitulo.Text = "Área do Muay Thai";
+                    break;
+                default:
+                    labelTitulo.Text = "Área Geral";
+                    break;
+            }
         }
 
         private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
