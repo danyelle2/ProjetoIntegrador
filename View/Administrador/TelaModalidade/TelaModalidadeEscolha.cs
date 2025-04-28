@@ -37,8 +37,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         private void VisibilidadeTelaUsuario(Usuario usuario)
         {
             //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE
-            COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
-            if (usuario.idModalidade == 1)
+            if (usuario.IdModalidade == 1)
             {
                 BtnZumba.Visible = true;
                 BtnFuncional.Visible = true;
@@ -47,7 +46,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             else
             {
                 BtnZumba.Visible = (usuario.IdModalidade == 2);
-                BtnMuayThai.Visible = (usuario.idModalidade == 3);
+                BtnMuayThai.Visible = (usuario.IdModalidade == 3);
                 BtnFuncional.Visible = (usuario.IdModalidade == 4);
             }
 
