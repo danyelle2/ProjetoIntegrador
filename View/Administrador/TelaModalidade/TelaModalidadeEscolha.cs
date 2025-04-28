@@ -21,42 +21,39 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
         {
-            //Usuario usuario = SessionUser.userLogado;
-            //VisibilidadeTelaUsuario(usuario);
+            Usuario usuario = SessionUser.userLogado;
+            VisibilidadeTelaUsuario(usuario);
 
-            // aqui é sobre a modalidade. CHAMA O SESSIONUSER ele identifica qual usuario está logado
-            //perguntar para o professor se é certo por aqui mesmo.
 
-            //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
-            //if (usuario.TipoUsuario == "administrador")
-            //{
-            //    btnCadastro.Visible = true;
-            //}
-            //else
-            //{
-            //    btnCadastro.Visible = false;
-            //}
+            if (usuario.TipoUsuario == "administrador")
+            {
+                btnCadastro.Visible = true;
+            }
+            else
+            {
+                btnCadastro.Visible = false;
+            }
         }
         private void VisibilidadeTelaUsuario(Usuario usuario)
         {
-            //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE 
-            //COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
-            //if (usuario.idModalidade == 1)
-            //{
-            //    BtnZumba.Visible = true;
-            //    BtnFuncional.Visible = true;
-            //    BtnMuayThai.Visible = true;
-            //}
-            //    else
-            //{
-            //    BtnZumba.Visible = (usuario.IdModalidade == 2);
-            //    BtnMuayThai.Visible = (usuario.idModalidade == 3);
-            //    BtnFuncional.Visible = (usuario.IdModalidade == 4);
-            //}
+            //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE
+            COMENTADO PARA CRIAR CADASTRO NO APP DEPOIS DESCOMENTAR
+            if (usuario.idModalidade == 1)
+            {
+                BtnZumba.Visible = true;
+                BtnFuncional.Visible = true;
+                BtnMuayThai.Visible = true;
+            }
+            else
+            {
+                BtnZumba.Visible = (usuario.IdModalidade == 2);
+                BtnMuayThai.Visible = (usuario.idModalidade == 3);
+                BtnFuncional.Visible = (usuario.IdModalidade == 4);
+            }
 
 
             //modalidade 1 é GERAL DO ADM
-            // 2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
+             //2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
         }
                             
         
