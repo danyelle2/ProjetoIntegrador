@@ -17,59 +17,53 @@ namespace ProjetoIntegrador.Services
             _databaseService = databaseService;
         }
 
-        public Usuario AutenticarUsuarionaModalidade(string cpf, string senha, bool statusUsuario, string tipoUsuario)
+        public Usuario AutenticarUsuario(string cpf, string senha)
         {
-            if (string.IsNullOrWhiteSpace(cpf))
-                throw new ArgumentException("O CPF não pode estar vazio.", nameof(cpf));
-            if (string.IsNullOrWhiteSpace(senha))
-                throw new ArgumentException("A senha não pode estar vazia.", nameof(senha));
-            if (string.IsNullOrWhiteSpace(tipoUsuario))
-                throw new ArgumentException("O tipo de usuário não pode estar vazio.", nameof(tipoUsuario));
-
             try
             {
                 string query = @"
-            SELECT 
-                u.id_usuario, 
-                u.nome, 
-                u.cpf, 
-                u.senha, 
-                u.tipo_usuario, 
-                u.status_usuario, 
-                m.tipo_modalidade 
-            FROM usuario u 
-            JOIN professor p ON p.id_usuario = u.id_usuario 
-            JOIN modalidade m ON p.id_modalidade = m.id_modalidade 
-            WHERE u.cpf = @cpf AND u.tipo_usuario = @tipo";
+                     SELECT
+                       u.id_usuario,
+                         u.nome,
+                           u.cpf,
+                             u.senha,
+                               u.tipo_usuario,
+                                 u.status_usuario,
+                                   u.id_modalidade
+                      FROM usuario u
+                      WHERE u.cpf = @cpf"; 
 
-                var parameters = new MySqlParameter[]
-                {
-            new MySqlParameter("@cpf", cpf),
-            new MySqlParameter("@tipo", tipoUsuario)
-                };
+                    var parameters = new MySqlParameter[]
+                    {
+                        new MySqlParameter("@cpf", cpf)
+                    };
 
-                using (var respostaBanco = _databaseService.ExecuteQuery(query, parameters))
-                {
+                    using (var respostaBanco = _databaseService.ExecuteQuery(query, parameters))
+                    {
                     if (respostaBanco.Read())
                     {
                         bool status = Convert.ToBoolean(respostaBanco["status_usuario"]);
-                        if (status != statusUsuario)
-                            throw new UnauthorizedAccessException("O status do usuário não é válido.");
 
+                        if (!status)
+                        {
+                            throw new UnauthorizedAccessException("Usuário inativo.");
+                        }
                         string storedHash = respostaBanco["senha"].ToString();
                         string inputHash = Criptografia.HashPassword(senha);
 
-                        if (!Criptografia.SecureEquals(storedHash, inputHash))
-                            throw new UnauthorizedAccessException("Senha incorreta.");
+                              if (!Criptografia.SecureEquals(storedHash, inputHash))
+                              {
+                                throw new UnauthorizedAccessException("Senha incorreta.");
 
-                        return new Usuario
-                        {
-                            Id = Convert.ToInt32(respostaBanco["id_usuario"]),
-                            Nome = respostaBanco["nome"].ToString(),
-                            TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
-                            StatusUsuario = status,
-                            Modalidade = respostaBanco["id_modalidade"]?.ToString().ToLower()
-                        };
+                              }
+                                  return new Usuario
+                                  {
+                                    Id = Convert.ToInt32(respostaBanco["id_usuario"]),
+                                    Nome = respostaBanco["nome"].ToString(),
+                                     TipoUsuario = respostaBanco["tipo_usuario"].ToString(),
+                                     StatusUsuario = status,
+                                     IdModalidade = Convert.ToInt32(respostaBanco["id_modalidade"])
+                                  };
                     }
                     throw new KeyNotFoundException("Usuário não encontrado.");
                 }

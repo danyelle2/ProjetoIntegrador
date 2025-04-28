@@ -169,5 +169,10 @@ namespace ProjetoIntegrador.View
             TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
         }
+
+        private void btnCadastro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
