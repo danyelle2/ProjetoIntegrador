@@ -35,10 +35,11 @@ namespace ProjetoIntegrador
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.MsgErro = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.MsgErro1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@ namespace ProjetoIntegrador
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.MsgErro1);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.TxtSenha);
             this.panel1.Controls.Add(this.TxtUsuario);
@@ -76,36 +78,6 @@ namespace ProjetoIntegrador
             this.panel1.Size = new System.Drawing.Size(467, 531);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // TxtSenha
-            // 
-            this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSenha.Location = new System.Drawing.Point(11, 295);
-            this.TxtSenha.Name = "TxtSenha";
-            this.TxtSenha.Size = new System.Drawing.Size(446, 47);
-            this.TxtSenha.TabIndex = 19;
-            // 
-            // TxtUsuario
-            // 
-            this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(11, 143);
-            this.TxtUsuario.MaxLength = 11;
-            this.TxtUsuario.Name = "TxtUsuario";
-            this.TxtUsuario.Size = new System.Drawing.Size(446, 47);
-            this.TxtUsuario.TabIndex = 18;
-            // 
-            // MsgErro
-            // 
-            this.MsgErro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MsgErro.AutoSize = true;
-            this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgErro.ForeColor = System.Drawing.Color.Maroon;
-            this.MsgErro.Location = new System.Drawing.Point(14, 367);
-            this.MsgErro.Name = "MsgErro";
-            this.MsgErro.Size = new System.Drawing.Size(0, 15);
-            this.MsgErro.TabIndex = 22;
             // 
             // btnLogin
             // 
@@ -123,6 +95,48 @@ namespace ProjetoIntegrador
             this.btnLogin.TabIndex = 23;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // TxtSenha
+            // 
+            this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.TxtSenha.Location = new System.Drawing.Point(11, 295);
+            this.TxtSenha.Name = "TxtSenha";
+            this.TxtSenha.PasswordChar = '*';
+            this.TxtSenha.Size = new System.Drawing.Size(446, 35);
+            this.TxtSenha.TabIndex = 19;
+            this.TxtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSenha_KeyDown);
+            // 
+            // TxtUsuario
+            // 
+            this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.TxtUsuario.Location = new System.Drawing.Point(11, 143);
+            this.TxtUsuario.MaxLength = 11;
+            this.TxtUsuario.Name = "TxtUsuario";
+            this.TxtUsuario.Size = new System.Drawing.Size(446, 35);
+            this.TxtUsuario.TabIndex = 18;
+            this.TxtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsuario_KeyDown);
+            // 
+            // MsgErro
+            // 
+            this.MsgErro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgErro.AutoSize = true;
+            this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErro.ForeColor = System.Drawing.Color.Maroon;
+            this.MsgErro.Location = new System.Drawing.Point(14, 367);
+            this.MsgErro.Name = "MsgErro";
+            this.MsgErro.Size = new System.Drawing.Size(0, 15);
+            this.MsgErro.TabIndex = 22;
+            // 
+            // MsgErro1
+            // 
+            this.MsgErro1.AutoSize = true;
+            this.MsgErro1.ForeColor = System.Drawing.Color.Red;
+            this.MsgErro1.Location = new System.Drawing.Point(8, 354);
+            this.MsgErro1.Name = "MsgErro1";
+            this.MsgErro1.Size = new System.Drawing.Size(0, 13);
+            this.MsgErro1.TabIndex = 24;
             // 
             // TelaLoginForm
             // 
@@ -154,6 +168,7 @@ namespace ProjetoIntegrador
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label MsgErro;
         private Button btnLogin;
+        private Label MsgErro1;
         //private PaintEventHandler panel1_Paint;
         //private EventHandler btnCadastro_Click;
     }

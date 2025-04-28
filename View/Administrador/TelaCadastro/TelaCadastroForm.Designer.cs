@@ -33,6 +33,12 @@
             this.comboBoxModalidade = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
+            this.labelMsgErroCpf1 = new System.Windows.Forms.Label();
+            this.MsgExplicacaoModalidade1 = new System.Windows.Forms.Label();
+            this.MsgExplicacaoUsuario1 = new System.Windows.Forms.Label();
+            this.labelMsgErroModalidade1 = new System.Windows.Forms.Label();
+            this.MsgErrorSenha1 = new System.Windows.Forms.Label();
             this.comboBoxModalidade1 = new System.Windows.Forms.ComboBox();
             this.TxTExplicacaoModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoUsuario = new System.Windows.Forms.Label();
@@ -46,12 +52,6 @@
             this.textSenhaConfirmada = new System.Windows.Forms.TextBox();
             this.textNomeCadastro = new System.Windows.Forms.TextBox();
             this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
-            this.MsgErrorSenha1 = new System.Windows.Forms.Label();
-            this.labelMsgErroModalidade1 = new System.Windows.Forms.Label();
-            this.MsgExplicacaoUsuario1 = new System.Windows.Forms.Label();
-            this.MsgExplicacaoModalidade1 = new System.Windows.Forms.Label();
-            this.labelMsgErroCpf1 = new System.Windows.Forms.Label();
-            this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
             this.SuspendLayout();
@@ -119,6 +119,75 @@
             this.panel1.Size = new System.Drawing.Size(1370, 749);
             this.panel1.TabIndex = 76;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBoxVoltar
+            // 
+            this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBoxVoltar.Location = new System.Drawing.Point(30, 12);
+            this.pictureBoxVoltar.Name = "pictureBoxVoltar";
+            this.pictureBoxVoltar.Size = new System.Drawing.Size(56, 66);
+            this.pictureBoxVoltar.TabIndex = 81;
+            this.pictureBoxVoltar.TabStop = false;
+            this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
+            // 
+            // labelMsgErroCpf1
+            // 
+            this.labelMsgErroCpf1.AutoSize = true;
+            this.labelMsgErroCpf1.BackColor = System.Drawing.Color.Transparent;
+            this.labelMsgErroCpf1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMsgErroCpf1.ForeColor = System.Drawing.Color.Maroon;
+            this.labelMsgErroCpf1.Location = new System.Drawing.Point(65, 207);
+            this.labelMsgErroCpf1.Name = "labelMsgErroCpf1";
+            this.labelMsgErroCpf1.Size = new System.Drawing.Size(0, 16);
+            this.labelMsgErroCpf1.TabIndex = 80;
+            // 
+            // MsgExplicacaoModalidade1
+            // 
+            this.MsgExplicacaoModalidade1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgExplicacaoModalidade1.AutoSize = true;
+            this.MsgExplicacaoModalidade1.BackColor = System.Drawing.Color.Transparent;
+            this.MsgExplicacaoModalidade1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgExplicacaoModalidade1.ForeColor = System.Drawing.Color.Black;
+            this.MsgExplicacaoModalidade1.Location = new System.Drawing.Point(286, 569);
+            this.MsgExplicacaoModalidade1.Name = "MsgExplicacaoModalidade1";
+            this.MsgExplicacaoModalidade1.Size = new System.Drawing.Size(0, 15);
+            this.MsgExplicacaoModalidade1.TabIndex = 79;
+            // 
+            // MsgExplicacaoUsuario1
+            // 
+            this.MsgExplicacaoUsuario1.AutoSize = true;
+            this.MsgExplicacaoUsuario1.BackColor = System.Drawing.Color.Transparent;
+            this.MsgExplicacaoUsuario1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgExplicacaoUsuario1.ForeColor = System.Drawing.Color.Black;
+            this.MsgExplicacaoUsuario1.Location = new System.Drawing.Point(257, 463);
+            this.MsgExplicacaoUsuario1.Name = "MsgExplicacaoUsuario1";
+            this.MsgExplicacaoUsuario1.Size = new System.Drawing.Size(0, 15);
+            this.MsgExplicacaoUsuario1.TabIndex = 78;
+            // 
+            // labelMsgErroModalidade1
+            // 
+            this.labelMsgErroModalidade1.AutoSize = true;
+            this.labelMsgErroModalidade1.BackColor = System.Drawing.Color.Transparent;
+            this.labelMsgErroModalidade1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMsgErroModalidade1.ForeColor = System.Drawing.Color.Maroon;
+            this.labelMsgErroModalidade1.Location = new System.Drawing.Point(96, 663);
+            this.labelMsgErroModalidade1.Name = "labelMsgErroModalidade1";
+            this.labelMsgErroModalidade1.Size = new System.Drawing.Size(0, 16);
+            this.labelMsgErroModalidade1.TabIndex = 77;
+            // 
+            // MsgErrorSenha1
+            // 
+            this.MsgErrorSenha1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MsgErrorSenha1.AutoSize = true;
+            this.MsgErrorSenha1.BackColor = System.Drawing.Color.Transparent;
+            this.MsgErrorSenha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgErrorSenha1.ForeColor = System.Drawing.Color.Maroon;
+            this.MsgErrorSenha1.Location = new System.Drawing.Point(828, 463);
+            this.MsgErrorSenha1.Name = "MsgErrorSenha1";
+            this.MsgErrorSenha1.Size = new System.Drawing.Size(0, 16);
+            this.MsgErrorSenha1.TabIndex = 76;
             // 
             // comboBoxModalidade1
             // 
@@ -226,6 +295,7 @@
             this.btnCadastro.Size = new System.Drawing.Size(156, 52);
             this.btnCadastro.TabIndex = 60;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            this.btnCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.btnCadastro_Paint);
             // 
             // txtSenhaCadastro
             // 
@@ -233,6 +303,7 @@
             this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaCadastro.Location = new System.Drawing.Point(831, 282);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
+            this.txtSenhaCadastro.PasswordChar = '*';
             this.txtSenhaCadastro.Size = new System.Drawing.Size(426, 35);
             this.txtSenhaCadastro.TabIndex = 57;
             // 
@@ -242,6 +313,7 @@
             this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textSenhaConfirmada.Location = new System.Drawing.Point(831, 425);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
+            this.textSenhaConfirmada.PasswordChar = '*';
             this.textSenhaConfirmada.Size = new System.Drawing.Size(426, 35);
             this.textSenhaConfirmada.TabIndex = 59;
             // 
@@ -263,75 +335,6 @@
             this.txtUsuarioCadastro.Size = new System.Drawing.Size(432, 35);
             this.txtUsuarioCadastro.TabIndex = 56;
             this.txtUsuarioCadastro.TextChanged += new System.EventHandler(this.txtUsuarioCadastro_TextChanged);
-            // 
-            // MsgErrorSenha1
-            // 
-            this.MsgErrorSenha1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MsgErrorSenha1.AutoSize = true;
-            this.MsgErrorSenha1.BackColor = System.Drawing.Color.Transparent;
-            this.MsgErrorSenha1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgErrorSenha1.ForeColor = System.Drawing.Color.Maroon;
-            this.MsgErrorSenha1.Location = new System.Drawing.Point(828, 463);
-            this.MsgErrorSenha1.Name = "MsgErrorSenha1";
-            this.MsgErrorSenha1.Size = new System.Drawing.Size(0, 16);
-            this.MsgErrorSenha1.TabIndex = 76;
-            // 
-            // labelMsgErroModalidade1
-            // 
-            this.labelMsgErroModalidade1.AutoSize = true;
-            this.labelMsgErroModalidade1.BackColor = System.Drawing.Color.Transparent;
-            this.labelMsgErroModalidade1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMsgErroModalidade1.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroModalidade1.Location = new System.Drawing.Point(96, 663);
-            this.labelMsgErroModalidade1.Name = "labelMsgErroModalidade1";
-            this.labelMsgErroModalidade1.Size = new System.Drawing.Size(0, 16);
-            this.labelMsgErroModalidade1.TabIndex = 77;
-            // 
-            // MsgExplicacaoUsuario1
-            // 
-            this.MsgExplicacaoUsuario1.AutoSize = true;
-            this.MsgExplicacaoUsuario1.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoUsuario1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgExplicacaoUsuario1.ForeColor = System.Drawing.Color.Black;
-            this.MsgExplicacaoUsuario1.Location = new System.Drawing.Point(257, 463);
-            this.MsgExplicacaoUsuario1.Name = "MsgExplicacaoUsuario1";
-            this.MsgExplicacaoUsuario1.Size = new System.Drawing.Size(0, 15);
-            this.MsgExplicacaoUsuario1.TabIndex = 78;
-            // 
-            // MsgExplicacaoModalidade1
-            // 
-            this.MsgExplicacaoModalidade1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.MsgExplicacaoModalidade1.AutoSize = true;
-            this.MsgExplicacaoModalidade1.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoModalidade1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgExplicacaoModalidade1.ForeColor = System.Drawing.Color.Black;
-            this.MsgExplicacaoModalidade1.Location = new System.Drawing.Point(286, 569);
-            this.MsgExplicacaoModalidade1.Name = "MsgExplicacaoModalidade1";
-            this.MsgExplicacaoModalidade1.Size = new System.Drawing.Size(0, 15);
-            this.MsgExplicacaoModalidade1.TabIndex = 79;
-            // 
-            // labelMsgErroCpf1
-            // 
-            this.labelMsgErroCpf1.AutoSize = true;
-            this.labelMsgErroCpf1.BackColor = System.Drawing.Color.Transparent;
-            this.labelMsgErroCpf1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMsgErroCpf1.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroCpf1.Location = new System.Drawing.Point(65, 207);
-            this.labelMsgErroCpf1.Name = "labelMsgErroCpf1";
-            this.labelMsgErroCpf1.Size = new System.Drawing.Size(0, 16);
-            this.labelMsgErroCpf1.TabIndex = 80;
-            // 
-            // pictureBoxVoltar
-            // 
-            this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxVoltar.Location = new System.Drawing.Point(30, 12);
-            this.pictureBoxVoltar.Name = "pictureBoxVoltar";
-            this.pictureBoxVoltar.Size = new System.Drawing.Size(56, 66);
-            this.pictureBoxVoltar.TabIndex = 81;
-            this.pictureBoxVoltar.TabStop = false;
-            this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
             // 
             // TelaCadastroForm
             // 

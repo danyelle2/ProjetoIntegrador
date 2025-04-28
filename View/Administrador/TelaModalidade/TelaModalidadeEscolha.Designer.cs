@@ -44,6 +44,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
@@ -82,9 +83,9 @@
             this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Location = new System.Drawing.Point(1230, 35);
+            this.BtnMuayThai.Location = new System.Drawing.Point(974, 92);
             this.BtnMuayThai.Name = "BtnMuayThai";
-            this.BtnMuayThai.Size = new System.Drawing.Size(209, 56);
+            this.BtnMuayThai.Size = new System.Drawing.Size(242, 56);
             this.BtnMuayThai.TabIndex = 2;
             this.BtnMuayThai.UseVisualStyleBackColor = true;
             this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
@@ -97,9 +98,9 @@
             this.BtnFuncional.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFuncional.Location = new System.Drawing.Point(587, 35);
+            this.BtnFuncional.Location = new System.Drawing.Point(527, 87);
             this.BtnFuncional.Name = "BtnFuncional";
-            this.BtnFuncional.Size = new System.Drawing.Size(216, 56);
+            this.BtnFuncional.Size = new System.Drawing.Size(246, 66);
             this.BtnFuncional.TabIndex = 1;
             this.BtnFuncional.UseVisualStyleBackColor = false;
             this.BtnFuncional.Click += new System.EventHandler(this.BtnFuncional_Click);
@@ -111,9 +112,9 @@
             this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnZumba.Location = new System.Drawing.Point(-24, 35);
+            this.BtnZumba.Location = new System.Drawing.Point(91, 87);
             this.BtnZumba.Name = "BtnZumba";
-            this.BtnZumba.Size = new System.Drawing.Size(194, 56);
+            this.BtnZumba.Size = new System.Drawing.Size(257, 66);
             this.BtnZumba.TabIndex = 0;
             this.BtnZumba.UseVisualStyleBackColor = true;
             this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
@@ -139,11 +140,10 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(1165, 36);
+            this.btnCadastro.Location = new System.Drawing.Point(27, 37);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(190, 50);
+            this.btnCadastro.Size = new System.Drawing.Size(258, 69);
             this.btnCadastro.TabIndex = 25;
-            this.btnCadastro.Text = "Botão Cadastro de Professor";
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click_1);
             // 
