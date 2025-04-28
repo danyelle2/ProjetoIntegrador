@@ -162,5 +162,12 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void pictureBoxVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
+            telaModalidadeEscolha.Show();
+        }
     }
 }

@@ -66,14 +66,14 @@ namespace ProjetoIntegrador
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.TxtSenha);
             this.panel1.Controls.Add(this.TxtUsuario);
             this.panel1.Controls.Add(this.MsgErro);
-            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.ForeColor = System.Drawing.Color.Transparent;
-            this.panel1.Location = new System.Drawing.Point(524, 12);
+            this.panel1.Location = new System.Drawing.Point(442, 92);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(731, 799);
+            this.panel1.Size = new System.Drawing.Size(467, 531);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -81,7 +81,7 @@ namespace ProjetoIntegrador
             // 
             this.TxtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSenha.Location = new System.Drawing.Point(107, 463);
+            this.TxtSenha.Location = new System.Drawing.Point(11, 295);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.Size = new System.Drawing.Size(446, 47);
             this.TxtSenha.TabIndex = 19;
@@ -90,7 +90,7 @@ namespace ProjetoIntegrador
             // 
             this.TxtUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(107, 199);
+            this.TxtUsuario.Location = new System.Drawing.Point(11, 143);
             this.TxtUsuario.MaxLength = 11;
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(446, 47);
@@ -101,27 +101,26 @@ namespace ProjetoIntegrador
             this.MsgErro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MsgErro.AutoSize = true;
             this.MsgErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgErro.ForeColor = System.Drawing.Color.Red;
-            this.MsgErro.Location = new System.Drawing.Point(313, 531);
+            this.MsgErro.ForeColor = System.Drawing.Color.Maroon;
+            this.MsgErro.Location = new System.Drawing.Point(14, 367);
             this.MsgErro.Name = "MsgErro";
-            this.MsgErro.Size = new System.Drawing.Size(19, 15);
+            this.MsgErro.Size = new System.Drawing.Size(0, 15);
             this.MsgErro.TabIndex = 22;
-            this.MsgErro.Text = "...";
             // 
             // btnLogin
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLogin.BackColor = System.Drawing.Color.Gray;
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Location = new System.Drawing.Point(236, 672);
+            this.btnLogin.Location = new System.Drawing.Point(175, 449);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(193, 74);
-            this.btnLogin.TabIndex = 17;
+            this.btnLogin.Size = new System.Drawing.Size(142, 46);
+            this.btnLogin.TabIndex = 23;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -131,7 +130,8 @@ namespace ProjetoIntegrador
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1364, 749);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1354, 710);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -153,7 +153,7 @@ namespace ProjetoIntegrador
         private System.Windows.Forms.TextBox TxtSenha;
         private System.Windows.Forms.TextBox TxtUsuario;
         private System.Windows.Forms.Label MsgErro;
-        private System.Windows.Forms.Button btnLogin;
+        private Button btnLogin;
         //private PaintEventHandler panel1_Paint;
         //private EventHandler btnCadastro_Click;
     }
