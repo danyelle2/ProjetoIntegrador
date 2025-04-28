@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnZumba = new System.Windows.Forms.Button();
-            this.BtnFuncional = new System.Windows.Forms.Button();
             this.BtnMuayThai = new System.Windows.Forms.Button();
+            this.BtnFuncional = new System.Windows.Forms.Button();
+            this.BtnZumba = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -52,6 +52,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1364, 295);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // labelTextoNaTela
+            // 
+            this.labelTextoNaTela.AutoSize = true;
+            this.labelTextoNaTela.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoNaTela.Location = new System.Drawing.Point(9, 125);
+            this.labelTextoNaTela.Name = "labelTextoNaTela";
+            this.labelTextoNaTela.Size = new System.Drawing.Size(0, 42);
+            this.labelTextoNaTela.TabIndex = 26;
+            this.labelTextoNaTela.Click += new System.EventHandler(this.labelTextoNaTela_Click);
             // 
             // btnCadastro
             // 
@@ -64,13 +75,13 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(234, 58);
+            this.btnCadastro.Location = new System.Drawing.Point(16, 51);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(258, 69);
             this.btnCadastro.TabIndex = 25;
             this.btnCadastro.Text = "cadastro";
             this.btnCadastro.UseVisualStyleBackColor = false;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click_1);
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // panel1
             // 
@@ -85,19 +96,19 @@
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // BtnZumba
+            // BtnMuayThai
             // 
-            this.BtnZumba.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnZumba.FlatAppearance.BorderSize = 0;
-            this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnZumba.Location = new System.Drawing.Point(91, 151);
-            this.BtnZumba.Name = "BtnZumba";
-            this.BtnZumba.Size = new System.Drawing.Size(257, 66);
-            this.BtnZumba.TabIndex = 0;
-            this.BtnZumba.UseVisualStyleBackColor = true;
-            this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
+            this.BtnMuayThai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnMuayThai.FlatAppearance.BorderSize = 0;
+            this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMuayThai.Location = new System.Drawing.Point(974, 156);
+            this.BtnMuayThai.Name = "BtnMuayThai";
+            this.BtnMuayThai.Size = new System.Drawing.Size(242, 56);
+            this.BtnMuayThai.TabIndex = 2;
+            this.BtnMuayThai.UseVisualStyleBackColor = true;
+            this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
             // 
             // BtnFuncional
             // 
@@ -114,19 +125,19 @@
             this.BtnFuncional.UseVisualStyleBackColor = false;
             this.BtnFuncional.Click += new System.EventHandler(this.BtnFuncional_Click);
             // 
-            // BtnMuayThai
+            // BtnZumba
             // 
-            this.BtnMuayThai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnMuayThai.FlatAppearance.BorderSize = 0;
-            this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Location = new System.Drawing.Point(974, 156);
-            this.BtnMuayThai.Name = "BtnMuayThai";
-            this.BtnMuayThai.Size = new System.Drawing.Size(242, 56);
-            this.BtnMuayThai.TabIndex = 2;
-            this.BtnMuayThai.UseVisualStyleBackColor = true;
-            this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
+            this.BtnZumba.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnZumba.FlatAppearance.BorderSize = 0;
+            this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnZumba.Location = new System.Drawing.Point(91, 151);
+            this.BtnZumba.Name = "BtnZumba";
+            this.BtnZumba.Size = new System.Drawing.Size(257, 66);
+            this.BtnZumba.TabIndex = 0;
+            this.BtnZumba.UseVisualStyleBackColor = true;
+            this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -150,23 +161,13 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // labelTextoNaTela
-            // 
-            this.labelTextoNaTela.AutoSize = true;
-            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(9, 125);
-            this.labelTextoNaTela.Name = "labelTextoNaTela";
-            this.labelTextoNaTela.Size = new System.Drawing.Size(170, 43);
-            this.labelTextoNaTela.TabIndex = 26;
-            this.labelTextoNaTela.Text = "danyelle";
-            this.labelTextoNaTela.Click += new System.EventHandler(this.labelTextoNaTela_Click);
-            // 
             // TelaModalidadeEscolha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximizeBox = false;
             this.Name = "TelaModalidadeEscolha";
             this.Text = "TelaModalidadeEscolha";
             this.Load += new System.EventHandler(this.TelaModalidadeEscolha_Load);

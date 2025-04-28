@@ -17,6 +17,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         public TelaModalidadeEscolha()
         {
             InitializeComponent();
+
         }
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
@@ -24,25 +25,20 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             Usuario usuario = SessionUser.userLogado;
             VisibilidadeTelaUsuario(usuario);
 
-            //labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}!\n Selecione a sua modalidade ";
-            labelTextoNaTela.Text = $"Pronto para iniciar Danyelle!\n Selecione a sua modalidade  ";
+            labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}!\n Selecione a sua modalidade ";
+            //labelTextoNaTela.Text = $"Pronto para iniciar Danyelle!\n Selecione a sua modalidade  ";
 
-            if (usuario.TipoUsuario == "administrador")
-            {
-                btnCadastro.Visible = true;
-            }
-            else
-            {
-                btnCadastro.Visible = false;
-            }
+            btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
+
         }
         private void VisibilidadeTelaUsuario(Usuario usuario)
         {
+            
             BtnZumba.Visible = true;
             BtnFuncional.Visible = true;
             BtnMuayThai.Visible = true;
 
-            if (usuario.IdModalidade == 1)
+            if (usuario.IdModalidade == 1) 
             {
                 BtnZumba.Enabled = true;
                 BtnFuncional.Enabled = true;
@@ -56,18 +52,18 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             }
         }
 
-    
-
-            //modalidade 1 é GERAL DO ADM
-            //2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
-        
 
 
+        //modalidade 1 é GERAL DO ADM
+        //2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+
+        //}
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -86,6 +82,9 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            TelaCadastroForm telaCadastro = new TelaCadastroForm();
+            telaCadastro.Show();
+            this.Hide();
 
         }
 
@@ -98,17 +97,18 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             if (BtnZumba.Enabled)
             {
-                var telaInicial = new TelaInicialForm(2); // Zumba
+                var telaInicial = new TelaInicialForm(2); 
                 telaInicial.Show();
                 this.Hide();
             }
+        
         }
 
         private void BtnFuncional_Click(object sender, EventArgs e)
         {
             if (BtnFuncional.Enabled)
             {
-                var telaInicial = new TelaInicialForm(3); // Funcional
+                var telaInicial = new TelaInicialForm(3); 
                 telaInicial.Show();
                 this.Hide();
             }
@@ -118,19 +118,12 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             if (BtnMuayThai.Enabled)
             {
-                var telaInicial = new TelaInicialForm(4); // Muay Thai
+                var telaInicial = new TelaInicialForm(4); 
                 telaInicial.Show();
                 this.Hide();
             }
         }
 
-
-        private void btnCadastro_Click_1(object sender, EventArgs e)
-        {
-            TelaCadastroForm telaCadastro = new TelaCadastroForm();
-            telaCadastro.Show();
-            
-        }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -138,6 +131,11 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         }
 
         private void labelTextoNaTela_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
