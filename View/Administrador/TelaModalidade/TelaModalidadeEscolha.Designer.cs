@@ -103,7 +103,7 @@
             this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Location = new System.Drawing.Point(974, 156);
+            this.BtnMuayThai.Location = new System.Drawing.Point(976, 136);
             this.BtnMuayThai.Name = "BtnMuayThai";
             this.BtnMuayThai.Size = new System.Drawing.Size(242, 56);
             this.BtnMuayThai.TabIndex = 2;
@@ -118,9 +118,10 @@
             this.BtnFuncional.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFuncional.Location = new System.Drawing.Point(527, 151);
+            this.BtnFuncional.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncional.Image")));
+            this.BtnFuncional.Location = new System.Drawing.Point(507, 91);
             this.BtnFuncional.Name = "BtnFuncional";
-            this.BtnFuncional.Size = new System.Drawing.Size(246, 66);
+            this.BtnFuncional.Size = new System.Drawing.Size(270, 66);
             this.BtnFuncional.TabIndex = 1;
             this.BtnFuncional.UseVisualStyleBackColor = false;
             this.BtnFuncional.Click += new System.EventHandler(this.BtnFuncional_Click);
@@ -128,11 +129,13 @@
             // BtnZumba
             // 
             this.BtnZumba.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnZumba.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnZumba.BackgroundImage")));
+            this.BtnZumba.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnZumba.FlatAppearance.BorderSize = 0;
             this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnZumba.Location = new System.Drawing.Point(91, 151);
+            this.BtnZumba.Location = new System.Drawing.Point(90, 91);
             this.BtnZumba.Name = "BtnZumba";
             this.BtnZumba.Size = new System.Drawing.Size(257, 66);
             this.BtnZumba.TabIndex = 0;
