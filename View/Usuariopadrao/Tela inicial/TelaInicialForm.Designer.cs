@@ -102,9 +102,9 @@
             this.pictureBoxAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxAlterar.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxAlterar.ErrorImage = null;
-            this.pictureBoxAlterar.Location = new System.Drawing.Point(-166, 264);
+            this.pictureBoxAlterar.Location = new System.Drawing.Point(108, 349);
             this.pictureBoxAlterar.Name = "pictureBoxAlterar";
-            this.pictureBoxAlterar.Size = new System.Drawing.Size(246, 236);
+            this.pictureBoxAlterar.Size = new System.Drawing.Size(222, 163);
             this.pictureBoxAlterar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAlterar.TabIndex = 16;
             this.pictureBoxAlterar.TabStop = false;
