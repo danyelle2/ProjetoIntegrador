@@ -1,9 +1,8 @@
 ﻿using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Controller.Repositorio;
-using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
-using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -29,19 +28,46 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         private void CarregarAlunos()
         {
             var alunosAtivos = _repositorioPagamento.AlunosAtivos();
-            dataGridViewpagamento.DataSource = alunosAtivos;
+            // fiz com ajuda!!
+            if (alunosAtivos != null)
+            {
+                dataGridViewpagamento.DataSource = alunosAtivos;
 
-            AplicarFormatoStatusPagamento();
+                ConfigurarColunas();
+
+                AplicarFormatoStatusPagamento();
+            }
+        }
+
+        private void ConfigurarColunas()
+        {
+            if (dataGridViewpagamento.Columns.Contains("Id"))
+            {
+                dataGridViewpagamento.Columns["Id"].Visible = false; // Esconde o Id
+            }
+
+            if (dataGridViewpagamento.Columns.Contains("Nome"))
+            {
+                dataGridViewpagamento.Columns["Nome"].HeaderText = "Nome do Aluno";
+                dataGridViewpagamento.Columns["Nome"].Width = 200;
+            }
+
+            if (dataGridViewpagamento.Columns.Contains("StatusPagamento"))
+            {
+                dataGridViewpagamento.Columns["StatusPagamento"].HeaderText = "Pagamento Realizado?";
+                dataGridViewpagamento.Columns["StatusPagamento"].Width = 150;
+            }
         }
 
         private void AplicarFormatoStatusPagamento()
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
             {
-                //MUDAR AS CORES DEPOIS.
-                if (row.Cells["StatusPagamento"].Value != null && bool.TryParse(row.Cells["StatusPagamento"].Value.ToString(), out bool statusPagamento))
+                if (row.Cells["StatusPagamento"].Value != null &&
+                    bool.TryParse(row.Cells["StatusPagamento"].Value.ToString(), out bool statusPagamento))
                 {
-                    row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.Green : Color.Red;
+                    row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.LightGreen : Color.LightCoral;
+                    row.Cells["StatusPagamento"].Style.ForeColor = Color.Black;
                 }
             }
         }
@@ -50,9 +76,10 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.SelectedRows)
             {
-                if (row.DataBoundItem is Model.Aluno aluno)
+                if (row.Cells["Id"].Value != null)
                 {
-                    _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, true);
+                    int idAluno = Convert.ToInt32(row.Cells["Id"].Value);
+                    _repositorioPagamento.AtualizarStatusPagamento(idAluno, true);
                 }
             }
 
@@ -63,9 +90,10 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.SelectedRows)
             {
-                if (row.DataBoundItem is Model.Aluno aluno)
+                if (row.Cells["Id"].Value != null)
                 {
-                    _repositorioPagamento.AtualizarStatusPagamento(aluno.Id, false);
+                    int idAluno = Convert.ToInt32(row.Cells["Id"].Value);
+                    _repositorioPagamento.AtualizarStatusPagamento(idAluno, false);
                 }
             }
 
