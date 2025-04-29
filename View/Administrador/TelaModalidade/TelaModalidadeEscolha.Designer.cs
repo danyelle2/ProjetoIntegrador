@@ -37,6 +37,7 @@
             this.BtnFuncional = new System.Windows.Forms.Button();
             this.BtnZumba = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -45,8 +46,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.labelTextoNaTela);
-            this.panel2.Controls.Add(this.btnCadastro);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
@@ -75,11 +76,11 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(16, 51);
+            this.btnCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastro.Image")));
+            this.btnCadastro.Location = new System.Drawing.Point(535, 242);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(258, 69);
+            this.btnCadastro.Size = new System.Drawing.Size(303, 96);
             this.btnCadastro.TabIndex = 25;
-            this.btnCadastro.Text = "cadastro";
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
@@ -87,6 +88,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.BtnMuayThai);
+            this.panel1.Controls.Add(this.btnCadastro);
             this.panel1.Controls.Add(this.BtnFuncional);
             this.panel1.Controls.Add(this.BtnZumba);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -167,6 +169,17 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(107, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "label1";
+            // 
             // TelaModalidadeEscolha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.Button BtnFuncional;
         private System.Windows.Forms.Button BtnZumba;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1;
     }
 }
