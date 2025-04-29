@@ -22,13 +22,8 @@ namespace ProjetoIntegrador.View
         {
             InitializeComponent();
             
-        }
-
-
+        }   
        
-        
-
-
         
 
         private void pictureBoxCadastroAlunosAparecer(object sender, EventArgs e)

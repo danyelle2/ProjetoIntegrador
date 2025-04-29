@@ -69,10 +69,10 @@
             // labelTextoNaTela
             // 
             this.labelTextoNaTela.AutoSize = true;
-            this.labelTextoNaTela.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(9, 125);
+            this.labelTextoNaTela.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoNaTela.Location = new System.Drawing.Point(9, 102);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
-            this.labelTextoNaTela.Size = new System.Drawing.Size(0, 42);
+            this.labelTextoNaTela.Size = new System.Drawing.Size(0, 33);
             this.labelTextoNaTela.TabIndex = 26;
             this.labelTextoNaTela.Click += new System.EventHandler(this.labelTextoNaTela_Click);
             // 
@@ -88,7 +88,7 @@
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
             this.btnCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastro.Image")));
-            this.btnCadastro.Location = new System.Drawing.Point(535, 242);
+            this.btnCadastro.Location = new System.Drawing.Point(528, 204);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(303, 96);
             this.btnCadastro.TabIndex = 25;
