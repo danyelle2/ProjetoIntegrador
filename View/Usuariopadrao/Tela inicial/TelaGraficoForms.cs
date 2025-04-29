@@ -1,5 +1,4 @@
-﻿using MySqlX.XDevAPI;
-using ProjetoIntegrador.Controller.Aluno;
+﻿using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
@@ -47,19 +46,27 @@ namespace ProjetoIntegrador.View
                 BorderWidth = 3
             };
 
-            foreach (var item in movimentacoesMes)
+            for (int mes = 1; mes <= 12; mes++)
             {
-                string nomeMes = new DateTime(1, item.Key, 1).ToString("MMM");
-                entradaMes.Points.AddXY(nomeMes, item.Value.Entradas);
-                saidaMes.Points.AddXY(nomeMes, item.Value.Saidas);
+                if (movimentacoesMes.TryGetValue(mes, out var movimentacao))
+                {
+                    entradaMes.Points.AddXY(new DateTime(1, mes, 1).ToString("MMM"), movimentacao.Entradas);
+                    saidaMes.Points.AddXY(new DateTime(1, mes, 1).ToString("MMM"), movimentacao.Saidas);
+                }
+                else
+                {
+                    entradaMes.Points.AddXY(new DateTime(1, mes, 1).ToString("MMM"), 0);
+                    saidaMes.Points.AddXY(new DateTime(1, mes, 1).ToString("MMM"), 0);
+                }
             }
 
-            chart1.Series.Add(entradaMes);
-            chart1.Series.Add(saidaMes);
-            chart1.Titles.Clear();
-            chart1.Titles.Add("Movimentação Mensal de Alunos");
-            chart1.ChartAreas[0].AxisX.Title = "Mês";
-            chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
+
+                    chart1.Series.Add(entradaMes);
+                chart1.Series.Add(saidaMes);
+               chart1.Titles.Clear();
+                    chart1.Titles.Add("Movimentação Mensal de Alunos");
+               chart1.ChartAreas[0].AxisX.Title = "Mês";
+                    chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
 
            
             var movimentacoesAno = repositorio.ObterMovimentacaoPorAno(modalidade);
@@ -79,12 +86,20 @@ namespace ProjetoIntegrador.View
                 BorderWidth = 3
             };
 
-            foreach (var item in movimentacoesAno)
+            for (int ano = 2020; ano <= DateTime.Now.Year; ano++)
             {
-                string ano = item.Key.ToString();
-                entradaAno.Points.AddXY(ano, item.Value.Entradas);
-                saidaAno.Points.AddXY(ano, item.Value.Saidas);
+                if (movimentacoesAno.TryGetValue(ano, out var movimentacao))
+                {
+                    entradaAno.Points.AddXY(ano.ToString(), movimentacao.Entradas);
+                    saidaAno.Points.AddXY(ano.ToString(), movimentacao.Saidas);
+                }
+                else
+                {
+                    entradaAno.Points.AddXY(ano.ToString(), 0);
+                    saidaAno.Points.AddXY(ano.ToString(), 0);
+                }
             }
+
 
             chart2.Series.Add(entradaAno);
             chart2.Series.Add(saidaAno);
@@ -97,10 +112,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            this.Dispose();
-            TelaInicialForm telaInicial = new TelaInicialForm();
-            telaInicial.Show();
+           
         }
 
         private void chart1_Click(object sender, EventArgs e)

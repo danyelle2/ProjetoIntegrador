@@ -165,6 +165,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBoxVoltar_Click(object sender, EventArgs e)
         {
+            //qualquer coisa colocar só um hide ao invés de close
             this.Close();
             TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();

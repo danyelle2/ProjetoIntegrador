@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Services;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
@@ -14,16 +17,29 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaInicialForm : Form
     {
-        public TelaInicialForm()
+
+        public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
             this.FormClosing += AppClose;
         }
 
+
         public void AppClose(object sender, FormClosingEventArgs e)
-        {
-            MessageBox.Show("Deseja encerrar a aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            Application.ExitThread();
+        {          
+            DialogResult result = MessageBox.Show("Deseja encerrar a aplicação?","Sair",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; 
+            }
+            else
+            {
+                Application.ExitThread(); 
+            }
+        
+
+
         }
 
         private void pictureBoxCadastroAlunosAparecer(object sender, EventArgs e)
@@ -55,13 +71,7 @@ namespace ProjetoIntegrador.View
         {
             MsgExplicacaoAlterarDados.Visible = false;
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            var telaAlterarDados = new TelaAlterarDadosAlunosForms();
-            telaAlterarDados.ShowDialog();
-        }
+        }       
 
         private void pictureBoxGráficoAparece(object sender, EventArgs e)
         {
@@ -77,15 +87,36 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {            
-            //Qualquer coisa mudar para show normal em tela inteira mesmo
+        {            // PERGUNTAR SE DEIXA TELA INTEIRA OU SÓ DIALOGO MESMO IGUAL AS OUTRAS.
+            // SE A TELA FICAR MAIOR COLOCAR O BOTÃO DE VOLTAR OU ALGO DO TIPO
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
             telaGrafico.ShowDialog();
+        }
+        private void CarregarAlunos()
+        {
+            var repositorioAluno = new RepositorioAluno(new DatabaseService());
+            var listaAlunos = repositorioAluno.BuscarTodos();
+            dataGridViewListaGeralAlunos.DataSource = listaAlunos;
         }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
+            CarregarAlunos();
 
+            Usuario usuario = SessionUser.userLogado;
+           
+            switch (usuario.IdModalidade)
+            {
+                case 2:
+                    labelTitulo.Text = "Área de Ritimos e Zumba";
+                    break;
+                case 3:
+                    labelTitulo.Text = "Área de Funcional";
+                    break;
+                case 4:
+                    labelTitulo.Text = "Área do Muay Thai";
+                    break;                
+            }
         }
 
         private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
@@ -99,8 +130,17 @@ namespace ProjetoIntegrador.View
             MsgTemporariaPagamento.Visible = false;
         }
 
+        private Aluno alunoSelecionado;
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        
+            if (e.RowIndex >= 0) 
+            {
+                alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.Rows[e.RowIndex].DataBoundItem;
+            }
+        
 
         }
 
@@ -115,10 +155,29 @@ namespace ProjetoIntegrador.View
 
         }
 
-        private void pictureBoxVoltar_Click(object sender, EventArgs e)
+            private void pictureBoxVoltar_Click(object sender, EventArgs e)
         {
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
+            this.Close(); 
         }
+
+        private void pictureBoxAlterar_Click(object sender, EventArgs e)
+        {         
+           
+            if (alunoSelecionado != null)
+            {
+                var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
+                telaAlterarDados.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        
+
+
     }
 }
+    }
+

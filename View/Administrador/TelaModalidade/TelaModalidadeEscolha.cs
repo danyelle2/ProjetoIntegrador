@@ -17,6 +17,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         public TelaModalidadeEscolha()
         {
             InitializeComponent();
+
         }
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
@@ -24,43 +25,45 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             Usuario usuario = SessionUser.userLogado;
             VisibilidadeTelaUsuario(usuario);
 
+            labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}!\n Selecione a sua modalidade ";
+            //labelTextoNaTela.Text = $"Pronto para iniciar Danyelle!\n Selecione a sua modalidade  ";
 
-            if (usuario.TipoUsuario == "administrador")
-            {
-                btnCadastro.Visible = true;
-            }
-            else
-            {
-                btnCadastro.Visible = false;
-            }
+            btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
+
         }
-        private void VisibilidadeTelaUsuario(Usuario usuario)
+     private void VisibilidadeTelaUsuario(Usuario usuario)
         {
-            //TROCAR NOME MODALIDADE PARA O ID DA MODALIDADE
-            if (usuario.IdModalidade == 1)
-            {
-                BtnZumba.Visible = true;
-                BtnFuncional.Visible = true;
-                BtnMuayThai.Visible = true;
-            }
-            else
-            {
-                BtnZumba.Visible = (usuario.IdModalidade == 2);
-                BtnMuayThai.Visible = (usuario.IdModalidade == 3);
-                BtnFuncional.Visible = (usuario.IdModalidade == 4);
-            }
+     
+     BtnZumba.Visible = true;
+     BtnFuncional.Visible = true;
+     BtnMuayThai.Visible = true;
+
+     if (usuario.IdModalidade == 1) 
+     {
+         BtnZumba.Enabled = true;
+         BtnFuncional.Enabled = true;
+         BtnMuayThai.Enabled = true;
+     }
+     else
+     {
+         BtnZumba.Enabled = (usuario.IdModalidade == 2);
+         BtnFuncional.Enabled = (usuario.IdModalidade == 3);
+         BtnMuayThai.Enabled = (usuario.IdModalidade == 4);
+     }
+ }
 
 
-            //modalidade 1 é GERAL DO ADM
-             //2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
-        }
-                            
-        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+        //modalidade 1 é GERAL DO ADM
+        //2 ZUMBA, 3 FUNCIONAL, 4 MUAY THAI
 
-        }
+
+
+
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+
+        //}
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -79,6 +82,9 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
+            TelaCadastroForm telaCadastro = new TelaCadastroForm();
+            telaCadastro.Show();
+            this.Hide();
 
         }
 
@@ -89,30 +95,49 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void BtnZumba_Click(object sender, EventArgs e)
         {
-            var telaInicial = new TelaInicialForm();
-            telaInicial.Show();
-            this.Hide();
+            if (BtnZumba.Enabled)
+            {
+                var telaInicial = new TelaInicialForm(2); 
+                telaInicial.Show();
+                this.Hide();
+            }
+        
         }
 
         private void BtnFuncional_Click(object sender, EventArgs e)
         {
-            var telaInicial = new TelaInicialForm();
-            telaInicial.Show();
-            this.Hide();
+            if (BtnFuncional.Enabled)
+            {
+                var telaInicial = new TelaInicialForm(3); 
+                telaInicial.Show();
+                this.Hide();
+            }
         }
 
         private void BtnMuayThai_Click(object sender, EventArgs e)
         {
-            var telaInicial = new TelaInicialForm();
-            telaInicial.Show();
-            this.Hide();
+            if (BtnMuayThai.Enabled)
+            {
+                var telaInicial = new TelaInicialForm(4); 
+                telaInicial.Show();
+                this.Hide();
+            }
         }
 
-        private void btnCadastro_Click_1(object sender, EventArgs e)
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            TelaCadastroForm telaCadastro = new TelaCadastroForm();
-            telaCadastro.ShowDialog();
-            
+
+        }
+
+        private void labelTextoNaTela_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void pictureBoxVoltar_Click(object sender, EventArgs e)

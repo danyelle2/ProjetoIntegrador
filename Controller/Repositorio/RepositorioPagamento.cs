@@ -1,26 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.Services;
 using ModelAluno = ProjetoIntegrador.Model.Aluno;
 
-namespace ProjetoIntegrador.Controller.Aluno
+namespace ProjetoIntegrador.Controller.Repositorio
 {
     internal class RepositorioPagamento
     {
         private readonly DatabaseService _databaseService;
-        //"DatabaseService databaseService" é a conexão com o banco de dados
+
         public RepositorioPagamento(DatabaseService databaseService)
         {
             _databaseService = databaseService;
         }
 
-
         public List<ModelAluno> AlunosAtivos()
         {
-            List<Model.Aluno> lista = new List<Model.Aluno>();
-            string query = "SELECT * FROM aluno id_aluno, nome, status_aluno, status_pagamento WHERE status_aluno = 1";
+            List<ModelAluno> lista = new List<ModelAluno>();
+
+            string query = @"
+                SELECT id_aluno, nome, status_aluno, status_pagamento 
+                FROM aluno 
+                WHERE status_aluno = 1"
+            ;
 
             using (MySqlDataReader reader = _databaseService.ExecuteQuery(query))
             {
@@ -41,20 +44,19 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public void AtualizarStatusPagamento(int idAluno, bool statusPagamento)
         {
-            // coloquei now para atualizar com a data atual que a pessoa atualizou o pagamento
             string query = @"
-        UPDATE pagamento 
-        SET data_pagamento = NOW(), status_pagamento = @status 
-        WHERE id_aluno = @idAluno";
+                UPDATE pagamento 
+                SET data_pagamento = NOW(), status_pagamento = @status 
+                WHERE id_aluno = @idAluno"
+            ;
 
             MySqlParameter[] parameters =
             {
-        new MySqlParameter("@status", statusPagamento),
-        new MySqlParameter("@idAluno", idAluno),
-    };
+                new MySqlParameter("@status", statusPagamento),
+                new MySqlParameter("@idAluno", idAluno),
+            };
 
             _databaseService.ExecuteNonQuery(query, parameters);
         }
-
     }
 }

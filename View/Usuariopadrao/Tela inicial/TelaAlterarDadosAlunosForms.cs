@@ -21,11 +21,36 @@ namespace ProjetoIntegrador.View
     {
         
         BotoesAlterarDadosAlunoController botoesAlterarDadosAlunoController;
-        public TelaAlterarDadosAlunosForms( Aluno aluno)
+        private Aluno alunoSelecionado;
+
+        public TelaAlterarDadosAlunosForms(Aluno aluno)
         {
             InitializeComponent();
             botoesAlterarDadosAlunoController = new BotoesAlterarDadosAlunoController();
+            this.alunoSelecionado = aluno;
+            PreencherCampos();
         }
+
+
+        private void PreencherCampos()
+        {
+            if (alunoSelecionado != null)
+            {
+                textBoxNomeAluno.Text = alunoSelecionado.Nome;
+                textBoxIdadeAluno.Text = alunoSelecionado.Idade.ToString();
+                textBoxTelefoneAluno.Text = alunoSelecionado.Telefone;
+                textBoxDataEntrada.Text = alunoSelecionado.DataEntrada.ToString("yyyy-MM-dd");
+                textBoxNomeResponsavel.Text = alunoSelecionado.NomeResponsavel;
+                comboBoxPlano.SelectedItem = alunoSelecionado.Assinatura;
+                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.Status;
+
+                if (alunoSelecionado.DataSaida != null)
+                {
+                    textBoxDataSaida.Text = alunoSelecionado.DataSaida?.ToString("yyyy-MM-dd");
+                }
+            }
+        }
+
 
         public TelaAlterarDadosAlunosForms()
         {
@@ -48,22 +73,23 @@ namespace ProjetoIntegrador.View
 
             if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel && resultadoComboBoxValidado)
             {
-                //REPOSITORIO QUE GUARDA O BANCO DE DADOS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                var alunoEditando = new Aluno();
-                alunoEditando.Nome = textBoxNomeAluno.Text;
-                alunoEditando.Idade = int.Parse(textBoxIdadeAluno.Text);
-                alunoEditando.Telefone = textBoxTelefoneAluno.Text;
-                alunoEditando.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
-                alunoEditando.NomeResponsavel = textBoxNomeResponsavel.Text;
-                alunoEditando.Assinatura = comboBoxPlano.SelectedItem.ToString();
-                alunoEditando.Status = comboBoxStatusAlunos.SelectedItem.ToString();
-                alunoEditando.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
-                
+                alunoSelecionado.Nome = textBoxNomeAluno.Text;
+                alunoSelecionado.Idade = int.Parse(textBoxIdadeAluno.Text);
+                alunoSelecionado.Telefone = textBoxTelefoneAluno.Text;
+                alunoSelecionado.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
+                alunoSelecionado.NomeResponsavel = textBoxNomeResponsavel.Text;
+                alunoSelecionado.Assinatura = comboBoxPlano.SelectedItem.ToString();
+                alunoSelecionado.Status = comboBoxStatusAlunos.SelectedItem.ToString();
+                alunoSelecionado.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
+
+                // Agora sim: passa o alunoSelecionado para alterar
                 var repositorio = new RepositorioAluno(new DatabaseService());
-                repositorio.AlterarDadosAlunos(aluno);
+                repositorio.AlterarDadosAlunos(alunoSelecionado);
 
-                MessageBox.Show($"Dados do aluno {aluno.Nome}, alterado com sucesso!", "Alteraçao de dados");
+                MessageBox.Show($"Dados do aluno {alunoSelecionado.Nome}, alterados com sucesso!", "Alteração de Dados");
 
+
+               
             }
             else
             {
