@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace ProjetoIntegrador.Controller.Aluno
 {
@@ -76,5 +77,51 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
         }
+
+        //FAZER EM FORMA DE LISTA COMO O PROFESSOR ENSINOU LISTA DE ALUNOS PARA O DATAGRID 
+        public List<Model.Aluno> BuscarTodos()
+        {
+            var listaAlunos = new List<Model.Aluno>();
+
+            string query = "SELECT * FROM aluno";
+
+            _databaseService.OpenConnection();
+            try
+            {
+                using (var cmd = new MySqlCommand(query, _databaseService.Connection))
+                {
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var aluno = new Model.Aluno
+                            {
+                                Id = Convert.ToInt32(reader["id_aluno"]),
+                                Nome = reader["nome"].ToString(),
+                                Idade = Convert.ToInt32(reader["idade"]),
+                                Telefone = reader["telefone"].ToString(),
+                                NomeResponsavel = reader["responsavel"].ToString(),
+                                DataEntrada = Convert.ToDateTime(reader["data_entrada"]),
+                                DataSaida = reader["data_saida"] != DBNull.Value ? (DateTime?)Convert.ToDateTime(reader["data_saida"]) : null,
+                                Status = Convert.ToBoolean(reader["status_aluno"]),
+                                Assinatura = reader["assinatura_aluno"].ToString(),
+                            };
+                            listaAlunos.Add(aluno);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException("Erro ao buscar alunos.", ex);
+            }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
+
+            return listaAlunos;
+        }
+
     }
 }

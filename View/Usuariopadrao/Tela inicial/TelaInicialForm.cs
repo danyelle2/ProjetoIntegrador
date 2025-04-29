@@ -87,16 +87,15 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {            
-            //Qualquer coisa mudar para show normal em tela inteira mesmo
+        {            // PERGUNTAR SE DEIXA TELA INTEIRA OU SÓ DIALOGO MESMO IGUAL AS OUTRAS.
+            // SE A TELA FICAR MAIOR COLOCAR O BOTÃO DE VOLTAR OU ALGO DO TIPO
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
             telaGrafico.ShowDialog();
         }
         private void CarregarAlunos()
         {
-            // Simulação, aqui você traria do banco de dados
-            var listaAlunos = RepositorioAluno.BuscarTodos(); // Repositório que busca os alunos
-
+            var repositorioAluno = new RepositorioAluno(new DatabaseService());
+            var listaAlunos = repositorioAluno.BuscarTodos();
             dataGridViewListaGeralAlunos.DataSource = listaAlunos;
         }
 
@@ -105,7 +104,7 @@ namespace ProjetoIntegrador.View
             CarregarAlunos();
 
             Usuario usuario = SessionUser.userLogado;
-            //mudar por os nomes dos botões
+           
             switch (usuario.IdModalidade)
             {
                 case 2:
@@ -137,7 +136,7 @@ namespace ProjetoIntegrador.View
         {
 
         
-            if (e.RowIndex >= 0) // Garantir que não clicou no cabeçalho
+            if (e.RowIndex >= 0) 
             {
                 alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.Rows[e.RowIndex].DataBoundItem;
             }
