@@ -21,26 +21,15 @@ namespace ProjetoIntegrador.View
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
-            this.FormClosing += AppClose;
+            
         }
 
 
-        public void AppClose(object sender, FormClosingEventArgs e)
-        {          
-            DialogResult result = MessageBox.Show("Deseja encerrar a aplicação?","Sair",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true; 
-            }
-            else
-            {
-                Application.ExitThread(); 
-            }
+       
         
 
 
-        }
+        
 
         private void pictureBoxCadastroAlunosAparecer(object sender, EventArgs e)
         {

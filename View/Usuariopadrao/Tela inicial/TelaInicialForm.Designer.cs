@@ -226,6 +226,7 @@
             this.Controls.Add(this.MsgExplicacaoGrafico);
             this.Controls.Add(this.MsgExplicacaoAlterarDados);
             this.Controls.Add(this.MsgExplicacaoCadastro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaInicialForm";
             this.Text = "TelaInicialForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
