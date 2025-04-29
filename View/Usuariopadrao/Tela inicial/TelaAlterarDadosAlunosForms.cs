@@ -82,7 +82,6 @@ namespace ProjetoIntegrador.View
                 comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAtivo ? "Ativo" : "Inativo";
                 alunoSelecionado.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
 
-                // Agora sim: passa o alunoSelecionado para alterar
                 var repositorio = new RepositorioAluno(new DatabaseService());
                 repositorio.AlterarDadosAlunos(alunoSelecionado);
 

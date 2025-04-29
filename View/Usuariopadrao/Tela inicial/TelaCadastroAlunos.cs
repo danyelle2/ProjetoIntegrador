@@ -42,11 +42,11 @@ namespace ProjetoIntegrador.View
                 bool resultadoIdadeInvalida = botoesCadastroAlunoController.IdadeInvalida(textBoxIdade, textMsgErroIdade);
                 bool resultadoCamposVazios = botoesCadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, textMsgErroResponsavel, comboBoxStatusAluno);
                 bool resultadoTelefoneValido = botoesCadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
-                bool DataInvalida = botoesCadastroAlunoController.ValidarData(textBoxDataEntrada, textMsgErroData);
+                bool dataValida = botoesCadastroAlunoController.ValidarData(textBoxDataEntrada, textMsgErroData);
                 bool resultadoNomeResponsavel = botoesCadastroAlunoController.ValidarNomeResponsavel(textBoxNomeResponsavel, textMsgErroResponsavel);
                 bool resultadoComboBox = botoesCadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
 
-                if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoNomeResponsavel && resultadoComboBox)
+                if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && dataValida && resultadoNomeResponsavel && resultadoComboBox)
                 {
                     var databaseService = new DatabaseService();
                     var repositorio = new RepositorioAluno(databaseService);
@@ -58,14 +58,18 @@ namespace ProjetoIntegrador.View
                         Telefone = txtTelefoneALuno.Text,
                         DataEntrada = DateTime.Parse(textBoxDataEntrada.Text),
                         Assinatura = txtAssinaturaAluno.SelectedItem?.ToString(),
-                        NomeResponsavel = textBoxNomeResponsavel.Text,
-                        StatusAtivo = comboBoxStatusAluno.SelectedItem?.ToString()
+                        NomeResponsavel = textBoxNomeResponsavel.Text
                     };
+
+                    //TALVEZ NÃO PRECISSE DISSO JÁ QUE NO REPOSITORIO EU JA CHAMO ELE COMO TRUE
+
+                    string statusSelecionado = comboBoxStatusAluno.SelectedItem?.ToString();
+                    aluno.StatusAtivo = statusSelecionado == "Ativo"; 
 
                     repositorio.CadastrarAluno(aluno);
 
                     MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //VE SE LIMPA APÓS O CADASTRO
+
                     limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
                 }
                 else
@@ -77,9 +81,8 @@ namespace ProjetoIntegrador.View
             {
                 MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
         }
+
 
         private void TelaCadastroAlunos_Load(object sender, EventArgs e)
         {
