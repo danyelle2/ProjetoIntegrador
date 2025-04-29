@@ -70,7 +70,7 @@ namespace ProjetoIntegrador
                             MessageBox.Show($"Bem-vindo, {usuario.Nome}!", "Login realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             SessionUser.Login(usuario);
 
-                            this.Close();
+                            this.Hide();
                             var telaEscolhaModalidade = new TelaModalidadeEscolha();
                             telaEscolhaModalidade.Show();
                         }
@@ -118,6 +118,7 @@ namespace ProjetoIntegrador
         }
         private void TxtUsuarioSenha_KeyDown(object sender, KeyEventArgs e)
         {
+            //COLOQUEI O ENTER PARA O BOTÃO LOGIN!!! FAZER ISSO SE DER EM ALGUMAS TELAS
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin.PerformClick(); 
