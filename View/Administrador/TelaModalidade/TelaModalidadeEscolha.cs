@@ -17,7 +17,21 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         public TelaModalidadeEscolha()
         {
             InitializeComponent();
+            this.FormClosing += AppClose;
 
+        }
+        public void AppClose(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Deseja encerrar a aplicação?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Application.ExitThread();
+            }
         }
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)

@@ -100,11 +100,11 @@
             // pictureBoxAlterar
             // 
             this.pictureBoxAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxAlterar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAlterar.BackColor = System.Drawing.Color.Black;
             this.pictureBoxAlterar.ErrorImage = null;
-            this.pictureBoxAlterar.Location = new System.Drawing.Point(-166, 264);
+            this.pictureBoxAlterar.Location = new System.Drawing.Point(108, 349);
             this.pictureBoxAlterar.Name = "pictureBoxAlterar";
-            this.pictureBoxAlterar.Size = new System.Drawing.Size(246, 236);
+            this.pictureBoxAlterar.Size = new System.Drawing.Size(222, 163);
             this.pictureBoxAlterar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxAlterar.TabIndex = 16;
             this.pictureBoxAlterar.TabStop = false;
@@ -117,7 +117,7 @@
             this.pictureBox2Graficos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2Graficos.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2Graficos.ErrorImage = null;
-            this.pictureBox2Graficos.Location = new System.Drawing.Point(-166, 506);
+            this.pictureBox2Graficos.Location = new System.Drawing.Point(89, 503);
             this.pictureBox2Graficos.Name = "pictureBox2Graficos";
             this.pictureBox2Graficos.Size = new System.Drawing.Size(246, 220);
             this.pictureBox2Graficos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -212,6 +212,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.panel1);
@@ -225,6 +226,7 @@
             this.Controls.Add(this.MsgExplicacaoGrafico);
             this.Controls.Add(this.MsgExplicacaoAlterarDados);
             this.Controls.Add(this.MsgExplicacaoCadastro);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaInicialForm";
             this.Text = "TelaInicialForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
