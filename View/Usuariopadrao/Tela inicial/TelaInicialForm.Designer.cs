@@ -100,7 +100,7 @@
             // pictureBoxAlterar
             // 
             this.pictureBoxAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBoxAlterar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAlterar.BackColor = System.Drawing.Color.Black;
             this.pictureBoxAlterar.ErrorImage = null;
             this.pictureBoxAlterar.Location = new System.Drawing.Point(108, 349);
             this.pictureBoxAlterar.Name = "pictureBoxAlterar";

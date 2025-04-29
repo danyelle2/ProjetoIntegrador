@@ -125,7 +125,7 @@
             this.BtnFuncional.FlatAppearance.BorderSize = 0;
             this.BtnFuncional.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;<<<<<<< DanyBancoDeDados
+            this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFuncional.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncional.Image")));
             this.BtnFuncional.Location = new System.Drawing.Point(507, 91);
 
