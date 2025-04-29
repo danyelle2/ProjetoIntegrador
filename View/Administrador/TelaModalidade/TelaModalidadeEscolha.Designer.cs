@@ -99,13 +99,16 @@
             // BtnMuayThai
             // 
             this.BtnMuayThai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnMuayThai.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnMuayThai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnMuayThai.BackgroundImage")));
+            this.BtnMuayThai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnMuayThai.FlatAppearance.BorderSize = 0;
             this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Location = new System.Drawing.Point(976, 136);
+            this.BtnMuayThai.Location = new System.Drawing.Point(958, 91);
             this.BtnMuayThai.Name = "BtnMuayThai";
-            this.BtnMuayThai.Size = new System.Drawing.Size(242, 56);
+            this.BtnMuayThai.Size = new System.Drawing.Size(270, 66);
             this.BtnMuayThai.TabIndex = 2;
             this.BtnMuayThai.UseVisualStyleBackColor = true;
             this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
