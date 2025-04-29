@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
+using MySql.Data.MySqlClient;
 
 namespace ProjetoIntegrador.Controller.Aluno
 {
@@ -67,7 +68,7 @@ namespace ProjetoIntegrador.Controller.Aluno
                 new MySql.Data.MySqlClient.MySqlParameter("@telefone", aluno.Telefone),
                 new MySql.Data.MySqlClient.MySqlParameter("@responsavel", aluno.NomeResponsavel),
                 new MySql.Data.MySqlClient.MySqlParameter("@dataEntrada", aluno.DataEntrada),
-                new MySql.Data.MySqlClient.MySqlParameter("@dataSaida", aluno.DataSaida),
+                new MySql.Data.MySqlClient.MySqlParameter("@dataSaida",  aluno.DataSaida.HasValue ? aluno.DataSaida.Value : (object)DBNull.Value), // SE EU COLOCAR ASSIM ACEITA A DATA SAIDA SER NULA !!!
                 new MySql.Data.MySqlClient.MySqlParameter("@status", aluno.Status),
                 new MySql.Data.MySqlClient.MySqlParameter("@assinatura_aluno", aluno.Assinatura),
                 new MySql.Data.MySqlClient.MySqlParameter("@id", aluno.Id)
