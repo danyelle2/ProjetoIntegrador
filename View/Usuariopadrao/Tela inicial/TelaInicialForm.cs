@@ -92,13 +92,13 @@ namespace ProjetoIntegrador.View
             switch (usuario.IdModalidade)
             {
                 case 2:
-                    labelTitulo.Text = "Área de Ritimos e Zumba";
+                    labelTituloModalidade.Text = "Área de Ritimos e Zumba";
                     break;
                 case 3:
-                    labelTitulo.Text = "Área de Funcional";
+                    labelTituloModalidade.Text = "Área de Funcional";
                     break;
                 case 4:
-                    labelTitulo.Text = "Área do Muay Thai";
+                    labelTituloModalidade.Text = "Área do Muay Thai";
                     break;                
             }
         }
