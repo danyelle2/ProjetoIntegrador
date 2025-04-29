@@ -42,7 +42,7 @@ namespace ProjetoIntegrador.View
                 textBoxDataEntrada.Text = alunoSelecionado.DataEntrada.ToString("yyyy-MM-dd");
                 textBoxNomeResponsavel.Text = alunoSelecionado.NomeResponsavel;
                 comboBoxPlano.SelectedItem = alunoSelecionado.Assinatura;
-                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.Status;
+                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAtivo;
 
                 if (alunoSelecionado.DataSaida != null)
                 {
@@ -79,7 +79,7 @@ namespace ProjetoIntegrador.View
                 alunoSelecionado.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
                 alunoSelecionado.NomeResponsavel = textBoxNomeResponsavel.Text;
                 alunoSelecionado.Assinatura = comboBoxPlano.SelectedItem.ToString();
-                alunoSelecionado.Status = comboBoxStatusAlunos.SelectedItem.ToString();
+                alunoSelecionado.StatusAtivo = comboBoxStatusAlunos.SelectedItem.ToString();
                 alunoSelecionado.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
 
                 // Agora sim: passa o alunoSelecionado para alterar

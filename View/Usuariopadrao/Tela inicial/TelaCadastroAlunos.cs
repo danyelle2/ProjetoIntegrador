@@ -59,7 +59,7 @@ namespace ProjetoIntegrador.View
                         DataEntrada = DateTime.Parse(textBoxDataEntrada.Text),
                         Assinatura = txtAssinaturaAluno.SelectedItem?.ToString(),
                         NomeResponsavel = textBoxNomeResponsavel.Text,
-                        Status = comboBoxStatusAluno.SelectedItem?.ToString()
+                        StatusAtivo = comboBoxStatusAluno.SelectedItem?.ToString()
                     };
 
                     repositorio.CadastrarAluno(aluno);
