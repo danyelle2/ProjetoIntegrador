@@ -35,11 +35,11 @@ namespace ProjetoIntegrador
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.MsgErro1 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.MsgErro = new System.Windows.Forms.Label();
-            this.MsgErro1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,6 +78,15 @@ namespace ProjetoIntegrador
             this.panel1.Size = new System.Drawing.Size(467, 531);
             this.panel1.TabIndex = 28;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // MsgErro1
+            // 
+            this.MsgErro1.AutoSize = true;
+            this.MsgErro1.ForeColor = System.Drawing.Color.Red;
+            this.MsgErro1.Location = new System.Drawing.Point(8, 354);
+            this.MsgErro1.Name = "MsgErro1";
+            this.MsgErro1.Size = new System.Drawing.Size(0, 13);
+            this.MsgErro1.TabIndex = 24;
             // 
             // btnLogin
             // 
@@ -128,15 +137,6 @@ namespace ProjetoIntegrador
             this.MsgErro.Name = "MsgErro";
             this.MsgErro.Size = new System.Drawing.Size(0, 15);
             this.MsgErro.TabIndex = 22;
-            // 
-            // MsgErro1
-            // 
-            this.MsgErro1.AutoSize = true;
-            this.MsgErro1.ForeColor = System.Drawing.Color.Red;
-            this.MsgErro1.Location = new System.Drawing.Point(8, 354);
-            this.MsgErro1.Name = "MsgErro1";
-            this.MsgErro1.Size = new System.Drawing.Size(0, 13);
-            this.MsgErro1.TabIndex = 24;
             // 
             // TelaLoginForm
             // 
