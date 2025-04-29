@@ -47,8 +47,8 @@ namespace ProjetoIntegrador.View
         private void pictureBoxAlterarDadosAparece(object sender, EventArgs e)
         {
 
-            MsgExplicacaoAlterarDados.Visible = true;
-            MsgExplicacaoAlterarDados.Text = "Clique aqui para alterar os dados do aluno";
+            MsgExplicacaoAlterarDados1.Visible = true;
+            MsgExplicacaoAlterarDados1.Text = "Clique aqui para alterar os dados do aluno";
         }
 
         private void pictureBoxAlterarDadosDesaparece(object sender, EventArgs e)
@@ -162,6 +162,11 @@ namespace ProjetoIntegrador.View
 
 
     }
-}
+
+        private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
     }
 
