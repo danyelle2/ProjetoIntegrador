@@ -25,11 +25,13 @@ namespace ProjetoIntegrador.Controller.Aluno
         {
             var resultado = new Dictionary<int, int>();
             string query = @"
-        SELECT MONTH(data_entrada) AS mes, COUNT(*) AS entradas 
-        FROM aluno 
-        WHERE YEAR(data_entrada) = YEAR(CURDATE()) 
-          AND modalidade = @modalidade
-        GROUP BY MONTH(data_entrada)";
+        SELECT MONTH(a.data_entrada) AS mes, COUNT(*) AS entradas 
+        FROM aluno a
+        JOIN usuario u ON a.id_usuario = u.id_usuario
+        JOIN modalidade m ON u.id_modalidade = m.id_modalidade
+        WHERE YEAR(a.data_entrada) = YEAR(CURDATE()) 
+          AND m.nome = @modalidade
+        GROUP BY MONTH(a.data_entrada)";
 
             using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
@@ -53,6 +55,7 @@ namespace ProjetoIntegrador.Controller.Aluno
 
         public Dictionary<int, int> ObterSaidasPorMes(string modalidade)
         {
+            //TERMINAR ESSa!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Corrigir Com o chat colocar igual a de cima
             var resultado = new Dictionary<int, int>();
             string query = @"
         SELECT MONTH(data_saida) AS mes, COUNT(*) AS saidas 

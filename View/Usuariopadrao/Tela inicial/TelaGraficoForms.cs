@@ -25,7 +25,7 @@ namespace ProjetoIntegrador.View
             private void TelaGraficoForms_Load(object sender, EventArgs e)
             {
             string modalidade = SessionUser.userLogado.Modalidade;
-            
+            //colocar um if aqui para verificar se o usuário é admin ou não ai se for coloca
 
             var repositorio = new RepositorioGrafico(new DatabaseService());
 
