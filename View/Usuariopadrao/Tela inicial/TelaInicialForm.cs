@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Model;
+using ProjetoIntegrador.Services;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
 
@@ -15,13 +17,11 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaInicialForm : Form
     {
-        private int idModalidade;
 
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
             this.FormClosing += AppClose;
-            this.idModalidade = idModalidade;
         }
 
 
@@ -71,13 +71,7 @@ namespace ProjetoIntegrador.View
         {
             MsgExplicacaoAlterarDados.Visible = false;
 
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            var telaAlterarDados = new TelaAlterarDadosAlunosForms();
-            telaAlterarDados.ShowDialog();
-        }
+        }       
 
         private void pictureBoxGráficoAparece(object sender, EventArgs e)
         {
@@ -98,24 +92,31 @@ namespace ProjetoIntegrador.View
             TelaGraficoForms telaGrafico = new TelaGraficoForms();
             telaGrafico.ShowDialog();
         }
+        private void CarregarAlunos()
+        {
+            // Simulação, aqui você traria do banco de dados
+            var listaAlunos = RepositorioAluno.BuscarTodos(); // Repositório que busca os alunos
+
+            dataGridViewListaGeralAlunos.DataSource = listaAlunos;
+        }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
+            CarregarAlunos();
+
+            Usuario usuario = SessionUser.userLogado;
             //mudar por os nomes dos botões
-            switch (idModalidade)
+            switch (usuario.IdModalidade)
             {
                 case 2:
-                    labelTitulo.Text = "Área da Zumba";
+                    labelTitulo.Text = "Área de Ritimos e Zumba";
                     break;
                 case 3:
-                    labelTitulo.Text = "Área Funcional";
+                    labelTitulo.Text = "Área de Funcional";
                     break;
                 case 4:
                     labelTitulo.Text = "Área do Muay Thai";
-                    break;
-                default:
-                    labelTitulo.Text = "Área Geral";
-                    break;
+                    break;                
             }
         }
 
@@ -130,8 +131,17 @@ namespace ProjetoIntegrador.View
             MsgTemporariaPagamento.Visible = false;
         }
 
+        private Aluno alunoSelecionado;
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        
+            if (e.RowIndex >= 0) // Garantir que não clicou no cabeçalho
+            {
+                alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.Rows[e.RowIndex].DataBoundItem;
+            }
+        
 
         }
 
@@ -146,10 +156,29 @@ namespace ProjetoIntegrador.View
 
         }
 
-        private void pictureBoxVoltar_Click(object sender, EventArgs e)
+            private void pictureBoxVoltar_Click(object sender, EventArgs e)
         {
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
+            this.Close(); 
         }
+
+        private void pictureBoxAlterar_Click(object sender, EventArgs e)
+        {         
+           
+            if (alunoSelecionado != null)
+            {
+                var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
+                telaAlterarDados.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        
+
+
     }
 }
+    }
+
