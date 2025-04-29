@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,7 +38,6 @@
             this.BtnFuncional = new System.Windows.Forms.Button();
             this.BtnZumba = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -54,6 +54,17 @@
             this.panel2.Size = new System.Drawing.Size(1364, 295);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(107, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 18);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "label1";
             // 
             // labelTextoNaTela
             // 
@@ -108,10 +119,7 @@
             this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-
             this.BtnMuayThai.Location = new System.Drawing.Point(958, 91);
-
-            
             this.BtnMuayThai.Name = "BtnMuayThai";
             this.BtnMuayThai.Size = new System.Drawing.Size(270, 66);
             this.BtnMuayThai.TabIndex = 2;
@@ -128,8 +136,6 @@
             this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFuncional.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncional.Image")));
             this.BtnFuncional.Location = new System.Drawing.Point(507, 91);
-
-            
             this.BtnFuncional.Name = "BtnFuncional";
             this.BtnFuncional.Size = new System.Drawing.Size(270, 66);
             this.BtnFuncional.TabIndex = 1;
@@ -145,9 +151,7 @@
             this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-
             this.BtnZumba.Location = new System.Drawing.Point(90, 91);
-
             this.BtnZumba.Name = "BtnZumba";
             this.BtnZumba.Size = new System.Drawing.Size(257, 66);
             this.BtnZumba.TabIndex = 0;
@@ -176,17 +180,6 @@
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(107, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "label1";
-            // 
             // TelaModalidadeEscolha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,6 +189,7 @@
             this.MaximizeBox = false;
             this.Name = "TelaModalidadeEscolha";
             this.Text = "TelaModalidadeEscolha";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaModalidadeEscolha_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -117,7 +117,7 @@
             this.pictureBox2Graficos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2Graficos.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2Graficos.ErrorImage = null;
-            this.pictureBox2Graficos.Location = new System.Drawing.Point(-166, 506);
+            this.pictureBox2Graficos.Location = new System.Drawing.Point(89, 503);
             this.pictureBox2Graficos.Name = "pictureBox2Graficos";
             this.pictureBox2Graficos.Size = new System.Drawing.Size(246, 220);
             this.pictureBox2Graficos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
