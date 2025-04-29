@@ -170,6 +170,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.pictureBoxVoltar);
             this.panel1.Location = new System.Drawing.Point(12, 2);
             this.panel1.Name = "panel1";
