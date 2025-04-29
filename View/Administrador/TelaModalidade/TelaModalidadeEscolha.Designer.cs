@@ -103,7 +103,7 @@
             this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Location = new System.Drawing.Point(974, 156);
+            this.BtnMuayThai.Location = new System.Drawing.Point(977, 209);
             this.BtnMuayThai.Name = "BtnMuayThai";
             this.BtnMuayThai.Size = new System.Drawing.Size(242, 56);
             this.BtnMuayThai.TabIndex = 2;
@@ -118,7 +118,7 @@
             this.BtnFuncional.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnFuncional.Location = new System.Drawing.Point(527, 151);
+            this.BtnFuncional.Location = new System.Drawing.Point(523, 209);
             this.BtnFuncional.Name = "BtnFuncional";
             this.BtnFuncional.Size = new System.Drawing.Size(246, 66);
             this.BtnFuncional.TabIndex = 1;
@@ -132,7 +132,7 @@
             this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnZumba.Location = new System.Drawing.Point(91, 151);
+            this.BtnZumba.Location = new System.Drawing.Point(97, 209);
             this.BtnZumba.Name = "BtnZumba";
             this.BtnZumba.Size = new System.Drawing.Size(257, 66);
             this.BtnZumba.TabIndex = 0;

@@ -159,7 +159,7 @@ namespace ProjetoIntegrador.View
         {
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
-            this.Close(); 
+            this.Hide(); 
         }
 
         private void pictureBoxAlterar_Click(object sender, EventArgs e)
