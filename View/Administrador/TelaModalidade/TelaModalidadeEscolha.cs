@@ -31,26 +31,26 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
 
         }
-        private void VisibilidadeTelaUsuario(Usuario usuario)
+     private void VisibilidadeTelaUsuario(Usuario usuario)
         {
-            
-            BtnZumba.Visible = true;
-            BtnFuncional.Visible = true;
-            BtnMuayThai.Visible = true;
+     
+     BtnZumba.Visible = true;
+     BtnFuncional.Visible = true;
+     BtnMuayThai.Visible = true;
 
-            if (usuario.IdModalidade == 1) 
-            {
-                BtnZumba.Enabled = true;
-                BtnFuncional.Enabled = true;
-                BtnMuayThai.Enabled = true;
-            }
-            else
-            {
-                BtnZumba.Enabled = (usuario.IdModalidade == 2);
-                BtnFuncional.Enabled = (usuario.IdModalidade == 3);
-                BtnMuayThai.Enabled = (usuario.IdModalidade == 4);
-            }
-        }
+     if (usuario.IdModalidade == 1) 
+     {
+         BtnZumba.Enabled = true;
+         BtnFuncional.Enabled = true;
+         BtnMuayThai.Enabled = true;
+     }
+     else
+     {
+         BtnZumba.Enabled = (usuario.IdModalidade == 2);
+         BtnFuncional.Enabled = (usuario.IdModalidade == 3);
+         BtnMuayThai.Enabled = (usuario.IdModalidade == 4);
+     }
+ }
 
 
 
