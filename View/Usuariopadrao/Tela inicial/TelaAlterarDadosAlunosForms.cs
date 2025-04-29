@@ -79,7 +79,7 @@ namespace ProjetoIntegrador.View
                 alunoSelecionado.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
                 alunoSelecionado.NomeResponsavel = textBoxNomeResponsavel.Text;
                 alunoSelecionado.Assinatura = comboBoxPlano.SelectedItem.ToString();
-                alunoSelecionado.StatusAtivo = comboBoxStatusAlunos.SelectedItem.ToString();
+                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAtivo ? "Ativo" : "Inativo";
                 alunoSelecionado.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
 
                 // Agora sim: passa o alunoSelecionado para alterar
