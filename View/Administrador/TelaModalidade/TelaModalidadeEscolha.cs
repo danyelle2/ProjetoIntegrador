@@ -40,11 +40,10 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             VisibilidadeTelaUsuario(usuario);
 
             labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}!\n Selecione a sua modalidade ";
-            //labelTextoNaTela.Text = $"Pronto para iniciar Danyelle!\n Selecione a sua modalidade  ";
 
             btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
 
-            labelNomeUser.texte = (usuario.Nome);
+            labelNomeUser.Text = (usuario.Nome);
 
         }
      private void VisibilidadeTelaUsuario(Usuario usuario)
