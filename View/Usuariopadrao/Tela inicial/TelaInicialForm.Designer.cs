@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicialForm));
             this.MsgExplicacaoGrafico = new System.Windows.Forms.Label();
-            this.MsgExplicacaoAlterarDados = new System.Windows.Forms.Label();
+            this.msgpagamentos = new System.Windows.Forms.Label();
             this.MsgExplicacaoCadastro = new System.Windows.Forms.Label();
             this.pictureBoxCadastroAlunos = new System.Windows.Forms.PictureBox();
             this.pictureBoxAlterar = new System.Windows.Forms.PictureBox();
@@ -56,22 +56,25 @@
             // 
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(206, 688);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(196, 558);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoGrafico.TabIndex = 14;
             this.MsgExplicacaoGrafico.Text = "...";
+            this.MsgExplicacaoGrafico.Click += new System.EventHandler(this.MsgExplicacaoGrafico_Click);
             // 
-            // MsgExplicacaoAlterarDados
+            // msgpagamentos
             // 
-            this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MsgExplicacaoAlterarDados.AutoSize = true;
-            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(206, 543);
-            this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
-            this.MsgExplicacaoAlterarDados.Size = new System.Drawing.Size(16, 13);
-            this.MsgExplicacaoAlterarDados.TabIndex = 13;
-            this.MsgExplicacaoAlterarDados.Text = "...";
-            this.MsgExplicacaoAlterarDados.Click += new System.EventHandler(this.MsgExplicacaoAlterarDados_Click);
+            this.msgpagamentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.msgpagamentos.AutoSize = true;
+            this.msgpagamentos.Location = new System.Drawing.Point(206, 692);
+            this.msgpagamentos.Name = "msgpagamentos";
+            this.msgpagamentos.Size = new System.Drawing.Size(16, 13);
+            this.msgpagamentos.TabIndex = 13;
+            this.msgpagamentos.Text = "...";
+            this.msgpagamentos.Click += new System.EventHandler(this.MsgExplicacaoAlterarDados_Click);
+            this.msgpagamentos.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
+            this.msgpagamentos.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
             // MsgExplicacaoCadastro
             // 
@@ -227,7 +230,7 @@
             this.Controls.Add(this.pictureBoxAlterar);
             this.Controls.Add(this.pictureBoxCadastroAlunos);
             this.Controls.Add(this.MsgExplicacaoGrafico);
-            this.Controls.Add(this.MsgExplicacaoAlterarDados);
+            this.Controls.Add(this.msgpagamentos);
             this.Controls.Add(this.MsgExplicacaoCadastro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaInicialForm";
@@ -249,7 +252,7 @@
         #endregion
 
         private System.Windows.Forms.Label MsgExplicacaoGrafico;
-        private System.Windows.Forms.Label MsgExplicacaoAlterarDados;
+        private System.Windows.Forms.Label msgpagamentos;
         private System.Windows.Forms.Label MsgExplicacaoCadastro;
         private System.Windows.Forms.PictureBox pictureBoxCadastroAlunos;
         private System.Windows.Forms.PictureBox pictureBoxAlterar;
