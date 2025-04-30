@@ -17,11 +17,13 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaInicialForm : Form
     {
-
+        private readonly int idModalidadeSelecionada;
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
-            
+            idModalidadeSelecionada = idModalidade;
+
+
         }   
        
         
@@ -71,10 +73,11 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {            // PERGUNTAR SE DEIXA TELA INTEIRA OU SÓ DIALOGO MESMO IGUAL AS OUTRAS.
-            // SE A TELA FICAR MAIOR COLOCAR O BOTÃO DE VOLTAR OU ALGO DO TIPO
-            TelaGraficoForms telaGrafico = new TelaGraficoForms();
-            telaGrafico.ShowDialog();
+        {
+            var telaGrafico = new TelaGraficoForms(IdModalidade);
+            telaGrafico.Show();
+            this.Hide();
+
         }
         private void CarregarAlunos()
         {
@@ -92,13 +95,13 @@ namespace ProjetoIntegrador.View
             switch (usuario.IdModalidade)
             {
                 case 2:
-                    labelTitulo.Text = "Área de Ritimos e Zumba";
+                    labelTituloModalidade.Text = "Área de Ritimos e Zumba";
                     break;
                 case 3:
-                    labelTitulo.Text = "Área de Funcional";
+                    labelTituloModalidade.Text = "Área de Funcional";
                     break;
                 case 4:
-                    labelTitulo.Text = "Área do Muay Thai";
+                    labelTituloModalidade.Text = "Área do Muay Thai";
                     break;                
             }
         }

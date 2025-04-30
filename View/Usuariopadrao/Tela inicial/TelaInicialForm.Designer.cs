@@ -40,7 +40,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MsgTemporariaPagamento = new System.Windows.Forms.Label();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
-            this.labelTitulo = new System.Windows.Forms.Label();
+            this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
@@ -178,16 +178,19 @@
             // pictureBoxVoltar
             // 
             this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
+
             this.pictureBoxVoltar.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxVoltar.Name = "pictureBoxVoltar";
             this.pictureBoxVoltar.Size = new System.Drawing.Size(69, 56);
+
             this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVoltar.TabIndex = 27;
             this.pictureBoxVoltar.TabStop = false;
             this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
             // 
-            // labelTitulo
+            // labelTituloModalidade
             // 
+
             this.labelTitulo.AutoSize = true;
             this.labelTitulo.BackColor = System.Drawing.Color.Transparent;
             this.labelTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -195,6 +198,7 @@
             this.labelTitulo.Name = "labelTitulo";
             this.labelTitulo.Size = new System.Drawing.Size(0, 24);
             this.labelTitulo.TabIndex = 23;
+
             // 
             // MsgExplicacaoAlterarDados1
             // 
@@ -216,7 +220,9 @@
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pictureBoxVoltar);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
+
             this.Controls.Add(this.labelTitulo);
+
             this.Controls.Add(this.MsgTemporariaPagamento);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dataGridViewListaGeralAlunos);
@@ -255,7 +261,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label MsgTemporariaPagamento;
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
-        private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
     }
 }
