@@ -44,6 +44,8 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
             btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
 
+           
+
         }
      private void VisibilidadeTelaUsuario(Usuario usuario)
         {
@@ -114,12 +116,14 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
                 var telaInicial = new TelaInicialForm(2); 
                 telaInicial.Show();
                 this.Hide();
+
             }
         
         }
 
         private void BtnFuncional_Click(object sender, EventArgs e)
         {
+
             if (BtnFuncional.Enabled)
             {
                 var telaInicial = new TelaInicialForm(3); 
