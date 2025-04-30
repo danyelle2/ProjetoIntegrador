@@ -33,7 +33,8 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
-                cmd.Parameters.AddWithValue("@modalidade", idModalidade);
+                // ARRUMAR ISSO AQUI GERANDO NA LEITURA DO GRÁFICO
+                cmd.Parameters.AddWithValue("@id_modalidade", idModalidade);
                 _databaseService.OpenConnection();
                 using (var reader = cmd.ExecuteReader())
                 {

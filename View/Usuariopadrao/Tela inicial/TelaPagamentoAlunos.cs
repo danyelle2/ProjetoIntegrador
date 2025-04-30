@@ -28,7 +28,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         private void CarregarAlunos()
         {
             var alunosAtivos = _repositorioPagamento.AlunosAtivos();
-            // fiz com ajuda!!
+           
             if (alunosAtivos != null)
             {
                 dataGridViewpagamento.DataSource = alunosAtivos;
@@ -43,7 +43,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             if (dataGridViewpagamento.Columns.Contains("Id"))
             {
-                dataGridViewpagamento.Columns["Id"].Visible = false; // Esconde o Id
+                dataGridViewpagamento.Columns["Id"].Visible = false; 
             }
 
             if (dataGridViewpagamento.Columns.Contains("Nome"))
@@ -63,14 +63,14 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
             {
-                if (row.Cells["StatusPagamento"].Value != null &&
-                    bool.TryParse(row.Cells["StatusPagamento"].Value.ToString(), out bool statusPagamento))
+                if (row.Cells["StatusPagamento"].Value is bool statusPagamento)
                 {
                     row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.LightGreen : Color.LightCoral;
                     row.Cells["StatusPagamento"].Style.ForeColor = Color.Black;
                 }
             }
         }
+
 
         private void buttonPagamentoRealizado_Click(object sender, EventArgs e)
         {
