@@ -71,10 +71,11 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {            // PERGUNTAR SE DEIXA TELA INTEIRA OU SÓ DIALOGO MESMO IGUAL AS OUTRAS.
-            // SE A TELA FICAR MAIOR COLOCAR O BOTÃO DE VOLTAR OU ALGO DO TIPO
-            TelaGraficoForms telaGrafico = new TelaGraficoForms();
-            telaGrafico.ShowDialog();
+        {
+            var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
+            telaGrafico.Show();
+            this.Hide();
+
         }
         private void CarregarAlunos()
         {
