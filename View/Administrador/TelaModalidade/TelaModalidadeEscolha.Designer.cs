@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelNomeUser = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,7 +46,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.labelNomeUser);
             this.panel2.Controls.Add(this.labelTextoNaTela);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
@@ -55,22 +55,21 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // labelNomeUser
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(107, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 18);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "label1";
+            this.labelNomeUser.AutoSize = true;
+            this.labelNomeUser.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelNomeUser.Location = new System.Drawing.Point(107, 22);
+            this.labelNomeUser.Name = "labelNomeUser";
+            this.labelNomeUser.Size = new System.Drawing.Size(0, 18);
+            this.labelNomeUser.TabIndex = 27;
             // 
             // labelTextoNaTela
             // 
             this.labelTextoNaTela.AutoSize = true;
             this.labelTextoNaTela.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(9, 102);
+            this.labelTextoNaTela.Location = new System.Drawing.Point(522, 97);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
             this.labelTextoNaTela.Size = new System.Drawing.Size(0, 33);
             this.labelTextoNaTela.TabIndex = 26;
@@ -209,6 +208,6 @@
         private System.Windows.Forms.Button BtnFuncional;
         private System.Windows.Forms.Button BtnZumba;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelNomeUser;
     }
 }
