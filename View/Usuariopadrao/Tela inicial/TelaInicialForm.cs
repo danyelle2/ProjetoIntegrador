@@ -55,7 +55,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBoxAlterarDadosDesaparece(object sender, EventArgs e)
         {
-            MsgExplicacaoAlterarDados.Visible = false;
+            MsgExplicacaoAlterarDados1.Visible = false;
 
         }       
 
@@ -167,6 +167,11 @@ namespace ProjetoIntegrador.View
     }
 
         private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MsgExplicacaoGrafico_Click(object sender, EventArgs e)
         {
 
         }
