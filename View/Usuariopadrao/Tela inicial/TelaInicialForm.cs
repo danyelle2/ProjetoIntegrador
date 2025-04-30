@@ -21,7 +21,9 @@ namespace ProjetoIntegrador.View
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
-            
+            idModalidadeSelecionada = idModalidade;
+
+
         }   
        
         

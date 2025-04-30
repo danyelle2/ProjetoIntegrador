@@ -56,14 +56,14 @@ namespace ProjetoIntegrador.Controller.Aluno
             var resultado = new Dictionary<int, int>();
 
             string query = @"
-        SELECT MONTH(a.data_saida) AS mes, COUNT(*) AS saidas 
-        FROM aluno a 
-        JOIN usuario u ON a.id_usuario = u.id_usuario 
-        JOIN modalidade m ON u.id_modalidade = m.id_modalidade 
-        WHERE a.data_saida IS NOT NULL 
-          AND YEAR(a.data_saida) = YEAR(CURDATE())
-          AND m.id_modalidade = @id_modalidade
-        GROUP BY MONTH(a.data_saida)";
+                 SELECT MONTH(a.data_saida) AS mes, COUNT(*) AS saidas 
+                 FROM aluno a 
+                 JOIN usuario u ON a.id_usuario = u.id_usuario 
+                 JOIN modalidade m ON u.id_modalidade = m.id_modalidade 
+                 WHERE a.data_saida IS NOT NULL 
+                 AND YEAR(a.data_saida) = YEAR(CURDATE())
+                 AND m.id_modalidade = @id_modalidade
+                 GROUP BY MONTH(a.data_saida)";
 
             using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
@@ -116,10 +116,10 @@ namespace ProjetoIntegrador.Controller.Aluno
                 YEAR(a.data_entrada) AS Ano,
                 COUNT(CASE WHEN a.data_entrada IS NOT NULL THEN 1 END) AS Entradas,
                 COUNT(CASE WHEN a.data_saida IS NOT NULL THEN 1 END) AS Saidas
-            FROM aluno a
-            JOIN usuario u ON a.id_usuario = u.id_usuario
-            JOIN modalidade m ON u.id_modalidade = m.id_modalidade
-            WHERE m.id_modalidade = @id_modalidade";
+                  FROM aluno a
+                  JOIN usuario u ON a.id_usuario = u.id_usuario
+                  JOIN modalidade m ON u.id_modalidade = m.id_modalidade
+                  WHERE m.id_modalidade = @id_modalidade";
 
                 if (anoInicial.HasValue)
                     query += " AND YEAR(a.data_entrada) >= @anoInicial ";
