@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.Services;
 using ModelAluno = ProjetoIntegrador.Model.Aluno;
@@ -22,8 +21,8 @@ namespace ProjetoIntegrador.Controller.Repositorio
             string query = @"
                 SELECT id_aluno, nome, status_aluno, status_pagamento 
                 FROM aluno 
-                WHERE status_aluno = 1"
-            ;
+                WHERE status_aluno = 1;
+            ";
 
             using (MySqlDataReader reader = _databaseService.ExecuteQuery(query))
             {
@@ -45,10 +44,10 @@ namespace ProjetoIntegrador.Controller.Repositorio
         public void AtualizarStatusPagamento(int idAluno, bool statusPagamento)
         {
             string query = @"
-                UPDATE pagamento 
-                SET data_pagamento = NOW(), status_pagamento = @status 
-                WHERE id_aluno = @idAluno"
-            ;
+                UPDATE aluno 
+                SET status_pagamento = @status 
+                WHERE id_aluno = @idAluno;
+            ";
 
             MySqlParameter[] parameters =
             {
