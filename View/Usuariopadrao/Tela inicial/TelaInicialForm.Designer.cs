@@ -195,7 +195,9 @@
             this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
             this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloModalidade.Location = new System.Drawing.Point(419, 26);
-            this.labelTituloModalidade.Name = "labelTitulo";
+            this.labelTituloModalidade.Name = "labelTituloModalidade";
+
+           
             this.labelTituloModalidade.Size = new System.Drawing.Size(0, 24);
             this.labelTituloModalidade.TabIndex = 23;
 
