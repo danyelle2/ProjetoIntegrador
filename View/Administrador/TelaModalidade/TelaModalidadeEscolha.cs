@@ -44,7 +44,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
             btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
 
-           
+            labelNomeUser.texte = (usuario.Nome);
 
         }
      private void VisibilidadeTelaUsuario(Usuario usuario)

@@ -191,13 +191,13 @@
             // labelTituloModalidade
             // 
 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(419, 26);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(0, 24);
-            this.labelTitulo.TabIndex = 23;
+            this.labelTituloModalidade.AutoSize = true;
+            this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
+            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloModalidade.Location = new System.Drawing.Point(419, 26);
+            this.labelTituloModalidade.Name = "labelTitulo";
+            this.labelTituloModalidade.Size = new System.Drawing.Size(0, 24);
+            this.labelTituloModalidade.TabIndex = 23;
 
             // 
             // MsgExplicacaoAlterarDados1
@@ -221,7 +221,7 @@
             this.Controls.Add(this.pictureBoxVoltar);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
 
-            this.Controls.Add(this.labelTitulo);
+            this.Controls.Add(this.labelTituloModalidade);
 
             this.Controls.Add(this.MsgTemporariaPagamento);
             this.Controls.Add(this.pictureBox3);

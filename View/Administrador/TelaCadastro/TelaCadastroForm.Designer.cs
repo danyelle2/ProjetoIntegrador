@@ -231,9 +231,9 @@
             this.msgTemporariaUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.msgTemporariaUsuario.Cursor = System.Windows.Forms.Cursors.Help;
             this.msgTemporariaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.msgTemporariaUsuario.Location = new System.Drawing.Point(196, 449);
+            this.msgTemporariaUsuario.Location = new System.Drawing.Point(196, 443);
             this.msgTemporariaUsuario.Name = "msgTemporariaUsuario";
-            this.msgTemporariaUsuario.Size = new System.Drawing.Size(55, 46);
+            this.msgTemporariaUsuario.Size = new System.Drawing.Size(55, 52);
             this.msgTemporariaUsuario.TabIndex = 67;
             this.msgTemporariaUsuario.UseVisualStyleBackColor = false;
             this.msgTemporariaUsuario.MouseLeave += new System.EventHandler(this.msgTemporariaUsuarioDesaparece);
@@ -246,9 +246,9 @@
             this.btnModalidadeCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnModalidadeCadastro.Cursor = System.Windows.Forms.Cursors.Help;
             this.btnModalidadeCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnModalidadeCadastro.Location = new System.Drawing.Point(225, 555);
+            this.btnModalidadeCadastro.Location = new System.Drawing.Point(226, 557);
             this.btnModalidadeCadastro.Name = "btnModalidadeCadastro";
-            this.btnModalidadeCadastro.Size = new System.Drawing.Size(55, 44);
+            this.btnModalidadeCadastro.Size = new System.Drawing.Size(60, 54);
             this.btnModalidadeCadastro.TabIndex = 68;
             this.btnModalidadeCadastro.UseVisualStyleBackColor = false;
             this.btnModalidadeCadastro.MouseLeave += new System.EventHandler(this.btnModalidadeCadastroDesapareceText);
