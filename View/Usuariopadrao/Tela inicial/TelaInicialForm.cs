@@ -74,6 +74,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+          int  IdModalidade = 1;
             var telaGrafico = new TelaGraficoForms(IdModalidade);
             telaGrafico.Show();
             this.Hide();
