@@ -17,7 +17,7 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaInicialForm : Form
     {
-
+        private readonly int idModalidadeSelecionada;
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
@@ -72,7 +72,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
+            var telaGrafico = new TelaGraficoForms(IdModalidade);
             telaGrafico.Show();
             this.Hide();
 

@@ -11,7 +11,7 @@ namespace ProjetoIntegrador.Controller
     {
         public void CarregarGraficoMensal(RepositorioGrafico repositorio, Chart chart, ProjetoIntegrador.Model.Usuario usuario)
         {
-            var dadosMensais = repositorio.ObterMovimentacaoPorMes(SessionUser.userLogado.Modalidade);
+            var dadosMensais = repositorio.ObterMovimentacaoPorMes(SessionUser.userLogado.IdModalidade);
 
             chart.Series.Clear();
 
@@ -48,7 +48,7 @@ namespace ProjetoIntegrador.Controller
 
         public void CarregarGraficoAnual(RepositorioGrafico repositorio, Chart chart, Model.Usuario usuario)
         {
-            var dadosAnuais = repositorio.ObterMovimentacaoPorAno(SessionUser.userLogado.Modalidade);
+            var dadosAnuais = repositorio.ObterMovimentacaoPorAno(SessionUser.userLogado.IdModalidade);
 
             chart.Series.Clear();
 
