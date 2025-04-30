@@ -42,6 +42,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
             this.labelTitulo = new System.Windows.Forms.Label();
+            this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
@@ -55,7 +56,7 @@
             // 
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(42, 574);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(206, 688);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoGrafico.TabIndex = 14;
@@ -65,7 +66,7 @@
             // 
             this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados.AutoSize = true;
-            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(42, 424);
+            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(206, 543);
             this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
             this.MsgExplicacaoAlterarDados.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoAlterarDados.TabIndex = 13;
@@ -76,7 +77,7 @@
             // 
             this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(42, 257);
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(230, 231);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
             this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(16, 13);
             this.MsgExplicacaoCadastro.TabIndex = 12;
@@ -199,6 +200,16 @@
             this.labelTitulo.TabIndex = 23;
             this.labelTitulo.Text = "TEXTO TITULO DA PAGINA";
             // 
+            // MsgExplicacaoAlterarDados1
+            // 
+            this.MsgExplicacaoAlterarDados1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MsgExplicacaoAlterarDados1.AutoSize = true;
+            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(230, 387);
+            this.MsgExplicacaoAlterarDados1.Name = "MsgExplicacaoAlterarDados1";
+            this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(16, 13);
+            this.MsgExplicacaoAlterarDados1.TabIndex = 24;
+            this.MsgExplicacaoAlterarDados1.Text = "...";
+            // 
             // TelaInicialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +217,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.MsgExplicacaoAlterarDados1);
             this.Controls.Add(this.labelTitulo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MsgTemporariaPagamento);
@@ -249,5 +261,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
         private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
     }
 }
