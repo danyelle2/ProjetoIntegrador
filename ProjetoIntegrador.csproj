@@ -119,6 +119,7 @@
     <Compile Include="Model\Criptografia.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Modalidade.cs" />
+    <Compile Include="Model\Pagamento.cs" />
     <Compile Include="Model\TipoUsuario.cs" />
     <Compile Include="Services\AutenticacaoUsuario.cs" />
     <Compile Include="Services\DatabaseService.cs" />

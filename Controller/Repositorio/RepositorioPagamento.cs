@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
@@ -51,24 +52,25 @@ namespace ProjetoIntegrador.Controller.Repositorio
         }
 
 
-        public void AtualizarStatusPagamento(int idAluno, bool statusPagamento)
+        public void AtualizarStatusPagamento(int idPagamento, bool statusPagamento)
         {
             string query = @"
-               string query = @""
-    UPDATE pagamento 
-    SET status_pagamento = @status 
-    WHERE id_aluno = @idAluno;
-"";
+        UPDATE pagamento 
+        SET status_pagamento = @status, 
+            data_pagamento = @data
+        WHERE id_pagamento = @idPagamento;
+    ";
 
-            ";
+            var dataPagamento = statusPagamento ? DateTime.Now.Date : (object)DBNull.Value;
 
             MySqlParameter[] parameters =
             {
-                new MySqlParameter("@status", statusPagamento),
-                new MySqlParameter("@idAluno", idAluno),
-            };
+        new MySqlParameter("@status", statusPagamento),
+        new MySqlParameter("@data", dataPagamento),
+        new MySqlParameter("@idPagamento", idPagamento),
+    };
 
             _databaseService.ExecuteNonQuery(query, parameters);
         }
     }
-}
+    }
