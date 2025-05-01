@@ -186,6 +186,26 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarAlunos();
+
+        }
+
+        private void FiltrarAlunos()
+        {
+            string pesquisa = textBox1.Text.Trim();
+
+            var repositorioAluno = new RepositorioAluno(new DatabaseService());
+            var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
+
+            var alunosFiltrados = listaAlunos
+                .Where(a => a.StatusAtivo && a.Nome.Contains(pesquisa, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            dataGridViewListaGeralAlunos.DataSource = alunosFiltrados;
+        }
     }
     }
 

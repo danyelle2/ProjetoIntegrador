@@ -42,6 +42,7 @@
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
             this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
@@ -55,10 +56,10 @@
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
             this.MsgExplicacaoGrafico.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoGrafico.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.MsgExplicacaoGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(188, 554);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
-            this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(0, 17);
+            this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoGrafico.TabIndex = 14;
             this.MsgExplicacaoGrafico.Click += new System.EventHandler(this.MsgExplicacaoGrafico_Click);
             // 
@@ -67,10 +68,10 @@
             this.msgpagamentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.msgpagamentos.AutoSize = true;
             this.msgpagamentos.BackColor = System.Drawing.Color.Transparent;
-            this.msgpagamentos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.msgpagamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.msgpagamentos.Location = new System.Drawing.Point(188, 710);
             this.msgpagamentos.Name = "msgpagamentos";
-            this.msgpagamentos.Size = new System.Drawing.Size(0, 17);
+            this.msgpagamentos.Size = new System.Drawing.Size(0, 18);
             this.msgpagamentos.TabIndex = 13;
             this.msgpagamentos.Click += new System.EventHandler(this.MsgExplicacaoAlterarDados_Click);
             this.msgpagamentos.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
@@ -81,10 +82,10 @@
             this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
             this.MsgExplicacaoCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoCadastro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgExplicacaoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(188, 240);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
-            this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(0, 17);
+            this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoCadastro.TabIndex = 12;
             // 
             // pictureBoxCadastroAlunos
@@ -136,9 +137,9 @@
             // 
             this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(655, 94);
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(688, 176);
             this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
-            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(682, 653);
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 551);
             this.dataGridViewListaGeralAlunos.TabIndex = 18;
             this.dataGridViewListaGeralAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -178,11 +179,9 @@
             // pictureBoxVoltar
             // 
             this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
-
             this.pictureBoxVoltar.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxVoltar.Name = "pictureBoxVoltar";
             this.pictureBoxVoltar.Size = new System.Drawing.Size(69, 56);
-
             this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVoltar.TabIndex = 27;
             this.pictureBoxVoltar.TabStop = false;
@@ -190,28 +189,36 @@
             // 
             // labelTituloModalidade
             // 
-
             this.labelTituloModalidade.AutoSize = true;
             this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
             this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloModalidade.Location = new System.Drawing.Point(419, 26);
             this.labelTituloModalidade.Name = "labelTituloModalidade";
-
-           
             this.labelTituloModalidade.Size = new System.Drawing.Size(0, 24);
             this.labelTituloModalidade.TabIndex = 23;
-
             // 
             // MsgExplicacaoAlterarDados1
             // 
             this.MsgExplicacaoAlterarDados1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados1.AutoSize = true;
             this.MsgExplicacaoAlterarDados1.BackColor = System.Drawing.Color.Transparent;
-            this.MsgExplicacaoAlterarDados1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 11.25F);
+            this.MsgExplicacaoAlterarDados1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
             this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(188, 404);
             this.MsgExplicacaoAlterarDados1.Name = "MsgExplicacaoAlterarDados1";
-            this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(0, 17);
+            this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoAlterarDados1.TabIndex = 24;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(757, 118);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(451, 33);
+            this.textBox1.TabIndex = 28;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // TelaInicialForm
             // 
@@ -220,11 +227,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBoxVoltar);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
-
             this.Controls.Add(this.labelTituloModalidade);
-
             this.Controls.Add(this.MsgTemporariaPagamento);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dataGridViewListaGeralAlunos);
@@ -265,5 +271,6 @@
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
         private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
