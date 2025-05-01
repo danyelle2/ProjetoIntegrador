@@ -175,7 +175,7 @@ namespace ProjetoIntegrador.View
         
 
 
-    }
+    
 
         private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
         {

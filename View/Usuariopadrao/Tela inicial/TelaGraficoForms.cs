@@ -88,7 +88,7 @@ namespace ProjetoIntegrador.View
             var saidaAno = new Series("Saídas")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.AliceBlue,
+                Color = Color.DarkBlue,
                 BorderWidth = 3
             };
 
@@ -122,6 +122,16 @@ namespace ProjetoIntegrador.View
         }
 
         private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -58,13 +58,13 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             string query = @"
                 SELECT MONTH(a.data_saida) AS mes, COUNT(*) AS saidas 
-FROM aluno a 
-WHERE a.data_saida IS NOT NULL 
-  AND YEAR(a.data_saida) = YEAR(CURDATE())
-  AND a.id_modalidade = @id_modalidade
-GROUP BY MONTH(a.data_saida)";
+                FROM aluno a 
+                    WHERE a.data_saida IS NOT NULL 
+                 AND YEAR(a.data_saida) = YEAR(CURDATE())
+                 AND a.id_modalidade = @id_modalidade
+                GROUP BY MONTH(a.data_saida)";
 
-            using (var cmd = new MySqlCommand(query, _databaseService.Connection))
+              using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
                 cmd.Parameters.AddWithValue("@id_modalidade", idModalidade);
 
@@ -79,7 +79,7 @@ GROUP BY MONTH(a.data_saida)";
                     }
                 }
                 _databaseService.CloseConnection();
-            }
+              }
 
             return resultado;
         }
@@ -111,17 +111,17 @@ GROUP BY MONTH(a.data_saida)";
             try
             {
                 string query = @"
-            SELECT 
-    YEAR(a.data_entrada) AS Ano,
-    COUNT(CASE WHEN a.data_entrada IS NOT NULL THEN 1 END) AS Entradas,
-    COUNT(CASE WHEN a.data_saida IS NOT NULL THEN 1 END) AS Saidas
-FROM aluno a
-WHERE a.id_modalidade = @id_modalidade";
+                      SELECT 
+                        YEAR(a.data_entrada) AS Ano,
+                         COUNT(CASE WHEN a.data_entrada IS NOT NULL THEN 1 END) AS Entradas,
+                          COUNT(CASE WHEN a.data_saida IS NOT NULL THEN 1 END) AS Saidas
+                        FROM aluno a
+                        WHERE a.id_modalidade = @id_modalidade";
 
-                if (anoInicial.HasValue)
+                    if (anoInicial.HasValue)
                     query += " AND YEAR(a.data_entrada) >= @anoInicial ";
 
-                if (anoFinal.HasValue)
+                        if (anoFinal.HasValue)
                     query += " AND YEAR(a.data_entrada) <= @anoFinal ";
 
                 query += " GROUP BY YEAR(a.data_entrada) ORDER BY Ano";
