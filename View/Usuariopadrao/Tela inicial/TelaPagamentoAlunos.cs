@@ -11,6 +11,7 @@ using System.Windows.Forms;
 namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 {
     public partial class TelaPagamentoAlunos : Form
+        //CORRIGIR ESSA TELA TA DANDO ERRO DESCOBRIR O MOTIVO
     {
         private readonly RepositorioPagamento _repositorioPagamento;
         private readonly int _idModalidade;

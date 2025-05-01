@@ -38,9 +38,9 @@
             // dataGridViewpagamento
             // 
             this.dataGridViewpagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewpagamento.Location = new System.Drawing.Point(187, 69);
+            this.dataGridViewpagamento.Location = new System.Drawing.Point(149, 72);
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
-            this.dataGridViewpagamento.Size = new System.Drawing.Size(464, 413);
+            this.dataGridViewpagamento.Size = new System.Drawing.Size(547, 413);
             this.dataGridViewpagamento.TabIndex = 22;
             // 
             // buttonPagamentoRealizado
