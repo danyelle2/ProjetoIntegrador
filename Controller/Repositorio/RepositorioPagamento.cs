@@ -21,13 +21,20 @@ namespace ProjetoIntegrador.Controller.Repositorio
         {
             List<Pagamento> listaPagamentos = new List<Pagamento>();
 
-            string query = @"
-        SELECT p.id_pagamento, p.id_aluno, p.status_pagamento, p.data_pagamento
-        FROM pagamento p
-        INNER JOIN aluno a ON a.id_aluno = p.id_aluno
-        INNER JOIN modalidade u ON u.id_modalidade = a.id_modalidade
-        WHERE a.status_aluno = 1 AND u.id_modalidade = @idModalidade;
-    ";
+            string query = @"SELECT
+            p.id_pagamento,
+            p.id_aluno,
+            a.nome, -- Usando o nome da coluna correto do MySQL
+            p.status_pagamento,
+            p.data_pagamento
+        FROM
+            pagamento p
+        INNER JOIN
+            aluno a ON a.id_aluno = p.id_aluno
+        INNER JOIN
+            modalidade u ON u.id_modalidade = a.id_modalidade
+        WHERE
+            a.status_aluno = 1 AND u.id_modalidade = @idModalidade;";
 
             MySqlParameter[] parameters =
             {
@@ -42,6 +49,7 @@ namespace ProjetoIntegrador.Controller.Repositorio
                     {
                         IdPagamento = reader.GetInt32("id_pagamento"),
                         IdAluno = reader.GetInt32("id_aluno"),
+                        NomeAluno = reader.GetString("nome"), 
                         StatusPagamento = reader.GetBoolean("status_pagamento"),
                         DataPagamento = reader.IsDBNull(reader.GetOrdinal("data_pagamento")) ? (DateTime?)null : reader.GetDateTime("data_pagamento")
                     });

@@ -55,7 +55,7 @@
             // 
             // textBoxNomeResponsavel
             // 
-            this.textBoxNomeResponsavel.Location = new System.Drawing.Point(436, 233);
+            this.textBoxNomeResponsavel.Location = new System.Drawing.Point(418, 284);
             this.textBoxNomeResponsavel.Multiline = true;
             this.textBoxNomeResponsavel.Name = "textBoxNomeResponsavel";
             this.textBoxNomeResponsavel.Size = new System.Drawing.Size(140, 23);
@@ -67,7 +67,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(439, 192);
+            this.label8.Location = new System.Drawing.Point(421, 243);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 24);
             this.label8.TabIndex = 91;
@@ -76,7 +76,7 @@
             // 
             // textBoxIdade
             // 
-            this.textBoxIdade.Location = new System.Drawing.Point(235, 318);
+            this.textBoxIdade.Location = new System.Drawing.Point(217, 369);
             this.textBoxIdade.Multiline = true;
             this.textBoxIdade.Name = "textBoxIdade";
             this.textBoxIdade.Size = new System.Drawing.Size(140, 23);
@@ -88,7 +88,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(234, 279);
+            this.label7.Location = new System.Drawing.Point(216, 330);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 24);
             this.label7.TabIndex = 89;
@@ -100,14 +100,14 @@
             this.txtAssinaturaAluno.Items.AddRange(new object[] {
             "Mensal",
             "Anual"});
-            this.txtAssinaturaAluno.Location = new System.Drawing.Point(235, 235);
+            this.txtAssinaturaAluno.Location = new System.Drawing.Point(217, 286);
             this.txtAssinaturaAluno.Name = "txtAssinaturaAluno";
             this.txtAssinaturaAluno.Size = new System.Drawing.Size(140, 21);
             this.txtAssinaturaAluno.TabIndex = 88;
             // 
             // textBoxDataEntrada
             // 
-            this.textBoxDataEntrada.Location = new System.Drawing.Point(436, 56);
+            this.textBoxDataEntrada.Location = new System.Drawing.Point(418, 107);
             this.textBoxDataEntrada.Multiline = true;
             this.textBoxDataEntrada.Name = "textBoxDataEntrada";
             this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 23);
@@ -118,7 +118,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(439, 30);
+            this.label5.Location = new System.Drawing.Point(421, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 24);
             this.label5.TabIndex = 86;
@@ -127,7 +127,7 @@
             // 
             // txtTelefoneALuno
             // 
-            this.txtTelefoneALuno.Location = new System.Drawing.Point(235, 142);
+            this.txtTelefoneALuno.Location = new System.Drawing.Point(217, 193);
             this.txtTelefoneALuno.Multiline = true;
             this.txtTelefoneALuno.Name = "txtTelefoneALuno";
             this.txtTelefoneALuno.Size = new System.Drawing.Size(140, 23);
@@ -135,7 +135,7 @@
             // 
             // txtNomeAluno
             // 
-            this.txtNomeAluno.Location = new System.Drawing.Point(235, 56);
+            this.txtNomeAluno.Location = new System.Drawing.Point(217, 107);
             this.txtNomeAluno.Multiline = true;
             this.txtNomeAluno.Name = "txtNomeAluno";
             this.txtNomeAluno.Size = new System.Drawing.Size(140, 23);
@@ -144,7 +144,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(232, 302);
+            this.label4.Location = new System.Drawing.Point(214, 353);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
             this.label4.TabIndex = 82;
@@ -154,7 +154,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(234, 192);
+            this.label3.Location = new System.Drawing.Point(216, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 24);
             this.label3.TabIndex = 81;
@@ -165,7 +165,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(234, 103);
+            this.label2.Location = new System.Drawing.Point(216, 154);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 24);
             this.label2.TabIndex = 80;
@@ -177,7 +177,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(234, 30);
+            this.label1.Location = new System.Drawing.Point(216, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 24);
             this.label1.TabIndex = 79;
@@ -189,7 +189,7 @@
             this.textMsgErroIdade.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroIdade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMsgErroIdade.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroIdade.Location = new System.Drawing.Point(235, 347);
+            this.textMsgErroIdade.Location = new System.Drawing.Point(217, 398);
             this.textMsgErroIdade.Name = "textMsgErroIdade";
             this.textMsgErroIdade.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroIdade.TabIndex = 95;
@@ -200,7 +200,7 @@
             this.textMsgErroResponsavel.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMsgErroResponsavel.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroResponsavel.Location = new System.Drawing.Point(440, 261);
+            this.textMsgErroResponsavel.Location = new System.Drawing.Point(422, 312);
             this.textMsgErroResponsavel.Name = "textMsgErroResponsavel";
             this.textMsgErroResponsavel.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroResponsavel.TabIndex = 96;
@@ -211,7 +211,7 @@
             this.textMsgErroTelefone.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMsgErroTelefone.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroTelefone.Location = new System.Drawing.Point(235, 168);
+            this.textMsgErroTelefone.Location = new System.Drawing.Point(217, 219);
             this.textMsgErroTelefone.Name = "textMsgErroTelefone";
             this.textMsgErroTelefone.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroTelefone.TabIndex = 97;
@@ -222,7 +222,7 @@
             this.textMsgErroData.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMsgErroData.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroData.Location = new System.Drawing.Point(440, 82);
+            this.textMsgErroData.Location = new System.Drawing.Point(422, 133);
             this.textMsgErroData.Name = "textMsgErroData";
             this.textMsgErroData.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroData.TabIndex = 98;
@@ -232,7 +232,7 @@
             this.comboBoxStatusAluno.FormattingEnabled = true;
             this.comboBoxStatusAluno.Items.AddRange(new object[] {
             "Ativo"});
-            this.comboBoxStatusAluno.Location = new System.Drawing.Point(436, 142);
+            this.comboBoxStatusAluno.Location = new System.Drawing.Point(418, 193);
             this.comboBoxStatusAluno.Name = "comboBoxStatusAluno";
             this.comboBoxStatusAluno.Size = new System.Drawing.Size(140, 21);
             this.comboBoxStatusAluno.TabIndex = 113;
@@ -243,7 +243,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(439, 103);
+            this.label6.Location = new System.Drawing.Point(421, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 24);
             this.label6.TabIndex = 112;
@@ -255,7 +255,7 @@
             this.labelMsgErroPlano.BackColor = System.Drawing.Color.Transparent;
             this.labelMsgErroPlano.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMsgErroPlano.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroPlano.Location = new System.Drawing.Point(235, 259);
+            this.labelMsgErroPlano.Location = new System.Drawing.Point(217, 310);
             this.labelMsgErroPlano.Name = "labelMsgErroPlano";
             this.labelMsgErroPlano.Size = new System.Drawing.Size(0, 16);
             this.labelMsgErroPlano.TabIndex = 114;
@@ -266,7 +266,7 @@
             this.labelMsgErroStatusAluno.BackColor = System.Drawing.Color.Transparent;
             this.labelMsgErroStatusAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMsgErroStatusAluno.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroStatusAluno.Location = new System.Drawing.Point(440, 171);
+            this.labelMsgErroStatusAluno.Location = new System.Drawing.Point(422, 222);
             this.labelMsgErroStatusAluno.Name = "labelMsgErroStatusAluno";
             this.labelMsgErroStatusAluno.Size = new System.Drawing.Size(0, 16);
             this.labelMsgErroStatusAluno.TabIndex = 115;
@@ -275,6 +275,8 @@
             // 
             this.btnCadastrarAluno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCadastrarAluno.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAluno.BackgroundImage")));
+            this.btnCadastrarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCadastrarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastrarAluno.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnCadastrarAluno.FlatAppearance.BorderSize = 0;
@@ -283,9 +285,9 @@
             this.btnCadastrarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnCadastrarAluno.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarAluno.Location = new System.Drawing.Point(650, 369);
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(561, 430);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
-            this.btnCadastrarAluno.Size = new System.Drawing.Size(114, 37);
+            this.btnCadastrarAluno.Size = new System.Drawing.Size(137, 59);
             this.btnCadastrarAluno.TabIndex = 85;
             this.btnCadastrarAluno.UseVisualStyleBackColor = false;
             this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
@@ -296,8 +298,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(710, 554);
             this.Controls.Add(this.labelMsgErroStatusAluno);
             this.Controls.Add(this.labelMsgErroPlano);
             this.Controls.Add(this.comboBoxStatusAluno);
@@ -320,9 +322,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Location = new System.Drawing.Point(238, 118);
             this.Name = "TelaCadastroAlunos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "TelaCadastroAlunos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.TelaCadastroAlunos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

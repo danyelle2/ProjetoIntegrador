@@ -11,7 +11,6 @@ using System.Windows.Forms;
 namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 {
     public partial class TelaPagamentoAlunos : Form
-        //CORRIGIR ESSA TELA TA DANDO ERRO DESCOBRIR O MOTIVO
     {
         private readonly RepositorioPagamento _repositorioPagamento;
         private readonly int _idModalidade;
@@ -51,8 +50,14 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 
             if (dataGridViewpagamento.Columns.Contains("IdAluno"))
             {
-                dataGridViewpagamento.Columns["IdAluno"].HeaderText = "ID do Aluno";
+                dataGridViewpagamento.Columns["IdAluno"].HeaderText = "ID";
+                dataGridViewpagamento.Columns["IdAluno"].Width = 40; 
             }
+            if (dataGridViewpagamento.Columns.Contains("NomeAluno"))
+            {
+                dataGridViewpagamento.Columns["NomeAluno"].HeaderText = "Nome";
+            }
+
 
             if (dataGridViewpagamento.Columns.Contains("StatusPagamento"))
             {
@@ -108,6 +113,11 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
             }
 
             CarregarPagamentos();
+        }
+
+        private void dataGridViewpagamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
