@@ -29,8 +29,8 @@ namespace ProjetoIntegrador.Controller.Repositorio
 
             MySqlParameter[] parameters =
             {
-        new MySqlParameter("@idModalidade", IdModalidade),
-    };
+        new MySqlParameter("@idModalidade", idModalidade)
+            };
 
             using (MySqlDataReader reader = _databaseService.ExecuteQuery(query, parameters))
             {
