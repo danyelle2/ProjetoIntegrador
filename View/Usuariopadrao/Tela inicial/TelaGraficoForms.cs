@@ -118,7 +118,9 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           
+            TelaInicialForm telainicial = new TelaInicialForm(idModalidadeSelecionada);
+            telainicial.Show();
+            this.Hide();
         }
 
         private void chart1_Click(object sender, EventArgs e)

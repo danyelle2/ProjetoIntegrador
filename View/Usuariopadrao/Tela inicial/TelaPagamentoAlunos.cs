@@ -25,7 +25,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)
         {
-            dataGridViewpagamento.BackgroundColor = Color.WhiteSmoke;
+            dataGridViewpagamento.BackgroundColor = Color.Gray;
 
             dataGridViewpagamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             CarregarPagamentos();
@@ -116,6 +116,11 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         }
 
         private void dataGridViewpagamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

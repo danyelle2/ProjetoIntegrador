@@ -39,10 +39,11 @@
             // 
             // dataGridViewpagamento
             // 
+            this.dataGridViewpagamento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewpagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewpagamento.Location = new System.Drawing.Point(209, 104);
+            this.dataGridViewpagamento.Location = new System.Drawing.Point(82, 111);
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
-            this.dataGridViewpagamento.Size = new System.Drawing.Size(448, 413);
+            this.dataGridViewpagamento.Size = new System.Drawing.Size(477, 397);
             this.dataGridViewpagamento.TabIndex = 22;
             this.dataGridViewpagamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpagamento_CellContentClick);
             // 
@@ -57,9 +58,9 @@
             this.buttonPagamentoRealizado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPagamentoRealizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPagamentoRealizado.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(677, 161);
+            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(81, 566);
             this.buttonPagamentoRealizado.Name = "buttonPagamentoRealizado";
-            this.buttonPagamentoRealizado.Size = new System.Drawing.Size(132, 46);
+            this.buttonPagamentoRealizado.Size = new System.Drawing.Size(132, 42);
             this.buttonPagamentoRealizado.TabIndex = 24;
             this.buttonPagamentoRealizado.UseVisualStyleBackColor = false;
             this.buttonPagamentoRealizado.Click += new System.EventHandler(this.buttonPagamentoRealizado_Click);
@@ -74,9 +75,9 @@
             this.buttonPendentePagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPendentePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPendentePagamento.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPendentePagamento.Location = new System.Drawing.Point(677, 314);
+            this.buttonPendentePagamento.Location = new System.Drawing.Point(423, 563);
             this.buttonPendentePagamento.Name = "buttonPendentePagamento";
-            this.buttonPendentePagamento.Size = new System.Drawing.Size(132, 51);
+            this.buttonPendentePagamento.Size = new System.Drawing.Size(136, 48);
             this.buttonPendentePagamento.TabIndex = 23;
             this.buttonPendentePagamento.UseVisualStyleBackColor = false;
             this.buttonPendentePagamento.Click += new System.EventHandler(this.buttonPendentePagamento_Click);
@@ -85,11 +86,14 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(194, 31);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(44, 80);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(477, 500);
+            this.pictureBox1.Size = new System.Drawing.Size(547, 463);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // TelaPagamentoAlunos
             // 
@@ -97,7 +101,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(821, 554);
+            this.ClientSize = new System.Drawing.Size(651, 637);
             this.Controls.Add(this.buttonPagamentoRealizado);
             this.Controls.Add(this.buttonPendentePagamento);
             this.Controls.Add(this.dataGridViewpagamento);
