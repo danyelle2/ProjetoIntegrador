@@ -1,5 +1,6 @@
 ﻿using ProjetoIntegrador.Controller.Aluno;
 using ProjetoIntegrador.Controller.Repositorio;
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
 using System.Data;
@@ -12,10 +13,13 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
     public partial class TelaPagamentoAlunos : Form
     {
         private readonly RepositorioPagamento _repositorioPagamento;
+        private readonly int _idModalidade;
 
-        public TelaPagamentoAlunos()
+        public TelaPagamentoAlunos(int idModalidade)
         {
             InitializeComponent();
+            _idModalidade = idModalidade;
+
             _repositorioPagamento = new RepositorioPagamento(new DatabaseService());
         }
 
@@ -27,17 +31,15 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 
         private void CarregarAlunos()
         {
-            var alunosAtivos = _repositorioPagamento.AlunosAtivos();
-           
+            var alunosAtivos = _repositorioPagamento.AlunosAtivos(_idModalidade);
             if (alunosAtivos != null)
             {
                 dataGridViewpagamento.DataSource = alunosAtivos;
-
                 ConfigurarColunas();
-
                 AplicarFormatoStatusPagamento();
             }
         }
+
 
         private void ConfigurarColunas()
         {

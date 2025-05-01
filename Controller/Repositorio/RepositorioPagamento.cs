@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using ModelAluno = ProjetoIntegrador.Model.Aluno;
+using ModelModalidade = ProjetoIntegrador.Model.Modalidade;
 
 namespace ProjetoIntegrador.Controller.Repositorio
 {
@@ -14,17 +16,23 @@ namespace ProjetoIntegrador.Controller.Repositorio
             _databaseService = databaseService;
         }
 
-        public List<ModelAluno> AlunosAtivos()
+        public List<ModelAluno> AlunosAtivos(int idModalidade)
         {
             List<ModelAluno> lista = new List<ModelAluno>();
 
             string query = @"
-                SELECT id_aluno, nome, status_aluno, status_pagamento 
-                FROM aluno 
-                WHERE status_aluno = 1;
-            ";
+        SELECT a.id_aluno, a.nome, a.status_aluno, a.status_pagamento 
+        FROM aluno a
+        INNER JOIN usuario u ON a.id_usuario = u.id_usuario
+        WHERE a.status_aluno = 1 AND u.id_modalidade = @idModalidade;
+    ";
 
-            using (MySqlDataReader reader = _databaseService.ExecuteQuery(query))
+            MySqlParameter[] parameters =
+            {
+        new MySqlParameter("@idModalidade", IdModalidade),
+    };
+
+            using (MySqlDataReader reader = _databaseService.ExecuteQuery(query, parameters))
             {
                 while (reader.Read())
                 {

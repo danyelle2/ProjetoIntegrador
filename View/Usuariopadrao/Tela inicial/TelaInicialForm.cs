@@ -42,7 +42,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBoxCadastroAlunos_Click(object sender, EventArgs e)
         {
-            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos();
+            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada);
             telaCadastroAluno.ShowDialog();
         }
 
@@ -74,8 +74,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-          int  IdModalidade = 1;
-            var telaGrafico = new TelaGraficoForms(IdModalidade);
+            var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
             telaGrafico.Show();
             this.Hide();
 
@@ -134,8 +133,9 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos();
-                telapagamento.Show();
+            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
+            telapagamento.Show();
+
         }
 
         private void textBoxPesquisa_TextChanged(object sender, EventArgs e)

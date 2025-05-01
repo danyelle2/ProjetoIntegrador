@@ -1,5 +1,6 @@
 ﻿using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,14 @@ namespace ProjetoIntegrador.View
 
         BotoesCadastroAlunoController botoesCadastroAlunoController;
         LimparCamposController limparCamposController;
+        private readonly int _idModalidade;
 
-        public TelaCadastroAlunos()
+        public TelaCadastroAlunos(int idModalidade)
         {
             InitializeComponent();
             botoesCadastroAlunoController = new BotoesCadastroAlunoController();
             limparCamposController = new LimparCamposController();
+            _idModalidade = idModalidade;
 
         }
         BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
