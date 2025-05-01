@@ -201,7 +201,9 @@ namespace ProjetoIntegrador.View
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
 
             var alunosFiltrados = listaAlunos
-                .Where(a => a.StatusAtivo && a.Nome.Contains(pesquisa, StringComparison.OrdinalIgnoreCase))
+                .Where(a => a.StatusAtivo &&
+                            a.Nome != null &&
+                            a.Nome.IndexOf(pesquisa, StringComparison.OrdinalIgnoreCase) >= 0)
                 .ToList();
 
             dataGridViewListaGeralAlunos.DataSource = alunosFiltrados;
