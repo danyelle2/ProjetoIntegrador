@@ -94,10 +94,12 @@ namespace ProjetoIntegrador.View
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
+            Usuario usuario = SessionUser.userLogado;
+            label1UsuarioNome.Text = usuario.Nome;
+
             CarregarAlunos();
 
-            Usuario usuario = SessionUser.userLogado;
-           
+
             switch (usuario.IdModalidade)
             {
                 case 2:
@@ -108,7 +110,8 @@ namespace ProjetoIntegrador.View
                     break;
                 case 4:
                     labelTituloModalidade.Text = "Área do Muay Thai";
-                    break;                
+                    break;
+
             }
         }
 

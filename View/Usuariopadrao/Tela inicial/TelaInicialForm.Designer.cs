@@ -43,6 +43,7 @@
             this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1UsuarioNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
@@ -220,6 +221,17 @@
             this.textBox1.TabIndex = 28;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // label1UsuarioNome
+            // 
+            this.label1UsuarioNome.AutoSize = true;
+            this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
+            this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1UsuarioNome.Location = new System.Drawing.Point(1173, 26);
+            this.label1UsuarioNome.Name = "label1UsuarioNome";
+            this.label1UsuarioNome.Size = new System.Drawing.Size(0, 22);
+            this.label1UsuarioNome.TabIndex = 29;
+            // 
             // TelaInicialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -227,6 +239,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.label1UsuarioNome);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBoxVoltar);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
@@ -272,5 +285,6 @@
         private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1UsuarioNome;
     }
 }
