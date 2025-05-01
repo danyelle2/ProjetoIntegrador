@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1TextoModalidade = new System.Windows.Forms.Label();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@
             this.BtnFuncional = new System.Windows.Forms.Button();
             this.BtnZumba = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1TextoModalidade = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -56,6 +56,16 @@
             this.panel2.Size = new System.Drawing.Size(1360, 291);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label1TextoModalidade
+            // 
+            this.label1TextoModalidade.AutoSize = true;
+            this.label1TextoModalidade.Font = new System.Drawing.Font("Arial Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1TextoModalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1TextoModalidade.Location = new System.Drawing.Point(518, 99);
+            this.label1TextoModalidade.Name = "label1TextoModalidade";
+            this.label1TextoModalidade.Size = new System.Drawing.Size(0, 52);
+            this.label1TextoModalidade.TabIndex = 28;
             // 
             // labelNomeUser
             // 
@@ -89,9 +99,9 @@
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
             this.btnCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastro.Image")));
-            this.btnCadastro.Location = new System.Drawing.Point(582, 230);
+            this.btnCadastro.Location = new System.Drawing.Point(527, 229);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(356, 74);
+            this.btnCadastro.Size = new System.Drawing.Size(356, 88);
             this.btnCadastro.TabIndex = 25;
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
@@ -136,7 +146,7 @@
             this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFuncional.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncional.Image")));
-            this.BtnFuncional.Location = new System.Drawing.Point(505, 91);
+            this.BtnFuncional.Location = new System.Drawing.Point(518, 91);
             this.BtnFuncional.Name = "BtnFuncional";
             this.BtnFuncional.Size = new System.Drawing.Size(270, 66);
             this.BtnFuncional.TabIndex = 1;
@@ -147,14 +157,14 @@
             // 
             this.BtnZumba.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BtnZumba.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnZumba.BackgroundImage")));
-            this.BtnZumba.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnZumba.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.BtnZumba.FlatAppearance.BorderSize = 0;
             this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnZumba.Location = new System.Drawing.Point(88, 91);
             this.BtnZumba.Name = "BtnZumba";
-            this.BtnZumba.Size = new System.Drawing.Size(257, 66);
+            this.BtnZumba.Size = new System.Drawing.Size(269, 66);
             this.BtnZumba.TabIndex = 0;
             this.BtnZumba.UseVisualStyleBackColor = true;
             this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
@@ -180,15 +190,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1366, 745);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
-            // 
-            // label1TextoModalidade
-            // 
-            this.label1TextoModalidade.AutoSize = true;
-            this.label1TextoModalidade.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1TextoModalidade.Location = new System.Drawing.Point(518, 99);
-            this.label1TextoModalidade.Name = "label1TextoModalidade";
-            this.label1TextoModalidade.Size = new System.Drawing.Size(0, 44);
-            this.label1TextoModalidade.TabIndex = 28;
             // 
             // TelaModalidadeEscolha
             // 

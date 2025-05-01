@@ -93,6 +93,8 @@ namespace ProjetoIntegrador.View
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
+            dataGridViewListaGeralAlunos.BackgroundColor = Color.White;
+
             Usuario usuario = SessionUser.userLogado;
             label1UsuarioNome.Text = usuario.Nome;
 
