@@ -83,8 +83,14 @@ namespace ProjetoIntegrador.View
         {
             var repositorioAluno = new RepositorioAluno(new DatabaseService());
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
-            dataGridViewListaGeralAlunos.DataSource = listaAlunos;
-        }
+
+            var alunosAtivos = listaAlunos.Where(a => a.StatusAtivo).ToList();
+
+            dataGridViewListaGeralAlunos.DataSource = alunosAtivos;
+
+            dataGridViewListaGeralAlunos.Columns["StatusAtivo"].Visible = false;
+            dataGridViewListaGeralAlunos.Columns["Id"].Visible = false;
+        }        
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
@@ -150,18 +156,22 @@ namespace ProjetoIntegrador.View
             this.Hide(); 
         }
 
-        private void pictureBoxAlterar_Click(object sender, EventArgs e)
-        {         
-           
+        
+
+            private void pictureBoxAlterar_Click(object sender, EventArgs e)
+        {
             if (alunoSelecionado != null)
             {
                 var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
                 telaAlterarDados.ShowDialog();
+                CarregarAlunos();
             }
             else
             {
                 MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
         
 
 
