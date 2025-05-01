@@ -26,41 +26,47 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)
         {
+            dataGridViewpagamento.BackgroundColor = Color.WhiteSmoke;
+
             dataGridViewpagamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            CarregarAlunos();
+            CarregarPagamentos();
         }
 
-        private void CarregarAlunos()
+        private void CarregarPagamentos()
         {
-            var alunosAtivos = _repositorioPagamento.AlunosAtivos(_idModalidade);
-            if (alunosAtivos != null)
+            var pagamentos = _repositorioPagamento.ObterPagamentosAtivos(_idModalidade);
+            if (pagamentos != null)
             {
-                dataGridViewpagamento.DataSource = alunosAtivos;
-                ConfigurarColunas();
-                AplicarFormatoStatusPagamento();
+                dataGridViewpagamento.DataSource = pagamentos;
+                ConfigurarColunasPagamento();
             }
         }
 
-
-        private void ConfigurarColunas()
+        private void ConfigurarColunasPagamento()
         {
-            if (dataGridViewpagamento.Columns.Contains("Id"))
+            if (dataGridViewpagamento.Columns.Contains("IdPagamento"))
             {
-                dataGridViewpagamento.Columns["Id"].Visible = false; 
+                dataGridViewpagamento.Columns["IdPagamento"].Visible = false;
             }
 
-            if (dataGridViewpagamento.Columns.Contains("Nome"))
+            if (dataGridViewpagamento.Columns.Contains("IdAluno"))
             {
-                dataGridViewpagamento.Columns["Nome"].HeaderText = "Nome do Aluno";
-                dataGridViewpagamento.Columns["Nome"].Width = 200;
+                dataGridViewpagamento.Columns["IdAluno"].HeaderText = "ID do Aluno";
             }
 
             if (dataGridViewpagamento.Columns.Contains("StatusPagamento"))
             {
-                dataGridViewpagamento.Columns["StatusPagamento"].HeaderText = "Pagamento Realizado?";
+                dataGridViewpagamento.Columns["StatusPagamento"].HeaderText = "Status do Pagamento";
                 dataGridViewpagamento.Columns["StatusPagamento"].Width = 150;
             }
+
+            if (dataGridViewpagamento.Columns.Contains("DataPagamento"))
+            {
+                dataGridViewpagamento.Columns["DataPagamento"].HeaderText = "Data do Pagamento";
+                dataGridViewpagamento.Columns["DataPagamento"].Width = 150;
+            }
         }
+
 
         private void AplicarFormatoStatusPagamento()
         {
@@ -69,7 +75,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 if (row.Cells["StatusPagamento"]?.Value is bool statusPagamento)
 
                 {
-                    row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.LightGreen : Color.LightCoral;
+                    row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.DarkBlue : Color.LightCoral;
                     row.Cells["StatusPagamento"].Style.ForeColor = Color.DarkMagenta;
                 }
             }
@@ -83,11 +89,11 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 if (row.Cells["Id"].Value != null)
                 {
                     int idAluno = Convert.ToInt32(row.Cells["Id"].Value);
-                    _repositorioPagamento.AtualizarStatusPagamento(idAluno, true);
+                    _repositorioPagamento.AtualizarPagamento(idAluno, true);
                 }
             }
 
-            CarregarAlunos();
+            CarregarPagamentos();
         }
 
         private void buttonPendentePagamento_Click(object sender, EventArgs e)
@@ -97,11 +103,11 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 if (row.Cells["Id"].Value != null)
                 {
                     int idAluno = Convert.ToInt32(row.Cells["Id"].Value);
-                    _repositorioPagamento.AtualizarStatusPagamento(idAluno, false);
+                    _repositorioPagamento.AtualizarPagamento(idAluno, false);
                 }
             }
 
-            CarregarAlunos();
+            CarregarPagamentos();
         }
     }
 }

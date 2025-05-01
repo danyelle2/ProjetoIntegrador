@@ -89,7 +89,6 @@ namespace ProjetoIntegrador.View
             dataGridViewListaGeralAlunos.DataSource = alunosAtivos;
 
             dataGridViewListaGeralAlunos.Columns["StatusAtivo"].Visible = false;
-            dataGridViewListaGeralAlunos.Columns["Id"].Visible = false;
         }        
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
