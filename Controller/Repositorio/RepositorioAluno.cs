@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
 
 namespace ProjetoIntegrador.Controller.Aluno
-{
+{//NÃO MEXER MAIS TA OK!!
     public class RepositorioAluno
     {
         private readonly DatabaseService _databaseService;
@@ -24,30 +24,34 @@ namespace ProjetoIntegrador.Controller.Aluno
         public bool CadastrarAluno(Model.Aluno aluno)
         {
             string query = @"
-                INSERT INTO aluno (
-                    nome, idade, telefone, 
-                    data_entrada, responsavel, 
-                    status_aluno, assinatura_aluno
-                ) 
-                VALUES (
-                    @nome, @idade, @telefone,
-                    @data_entrada, @responsavel, 
-                    @status, @assinatura_aluno
-                )";
+                    INSERT INTO aluno (
+                     nome, idade, telefone, 
+                      data_entrada, responsavel, 
+                       status_aluno, assinatura_aluno,
+                        id_modalidade)
+                      VALUES (
+                        @nome, @idade, @telefone,
+                          @data_entrada, @responsavel, 
+                            @status, @assinatura_aluno,
+                              @id_modalidade)";
+
 
             var parametros = new MySql.Data.MySqlClient.MySqlParameter[]
             {
-                new MySql.Data.MySqlClient.MySqlParameter("@nome", aluno.Nome),
-                new MySql.Data.MySqlClient.MySqlParameter("@idade", aluno.Idade),
-                new MySql.Data.MySqlClient.MySqlParameter("@telefone", aluno.Telefone),
-                new MySql.Data.MySqlClient.MySqlParameter("@data_entrada", aluno.DataEntrada),
-                new MySql.Data.MySqlClient.MySqlParameter("@responsavel", aluno.NomeResponsavel),
-                new MySql.Data.MySqlClient.MySqlParameter("@status", true),
-                new MySql.Data.MySqlClient.MySqlParameter("@assinatura_aluno", aluno.Assinatura)
+              new MySql.Data.MySqlClient.MySqlParameter("@nome", aluno.Nome),
+              new MySql.Data.MySqlClient.MySqlParameter("@idade", aluno.Idade),
+              new MySql.Data.MySqlClient.MySqlParameter("@telefone", aluno.Telefone),
+              new MySql.Data.MySqlClient.MySqlParameter("@data_entrada", aluno.DataEntrada),
+              new MySql.Data.MySqlClient.MySqlParameter("@responsavel", aluno.NomeResponsavel),
+              new MySql.Data.MySqlClient.MySqlParameter("@status", true),
+              new MySql.Data.MySqlClient.MySqlParameter("@assinatura_aluno", aluno.Assinatura),
+              new MySql.Data.MySqlClient.MySqlParameter("@id_modalidade", aluno.IdModalidade)
+
             };
 
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
         }
+
 
         public bool AlterarDadosAlunos(Model.Aluno aluno)
         {
@@ -78,18 +82,19 @@ namespace ProjetoIntegrador.Controller.Aluno
             return _databaseService.ExecuteNonQuery(query, parametros) > 0;
         }
 
-        //FAZER EM FORMA DE LISTA COMO O PROFESSOR ENSINOU LISTA DE ALUNOS PARA O DATAGRID 
-        public List<Model.Aluno> BuscarTodos()
+        public List<Model.Aluno> BuscarTodos(int idModalidade)
         {
             var listaAlunos = new List<Model.Aluno>();
 
-            string query = "SELECT * FROM aluno";
+            string query = "SELECT * FROM aluno WHERE id_modalidade = @idModalidade";
 
             _databaseService.OpenConnection();
             try
             {
                 using (var cmd = new MySqlCommand(query, _databaseService.Connection))
                 {
+                    cmd.Parameters.AddWithValue("@idModalidade", idModalidade); 
+
                     using (var reader = cmd.ExecuteReader())
                     {
                         while (reader.Read())
@@ -105,6 +110,7 @@ namespace ProjetoIntegrador.Controller.Aluno
                                 DataSaida = reader["data_saida"] != DBNull.Value ? (DateTime?)Convert.ToDateTime(reader["data_saida"]) : null,
                                 StatusAtivo = Convert.ToBoolean(reader["status_aluno"]),
                                 Assinatura = reader["assinatura_aluno"].ToString(),
+                                IdModalidade = Convert.ToInt32(reader["id_modalidade"]),
                             };
                             listaAlunos.Add(aluno);
                         }
@@ -122,6 +128,5 @@ namespace ProjetoIntegrador.Controller.Aluno
 
             return listaAlunos;
         }
-
     }
 }

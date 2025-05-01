@@ -10,13 +10,15 @@ using System.Threading.Tasks;
 
 namespace ProjetoIntegrador.Controller.Aluno
 {
-    public class RepositorioGrafico //função de adm e professor visualizar a tela ok !!!
+    public class RepositorioGrafico 
+        //função de adm e professor visualizar a tela ok !!!
+        // chamar por idModalidade ao invés de usuario
     {
 
         private readonly DatabaseService _databaseService;
 
         public RepositorioGrafico(DatabaseService databaseService)
-        {//banco ligação NÃO esquecer _databaseService = databaseService;
+        {
             _databaseService = databaseService;
         }
 
@@ -24,12 +26,10 @@ namespace ProjetoIntegrador.Controller.Aluno
         {
             var resultado = new Dictionary<int, int>();
             string query = @"SELECT MONTH(a.data_entrada) AS mes, COUNT(*) AS entradas  
-                     FROM aluno a 
-                     JOIN usuario u ON a.id_usuario = u.id_usuario 
-                     JOIN modalidade m ON u.id_modalidade = m.id_modalidade 
-                     WHERE YEAR(a.data_entrada) = YEAR(CURDATE()) 
-                       AND m.id_modalidade = @id_modalidade
-                     GROUP BY MONTH(a.data_entrada)";
+                FROM aluno a 
+                WHERE YEAR(a.data_entrada) = YEAR(CURDATE()) 
+                 AND a.id_modalidade = @id_modalidade
+                GROUP BY MONTH(a.data_entrada)";
 
             using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
@@ -57,14 +57,12 @@ namespace ProjetoIntegrador.Controller.Aluno
             var resultado = new Dictionary<int, int>();
 
             string query = @"
-                 SELECT MONTH(a.data_saida) AS mes, COUNT(*) AS saidas 
-                 FROM aluno a 
-                 JOIN usuario u ON a.id_usuario = u.id_usuario 
-                 JOIN modalidade m ON u.id_modalidade = m.id_modalidade 
-                 WHERE a.data_saida IS NOT NULL 
-                 AND YEAR(a.data_saida) = YEAR(CURDATE())
-                 AND m.id_modalidade = @id_modalidade
-                 GROUP BY MONTH(a.data_saida)";
+                SELECT MONTH(a.data_saida) AS mes, COUNT(*) AS saidas 
+FROM aluno a 
+WHERE a.data_saida IS NOT NULL 
+  AND YEAR(a.data_saida) = YEAR(CURDATE())
+  AND a.id_modalidade = @id_modalidade
+GROUP BY MONTH(a.data_saida)";
 
             using (var cmd = new MySqlCommand(query, _databaseService.Connection))
             {
@@ -114,13 +112,11 @@ namespace ProjetoIntegrador.Controller.Aluno
             {
                 string query = @"
             SELECT 
-                YEAR(a.data_entrada) AS Ano,
-                COUNT(CASE WHEN a.data_entrada IS NOT NULL THEN 1 END) AS Entradas,
-                COUNT(CASE WHEN a.data_saida IS NOT NULL THEN 1 END) AS Saidas
-                  FROM aluno a
-                  JOIN usuario u ON a.id_usuario = u.id_usuario
-                  JOIN modalidade m ON u.id_modalidade = m.id_modalidade
-                  WHERE m.id_modalidade = @id_modalidade";
+    YEAR(a.data_entrada) AS Ano,
+    COUNT(CASE WHEN a.data_entrada IS NOT NULL THEN 1 END) AS Entradas,
+    COUNT(CASE WHEN a.data_saida IS NOT NULL THEN 1 END) AS Saidas
+FROM aluno a
+WHERE a.id_modalidade = @id_modalidade";
 
                 if (anoInicial.HasValue)
                     query += " AND YEAR(a.data_entrada) >= @anoInicial ";

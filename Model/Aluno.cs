@@ -19,6 +19,7 @@ namespace ProjetoIntegrador.Model
         public DateTime? DataSaida { get; set; }
 
         public string NomeResponsavel { get; set; }
-        
+        public int IdModalidade { get; set; }
+
     }
 }

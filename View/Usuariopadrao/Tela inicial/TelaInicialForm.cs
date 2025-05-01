@@ -82,7 +82,7 @@ namespace ProjetoIntegrador.View
         private void CarregarAlunos()
         {
             var repositorioAluno = new RepositorioAluno(new DatabaseService());
-            var listaAlunos = repositorioAluno.BuscarTodos();
+            var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
             dataGridViewListaGeralAlunos.DataSource = listaAlunos;
         }
 
