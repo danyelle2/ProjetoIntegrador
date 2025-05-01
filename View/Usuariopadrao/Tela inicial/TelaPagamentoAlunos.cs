@@ -69,7 +69,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 if (row.Cells["StatusPagamento"].Value is bool statusPagamento)
                 {
                     row.Cells["StatusPagamento"].Style.BackColor = statusPagamento ? Color.LightGreen : Color.LightCoral;
-                    row.Cells["StatusPagamento"].Style.ForeColor = Color.Black;
+                    row.Cells["StatusPagamento"].Style.ForeColor = Color.DarkMagenta;
                 }
             }
         }

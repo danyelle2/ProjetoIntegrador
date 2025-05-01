@@ -21,16 +21,17 @@ namespace ProjetoIntegrador.Controller.Repositorio
             List<ModelAluno> lista = new List<ModelAluno>();
 
             string query = @"
-        SELECT a.id_aluno, a.nome, a.status_aluno, a.status_pagamento 
+        SELECT a.id_aluno, a.nome, a.status_aluno, p.status_pagamento
         FROM aluno a
-        INNER JOIN usuario u ON a.id_usuario = u.id_usuario
-        WHERE a.status_aluno = 1 AND u.id_modalidade = @idModalidade;
+        INNER JOIN pagamento p ON a.id_aluno = p.id_aluno
+        INNER JOIN modalidade u ON u.id_modalidade = a.id_modalidade
+        WHERE a.status_aluno = 1 AND p.status_pagamento = 0 AND u.id_modalidade = @idModalidade;
     ";
 
             MySqlParameter[] parameters =
             {
         new MySqlParameter("@idModalidade", idModalidade)
-            };
+    };
 
             using (MySqlDataReader reader = _databaseService.ExecuteQuery(query, parameters))
             {
@@ -49,12 +50,16 @@ namespace ProjetoIntegrador.Controller.Repositorio
             return lista;
         }
 
+
         public void AtualizarStatusPagamento(int idAluno, bool statusPagamento)
         {
             string query = @"
-                UPDATE aluno 
-                SET status_pagamento = @status 
-                WHERE id_aluno = @idAluno;
+               string query = @""
+    UPDATE pagamento 
+    SET status_pagamento = @status 
+    WHERE id_aluno = @idAluno;
+"";
+
             ";
 
             MySqlParameter[] parameters =
