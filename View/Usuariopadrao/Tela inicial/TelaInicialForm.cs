@@ -12,6 +12,7 @@ using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoIntegrador.View
 {
@@ -84,15 +85,22 @@ namespace ProjetoIntegrador.View
             var repositorioAluno = new RepositorioAluno(new DatabaseService());
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
 
-            var alunos = listaAlunos.ToList(); 
-            dataGridViewListaGeralAlunos.DataSource = alunos;
+            dataGridViewListaGeralAlunos.DataSource = listaAlunos.ToList();
 
-                       
             dataGridViewListaGeralAlunos.Columns["StatusPagamento"].Visible = false;
-            dataGridViewListaGeralAlunos.Columns["IdModalidade"].Visible = false;          
-                        
-                dataGridViewListaGeralAlunos.Columns["Id"].HeaderText = "ID";
-                dataGridViewListaGeralAlunos.Columns["Id"].Width = 40;
+            dataGridViewListaGeralAlunos.Columns["IdModalidade"].Visible = false;
+
+            dataGridViewListaGeralAlunos.Columns["Id"].HeaderText = "ID";
+            dataGridViewListaGeralAlunos.Columns["Id"].Width = 40;
+
+
+            if (dataGridViewListaGeralAlunos.Columns.Contains("StatusAluno"))
+            {
+                dataGridViewListaGeralAlunos.Columns["StatusAluno"].HeaderText = "Status";
+                dataGridViewListaGeralAlunos.Columns["StatusAluno"].Width = 80;
+
+                dataGridViewListaGeralAlunos.Columns["StatusAluno"].CellTemplate = new DataGridViewTextBoxCell();
+            }
 
             if (dataGridViewListaGeralAlunos.Columns.Contains("Id"))
                 dataGridViewListaGeralAlunos.Columns["Id"].DisplayIndex = 0;
@@ -106,13 +114,19 @@ namespace ProjetoIntegrador.View
             foreach (DataGridViewRow row in dataGridViewListaGeralAlunos.Rows)
             {
                 var aluno = (Aluno)row.DataBoundItem;
+
+                if (row.Cells["StatusAluno"] != null)
+                {
+                    row.Cells["StatusAluno"].Value = aluno.StatusAlunoTexto; 
+                }
+
                 if (!aluno.StatusAluno)
                 {
                     row.DefaultCellStyle.BackColor = Color.LightGray;
                     row.DefaultCellStyle.ForeColor = Color.DarkGray;
                 }
             }
-        }        
+        }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
