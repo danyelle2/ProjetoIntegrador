@@ -85,40 +85,82 @@ namespace ProjetoIntegrador.View
             var repositorioAluno = new RepositorioAluno(new DatabaseService());
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
 
-            dataGridViewListaGeralAlunos.DataSource = listaAlunos.ToList();
+            dataGridViewListaGeralAlunos.AutoGenerateColumns = false;
 
-            dataGridViewListaGeralAlunos.Columns["StatusPagamento"].Visible = false;
-            dataGridViewListaGeralAlunos.Columns["IdModalidade"].Visible = false;
+            dataGridViewListaGeralAlunos.Columns.Clear();
 
-            dataGridViewListaGeralAlunos.Columns["Id"].HeaderText = "ID";
-            dataGridViewListaGeralAlunos.Columns["Id"].Width = 40;
-
-
-            if (dataGridViewListaGeralAlunos.Columns.Contains("StatusAluno"))
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
             {
-                dataGridViewListaGeralAlunos.Columns["StatusAluno"].HeaderText = "Status";
-                dataGridViewListaGeralAlunos.Columns["StatusAluno"].Width = 80;
+                DataPropertyName = "Id",
+                HeaderText = "ID",
+                Width = 40,
+                Name = "Id"
+            });
 
-                dataGridViewListaGeralAlunos.Columns["StatusAluno"].CellTemplate = new DataGridViewTextBoxCell();
-            }
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Nome",
+                HeaderText = "Nome",
+                Name = "Nome"
+            });
 
-            if (dataGridViewListaGeralAlunos.Columns.Contains("Id"))
-                dataGridViewListaGeralAlunos.Columns["Id"].DisplayIndex = 0;
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "StatusAlunoTexto",
+                HeaderText = "Status",
+                Width = 80,
+                Name = "StatusAluno"
+            });
 
-            if (dataGridViewListaGeralAlunos.Columns.Contains("Nome"))
-                dataGridViewListaGeralAlunos.Columns["Nome"].DisplayIndex = 1;
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "assinatura",
+                HeaderText = "Assinatura",
+                Width = 80,
+                Name = "assinatura"
+            });
 
-            if (dataGridViewListaGeralAlunos.Columns.Contains("assinatura"))
-                dataGridViewListaGeralAlunos.Columns["assinatura"].DisplayIndex = 2;
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "DataEntrada",
+                HeaderText = "Entrada",
+                Width = 80,
+                Name = "DataEntrada"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Idade",
+                HeaderText = "Idade",
+                Width = 40,
+                Name = "Idade"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Telefone",
+                HeaderText = "Telefone",                
+                Name = "Telefone"
+            });
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "NomeResponsavel",
+                HeaderText = "Responsável",
+                Name = "NomeResposavel"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "DataSaida",
+                HeaderText = "Saída",
+                Width = 80,
+                Name = "DataSaida"
+            });
+            dataGridViewListaGeralAlunos.DataSource = listaAlunos.ToList();
 
             foreach (DataGridViewRow row in dataGridViewListaGeralAlunos.Rows)
             {
                 var aluno = (Aluno)row.DataBoundItem;
-
-                if (row.Cells["StatusAluno"] != null)
-                {
-                    row.Cells["StatusAluno"].Value = aluno.StatusAlunoTexto; 
-                }
 
                 if (!aluno.StatusAluno)
                 {

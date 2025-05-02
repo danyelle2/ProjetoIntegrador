@@ -48,7 +48,7 @@ namespace ProjetoIntegrador.Controller.Aluno
             new MySqlParameter("@telefone", aluno.Telefone),
             new MySqlParameter("@data_entrada", aluno.DataEntrada),
             new MySqlParameter("@responsavel", aluno.NomeResponsavel),
-            new MySqlParameter("@status", true),
+            new MySqlParameter("@status", true), 
             new MySqlParameter("@assinatura_aluno", aluno.Assinatura),
             new MySqlParameter("@id_modalidade", aluno.IdModalidade)
                 };
