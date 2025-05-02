@@ -84,16 +84,45 @@ namespace ProjetoIntegrador.View
             var repositorioAluno = new RepositorioAluno(new DatabaseService());
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
 
-            var alunosAtivos = listaAlunos.Where(a => a.StatusAtivo).ToList();
+            var alunos = listaAlunos.ToList(); 
+            dataGridViewListaGeralAlunos.DataSource = alunos;
 
-            dataGridViewListaGeralAlunos.DataSource = alunosAtivos;
+                       
+            dataGridViewListaGeralAlunos.Columns["StatusPagamento"].Visible = false;
+            dataGridViewListaGeralAlunos.Columns["IdModalidade"].Visible = false;          
+                        
+                dataGridViewListaGeralAlunos.Columns["Id"].HeaderText = "ID";
+                dataGridViewListaGeralAlunos.Columns["Id"].Width = 40;
 
-            dataGridViewListaGeralAlunos.Columns["StatusAtivo"].Visible = false;
+            if (dataGridViewListaGeralAlunos.Columns.Contains("Id"))
+                dataGridViewListaGeralAlunos.Columns["Id"].DisplayIndex = 0;
+
+            if (dataGridViewListaGeralAlunos.Columns.Contains("Nome"))
+                dataGridViewListaGeralAlunos.Columns["Nome"].DisplayIndex = 1;
+
+            if (dataGridViewListaGeralAlunos.Columns.Contains("assinatura"))
+                dataGridViewListaGeralAlunos.Columns["assinatura"].DisplayIndex = 2;
+
+            foreach (DataGridViewRow row in dataGridViewListaGeralAlunos.Rows)
+            {
+                var aluno = (Aluno)row.DataBoundItem;
+                if (!aluno.StatusAluno)
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGray;
+                    row.DefaultCellStyle.ForeColor = Color.DarkGray;
+                }
+            }
         }        
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
+            dataGridViewListaGeralAlunos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewListaGeralAlunos.MultiSelect = false; 
+
             dataGridViewListaGeralAlunos.BackgroundColor = Color.White;
+            dataGridViewListaGeralAlunos.ReadOnly = true;
+            dataGridViewListaGeralAlunos.AllowUserToAddRows = false;
+            dataGridViewListaGeralAlunos.AllowUserToDeleteRows = false;
 
             Usuario usuario = SessionUser.userLogado;
             label1UsuarioNome.Text = usuario.Nome;
@@ -101,7 +130,7 @@ namespace ProjetoIntegrador.View
             CarregarAlunos();
 
 
-            switch (usuario.IdModalidade)
+            switch (idModalidadeSelecionada)
             {
                 case 2:
                     labelTituloModalidade.Text = "Área de Ritimos e Zumba";
@@ -115,7 +144,7 @@ namespace ProjetoIntegrador.View
 
             }
         }
-
+        
         private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
         {
             MsgTemporariaPagamento.Visible = true;
@@ -129,18 +158,7 @@ namespace ProjetoIntegrador.View
 
         private Aluno alunoSelecionado;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        
-            if (e.RowIndex >= 0) 
-            {
-                alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.Rows[e.RowIndex].DataBoundItem;
-            }
-        
-
-        }
-
+       
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
@@ -160,26 +178,25 @@ namespace ProjetoIntegrador.View
             this.Hide(); 
         }
 
-        
 
-            private void pictureBoxAlterar_Click(object sender, EventArgs e)
+
+        private void pictureBoxAlterar_Click(object sender, EventArgs e)
         {
-            if (alunoSelecionado != null)
+            if (dataGridViewListaGeralAlunos.SelectedRows.Count == 0)
             {
-                var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
-                telaAlterarDados.ShowDialog();
-                CarregarAlunos();
+                MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
+            if (telaAlterarDados.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CarregarAlunos(); 
             }
         }
 
-        
 
-
-    
 
         private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
         {
@@ -205,12 +222,20 @@ namespace ProjetoIntegrador.View
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
 
             var alunosFiltrados = listaAlunos
-                .Where(a => a.StatusAtivo &&
+                .Where(a => a.Nome != null && 
                             a.Nome != null &&
                             a.Nome.IndexOf(pesquisa, StringComparison.OrdinalIgnoreCase) >= 0)
                 .ToList();
 
             dataGridViewListaGeralAlunos.DataSource = alunosFiltrados;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewListaGeralAlunos.SelectedRows.Count > 0)
+            {
+                alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.SelectedRows[0].DataBoundItem;
+            }
         }
     }
     }

@@ -33,6 +33,7 @@
             this.buttonPagamentoRealizado = new System.Windows.Forms.Button();
             this.buttonPendentePagamento = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1PesquisaPagamento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewpagamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
             this.dataGridViewpagamento.Size = new System.Drawing.Size(477, 397);
             this.dataGridViewpagamento.TabIndex = 22;
-            this.dataGridViewpagamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewpagamento_CellContentClick);
+            this.dataGridViewpagamento.SelectionChanged += new System.EventHandler(this.dataGridViewpagamento_SelectionChanged);
             // 
             // buttonPagamentoRealizado
             // 
@@ -93,7 +94,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // textBox1PesquisaPagamento
+            // 
+            this.textBox1PesquisaPagamento.BackColor = System.Drawing.Color.White;
+            this.textBox1PesquisaPagamento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1PesquisaPagamento.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1PesquisaPagamento.Location = new System.Drawing.Point(478, 21);
+            this.textBox1PesquisaPagamento.Name = "textBox1PesquisaPagamento";
+            this.textBox1PesquisaPagamento.Size = new System.Drawing.Size(161, 22);
+            this.textBox1PesquisaPagamento.TabIndex = 29;
+            this.textBox1PesquisaPagamento.TextChanged += new System.EventHandler(this.textBox1PesquisaPagamento_TextChanged);
             // 
             // TelaPagamentoAlunos
             // 
@@ -102,6 +113,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(651, 637);
+            this.Controls.Add(this.textBox1PesquisaPagamento);
             this.Controls.Add(this.buttonPagamentoRealizado);
             this.Controls.Add(this.buttonPendentePagamento);
             this.Controls.Add(this.dataGridViewpagamento);
@@ -114,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewpagamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,5 +135,6 @@
         private System.Windows.Forms.Button buttonPagamentoRealizado;
         private System.Windows.Forms.Button buttonPendentePagamento;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox1PesquisaPagamento;
     }
 }

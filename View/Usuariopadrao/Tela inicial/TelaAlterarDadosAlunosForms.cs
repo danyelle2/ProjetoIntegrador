@@ -42,7 +42,7 @@ namespace ProjetoIntegrador.View
                 textBoxDataEntrada.Text = alunoSelecionado.DataEntrada.ToString("yyyy-MM-dd");
                 textBoxNomeResponsavel.Text = alunoSelecionado.NomeResponsavel;
                 comboBoxPlano.SelectedItem = alunoSelecionado.Assinatura;
-                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAtivo;
+                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAluno;
 
                 if (alunoSelecionado.DataSaida != null)
                 {
@@ -59,41 +59,72 @@ namespace ProjetoIntegrador.View
         BotoesAlterarDadosAlunoController alterarDadosAlunoController =new BotoesAlterarDadosAlunoController();
         private void btnAlterarDados_Click(object sender, EventArgs e)
         {
+            try
+            {                
+                bool todasAsValidoesPassaram =
+                    botoesAlterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade) &&
+                    botoesAlterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade) &&
+                    botoesAlterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno,
+                        textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel,
+                        comboBoxStatusAlunos, textBoxDataSaida) &&
+                    botoesAlterarDadosAlunoController.ValidarTelefone(textBoxTelefoneAluno, textMsgErroTelefone) &&
+                    botoesAlterarDadosAlunoController.ValidarDatas(textBoxDataEntrada, LabelMsgErroDataEntrada,
+                        textBoxDataSaida, textMsgErroDataSaida) &&
+                    botoesAlterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida,
+                        LabelNomeDataSaida, textMsgErroDataSaida) &&
+                    botoesAlterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel) &&
+                    botoesAlterarDadosAlunoController.ValidarComboBox(comboBoxPlano, comboBoxStatusAlunos,
+                        labelMsgErroPlano, labelMsgErroStatusAluno);
 
-            Aluno aluno = new Aluno();
+                if (!todasAsValidoesPassaram)
+                {
+                    MessageBox.Show("Por favor, corrija os erros destacados antes de salvar.", "Dados Inválidos",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            bool resultadoMenorIdade = botoesAlterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade);
-            bool resultadoIdadeInvalida = botoesAlterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade);
-            bool resultadoCamposVazios = botoesAlterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno, textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel, comboBoxStatusAlunos, textBoxDataSaida);
-            bool resultadoTelefoneValido = botoesAlterarDadosAlunoController.ValidarTelefone(textBoxTelefoneAluno, textMsgErroTelefone);
-            bool DataInvalida = botoesAlterarDadosAlunoController.ValidarDatas(textBoxDataEntrada, LabelMsgErroDataEntrada, textBoxDataSaida, textMsgErroDataSaida);
-            bool resultadoAparecerDataSaida = botoesAlterarDadosAlunoController.AparecerDataSaida(comboBoxStatusAlunos, textBoxDataSaida, LabelNomeDataSaida, textMsgErroDataSaida);
-            bool resultadoNomeResponsavel = botoesAlterarDadosAlunoController.VisibilidadeNomeResponsavel(textBoxNomeResponsavel, labelMsgErroResponsavel);
-            bool resultadoComboBoxValidado = botoesAlterarDadosAlunoController.ValidarComboBox(comboBoxPlano, comboBoxStatusAlunos, labelMsgErroPlano, labelMsgErroStatusAluno);
-
-            if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && DataInvalida && resultadoAparecerDataSaida && resultadoNomeResponsavel && resultadoComboBoxValidado)
-            {
                 alunoSelecionado.Nome = textBoxNomeAluno.Text;
                 alunoSelecionado.Idade = int.Parse(textBoxIdadeAluno.Text);
                 alunoSelecionado.Telefone = textBoxTelefoneAluno.Text;
                 alunoSelecionado.DataEntrada = DateTime.Parse(textBoxDataEntrada.Text);
                 alunoSelecionado.NomeResponsavel = textBoxNomeResponsavel.Text;
                 alunoSelecionado.Assinatura = comboBoxPlano.SelectedItem.ToString();
-                comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAtivo ? "Ativo" : "Inativo";
-                alunoSelecionado.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
+
+                alunoSelecionado.StatusAluno = comboBoxStatusAlunos.SelectedItem.ToString() == "Ativo";
+                
+                if (!alunoSelecionado.StatusAluno && !string.IsNullOrEmpty(textBoxDataSaida.Text))
+                {
+                    alunoSelecionado.DataSaida = DateTime.Parse(textBoxDataSaida.Text);
+                }
+                else
+                {
+                    alunoSelecionado.DataSaida = null;
+                }
 
                 var repositorio = new RepositorioAluno(new DatabaseService());
-                repositorio.AlterarDadosAlunos(alunoSelecionado);
+                bool sucesso = repositorio.AlterarDadosAlunos(alunoSelecionado);
 
-                MessageBox.Show($"Dados do aluno {alunoSelecionado.Nome}, alterados com sucesso!", "Alteração de Dados");
-
-
-               
+                if (sucesso)
+                {
+                    MessageBox.Show($"Dados do aluno {alunoSelecionado.Nome} alterados com sucesso!","Alteração de Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Não foi possível salvar as alterações. Tente novamente.",
+                                  "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (FormatException ex)
             {
-                MessageBox.Show($"Erro ao alterar os dados do aluno{aluno.Nome}.", "Alteração de dados");
-
+                MessageBox.Show($"Erro de formato nos dados: {ex.Message}",
+                              "Erro de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocorreu um erro inesperado: {ex.Message}",
+                              "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

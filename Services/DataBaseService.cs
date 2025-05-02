@@ -58,7 +58,7 @@ namespace ProjetoIntegrador.Services
             }
         }
 
-        public int ExecuteNonQuery(string commandText, MySqlParameter[] parameters = null)
+        public int ExecuteNonQuery(string commandText, MySqlParameter[] parameters = null, MySqlTransaction transaction = null)
         {
             try
             {
@@ -82,7 +82,7 @@ namespace ProjetoIntegrador.Services
             }
         }
 
-        public object ExecuteScalar(string commandText, MySqlParameter[] parameters = null)
+        public object ExecuteScalar(string commandText, MySqlParameter[] parameters = null, MySqlTransaction transaction = null)
         {
             try
             {

@@ -142,7 +142,7 @@
             this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
             this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 551);
             this.dataGridViewListaGeralAlunos.TabIndex = 18;
-            this.dataGridViewListaGeralAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewListaGeralAlunos.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // directorySearcher1
             // 
@@ -214,7 +214,7 @@
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(757, 118);
+            this.textBox1.Location = new System.Drawing.Point(791, 118);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(451, 33);

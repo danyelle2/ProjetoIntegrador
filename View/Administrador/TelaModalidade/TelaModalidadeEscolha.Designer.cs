@@ -99,7 +99,7 @@
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
             this.btnCadastro.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastro.Image")));
-            this.btnCadastro.Location = new System.Drawing.Point(527, 229);
+            this.btnCadastro.Location = new System.Drawing.Point(476, 233);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(356, 88);
             this.btnCadastro.TabIndex = 25;
