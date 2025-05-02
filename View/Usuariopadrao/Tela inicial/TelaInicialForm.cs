@@ -125,7 +125,12 @@ namespace ProjetoIntegrador.View
                 DataPropertyName = "DataEntrada",
                 HeaderText = "Entrada",
                 Width = 80,
-                Name = "DataEntrada"
+                Name = "DataEntrada",
+                 DefaultCellStyle = new DataGridViewCellStyle()
+                 {
+                     Format = "dd/MM/yyyy",
+                     Alignment = DataGridViewContentAlignment.MiddleCenter
+                 }
             });
 
             dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
@@ -154,7 +159,12 @@ namespace ProjetoIntegrador.View
                 DataPropertyName = "DataSaida",
                 HeaderText = "Saída",
                 Width = 80,
-                Name = "DataSaida"
+                Name = "DataSaida",
+                DefaultCellStyle = new DataGridViewCellStyle()
+                {
+                    Format = "dd/MM/yyyy",
+                    Alignment = DataGridViewContentAlignment.MiddleCenter
+                }
             });
             dataGridViewListaGeralAlunos.DataSource = listaAlunos.ToList();
 

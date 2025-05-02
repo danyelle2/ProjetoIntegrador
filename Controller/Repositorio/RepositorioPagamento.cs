@@ -19,14 +19,15 @@ namespace ProjetoIntegrador.Controller.Repositorio
 
         public List<Pagamento> ObterPagamentosAtivos(int idModalidade)
         {
-            List<Pagamento> listaPagamentos = new List<Pagamento>();
-
-            string query = @"SELECT
+            var pagamentos = new List<Pagamento>();
+            string query = @"
+        SELECT
             p.id_pagamento,
             p.id_aluno,
-            a.nome, -- Usando o nome da coluna correto do MySQL
-            p.status_pagamento,
-            p.data_pagamento
+            a.nome as NomeAluno,
+            a.responsavel as NomeResponsavel, 
+            p.status_pagamento as StatusPagamento,
+            p.data_pagamento as DataPagamento
         FROM
             pagamento p
         INNER JOIN
@@ -34,32 +35,41 @@ namespace ProjetoIntegrador.Controller.Repositorio
         INNER JOIN
             modalidade u ON u.id_modalidade = a.id_modalidade
         WHERE
-            a.status_aluno = 1 AND u.id_modalidade = @idModalidade;";
+            a.status_aluno = 1 AND u.id_modalidade = @idModalidade";
 
-            MySqlParameter[] parameters =
+            _databaseService.OpenConnection();
+            try
             {
-        new MySqlParameter("@idModalidade", idModalidade)
-    };
-
-            using (MySqlDataReader reader = _databaseService.ExecuteQuery(query, parameters))
-            {
-                while (reader.Read())
+                using (var cmd = new MySqlCommand(query, _databaseService.Connection))
                 {
-                    listaPagamentos.Add(new Pagamento
+                    cmd.Parameters.AddWithValue("@idModalidade", idModalidade);
+
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        IdPagamento = reader.GetInt32("id_pagamento"),
-                        IdAluno = reader.GetInt32("id_aluno"),
-                        NomeAluno = reader.GetString("nome"), 
-                        StatusPagamento = reader.GetBoolean("status_pagamento"),
-                        DataPagamento = reader.IsDBNull(reader.GetOrdinal("data_pagamento")) ? (DateTime?)null : reader.GetDateTime("data_pagamento")
-                    });
+                        while (reader.Read())
+                        {
+                            var pagamento = new Pagamento
+                            {
+                                IdPagamento = Convert.ToInt32(reader["id_pagamento"]),
+                                IdAluno = Convert.ToInt32(reader["id_aluno"]),
+                                NomeAluno = reader["NomeAluno"].ToString(), 
+                                NomeResponsavel = reader["NomeResponsavel"].ToString(),
+                                StatusPagamento = Convert.ToBoolean(reader["StatusPagamento"]),
+                                DataPagamento = reader["DataPagamento"] != DBNull.Value ?
+                                                (DateTime?)Convert.ToDateTime(reader["DataPagamento"]) : null
+                            };
+                            pagamentos.Add(pagamento);
+                        }
+                    }
                 }
             }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
 
-            return listaPagamentos;
+            return pagamentos;
         }
-
-
 
         public void AtualizarPagamento(int idAluno, bool statusPagamento)
         {

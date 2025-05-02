@@ -34,7 +34,6 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
             dataGridViewpagamento.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
 
             CarregarPagamentos();
-
         }
 
         private void CarregarPagamentos()
@@ -43,77 +42,102 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
             {
                 var pagamentos = _repositorioPagamento.ObterPagamentosAtivos(_idModalidade);
 
-                if (pagamentos != null && pagamentos.Any())
-                {
-                    dataGridViewpagamento.DataSource = pagamentos;
-                    ConfigurarColunasPagamento();
-                }
-                else
-                {
-                    MessageBox.Show("Nenhum aluno encontrado para esta modalidade.", "Informação",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                // Configura as colunas antes de atribuir o DataSource
+                ConfigurarColunasPagamento();
+
+                dataGridViewpagamento.DataSource = pagamentos;
+
+                // Aplica formatação condicional após carregar os dados
+                AplicarFormatacaoCondicional();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao carregar pagamentos: {ex.Message}", "Erro",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Erro ao carregar pagamentos: {ex.Message}", "Erro",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void AplicarFormatacaoCondicional()
+        {
+            foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
+            {
+                if (row.Cells["Status"].Value != null)
+                {
+                    bool status = row.Cells["Status"].Value.ToString() == "Pago";
+                    row.Cells["Status"].Style.BackColor = status ? Color.LightGreen : Color.LightCoral;
+                    row.Cells["Status"].Style.ForeColor = Color.Black;
+                }
+            }
+        }
+
         private void dataGridViewpagamento_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            if (e.ColumnIndex == dataGridViewpagamento.Columns["StatusPagamento"].Index)
-            {
-                e.ThrowException = false;
-                MessageBox.Show("Erro ao processar status de pagamento", "Erro",MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            e.Cancel = true; // Evita que o erro interrompa a execução
         }
+
         private void ConfigurarColunasPagamento()
         {
-            if (dataGridViewpagamento.Columns.Contains("StatusPagamento"))
-            {
-                dataGridViewpagamento.Columns["StatusPagamento"].CellTemplate = new DataGridViewTextBoxCell();
+            dataGridViewpagamento.AutoGenerateColumns = false;
+            dataGridViewpagamento.Columns.Clear();
 
-                foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
+            // Coluna ID Aluno (corrigido para "IdAluno")
+            dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "IdAluno",
+                HeaderText = "ID",
+                Name = "IdAluno",
+                Width = 50
+            });
+
+            // Coluna Nome
+            dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "NomeAluno",
+                HeaderText = "Nome",
+                Name = "Nome",
+                Width = 200
+            });
+
+            // Coluna Status (usando StatusPagamentoTexto)
+            dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "StatusPagamentoTexto",
+                HeaderText = "Status",
+                Name = "Status",
+                Width = 80
+            });
+
+            // Coluna Data Pagamento
+            dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
+            {
+                DataPropertyName = "DataPagamento",
+                HeaderText = "Data Pagamento",
+                Name = "DataPagamento",
+                Width = 100,
+                DefaultCellStyle = new DataGridViewCellStyle
                 {
-                    if (row.Cells["StatusPagamento"].Value != null)
-                    {
-                        bool status;
-                        if (row.Cells["StatusPagamento"].Value is bool)
-                        {
-                            status = (bool)row.Cells["StatusPagamento"].Value;
-                        }
-                        else if (row.Cells["StatusPagamento"].Value is string strValue)
-                        {
-                            status = strValue == "Pago";
-                        }
-                        else
-                        {
-                            status = false; 
-                        }
-
-                        row.Cells["StatusPagamento"].Value = status ? "Pago" : "Pendente";
-                        row.Cells["StatusPagamento"].Style.BackColor = status ? Color.LightGreen : Color.LightCoral;
-                        row.Cells["StatusPagamento"].Style.ForeColor = Color.Black;
-                    }
+                    Format = "dd/MM/yyyy",
+                    Alignment = DataGridViewContentAlignment.MiddleCenter,
+                    NullValue = " - "
                 }
+            });
 
-                dataGridViewpagamento.Columns["StatusPagamento"].HeaderText = "Status";
-                dataGridViewpagamento.Columns["StatusPagamento"].Width = 100;
-            }
-
-            if (dataGridViewpagamento.Columns.Contains("DataPagamento"))
+            // Coluna Responsável
+            dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
             {
-                dataGridViewpagamento.Columns["DataPagamento"].HeaderText = "Data";
-                dataGridViewpagamento.Columns["DataPagamento"].Width = 100;
-                dataGridViewpagamento.Columns["DataPagamento"].DefaultCellStyle.Format = "dd/MM/yyyy";
-                dataGridViewpagamento.Columns["DataPagamento"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            }
+                DataPropertyName = "NomeResponsavel",
+                HeaderText = "Responsável",
+                Name = "Responsavel",
+                Width = 150
+            });
         }
+
         private void buttonPagamentoRealizado_Click(object sender, EventArgs e)
         {
             if (dataGridViewpagamento.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Selecione pelo menos um aluno.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione pelo menos um aluno.", "Aviso",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -154,7 +178,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 {
                     if (row.Cells["IdAluno"].Value != null)
                     {
-                        int idAluno = Convert.ToInt32(row.Cells["IdAluno"].Value);
+                        int idAluno = Convert.ToInt32(row.Cells["IdAluno"].Value); // Corrigido o nome da coluna
                         _repositorioPagamento.AtualizarPagamento(idAluno, false);
                     }
                 }
@@ -189,7 +213,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                         .ToList();
 
                     dataGridViewpagamento.DataSource = pagamentosFiltrados;
-                    ConfigurarColunasPagamento();
+                    AplicarFormatacaoCondicional();
                 }
             }
             catch (Exception ex)
@@ -207,8 +231,8 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 alunoSelecionado = new Aluno
                 {
                     Id = Convert.ToInt32(selectedRow.Cells["IdAluno"].Value),
-                    Nome = selectedRow.Cells["NomeAluno"].Value.ToString(),
-                    StatusPagamento = (bool)selectedRow.Cells["StatusPagamento"].Value
+                    Nome = selectedRow.Cells["Nome"].Value.ToString(),
+                    StatusPagamento = selectedRow.Cells["Status"].Value.ToString() == "Pago"
                 };
             }
         }

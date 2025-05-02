@@ -62,7 +62,7 @@
             this.label1TextoModalidade.AutoSize = true;
             this.label1TextoModalidade.Font = new System.Drawing.Font("Arial Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1TextoModalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1TextoModalidade.Location = new System.Drawing.Point(518, 99);
+            this.label1TextoModalidade.Location = new System.Drawing.Point(451, 91);
             this.label1TextoModalidade.Name = "label1TextoModalidade";
             this.label1TextoModalidade.Size = new System.Drawing.Size(0, 52);
             this.label1TextoModalidade.TabIndex = 28;

@@ -42,9 +42,9 @@
             // 
             this.dataGridViewpagamento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewpagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewpagamento.Location = new System.Drawing.Point(82, 111);
+            this.dataGridViewpagamento.Location = new System.Drawing.Point(44, 80);
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
-            this.dataGridViewpagamento.Size = new System.Drawing.Size(477, 397);
+            this.dataGridViewpagamento.Size = new System.Drawing.Size(547, 463);
             this.dataGridViewpagamento.TabIndex = 22;
             this.dataGridViewpagamento.SelectionChanged += new System.EventHandler(this.dataGridViewpagamento_SelectionChanged);
             // 

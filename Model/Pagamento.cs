@@ -11,6 +11,7 @@ namespace ProjetoIntegrador.Model
         public int IdPagamento { get; set; }
         public int IdAluno { get; set; }
         public string NomeAluno { get; set; }
+        public string NomeResponsavel { get; set; }
         public bool StatusPagamento { get; set; }
         public DateTime? DataPagamento { get; set; }
         public string StatusPagamentoTexto => StatusPagamento ? "Pago" : "Pendente";
