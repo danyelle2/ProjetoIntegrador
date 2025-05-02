@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaInicialForm));
             this.MsgExplicacaoGrafico = new System.Windows.Forms.Label();
-            this.MsgExplicacaoAlterarDados = new System.Windows.Forms.Label();
+            this.msgpagamentos = new System.Windows.Forms.Label();
             this.MsgExplicacaoCadastro = new System.Windows.Forms.Label();
             this.pictureBoxCadastroAlunos = new System.Windows.Forms.PictureBox();
             this.pictureBoxAlterar = new System.Windows.Forms.PictureBox();
@@ -39,16 +39,16 @@
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.MsgTemporariaPagamento = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
-            this.labelTitulo = new System.Windows.Forms.Label();
+            this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1UsuarioNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,32 +56,38 @@
             // 
             this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoGrafico.AutoSize = true;
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(206, 688);
+            this.MsgExplicacaoGrafico.BackColor = System.Drawing.Color.Transparent;
+            this.MsgExplicacaoGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(188, 554);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
-            this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(16, 13);
+            this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoGrafico.TabIndex = 14;
-            this.MsgExplicacaoGrafico.Text = "...";
+            this.MsgExplicacaoGrafico.Click += new System.EventHandler(this.MsgExplicacaoGrafico_Click);
             // 
-            // MsgExplicacaoAlterarDados
+            // msgpagamentos
             // 
-            this.MsgExplicacaoAlterarDados.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.MsgExplicacaoAlterarDados.AutoSize = true;
-            this.MsgExplicacaoAlterarDados.Location = new System.Drawing.Point(206, 543);
-            this.MsgExplicacaoAlterarDados.Name = "MsgExplicacaoAlterarDados";
-            this.MsgExplicacaoAlterarDados.Size = new System.Drawing.Size(16, 13);
-            this.MsgExplicacaoAlterarDados.TabIndex = 13;
-            this.MsgExplicacaoAlterarDados.Text = "...";
-            this.MsgExplicacaoAlterarDados.Click += new System.EventHandler(this.MsgExplicacaoAlterarDados_Click);
+            this.msgpagamentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.msgpagamentos.AutoSize = true;
+            this.msgpagamentos.BackColor = System.Drawing.Color.Transparent;
+            this.msgpagamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.msgpagamentos.Location = new System.Drawing.Point(188, 710);
+            this.msgpagamentos.Name = "msgpagamentos";
+            this.msgpagamentos.Size = new System.Drawing.Size(0, 18);
+            this.msgpagamentos.TabIndex = 13;
+            this.msgpagamentos.Click += new System.EventHandler(this.MsgExplicacaoAlterarDados_Click);
+            this.msgpagamentos.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
+            this.msgpagamentos.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
             // MsgExplicacaoCadastro
             // 
             this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoCadastro.AutoSize = true;
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(230, 231);
+            this.MsgExplicacaoCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.MsgExplicacaoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(188, 240);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
-            this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(16, 13);
+            this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoCadastro.TabIndex = 12;
-            this.MsgExplicacaoCadastro.Text = "...";
             // 
             // pictureBoxCadastroAlunos
             // 
@@ -90,7 +96,7 @@
             this.pictureBoxCadastroAlunos.ErrorImage = null;
             this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(45, 118);
             this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
-            this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(148, 139);
+            this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(137, 139);
             this.pictureBoxCadastroAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxCadastroAlunos.TabIndex = 15;
             this.pictureBoxCadastroAlunos.TabStop = false;
@@ -132,11 +138,11 @@
             // 
             this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(655, 94);
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(688, 176);
             this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
-            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(682, 653);
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 551);
             this.dataGridViewListaGeralAlunos.TabIndex = 18;
-            this.dataGridViewListaGeralAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridViewListaGeralAlunos.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // directorySearcher1
             // 
@@ -156,6 +162,8 @@
             this.pictureBox3.TabIndex = 20;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
+            this.pictureBox3.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
             // MsgTemporariaPagamento
             // 
@@ -169,46 +177,60 @@
             this.MsgTemporariaPagamento.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
             this.MsgTemporariaPagamento.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.pictureBoxVoltar);
-            this.panel1.Location = new System.Drawing.Point(12, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 100);
-            this.panel1.TabIndex = 22;
-            // 
             // pictureBoxVoltar
             // 
-            this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
-            this.pictureBoxVoltar.Location = new System.Drawing.Point(33, 11);
+            this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxVoltar.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxVoltar.Name = "pictureBoxVoltar";
-            this.pictureBoxVoltar.Size = new System.Drawing.Size(100, 50);
+            this.pictureBoxVoltar.Size = new System.Drawing.Size(69, 56);
             this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxVoltar.TabIndex = 27;
             this.pictureBoxVoltar.TabStop = false;
             this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
             // 
-            // labelTitulo
+            // labelTituloModalidade
             // 
-            this.labelTitulo.AutoSize = true;
-            this.labelTitulo.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitulo.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitulo.Location = new System.Drawing.Point(419, 26);
-            this.labelTitulo.Name = "labelTitulo";
-            this.labelTitulo.Size = new System.Drawing.Size(278, 24);
-            this.labelTitulo.TabIndex = 23;
-            this.labelTitulo.Text = "TEXTO TITULO DA PAGINA";
+            this.labelTituloModalidade.AutoSize = true;
+            this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
+            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloModalidade.Location = new System.Drawing.Point(419, 26);
+            this.labelTituloModalidade.Name = "labelTituloModalidade";
+            this.labelTituloModalidade.Size = new System.Drawing.Size(0, 24);
+            this.labelTituloModalidade.TabIndex = 23;
             // 
             // MsgExplicacaoAlterarDados1
             // 
             this.MsgExplicacaoAlterarDados1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgExplicacaoAlterarDados1.AutoSize = true;
-            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(230, 387);
+            this.MsgExplicacaoAlterarDados1.BackColor = System.Drawing.Color.Transparent;
+            this.MsgExplicacaoAlterarDados1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(188, 404);
             this.MsgExplicacaoAlterarDados1.Name = "MsgExplicacaoAlterarDados1";
-            this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(16, 13);
+            this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoAlterarDados1.TabIndex = 24;
-            this.MsgExplicacaoAlterarDados1.Text = "...";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(791, 118);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(451, 33);
+            this.textBox1.TabIndex = 28;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1UsuarioNome
+            // 
+            this.label1UsuarioNome.AutoSize = true;
+            this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
+            this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1UsuarioNome.Location = new System.Drawing.Point(1173, 26);
+            this.label1UsuarioNome.Name = "label1UsuarioNome";
+            this.label1UsuarioNome.Size = new System.Drawing.Size(0, 22);
+            this.label1UsuarioNome.TabIndex = 29;
             // 
             // TelaInicialForm
             // 
@@ -217,9 +239,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.label1UsuarioNome);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pictureBoxVoltar);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
-            this.Controls.Add(this.labelTitulo);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.labelTituloModalidade);
             this.Controls.Add(this.MsgTemporariaPagamento);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.dataGridViewListaGeralAlunos);
@@ -227,7 +251,7 @@
             this.Controls.Add(this.pictureBoxAlterar);
             this.Controls.Add(this.pictureBoxCadastroAlunos);
             this.Controls.Add(this.MsgExplicacaoGrafico);
-            this.Controls.Add(this.MsgExplicacaoAlterarDados);
+            this.Controls.Add(this.msgpagamentos);
             this.Controls.Add(this.MsgExplicacaoCadastro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaInicialForm";
@@ -239,7 +263,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -249,7 +272,7 @@
         #endregion
 
         private System.Windows.Forms.Label MsgExplicacaoGrafico;
-        private System.Windows.Forms.Label MsgExplicacaoAlterarDados;
+        private System.Windows.Forms.Label msgpagamentos;
         private System.Windows.Forms.Label MsgExplicacaoCadastro;
         private System.Windows.Forms.PictureBox pictureBoxCadastroAlunos;
         private System.Windows.Forms.PictureBox pictureBoxAlterar;
@@ -258,9 +281,10 @@
         private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label MsgTemporariaPagamento;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
-        private System.Windows.Forms.Label labelTitulo;
+        private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1UsuarioNome;
     }
 }

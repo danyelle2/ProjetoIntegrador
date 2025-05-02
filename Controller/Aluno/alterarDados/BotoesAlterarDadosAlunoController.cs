@@ -12,7 +12,7 @@ namespace ProjetoIntegrador.Controller
     {
         public bool AparecerCampoResponsavel(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
         {
-
+            MsgErroIdade.Text = "";
             if (int.TryParse(idade.Text, out int idadeAluno))
             {
 
@@ -36,6 +36,7 @@ namespace ProjetoIntegrador.Controller
         }
         public bool IdadeInvalida(TextBox idade, Label MsgErroIdade)
         {
+            MsgErroIdade.Text = "";
             if (int.TryParse(idade.Text, out int idadeAluno))
                 if (idadeAluno <= 0 && idadeAluno > 99)
                 {
@@ -47,6 +48,7 @@ namespace ProjetoIntegrador.Controller
 
         public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno, TextBox dataSaida)
         {
+            MsgErroResponsavel.Text = "";
             if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(dataEntrada.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
                 MessageBox.Show("Preencha todos os campos obrigatórios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -65,7 +67,7 @@ namespace ProjetoIntegrador.Controller
 
 
         public bool ValidarTelefone(TextBox telefone, Label MsgErroTelefone)
-        {
+        {MsgErroTelefone.Text = "";
             if (telefone.Text.Length < 10 || telefone.Text.Length > 11)
             {
                 MsgErroTelefone.Text = "Número de telefone deve ter 10 ou 11 dígitos.";
@@ -74,26 +76,40 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarDatas(TextBox dataentrada, Label MsgErroDataEntrada, TextBox dataSaida, Label MsgErrodataSaida)
+        public bool ValidarDatas(TextBox dataEntrada, Label MsgErroDataEntrada, TextBox dataSaida, Label MsgErroDataSaida)
         {
-            DateTime dataEntrada, dataDeSaida;
+            MsgErroDataEntrada.Text = "";
+            MsgErroDataSaida.Text = "";
 
-            if (!DateTime.TryParse(dataentrada.Text, out dataEntrada))
+            if (!DateTime.TryParse(dataEntrada.Text, out DateTime dataEntradaConvertida))
             {
-                MsgErroDataEntrada.Text = "Data inválida. Favor inserir uma data válida.";
+                MsgErroDataEntrada.Text = "Data de entrada inválida. Formato esperado: dd/MM/aaaa";
                 return false;
             }
-            if (dataSaida.Visible)
+
+            if (dataEntradaConvertida > DateTime.Now)
             {
-                if (!DateTime.TryParse(dataSaida.Text, out dataDeSaida))
+                MsgErroDataEntrada.Text = "Data de entrada não pode ser futura";
+                return false;
+            }
+
+            if (dataSaida.Visible && !string.IsNullOrWhiteSpace(dataSaida.Text))
+            {
+                if (!DateTime.TryParse(dataSaida.Text, out DateTime dataSaidaConvertida))
                 {
-                    MsgErrodataSaida.Text = "Data inválida. Favor inserir uma data válida.";
+                    MsgErroDataSaida.Text = "Data de saída inválida. Formato esperado: dd/MM/aaaa";
                     return false;
                 }
-                else if (dataEntrada > DateTime.Now && dataDeSaida > DateTime.Now)
+
+                if (dataSaidaConvertida > DateTime.Now)
                 {
-                    MsgErrodataSaida.Text = "Data inválida. Favor inserir uma data que não ultrapasse a atual.";
-                    MsgErroDataEntrada.Text = "Data inválida. Favor inserir uma data que não ultrapasse a atual.";
+                    MsgErroDataSaida.Text = "Data de saída não pode ser futura";
+                    return false;
+                }
+
+                if (dataSaidaConvertida < dataEntradaConvertida)
+                {
+                    MsgErroDataSaida.Text = "Data de saída não pode ser anterior à data de entrada";
                     return false;
                 }
             }
@@ -102,18 +118,33 @@ namespace ProjetoIntegrador.Controller
         }
         public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida, Label MsgErrorDataSaida)
         {
-            if (statusAluno.SelectedItem != null && statusAluno.SelectedItem.ToString() == "Inativo")
+            MsgErrorDataSaida.Text = "";
+
+            bool Inativo = (statusAluno.SelectedItem != null && statusAluno.SelectedItem.ToString() == "Inativo");
+            dataSaida.Visible = Inativo;
+            nomeDataSaida.Visible = Inativo;
+
+            if (Inativo)
             {
-                dataSaida.Visible = true;
-                nomeDataSaida.Visible = true;
-                MsgErrorDataSaida.Text = "Preencha a data de saída.";
-                return false;
+                if (string.IsNullOrWhiteSpace(dataSaida.Text))
+                {
+                    MsgErrorDataSaida.Text = "Data de saída é obrigatória para alunos inativos.";
+                    return false;
+                }
+
+                if (!DateTime.TryParse(dataSaida.Text, out _))
+                {
+                    MsgErrorDataSaida.Text = "Formato de data inválido. Use dd/MM/aaaa.";
+                    return false;
+                }
             }
 
             return true;
         }
+        
         public bool VisibilidadeNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
+            MsgErroResponsavel.Text = "";
             while (nomeResponsavel.Visible)
             {
                 if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
@@ -126,8 +157,10 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarComboBox(ComboBox plano, ComboBox statusAluno, Label MsgErroPlano, Label MsgErroStatusAluno) //colocar essa função em todos as tela com combobox
+        public bool ValidarComboBox(ComboBox plano, ComboBox statusAluno, Label MsgErroPlano, Label MsgErroStatusAluno) 
         {
+            MsgErroPlano.Text = "";
+            MsgErroStatusAluno.Text = "";
             if (plano.SelectedItem == null || (plano.SelectedItem.ToString() != "Anual" && plano.SelectedItem.ToString() != "Mensal"))
             {
                 MsgErroPlano.Text = "Selecione uma opção válida.";

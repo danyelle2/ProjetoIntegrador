@@ -1,5 +1,6 @@
 ﻿using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,14 @@ namespace ProjetoIntegrador.View
 
         BotoesCadastroAlunoController botoesCadastroAlunoController;
         LimparCamposController limparCamposController;
+        private readonly int _idModalidade;
 
-        public TelaCadastroAlunos()
+        public TelaCadastroAlunos(int idModalidade)
         {
             InitializeComponent();
             botoesCadastroAlunoController = new BotoesCadastroAlunoController();
             limparCamposController = new LimparCamposController();
+            _idModalidade = idModalidade;
 
         }
         BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
@@ -52,25 +55,32 @@ namespace ProjetoIntegrador.View
                     var repositorio = new RepositorioAluno(databaseService);
 
                     var aluno = new Model.Aluno
+
                     {
+                        
                         Nome = txtNomeAluno.Text,
                         Idade = int.Parse(textBoxIdade.Text),
                         Telefone = txtTelefoneALuno.Text,
                         DataEntrada = DateTime.Parse(textBoxDataEntrada.Text),
                         Assinatura = txtAssinaturaAluno.SelectedItem?.ToString(),
-                        NomeResponsavel = textBoxNomeResponsavel.Text
+                        NomeResponsavel = textBoxNomeResponsavel.Text,
+                        IdModalidade = _idModalidade
+
                     };
 
-                    //TALVEZ NÃO PRECISSE DISSO JÁ QUE NO REPOSITORIO EU JA CHAMO ELE COMO TRUE
+                    var usuarioLogado = SessionUser.userLogado;
 
-                    string statusSelecionado = comboBoxStatusAluno.SelectedItem?.ToString();
-                    aluno.StatusAtivo = statusSelecionado == "Ativo"; 
+                    bool sucesso = repositorio.CadastrarAluno(aluno);
 
-                    repositorio.CadastrarAluno(aluno);
-
-                    MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
+                    if (sucesso)
+                    {
+                        MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao cadastrar aluno. Verifique os campos e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
@@ -82,6 +92,7 @@ namespace ProjetoIntegrador.View
                 MessageBox.Show($"Erro ao cadastrar: {ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void TelaCadastroAlunos_Load(object sender, EventArgs e)

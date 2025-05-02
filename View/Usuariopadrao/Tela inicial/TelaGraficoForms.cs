@@ -16,20 +16,26 @@ namespace ProjetoIntegrador.View
 {
     public partial class TelaGraficoForms : Form
     {
-        public TelaGraficoForms()
+        private readonly int idModalidadeSelecionada;
+
+        public TelaGraficoForms(int idModalidade)
         {
             InitializeComponent();
+            idModalidadeSelecionada = idModalidade;
         }
-        
-     
-            private void TelaGraficoForms_Load(object sender, EventArgs e)
+
+
+
+        private void TelaGraficoForms_Load(object sender, EventArgs e)
             {
-            string modalidade = SessionUser.userLogado.Modalidade;
-            
+            int idmodalidade = SessionUser.EhAdministrador
+              ? idModalidadeSelecionada
+             : SessionUser.IdModalidade;
+            //USAR UM CORINGA, não esquecer 
 
             var repositorio = new RepositorioGrafico(new DatabaseService());
 
-            var movimentacoesMes = repositorio.ObterMovimentacaoPorMes(modalidade);
+            var movimentacoesMes = repositorio.ObterMovimentacaoPorMes(idmodalidade);
 
             chart1.Series.Clear();
             var entradaMes = new Series("Entradas")
@@ -69,7 +75,7 @@ namespace ProjetoIntegrador.View
                     chart1.ChartAreas[0].AxisY.Title = "Número de Alunos";
 
            
-            var movimentacoesAno = repositorio.ObterMovimentacaoPorAno(modalidade);
+            var movimentacoesAno = repositorio.ObterMovimentacaoPorAno(idmodalidade);
 
             chart2.Series.Clear();
             var entradaAno = new Series("Entradas")
@@ -82,7 +88,7 @@ namespace ProjetoIntegrador.View
             var saidaAno = new Series("Saídas")
             {
                 ChartType = SeriesChartType.Column,
-                Color = Color.AliceBlue,
+                Color = Color.DarkBlue,
                 BorderWidth = 3
             };
 
@@ -112,10 +118,22 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           
+            TelaInicialForm telainicial = new TelaInicialForm(idModalidadeSelecionada);
+            telainicial.Show();
+            this.Hide();
         }
 
         private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart1_Click_1(object sender, EventArgs e)
         {
 
         }

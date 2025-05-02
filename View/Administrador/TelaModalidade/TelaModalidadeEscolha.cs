@@ -39,10 +39,13 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             Usuario usuario = SessionUser.userLogado;
             VisibilidadeTelaUsuario(usuario);
 
-            labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}!\n Selecione a sua modalidade ";
-            //labelTextoNaTela.Text = $"Pronto para iniciar Danyelle!\n Selecione a sua modalidade  ";
+            labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}! ";
+
+            label1TextoModalidade.Text = "Escolha sua Modalidade:";
 
             btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
+
+            labelNomeUser.Text = (usuario.TipoUsuario);
 
         }
      private void VisibilidadeTelaUsuario(Usuario usuario)
@@ -114,12 +117,14 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
                 var telaInicial = new TelaInicialForm(2); 
                 telaInicial.Show();
                 this.Hide();
+
             }
         
         }
 
         private void BtnFuncional_Click(object sender, EventArgs e)
         {
+
             if (BtnFuncional.Enabled)
             {
                 var telaInicial = new TelaInicialForm(3); 
@@ -137,6 +142,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
                 this.Hide();
             }
         }
+
 
 
         private void panel3_Paint(object sender, PaintEventArgs e)

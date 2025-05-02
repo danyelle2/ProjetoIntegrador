@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System;
+using System.Collections.Generic;
 using MySql.Data.MySqlClient;
+using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using ModelAluno = ProjetoIntegrador.Model.Aluno;
+using ModelModalidade = ProjetoIntegrador.Model.Modalidade;
 
 namespace ProjetoIntegrador.Controller.Repositorio
 {
@@ -15,48 +17,87 @@ namespace ProjetoIntegrador.Controller.Repositorio
             _databaseService = databaseService;
         }
 
-        public List<ModelAluno> AlunosAtivos()
+        public List<Pagamento> ObterPagamentosAtivos(int idModalidade)
         {
-            List<ModelAluno> lista = new List<ModelAluno>();
-
+            var pagamentos = new List<Pagamento>();
             string query = @"
-                SELECT id_aluno, nome, status_aluno, status_pagamento 
-                FROM aluno 
-                WHERE status_aluno = 1"
-            ;
+        SELECT
+            p.id_pagamento,
+            p.id_aluno,
+            a.nome as NomeAluno,
+            a.responsavel as NomeResponsavel, 
+            p.status_pagamento as StatusPagamento,
+            p.data_pagamento as DataPagamento
+        FROM
+            pagamento p
+        INNER JOIN
+            aluno a ON a.id_aluno = p.id_aluno
+        INNER JOIN
+            modalidade u ON u.id_modalidade = a.id_modalidade
+        WHERE
+            a.status_aluno = 1 AND u.id_modalidade = @idModalidade";
 
-            using (MySqlDataReader reader = _databaseService.ExecuteQuery(query))
+            _databaseService.OpenConnection();
+            try
             {
-                while (reader.Read())
+                using (var cmd = new MySqlCommand(query, _databaseService.Connection))
                 {
-                    lista.Add(new ModelAluno
+                    cmd.Parameters.AddWithValue("@idModalidade", idModalidade);
+
+                    using (var reader = cmd.ExecuteReader())
                     {
-                        Id = reader.GetInt32("id_aluno"),
-                        Nome = reader.GetString("nome"),
-                        StatusAtivo = reader.GetBoolean("status_aluno"),
-                        StatusPagamento = reader.GetBoolean("status_pagamento")
-                    });
+                        while (reader.Read())
+                        {
+                            var pagamento = new Pagamento
+                            {
+                                IdPagamento = Convert.ToInt32(reader["id_pagamento"]),
+                                IdAluno = Convert.ToInt32(reader["id_aluno"]),
+                                NomeAluno = reader["NomeAluno"].ToString(), 
+                                NomeResponsavel = reader["NomeResponsavel"].ToString(),
+                                StatusPagamento = Convert.ToBoolean(reader["StatusPagamento"]),
+                                DataPagamento = reader["DataPagamento"] != DBNull.Value ?
+                                                (DateTime?)Convert.ToDateTime(reader["DataPagamento"]) : null
+                            };
+                            pagamentos.Add(pagamento);
+                        }
+                    }
                 }
             }
+            finally
+            {
+                _databaseService.CloseConnection();
+            }
 
-            return lista;
+            return pagamentos;
         }
 
-        public void AtualizarStatusPagamento(int idAluno, bool statusPagamento)
+        public void AtualizarPagamento(int idAluno, bool statusPagamento)
         {
             string query = @"
-                UPDATE pagamento 
-                SET data_pagamento = NOW(), status_pagamento = @status 
-                WHERE id_aluno = @idAluno"
-            ;
+        UPDATE pagamento 
+        SET status_pagamento = @statusPagamento,
+            data_pagamento = @dataPagamento
+        WHERE id_aluno = @idAluno;
+    ";
+            //VER SE DA CERTO COM CONDICIONAL 
+            object dataPagamento;
+            if (statusPagamento)
+            {
+                dataPagamento = DateTime.Now;
+            }
+            else
+            {
+                dataPagamento = DBNull.Value;
+            }
 
             MySqlParameter[] parameters =
             {
-                new MySqlParameter("@status", statusPagamento),
-                new MySqlParameter("@idAluno", idAluno),
-            };
+        new MySqlParameter("@statusPagamento", statusPagamento),
+        new MySqlParameter("@dataPagamento", dataPagamento),
+        new MySqlParameter("@idAluno", idAluno)
+    };
 
             _databaseService.ExecuteNonQuery(query, parameters);
         }
     }
-}
+    }

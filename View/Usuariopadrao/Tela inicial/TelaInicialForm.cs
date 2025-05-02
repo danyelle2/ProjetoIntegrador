@@ -12,16 +12,19 @@ using ProjetoIntegrador.Model;
 using ProjetoIntegrador.Services;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.View.Usuariopadrao.Tela_inicial;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjetoIntegrador.View
 {
     public partial class TelaInicialForm : Form
     {
-
+        private readonly int idModalidadeSelecionada;
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
-            
+            idModalidadeSelecionada = idModalidade;
+
+
         }   
        
         
@@ -40,7 +43,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBoxCadastroAlunos_Click(object sender, EventArgs e)
         {
-            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos();
+            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada);
             telaCadastroAluno.ShowDialog();
         }
 
@@ -53,7 +56,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBoxAlterarDadosDesaparece(object sender, EventArgs e)
         {
-            MsgExplicacaoAlterarDados.Visible = false;
+            MsgExplicacaoAlterarDados1.Visible = false;
 
         }       
 
@@ -71,38 +74,143 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
-        {            // PERGUNTAR SE DEIXA TELA INTEIRA OU SÓ DIALOGO MESMO IGUAL AS OUTRAS.
-            // SE A TELA FICAR MAIOR COLOCAR O BOTÃO DE VOLTAR OU ALGO DO TIPO
-            TelaGraficoForms telaGrafico = new TelaGraficoForms();
-            telaGrafico.ShowDialog();
+        {
+            var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
+            telaGrafico.Show();
+            this.Hide();
+
         }
         private void CarregarAlunos()
         {
             var repositorioAluno = new RepositorioAluno(new DatabaseService());
-            var listaAlunos = repositorioAluno.BuscarTodos();
-            dataGridViewListaGeralAlunos.DataSource = listaAlunos;
+            var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
+
+            dataGridViewListaGeralAlunos.AutoGenerateColumns = false;
+
+            dataGridViewListaGeralAlunos.Columns.Clear();
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Id",
+                HeaderText = "ID",
+                Width = 40,
+                Name = "Id"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Nome",
+                HeaderText = "Nome",
+                Name = "Nome"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "StatusAlunoTexto",
+                HeaderText = "Status",
+                Width = 80,
+                Name = "StatusAluno"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "assinatura",
+                HeaderText = "Assinatura",
+                Width = 80,
+                Name = "assinatura"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "DataEntrada",
+                HeaderText = "Entrada",
+                Width = 80,
+                Name = "DataEntrada",
+                 DefaultCellStyle = new DataGridViewCellStyle()
+                 {
+                     Format = "dd/MM/yyyy",
+                     Alignment = DataGridViewContentAlignment.MiddleCenter
+                 }
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Idade",
+                HeaderText = "Idade",
+                Width = 40,
+                Name = "Idade"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "Telefone",
+                HeaderText = "Telefone",                
+                Name = "Telefone"
+            });
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "NomeResponsavel",
+                HeaderText = "Responsável",
+                Name = "NomeResposavel"
+            });
+
+            dataGridViewListaGeralAlunos.Columns.Add(new DataGridViewTextBoxColumn()
+            {
+                DataPropertyName = "DataSaida",
+                HeaderText = "Saída",
+                Width = 80,
+                Name = "DataSaida",
+                DefaultCellStyle = new DataGridViewCellStyle()
+                {
+                    Format = "dd/MM/yyyy",
+                    Alignment = DataGridViewContentAlignment.MiddleCenter
+                }
+            });
+            dataGridViewListaGeralAlunos.DataSource = listaAlunos.ToList();
+
+            foreach (DataGridViewRow row in dataGridViewListaGeralAlunos.Rows)
+            {
+                var aluno = (Aluno)row.DataBoundItem;
+
+                if (!aluno.StatusAluno)
+                {
+                    row.DefaultCellStyle.BackColor = Color.LightGray;
+                    row.DefaultCellStyle.ForeColor = Color.DarkGray;
+                }
+            }
         }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)
         {
-            CarregarAlunos();
+            dataGridViewListaGeralAlunos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewListaGeralAlunos.MultiSelect = false; 
+
+            dataGridViewListaGeralAlunos.BackgroundColor = Color.White;
+            dataGridViewListaGeralAlunos.ReadOnly = true;
+            dataGridViewListaGeralAlunos.AllowUserToAddRows = false;
+            dataGridViewListaGeralAlunos.AllowUserToDeleteRows = false;
 
             Usuario usuario = SessionUser.userLogado;
-           
-            switch (usuario.IdModalidade)
+            label1UsuarioNome.Text = usuario.Nome;
+
+            CarregarAlunos();
+
+
+            switch (idModalidadeSelecionada)
             {
                 case 2:
-                    labelTitulo.Text = "Área de Ritimos e Zumba";
+                    labelTituloModalidade.Text = "Área de Ritimos e Zumba";
                     break;
                 case 3:
-                    labelTitulo.Text = "Área de Funcional";
+                    labelTituloModalidade.Text = "Área de Funcional";
                     break;
                 case 4:
-                    labelTitulo.Text = "Área do Muay Thai";
-                    break;                
+                    labelTituloModalidade.Text = "Área do Muay Thai";
+                    break;
+
             }
         }
-
+        
         private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
         {
             MsgTemporariaPagamento.Visible = true;
@@ -116,22 +224,12 @@ namespace ProjetoIntegrador.View
 
         private Aluno alunoSelecionado;
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        
-            if (e.RowIndex >= 0) 
-            {
-                alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.Rows[e.RowIndex].DataBoundItem;
-            }
-        
-
-        }
-
+       
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos();
-                telapagamento.Show();
+            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
+            telapagamento.Show();
+
         }
 
         private void textBoxPesquisa_TextChanged(object sender, EventArgs e)
@@ -146,26 +244,64 @@ namespace ProjetoIntegrador.View
             this.Hide(); 
         }
 
+
+
         private void pictureBoxAlterar_Click(object sender, EventArgs e)
-        {         
-           
-            if (alunoSelecionado != null)
+        {
+            if (dataGridViewListaGeralAlunos.SelectedRows.Count == 0)
             {
-                var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
-                telaAlterarDados.ShowDialog();
+                MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção",
+                              MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
+            if (telaAlterarDados.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Selecione um aluno para alterar os dados.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CarregarAlunos(); 
             }
-        
+        }
 
 
-    }
 
         private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MsgExplicacaoGrafico_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            FiltrarAlunos();
+
+        }
+
+        private void FiltrarAlunos()
+        {
+            string pesquisa = textBox1.Text.Trim();
+
+            var repositorioAluno = new RepositorioAluno(new DatabaseService());
+            var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
+
+            var alunosFiltrados = listaAlunos
+                .Where(a => a.Nome != null && 
+                            a.Nome != null &&
+                            a.Nome.IndexOf(pesquisa, StringComparison.OrdinalIgnoreCase) >= 0)
+                .ToList();
+
+            dataGridViewListaGeralAlunos.DataSource = alunosFiltrados;
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridViewListaGeralAlunos.SelectedRows.Count > 0)
+            {
+                alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.SelectedRows[0].DataBoundItem;
+            }
         }
     }
     }
