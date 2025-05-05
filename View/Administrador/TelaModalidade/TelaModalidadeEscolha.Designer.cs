@@ -61,11 +61,11 @@
             // label1TextoModalidade
             // 
             this.label1TextoModalidade.AutoSize = true;
-            this.label1TextoModalidade.Font = new System.Drawing.Font("Arial Black", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1TextoModalidade.Font = new System.Drawing.Font("Arial Narrow", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1TextoModalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1TextoModalidade.Location = new System.Drawing.Point(451, 91);
+            this.label1TextoModalidade.Location = new System.Drawing.Point(517, 99);
             this.label1TextoModalidade.Name = "label1TextoModalidade";
-            this.label1TextoModalidade.Size = new System.Drawing.Size(0, 52);
+            this.label1TextoModalidade.Size = new System.Drawing.Size(0, 57);
             this.label1TextoModalidade.TabIndex = 28;
             // 
             // labelNomeUser
@@ -73,7 +73,7 @@
             this.labelNomeUser.AutoSize = true;
             this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(85, 23);
+            this.labelNomeUser.Location = new System.Drawing.Point(108, 26);
             this.labelNomeUser.Name = "labelNomeUser";
             this.labelNomeUser.Size = new System.Drawing.Size(0, 22);
             this.labelNomeUser.TabIndex = 27;
@@ -82,7 +82,7 @@
             // 
             this.labelTextoNaTela.AutoSize = true;
             this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(472, 23);
+            this.labelTextoNaTela.Location = new System.Drawing.Point(469, 26);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
             this.labelTextoNaTela.Size = new System.Drawing.Size(0, 22);
             this.labelTextoNaTela.TabIndex = 26;
