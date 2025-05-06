@@ -256,7 +256,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaInicialForm";
             this.Text = "TelaInicialForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaInicialForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).EndInit();

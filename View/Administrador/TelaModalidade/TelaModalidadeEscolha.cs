@@ -36,7 +36,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         private void TelaModalidadeEscolha_Load(object sender, EventArgs e)
         {
-            Usuario usuario = SessionUser.userLogado;
+            Usuario usuario = SessionUser.userLogado; 
             VisibilidadeTelaUsuario(usuario);
 
             labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}! ";
@@ -64,8 +64,11 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
      else
      {
          BtnZumba.Enabled = (usuario.IdModalidade == 2);
+         BtnZumba.Visible = (usuario.IdModalidade == 2);
          BtnFuncional.Enabled = (usuario.IdModalidade == 3);
+         BtnFuncional.Visible = (usuario.IdModalidade == 3);
          BtnMuayThai.Enabled = (usuario.IdModalidade == 4);
+         BtnMuayThai.Visible = (usuario.IdModalidade == 4);
      }
  }
 

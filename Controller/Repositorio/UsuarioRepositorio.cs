@@ -66,34 +66,34 @@ namespace ProjetoIntegrador.Controller.Usuario
             // parametros serve para segurança do código.
 
 
-           
 
 
-            try
-            {
-                int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
 
-                if (usuario.TipoUsuario == "usuario_padrao")
-                {
-                    string query2 = @" 
-                         INSERT INTO professor (id_usuario, id_modalidade)
-                         VALUES (@id_usuario, @id_modalidade)";
+            //try
+            //{
+            //    int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
 
-                    var parameters2 = new MySqlParameter[]
-                    {
-                          new MySqlParameter("@id_usuario", idUsuario),
-                      new MySqlParameter("@id_modalidade", idModalidade),
-                    };
+            //    if (usuario.TipoUsuario == "usuario_padrao")
+            //    {
+            //        string query2 = @" 
+            //             INSERT INTO professor (id_usuario, id_modalidade)
+            //             VALUES (@id_usuario, @id_modalidade)";
 
-                    _databaseService.ExecuteNonQuery(query2, parameters2);
-                }
-            
+            //        var parameters2 = new MySqlParameter[]
+            //        {
+            //              new MySqlParameter("@id_usuario", idUsuario),
+            //          new MySqlParameter("@id_modalidade", idModalidade),
+            //        };
 
-            }
-            catch (Exception ex)
-            {
-                throw new InvalidOperationException("Erro ao cadastrar usuário.", ex);
-            }
+            //        _databaseService.ExecuteNonQuery(query2, parameters2);
+            //    }
+
+
+        //}
+            //catch (Exception ex)
+            //{
+            //    throw new InvalidOperationException("Erro ao cadastrar usuário.", ex);
+            //}
             //Colocar uma função update para usuario mudar os status dele para inativo.
         }
     }

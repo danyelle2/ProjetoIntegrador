@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1TextoModalidade = new System.Windows.Forms.Label();
+            this.btnCadastro = new System.Windows.Forms.Button();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
-            this.btnCadastro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BtnMuayThai = new System.Windows.Forms.Button();
             this.BtnFuncional = new System.Windows.Forms.Button();
@@ -68,6 +68,25 @@
             this.label1TextoModalidade.Size = new System.Drawing.Size(0, 57);
             this.label1TextoModalidade.TabIndex = 28;
             // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.FlatAppearance.BorderSize = 0;
+            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.Location = new System.Drawing.Point(1055, -3);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(308, 84);
+            this.btnCadastro.TabIndex = 25;
+            this.btnCadastro.Text = "Cadastrar Usuário";
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
             // labelNomeUser
             // 
             this.labelNomeUser.AutoSize = true;
@@ -87,24 +106,6 @@
             this.labelTextoNaTela.Size = new System.Drawing.Size(0, 22);
             this.labelTextoNaTela.TabIndex = 26;
             this.labelTextoNaTela.Click += new System.EventHandler(this.labelTextoNaTela_Click);
-            // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastro.FlatAppearance.BorderSize = 0;
-            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(1052, 9);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(289, 55);
-            this.btnCadastro.TabIndex = 25;
-            this.btnCadastro.UseVisualStyleBackColor = false;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // panel1
             // 
@@ -129,11 +130,12 @@
             this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Location = new System.Drawing.Point(980, 209);
+            this.BtnMuayThai.Location = new System.Drawing.Point(985, 209);
             this.BtnMuayThai.Name = "BtnMuayThai";
             this.BtnMuayThai.Size = new System.Drawing.Size(270, 66);
             this.BtnMuayThai.TabIndex = 2;
             this.BtnMuayThai.UseVisualStyleBackColor = true;
+            this.BtnMuayThai.Visible = false;
             this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
             // 
             // BtnFuncional
@@ -145,11 +147,12 @@
             this.BtnFuncional.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnFuncional.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnFuncional.Image = ((System.Drawing.Image)(resources.GetObject("BtnFuncional.Image")));
-            this.BtnFuncional.Location = new System.Drawing.Point(542, 209);
+            this.BtnFuncional.Location = new System.Drawing.Point(541, 209);
             this.BtnFuncional.Name = "BtnFuncional";
             this.BtnFuncional.Size = new System.Drawing.Size(270, 66);
             this.BtnFuncional.TabIndex = 1;
             this.BtnFuncional.UseVisualStyleBackColor = false;
+            this.BtnFuncional.Visible = false;
             this.BtnFuncional.Click += new System.EventHandler(this.BtnFuncional_Click);
             // 
             // BtnZumba
@@ -166,6 +169,7 @@
             this.BtnZumba.Size = new System.Drawing.Size(269, 66);
             this.BtnZumba.TabIndex = 0;
             this.BtnZumba.UseVisualStyleBackColor = true;
+            this.BtnZumba.Visible = false;
             this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
             // 
             // tableLayoutPanel1
