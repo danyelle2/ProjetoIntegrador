@@ -125,9 +125,10 @@
             this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBoxVoltar.Location = new System.Drawing.Point(30, 12);
+            this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
+            this.pictureBoxVoltar.Location = new System.Drawing.Point(22, 12);
             this.pictureBoxVoltar.Name = "pictureBoxVoltar";
-            this.pictureBoxVoltar.Size = new System.Drawing.Size(56, 66);
+            this.pictureBoxVoltar.Size = new System.Drawing.Size(74, 66);
             this.pictureBoxVoltar.TabIndex = 81;
             this.pictureBoxVoltar.TabStop = false;
             this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
@@ -288,11 +289,12 @@
             // btnCadastro
             // 
             this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastro.BackgroundImage")));
             this.btnCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastro.Location = new System.Drawing.Point(999, 501);
+            this.btnCadastro.Location = new System.Drawing.Point(992, 486);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(156, 52);
+            this.btnCadastro.Size = new System.Drawing.Size(161, 67);
             this.btnCadastro.TabIndex = 60;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             this.btnCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.btnCadastro_Paint);
