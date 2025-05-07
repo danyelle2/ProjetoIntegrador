@@ -42,12 +42,10 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
             {
                 var pagamentos = _repositorioPagamento.ObterPagamentosAtivos(_idModalidade);
 
-                // Configura as colunas antes de atribuir o DataSource
                 ConfigurarColunasPagamento();
 
                 dataGridViewpagamento.DataSource = pagamentos;
 
-                // Aplica formatação condicional após carregar os dados
                 AplicarFormatacaoCondicional();
             }
             catch (Exception ex)
@@ -61,18 +59,18 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         {
             foreach (DataGridViewRow row in dataGridViewpagamento.Rows)
             {
-                if (row.Cells["Status"].Value != null)
+                if (row.Cells["StatusPagamento"].Value != null)
                 {
-                    bool status = row.Cells["Status"].Value.ToString() == "Pago";
-                    row.Cells["Status"].Style.BackColor = status ? Color.LightGreen : Color.LightCoral;
-                    row.Cells["Status"].Style.ForeColor = Color.Black;
+                    bool status = row.Cells["StatusPagamento"].Value.ToString() == "Pago";
+                    row.Cells["StatusPagamento"].Style.BackColor = status ? Color.LightGreen : Color.LightCoral;
+                    row.Cells["StatusPagamento"].Style.ForeColor = Color.Black;
                 }
             }
         }
 
         private void dataGridViewpagamento_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            e.Cancel = true; // Evita que o erro interrompa a execução
+            e.Cancel = true; 
         }
 
         private void ConfigurarColunasPagamento()
@@ -80,7 +78,6 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
             dataGridViewpagamento.AutoGenerateColumns = false;
             dataGridViewpagamento.Columns.Clear();
 
-            // Coluna ID Aluno (corrigido para "IdAluno")
             dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "IdAluno",
@@ -89,25 +86,22 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 Width = 50
             });
 
-            // Coluna Nome
             dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
             {
-                DataPropertyName = "NomeAluno",
+                DataPropertyName = "Nome",
                 HeaderText = "Nome",
                 Name = "Nome",
                 Width = 200
             });
 
-            // Coluna Status (usando StatusPagamentoTexto)
             dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "StatusPagamentoTexto",
                 HeaderText = "Status",
-                Name = "Status",
+                Name = "StatusPagamento",
                 Width = 80
             });
 
-            // Coluna Data Pagamento
             dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "DataPagamento",
@@ -122,7 +116,6 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 }
             });
 
-            // Coluna Responsável
             dataGridViewpagamento.Columns.Add(new DataGridViewTextBoxColumn
             {
                 DataPropertyName = "NomeResponsavel",
@@ -184,7 +177,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 }
 
                 CarregarPagamentos();
-                MessageBox.Show("Status alterado para pendente com sucesso!", "Sucesso",
+                MessageBox.Show("StatusPagamento alterado para pendente com sucesso!", "Sucesso",
                               MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
@@ -209,7 +202,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 if (pagamentos != null)
                 {
                     var pagamentosFiltrados = pagamentos
-                        .Where(p => p.NomeAluno.ToLower().Contains(filtro))
+                        .Where(p => p.Nome.ToLower().Contains(filtro))
                         .ToList();
 
                     dataGridViewpagamento.DataSource = pagamentosFiltrados;
@@ -231,8 +224,6 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
                 alunoSelecionado = new Aluno
                 {
                     Id = Convert.ToInt32(selectedRow.Cells["IdAluno"].Value),
-                    Nome = selectedRow.Cells["Nome"].Value.ToString(),
-                    StatusPagamento = selectedRow.Cells["Status"].Value.ToString() == "Pago"
                 };
             }
         }

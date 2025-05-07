@@ -93,6 +93,7 @@
             // 
             this.pictureBoxCadastroAlunos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxCadastroAlunos.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxCadastroAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxCadastroAlunos.ErrorImage = null;
             this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(45, 118);
             this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
@@ -108,6 +109,7 @@
             // 
             this.pictureBoxAlterar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxAlterar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxAlterar.ErrorImage = null;
             this.pictureBoxAlterar.Location = new System.Drawing.Point(45, 273);
             this.pictureBoxAlterar.Name = "pictureBoxAlterar";
@@ -123,6 +125,7 @@
             // 
             this.pictureBox2Graficos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2Graficos.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2Graficos.ErrorImage = null;
             this.pictureBox2Graficos.Location = new System.Drawing.Point(45, 440);
             this.pictureBox2Graficos.Name = "pictureBox2Graficos";
@@ -154,6 +157,7 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.ErrorImage = null;
             this.pictureBox3.Location = new System.Drawing.Point(45, 590);
             this.pictureBox3.Name = "pictureBox3";

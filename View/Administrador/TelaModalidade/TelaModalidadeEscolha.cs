@@ -163,6 +163,11 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
         }
 
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //private void pictureBoxVoltar_Click(object sender, EventArgs e)
         //{
 

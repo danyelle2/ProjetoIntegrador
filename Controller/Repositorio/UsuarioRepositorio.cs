@@ -69,32 +69,10 @@ namespace ProjetoIntegrador.Controller.Usuario
 
 
 
-            //try
-            //{
-            //    int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
+            
+                int idUsuario = Convert.ToInt32(_databaseService.ExecuteScalarTransaction(query, parameters));
 
-            //    if (usuario.TipoUsuario == "usuario_padrao")
-            //    {
-            //        string query2 = @" 
-            //             INSERT INTO professor (id_usuario, id_modalidade)
-            //             VALUES (@id_usuario, @id_modalidade)";
-
-            //        var parameters2 = new MySqlParameter[]
-            //        {
-            //              new MySqlParameter("@id_usuario", idUsuario),
-            //          new MySqlParameter("@id_modalidade", idModalidade),
-            //        };
-
-            //        _databaseService.ExecuteNonQuery(query2, parameters2);
-            //    }
-
-
-        //}
-            //catch (Exception ex)
-            //{
-            //    throw new InvalidOperationException("Erro ao cadastrar usuário.", ex);
-            //}
-            //Colocar uma função update para usuario mudar os status dele para inativo.
+           
         }
     }
 }

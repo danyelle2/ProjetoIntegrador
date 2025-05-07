@@ -24,7 +24,7 @@ namespace ProjetoIntegrador.Controller.Repositorio
         SELECT
             p.id_pagamento,
             p.id_aluno,
-            a.nome as NomeAluno,
+            a.nome as Nome,
             a.responsavel as NomeResponsavel, 
             p.status_pagamento as StatusPagamento,
             p.data_pagamento as DataPagamento
@@ -52,7 +52,7 @@ namespace ProjetoIntegrador.Controller.Repositorio
                             {
                                 IdPagamento = Convert.ToInt32(reader["id_pagamento"]),
                                 IdAluno = Convert.ToInt32(reader["id_aluno"]),
-                                NomeAluno = reader["NomeAluno"].ToString(), 
+                                Nome = reader["Nome"].ToString(), 
                                 NomeResponsavel = reader["NomeResponsavel"].ToString(),
                                 StatusPagamento = Convert.ToBoolean(reader["StatusPagamento"]),
                                 DataPagamento = reader["DataPagamento"] != DBNull.Value ?
@@ -79,7 +79,6 @@ namespace ProjetoIntegrador.Controller.Repositorio
             data_pagamento = @dataPagamento
         WHERE id_aluno = @idAluno;
     ";
-            //VER SE DA CERTO COM CONDICIONAL 
             object dataPagamento;
             if (statusPagamento)
             {

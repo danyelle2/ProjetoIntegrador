@@ -22,5 +22,6 @@ namespace ProjetoIntegrador.Model
         public string StatusAlunoTexto => StatusAluno ? "Ativo" : "Inativo";
 
 
+
     }
 }
