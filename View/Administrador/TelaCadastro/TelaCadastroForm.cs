@@ -167,6 +167,8 @@ namespace ProjetoIntegrador.View
         {
             TelaModalidadeEscolha telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
+            this.Close();
+
         }
 
         private void btnCadastro_Paint(object sender, PaintEventArgs e)
