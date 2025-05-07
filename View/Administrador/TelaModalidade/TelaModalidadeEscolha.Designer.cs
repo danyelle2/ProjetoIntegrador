@@ -41,7 +41,6 @@
             this.btnCadastro = new System.Windows.Forms.Button();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -172,7 +171,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Controls.Add(this.label1TextoModalidade);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,6 +182,8 @@
             // 
             // tableLayoutPanel3
             // 
+            this.tableLayoutPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel3.BackgroundImage")));
+            this.tableLayoutPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.13848F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.86151F));
@@ -195,9 +195,10 @@
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(10, 0, 0, 10);
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.42955F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 100);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 95);
             this.tableLayoutPanel3.TabIndex = 29;
             // 
             // btnCadastro
@@ -211,12 +212,13 @@
             this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(1093, 3);
+            this.btnCadastro.Location = new System.Drawing.Point(1094, 3);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(264, 65);
+            this.btnCadastro.Size = new System.Drawing.Size(263, 65);
             this.btnCadastro.TabIndex = 28;
             this.btnCadastro.Text = "Cadastrar Usuário";
             this.btnCadastro.UseVisualStyleBackColor = false;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
             // labelNomeUser
             // 
@@ -224,7 +226,7 @@
             this.labelNomeUser.AutoSize = true;
             this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(85, 39);
+            this.labelNomeUser.Location = new System.Drawing.Point(93, 31);
             this.labelNomeUser.Name = "labelNomeUser";
             this.labelNomeUser.Size = new System.Drawing.Size(35, 22);
             this.labelNomeUser.TabIndex = 30;
@@ -235,21 +237,11 @@
             this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTextoNaTela.AutoSize = true;
             this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(383, 38);
+            this.labelTextoNaTela.Location = new System.Drawing.Point(386, 30);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
             this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
             this.labelTextoNaTela.TabIndex = 29;
             this.labelTextoNaTela.Text = ".....";
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 202);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1360, 89);
-            this.panel3.TabIndex = 30;
             // 
             // TelaModalidadeEscolha
             // 
@@ -286,6 +278,5 @@
         private System.Windows.Forms.Label labelNomeUser;
         private System.Windows.Forms.Label label1TextoModalidade;
         private System.Windows.Forms.Label labelTextoNaTela;
-        private System.Windows.Forms.Panel panel3;
     }
 }
