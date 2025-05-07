@@ -29,85 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaModalidadeEscolha));
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnZumba = new System.Windows.Forms.Button();
+            this.BtnMuayThai = new System.Windows.Forms.Button();
+            this.BtnFuncional = new System.Windows.Forms.Button();
             this.label1TextoModalidade = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnZumba = new System.Windows.Forms.Button();
-            this.BtnFuncional = new System.Windows.Forms.Button();
-            this.BtnMuayThai = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.label1TextoModalidade);
-            this.panel2.Controls.Add(this.btnCadastro);
-            this.panel2.Controls.Add(this.labelNomeUser);
-            this.panel2.Controls.Add(this.labelTextoNaTela);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1360, 291);
-            this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // label1TextoModalidade
-            // 
-            this.label1TextoModalidade.AutoSize = true;
-            this.label1TextoModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1TextoModalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1TextoModalidade.Location = new System.Drawing.Point(497, 98);
-            this.label1TextoModalidade.Name = "label1TextoModalidade";
-            this.label1TextoModalidade.Size = new System.Drawing.Size(0, 55);
-            this.label1TextoModalidade.TabIndex = 28;
-            // 
-            // btnCadastro
-            // 
-            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastro.FlatAppearance.BorderSize = 0;
-            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastro.Location = new System.Drawing.Point(1055, -3);
-            this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(308, 76);
-            this.btnCadastro.TabIndex = 25;
-            this.btnCadastro.Text = "Cadastrar Usuário";
-            this.btnCadastro.UseVisualStyleBackColor = false;
-            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
-            // 
-            // labelNomeUser
-            // 
-            this.labelNomeUser.AutoSize = true;
-            this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(108, 26);
-            this.labelNomeUser.Name = "labelNomeUser";
-            this.labelNomeUser.Size = new System.Drawing.Size(0, 22);
-            this.labelNomeUser.TabIndex = 27;
-            // 
-            // labelTextoNaTela
-            // 
-            this.labelTextoNaTela.AutoSize = true;
-            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(437, 24);
-            this.labelTextoNaTela.Name = "labelTextoNaTela";
-            this.labelTextoNaTela.Size = new System.Drawing.Size(0, 24);
-            this.labelTextoNaTela.TabIndex = 26;
-            this.labelTextoNaTela.Click += new System.EventHandler(this.labelTextoNaTela_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -132,6 +71,17 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1366, 745);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.tableLayoutPanel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 323);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1360, 419);
+            this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -170,6 +120,24 @@
             this.BtnZumba.Visible = false;
             this.BtnZumba.Click += new System.EventHandler(this.BtnZumba_Click);
             // 
+            // BtnMuayThai
+            // 
+            this.BtnMuayThai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BtnMuayThai.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BtnMuayThai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnMuayThai.FlatAppearance.BorderSize = 0;
+            this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMuayThai.Image = ((System.Drawing.Image)(resources.GetObject("BtnMuayThai.Image")));
+            this.BtnMuayThai.Location = new System.Drawing.Point(946, 18);
+            this.BtnMuayThai.Name = "BtnMuayThai";
+            this.BtnMuayThai.Size = new System.Drawing.Size(373, 382);
+            this.BtnMuayThai.TabIndex = 3;
+            this.BtnMuayThai.UseVisualStyleBackColor = true;
+            this.BtnMuayThai.Visible = false;
+            this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
+            // 
             // BtnFuncional
             // 
             this.BtnFuncional.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -189,34 +157,87 @@
             this.BtnFuncional.Visible = false;
             this.BtnFuncional.Click += new System.EventHandler(this.BtnFuncional_Click);
             // 
-            // BtnMuayThai
+            // label1TextoModalidade
             // 
-            this.BtnMuayThai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BtnMuayThai.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnMuayThai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMuayThai.FlatAppearance.BorderSize = 0;
-            this.BtnMuayThai.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.BtnMuayThai.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.BtnMuayThai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMuayThai.Image = ((System.Drawing.Image)(resources.GetObject("BtnMuayThai.Image")));
-            this.BtnMuayThai.Location = new System.Drawing.Point(946, 18);
-            this.BtnMuayThai.Name = "BtnMuayThai";
-            this.BtnMuayThai.Size = new System.Drawing.Size(373, 382);
-            this.BtnMuayThai.TabIndex = 3;
-            this.BtnMuayThai.UseVisualStyleBackColor = true;
-            this.BtnMuayThai.Visible = false;
-            this.BtnMuayThai.Click += new System.EventHandler(this.BtnMuayThai_Click);
+            this.label1TextoModalidade.AutoSize = true;
+            this.label1TextoModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1TextoModalidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1TextoModalidade.Location = new System.Drawing.Point(497, 98);
+            this.label1TextoModalidade.Name = "label1TextoModalidade";
+            this.label1TextoModalidade.Size = new System.Drawing.Size(0, 55);
+            this.label1TextoModalidade.TabIndex = 28;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.tableLayoutPanel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 323);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1360, 419);
-            this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.tableLayoutPanel3);
+            this.panel2.Controls.Add(this.label1TextoModalidade);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1360, 291);
+            this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.13848F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.86151F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 489F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
+            this.tableLayoutPanel3.Controls.Add(this.btnCadastro, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelTextoNaTela, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelNomeUser, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.02406F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.97594F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 291);
+            this.tableLayoutPanel3.TabIndex = 29;
+            // 
+            // btnCadastro
+            // 
+            this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastro.FlatAppearance.BorderSize = 0;
+            this.btnCadastro.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCadastro.Location = new System.Drawing.Point(1093, 3);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(264, 61);
+            this.btnCadastro.TabIndex = 28;
+            this.btnCadastro.Text = "Cadastrar Usuário";
+            this.btnCadastro.UseVisualStyleBackColor = false;
+            // 
+            // labelNomeUser
+            // 
+            this.labelNomeUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelNomeUser.AutoSize = true;
+            this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
+            this.labelNomeUser.Location = new System.Drawing.Point(85, 22);
+            this.labelNomeUser.Name = "labelNomeUser";
+            this.labelNomeUser.Size = new System.Drawing.Size(35, 22);
+            this.labelNomeUser.TabIndex = 30;
+            this.labelNomeUser.Text = ".....";
+            // 
+            // labelTextoNaTela
+            // 
+            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTextoNaTela.AutoSize = true;
+            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoNaTela.Location = new System.Drawing.Point(383, 21);
+            this.labelTextoNaTela.Name = "labelTextoNaTela";
+            this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
+            this.labelTextoNaTela.TabIndex = 29;
+            this.labelTextoNaTela.Text = ".....";
             // 
             // TelaModalidadeEscolha
             // 
@@ -229,27 +250,29 @@
             this.Name = "TelaModalidadeEscolha";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaModalidadeEscolha_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label labelTextoNaTela;
-        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label labelNomeUser;
-        private System.Windows.Forms.Label label1TextoModalidade;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button BtnFuncional;
         private System.Windows.Forms.Button BtnZumba;
         private System.Windows.Forms.Button BtnMuayThai;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.Label labelTextoNaTela;
+        private System.Windows.Forms.Label labelNomeUser;
+        private System.Windows.Forms.Label label1TextoModalidade;
     }
 }
