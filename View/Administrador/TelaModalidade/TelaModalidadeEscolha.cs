@@ -41,7 +41,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
 
             labelTextoNaTela.Text = $"Pronto para iniciar {usuario.Nome}! ";
 
-            label1TextoModalidade.Text = "Escolha sua Modalidade:";
+            //label1TextoModalidade.Text = "Escolha sua Modalidade:";
 
             btnCadastro.Visible = (usuario.TipoUsuario == "administrador");
 
