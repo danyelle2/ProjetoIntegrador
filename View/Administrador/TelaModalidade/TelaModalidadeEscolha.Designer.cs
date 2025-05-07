@@ -41,6 +41,7 @@
             this.btnCadastro = new System.Windows.Forms.Button();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -171,6 +172,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.tableLayoutPanel3);
             this.panel2.Controls.Add(this.label1TextoModalidade);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -193,7 +195,6 @@
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.42955F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 100);
@@ -223,7 +224,7 @@
             this.labelNomeUser.AutoSize = true;
             this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(85, 34);
+            this.labelNomeUser.Location = new System.Drawing.Point(85, 39);
             this.labelNomeUser.Name = "labelNomeUser";
             this.labelNomeUser.Size = new System.Drawing.Size(35, 22);
             this.labelNomeUser.TabIndex = 30;
@@ -234,11 +235,21 @@
             this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTextoNaTela.AutoSize = true;
             this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(383, 33);
+            this.labelTextoNaTela.Location = new System.Drawing.Point(383, 38);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
             this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
             this.labelTextoNaTela.TabIndex = 29;
             this.labelTextoNaTela.Text = ".....";
+            // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 202);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1360, 89);
+            this.panel3.TabIndex = 30;
             // 
             // TelaModalidadeEscolha
             // 
@@ -275,5 +286,6 @@
         private System.Windows.Forms.Label labelNomeUser;
         private System.Windows.Forms.Label label1TextoModalidade;
         private System.Windows.Forms.Label labelTextoNaTela;
+        private System.Windows.Forms.Panel panel3;
     }
 }
