@@ -251,7 +251,7 @@
             this.btnModalidadeCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnModalidadeCadastro.Location = new System.Drawing.Point(226, 557);
             this.btnModalidadeCadastro.Name = "btnModalidadeCadastro";
-            this.btnModalidadeCadastro.Size = new System.Drawing.Size(60, 54);
+            this.btnModalidadeCadastro.Size = new System.Drawing.Size(55, 52);
             this.btnModalidadeCadastro.TabIndex = 68;
             this.btnModalidadeCadastro.UseVisualStyleBackColor = false;
             this.btnModalidadeCadastro.MouseLeave += new System.EventHandler(this.btnModalidadeCadastroDesapareceText);
