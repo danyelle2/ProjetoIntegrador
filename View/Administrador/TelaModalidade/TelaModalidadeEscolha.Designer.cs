@@ -110,6 +110,7 @@
             this.BtnZumba.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.BtnZumba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnZumba.ForeColor = System.Drawing.Color.Transparent;
             this.BtnZumba.Image = ((System.Drawing.Image)(resources.GetObject("BtnZumba.Image")));
             this.BtnZumba.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnZumba.Location = new System.Drawing.Point(41, 21);
@@ -187,15 +188,15 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 489F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 269F));
             this.tableLayoutPanel3.Controls.Add(this.btnCadastro, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.labelTextoNaTela, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.labelNomeUser, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Controls.Add(this.labelTextoNaTela, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 2;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.02406F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.97594F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 291);
+            this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.42955F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 100);
             this.tableLayoutPanel3.TabIndex = 29;
             // 
             // btnCadastro
@@ -211,7 +212,7 @@
             this.btnCadastro.ForeColor = System.Drawing.Color.Transparent;
             this.btnCadastro.Location = new System.Drawing.Point(1093, 3);
             this.btnCadastro.Name = "btnCadastro";
-            this.btnCadastro.Size = new System.Drawing.Size(264, 61);
+            this.btnCadastro.Size = new System.Drawing.Size(264, 65);
             this.btnCadastro.TabIndex = 28;
             this.btnCadastro.Text = "Cadastrar Usuário";
             this.btnCadastro.UseVisualStyleBackColor = false;
@@ -222,7 +223,7 @@
             this.labelNomeUser.AutoSize = true;
             this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(85, 22);
+            this.labelNomeUser.Location = new System.Drawing.Point(85, 34);
             this.labelNomeUser.Name = "labelNomeUser";
             this.labelNomeUser.Size = new System.Drawing.Size(35, 22);
             this.labelNomeUser.TabIndex = 30;
@@ -233,7 +234,7 @@
             this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTextoNaTela.AutoSize = true;
             this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(383, 21);
+            this.labelTextoNaTela.Location = new System.Drawing.Point(383, 33);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
             this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
             this.labelTextoNaTela.TabIndex = 29;
@@ -271,8 +272,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnCadastro;
-        private System.Windows.Forms.Label labelTextoNaTela;
         private System.Windows.Forms.Label labelNomeUser;
         private System.Windows.Forms.Label label1TextoModalidade;
+        private System.Windows.Forms.Label labelTextoNaTela;
     }
 }
