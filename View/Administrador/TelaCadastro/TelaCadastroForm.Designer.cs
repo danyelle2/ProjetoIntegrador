@@ -290,7 +290,7 @@
             this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCadastro.Location = new System.Drawing.Point(1001, 501);
+            this.btnCadastro.Location = new System.Drawing.Point(999, 501);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(156, 52);
             this.btnCadastro.TabIndex = 60;
@@ -321,7 +321,7 @@
             // 
             this.textNomeCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textNomeCadastro.Location = new System.Drawing.Point(99, 321);
-            this.textNomeCadastro.MaxLength = 11;
+            this.textNomeCadastro.MaxLength = 50;
             this.textNomeCadastro.Name = "textNomeCadastro";
             this.textNomeCadastro.Size = new System.Drawing.Size(432, 35);
             this.textNomeCadastro.TabIndex = 58;
