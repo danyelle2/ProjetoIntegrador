@@ -126,7 +126,7 @@
             this.pictureBoxVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
-            this.pictureBoxVoltar.Location = new System.Drawing.Point(22, 12);
+            this.pictureBoxVoltar.Location = new System.Drawing.Point(12, 12);
             this.pictureBoxVoltar.Name = "pictureBoxVoltar";
             this.pictureBoxVoltar.Size = new System.Drawing.Size(74, 66);
             this.pictureBoxVoltar.TabIndex = 81;
@@ -353,7 +353,6 @@
             this.Name = "TelaCadastroForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "               ";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaCadastroForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
