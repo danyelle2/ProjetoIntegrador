@@ -229,6 +229,7 @@
             // 
             this.msgTemporariaUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.msgTemporariaUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.msgTemporariaUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("msgTemporariaUsuario.BackgroundImage")));
             this.msgTemporariaUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.msgTemporariaUsuario.Cursor = System.Windows.Forms.Cursors.Help;
             this.msgTemporariaUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -244,6 +245,7 @@
             // 
             this.btnModalidadeCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnModalidadeCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.btnModalidadeCadastro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnModalidadeCadastro.BackgroundImage")));
             this.btnModalidadeCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnModalidadeCadastro.Cursor = System.Windows.Forms.Cursors.Help;
             this.btnModalidadeCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
