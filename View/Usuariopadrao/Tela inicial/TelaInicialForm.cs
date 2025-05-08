@@ -213,13 +213,13 @@ namespace ProjetoIntegrador.View
         
         private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
         {
-            MsgTemporariaPagamento.Visible = true;
-            MsgTemporariaPagamento.Text = "Status do pagamentos dos alunos";
+            msgpagamentos.Visible = true;
+            msgpagamentos.Text = "Status do pagamentos dos alunos";
         }
 
         private void MsgTemporariaPagamento_Desaparece(object sender, EventArgs e)
         {
-            MsgTemporariaPagamento.Visible = false;
+            msgpagamentos.Visible = false;
         }
 
         private Aluno alunoSelecionado;
@@ -264,11 +264,6 @@ namespace ProjetoIntegrador.View
 
 
 
-        private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void MsgExplicacaoGrafico_Click(object sender, EventArgs e)
         {
 
@@ -302,6 +297,11 @@ namespace ProjetoIntegrador.View
             {
                 alunoSelecionado = (Aluno)dataGridViewListaGeralAlunos.SelectedRows[0].DataBoundItem;
             }
+        }
+
+        private void MsgExplicacaoAlterarDados_Click(object sender, EventArgs e)
+        {
+
         }
     }
     }
