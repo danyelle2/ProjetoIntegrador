@@ -38,31 +38,31 @@
             this.pictureBoxAlterar = new System.Windows.Forms.PictureBox();
             this.pictureBox2Graficos = new System.Windows.Forms.PictureBox();
             this.pictureBox3Pagamento = new System.Windows.Forms.PictureBox();
-            this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
-            this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
-            this.label1UsuarioNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1UsuarioNome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewListaGeralAlunos = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.NomeUser = new System.Windows.Forms.Label();
+            this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Pagamento)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // msgpagamentos
@@ -178,18 +178,6 @@
             this.pictureBox3Pagamento.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
             this.pictureBox3Pagamento.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
-            // labelTituloModalidade
-            // 
-            this.labelTituloModalidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelTituloModalidade.AutoSize = true;
-            this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
-            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloModalidade.Location = new System.Drawing.Point(276, 22);
-            this.labelTituloModalidade.Name = "labelTituloModalidade";
-            this.labelTituloModalidade.Size = new System.Drawing.Size(34, 24);
-            this.labelTituloModalidade.TabIndex = 37;
-            this.labelTituloModalidade.Text = "....";
-            // 
             // MsgExplicacaoAlterarDados1
             // 
             this.MsgExplicacaoAlterarDados1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -200,28 +188,6 @@
             this.MsgExplicacaoAlterarDados1.Name = "MsgExplicacaoAlterarDados1";
             this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoAlterarDados1.TabIndex = 38;
-            // 
-            // pictureBoxVoltar
-            // 
-            this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
-            this.pictureBoxVoltar.Location = new System.Drawing.Point(3, 3);
-            this.pictureBoxVoltar.Name = "pictureBoxVoltar";
-            this.pictureBoxVoltar.Size = new System.Drawing.Size(81, 62);
-            this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxVoltar.TabIndex = 39;
-            this.pictureBoxVoltar.TabStop = false;
-            // 
-            // label1UsuarioNome
-            // 
-            this.label1UsuarioNome.AutoSize = true;
-            this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
-            this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1UsuarioNome.Location = new System.Drawing.Point(1190, 9);
-            this.label1UsuarioNome.Name = "label1UsuarioNome";
-            this.label1UsuarioNome.Size = new System.Drawing.Size(0, 22);
-            this.label1UsuarioNome.TabIndex = 40;
             // 
             // label1
             // 
@@ -271,25 +237,6 @@
             this.label4.TabIndex = 45;
             this.label4.Text = "Pagamentos";
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.0292F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
-            this.tableLayoutPanel1.Controls.Add(this.pictureBoxVoltar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.NomeUser, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelTituloModalidade, 2, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.94526F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 68);
-            this.tableLayoutPanel1.TabIndex = 46;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
@@ -310,6 +257,17 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(651, 681);
             this.tableLayoutPanel2.TabIndex = 47;
             // 
+            // label1UsuarioNome
+            // 
+            this.label1UsuarioNome.AutoSize = true;
+            this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
+            this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1UsuarioNome.Location = new System.Drawing.Point(1190, 9);
+            this.label1UsuarioNome.Name = "label1UsuarioNome";
+            this.label1UsuarioNome.Size = new System.Drawing.Size(0, 22);
+            this.label1UsuarioNome.TabIndex = 40;
+            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -321,6 +279,15 @@
             this.panel1.Size = new System.Drawing.Size(676, 628);
             this.panel1.TabIndex = 48;
             // 
+            // dataGridViewListaGeralAlunos
+            // 
+            this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(29, 108);
+            this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 496);
+            this.dataGridViewListaGeralAlunos.TabIndex = 18;
+            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
@@ -331,15 +298,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(512, 41);
             this.textBox1.TabIndex = 28;
-            // 
-            // dataGridViewListaGeralAlunos
-            // 
-            this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(29, 108);
-            this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
-            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 496);
-            this.dataGridViewListaGeralAlunos.TabIndex = 18;
             // 
             // tableLayoutPanel3
             // 
@@ -356,6 +314,18 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1370, 749);
             this.tableLayoutPanel3.TabIndex = 49;
             // 
+            // labelTituloModalidade
+            // 
+            this.labelTituloModalidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelTituloModalidade.AutoSize = true;
+            this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
+            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloModalidade.Location = new System.Drawing.Point(276, 22);
+            this.labelTituloModalidade.Name = "labelTituloModalidade";
+            this.labelTituloModalidade.Size = new System.Drawing.Size(34, 24);
+            this.labelTituloModalidade.TabIndex = 37;
+            this.labelTituloModalidade.Text = "....";
+            // 
             // NomeUser
             // 
             this.NomeUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -368,6 +338,37 @@
             this.NomeUser.Size = new System.Drawing.Size(34, 24);
             this.NomeUser.TabIndex = 50;
             this.NomeUser.Text = "....";
+            // 
+            // pictureBoxVoltar
+            // 
+            this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
+            this.pictureBoxVoltar.Location = new System.Drawing.Point(3, 3);
+            this.pictureBoxVoltar.Name = "pictureBoxVoltar";
+            this.pictureBoxVoltar.Size = new System.Drawing.Size(81, 62);
+            this.pictureBoxVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxVoltar.TabIndex = 39;
+            this.pictureBoxVoltar.TabStop = false;
+            this.pictureBoxVoltar.Click += new System.EventHandler(this.pictureBoxVoltar_Click);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.0292F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
+            this.tableLayoutPanel1.Controls.Add(this.pictureBoxVoltar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.NomeUser, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelTituloModalidade, 2, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.94526F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 68);
+            this.tableLayoutPanel1.TabIndex = 46;
             // 
             // TelaInicialForm
             // 
@@ -397,15 +398,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Pagamento)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,20 +422,20 @@
         private System.Windows.Forms.PictureBox pictureBoxAlterar;
         private System.Windows.Forms.PictureBox pictureBox2Graficos;
         private System.Windows.Forms.PictureBox pictureBox3Pagamento;
-        private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
-        private System.Windows.Forms.PictureBox pictureBoxVoltar;
-        private System.Windows.Forms.Label label1UsuarioNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label1UsuarioNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridViewListaGeralAlunos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.Label NomeUser;
+        private System.Windows.Forms.PictureBox pictureBoxVoltar;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
