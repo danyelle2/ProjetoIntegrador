@@ -92,15 +92,17 @@ namespace ProjetoIntegrador
             // 
             this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLogin.Location = new System.Drawing.Point(175, 449);
+            this.btnLogin.Location = new System.Drawing.Point(157, 462);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(142, 46);
+            this.btnLogin.Size = new System.Drawing.Size(152, 50);
             this.btnLogin.TabIndex = 23;
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
