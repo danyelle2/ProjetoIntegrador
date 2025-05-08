@@ -303,6 +303,11 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void dataGridViewListaGeralAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     }
 
