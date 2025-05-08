@@ -44,15 +44,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1UsuarioNome = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewListaGeralAlunos = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelTituloModalidade = new System.Windows.Forms.Label();
-            this.NomeUser = new System.Windows.Forms.Label();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1UsuarioNome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
@@ -257,17 +256,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(651, 681);
             this.tableLayoutPanel2.TabIndex = 47;
             // 
-            // label1UsuarioNome
-            // 
-            this.label1UsuarioNome.AutoSize = true;
-            this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
-            this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1UsuarioNome.Location = new System.Drawing.Point(1190, 9);
-            this.label1UsuarioNome.Name = "label1UsuarioNome";
-            this.label1UsuarioNome.Size = new System.Drawing.Size(0, 22);
-            this.label1UsuarioNome.TabIndex = 40;
-            // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -326,19 +314,6 @@
             this.labelTituloModalidade.TabIndex = 37;
             this.labelTituloModalidade.Text = "....";
             // 
-            // NomeUser
-            // 
-            this.NomeUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.NomeUser.AutoSize = true;
-            this.NomeUser.BackColor = System.Drawing.Color.Transparent;
-            this.NomeUser.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NomeUser.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.NomeUser.Location = new System.Drawing.Point(1128, 22);
-            this.NomeUser.Name = "NomeUser";
-            this.NomeUser.Size = new System.Drawing.Size(34, 24);
-            this.NomeUser.TabIndex = 50;
-            this.NomeUser.Text = "....";
-            // 
             // pictureBoxVoltar
             // 
             this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
@@ -360,8 +335,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxVoltar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.NomeUser, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelTituloModalidade, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label1UsuarioNome, 3, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -370,13 +345,25 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 68);
             this.tableLayoutPanel1.TabIndex = 46;
             // 
+            // label1UsuarioNome
+            // 
+            this.label1UsuarioNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1UsuarioNome.AutoSize = true;
+            this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
+            this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1UsuarioNome.Location = new System.Drawing.Point(1128, 23);
+            this.label1UsuarioNome.Name = "label1UsuarioNome";
+            this.label1UsuarioNome.Size = new System.Drawing.Size(40, 22);
+            this.label1UsuarioNome.TabIndex = 41;
+            this.label1UsuarioNome.Text = "-----";
+            // 
             // TelaInicialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.label1UsuarioNome);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
             this.Controls.Add(this.pictureBox3Pagamento);
             this.Controls.Add(this.pictureBox2Graficos);
@@ -428,14 +415,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label1UsuarioNome;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridViewListaGeralAlunos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label labelTituloModalidade;
-        private System.Windows.Forms.Label NomeUser;
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label1UsuarioNome;
     }
 }
