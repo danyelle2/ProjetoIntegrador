@@ -251,7 +251,7 @@ namespace ProjetoIntegrador.View
         { //TIRAR O BOTAO E COLOCAR O DIALOG!!!!!!!!!!!!!!!!!!!!!!!
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
-            this.Hide(); 
+            this.Close(); 
         }
 
 

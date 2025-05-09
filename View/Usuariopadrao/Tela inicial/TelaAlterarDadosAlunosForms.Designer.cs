@@ -374,7 +374,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Location = new System.Drawing.Point(238, 118);
             this.Name = "TelaAlterarDadosAlunosForms";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.TelaAlterarDadosAlunosForms_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -318,16 +318,17 @@
             this.labelTituloModalidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelTituloModalidade.AutoSize = true;
             this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
-            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloModalidade.Location = new System.Drawing.Point(278, 22);
+            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloModalidade.Location = new System.Drawing.Point(278, 21);
             this.labelTituloModalidade.Name = "labelTituloModalidade";
-            this.labelTituloModalidade.Size = new System.Drawing.Size(34, 24);
+            this.labelTituloModalidade.Size = new System.Drawing.Size(32, 25);
             this.labelTituloModalidade.TabIndex = 37;
             this.labelTituloModalidade.Text = "....";
             // 
             // pictureBoxVoltar
             // 
             this.pictureBoxVoltar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxVoltar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxVoltar.Image")));
             this.pictureBoxVoltar.Location = new System.Drawing.Point(3, 3);
             this.pictureBoxVoltar.Name = "pictureBoxVoltar";
