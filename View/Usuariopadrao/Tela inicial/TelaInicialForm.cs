@@ -51,6 +51,7 @@ namespace ProjetoIntegrador.View
             
             TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada, this);
             telaCadastroAluno.ShowDialog();
+            this.Hide();
         }
 
         private void pictureBoxAlterarDadosAparece(object sender, EventArgs e)
@@ -322,7 +323,8 @@ namespace ProjetoIntegrador.View
         private void pictureBox2Graficos_Click(object sender, EventArgs e)
         {
             var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
-            telaGrafico.Show();            
+            telaGrafico.Show();
+            this.Hide();
            
         }
 

@@ -30,7 +30,13 @@ namespace ProjetoIntegrador.View
             this.alunoSelecionado = aluno;
             PreencherCampos();
         }
+        private void TelaAlterarDadosAlunosForms_FormClosing(object sender, FormClosingEventArgs e)  //teste por em todos
+        {
+            e.Cancel = true;
 
+            telaInicialForm.Show();
+            this.Hide();
+        }
 
         private void PreencherCampos()
         {

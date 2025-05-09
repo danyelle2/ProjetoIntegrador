@@ -30,7 +30,7 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
             dataGridViewpagamento.DataError += dataGridViewpagamento_DataError;
         }
        
-        private void TelaPagamentoAlunos_FormClosing(object sender, FormClosingEventArgs e)  //teste
+        private void TelaPagamentoAlunos_FormClosing(object sender, FormClosingEventArgs e)  //teste por em todos
         {
             e.Cancel = true;                       
 
