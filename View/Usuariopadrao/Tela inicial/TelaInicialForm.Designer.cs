@@ -131,6 +131,9 @@
             this.pictureBoxCadastroAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCadastroAlunos.TabIndex = 33;
             this.pictureBoxCadastroAlunos.TabStop = false;
+            this.pictureBoxCadastroAlunos.Click += new System.EventHandler(this.pictureBoxCadastroAlunos_Click);
+            this.pictureBoxCadastroAlunos.MouseLeave += new System.EventHandler(this.pictureBoxCadastroAlunosDesaparece);
+            this.pictureBoxCadastroAlunos.MouseHover += new System.EventHandler(this.pictureBoxCadastroAlunosAparecer);
             // 
             // pictureBoxAlterar
             // 
@@ -145,6 +148,9 @@
             this.pictureBoxAlterar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxAlterar.TabIndex = 34;
             this.pictureBoxAlterar.TabStop = false;
+            this.pictureBoxAlterar.Click += new System.EventHandler(this.pictureBoxAlterar_Click);
+            this.pictureBoxAlterar.MouseLeave += new System.EventHandler(this.pictureBoxAlterarDadosDesaparece);
+            this.pictureBoxAlterar.MouseHover += new System.EventHandler(this.pictureBoxAlterarDadosAparece);
             // 
             // pictureBox2Graficos
             // 
@@ -159,6 +165,9 @@
             this.pictureBox2Graficos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2Graficos.TabIndex = 35;
             this.pictureBox2Graficos.TabStop = false;
+            this.pictureBox2Graficos.Click += new System.EventHandler(this.pictureBox2Graficos_Click);
+            this.pictureBox2Graficos.MouseLeave += new System.EventHandler(this.pictureBoxGráficoDesaparece);
+            this.pictureBox2Graficos.MouseHover += new System.EventHandler(this.pictureBoxGráficoAparece);
             // 
             // pictureBox3Pagamento
             // 
@@ -174,6 +183,7 @@
             this.pictureBox3Pagamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3Pagamento.TabIndex = 36;
             this.pictureBox3Pagamento.TabStop = false;
+            this.pictureBox3Pagamento.Click += new System.EventHandler(this.pictureBox3Pagamento_Click);
             this.pictureBox3Pagamento.MouseLeave += new System.EventHandler(this.MsgTemporariaPagamento_Desaparece);
             this.pictureBox3Pagamento.MouseHover += new System.EventHandler(this.MsgTemporariaPagamento_Aparece);
             // 
@@ -255,6 +265,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 155F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(651, 681);
             this.tableLayoutPanel2.TabIndex = 47;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // panel1
             // 

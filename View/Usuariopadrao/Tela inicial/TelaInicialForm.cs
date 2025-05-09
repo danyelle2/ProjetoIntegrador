@@ -43,6 +43,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBoxCadastroAlunos_Click(object sender, EventArgs e)
         {
+            
             TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada);
             telaCadastroAluno.ShowDialog();
         }
@@ -75,9 +76,7 @@ namespace ProjetoIntegrador.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
-            telaGrafico.Show();
-            this.Hide();
+            
 
         }
         private void CarregarAlunos()
@@ -227,8 +226,7 @@ namespace ProjetoIntegrador.View
        
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
-            telapagamento.Show();
+            
 
         }
 
@@ -307,6 +305,24 @@ namespace ProjetoIntegrador.View
         private void dataGridViewListaGeralAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void pictureBox2Graficos_Click(object sender, EventArgs e)
+        {
+            var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
+            telaGrafico.Show();
+            this.Hide();
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox3Pagamento_Click(object sender, EventArgs e)
+        {
+            TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
+            telapagamento.Show();
         }
     }
     }
