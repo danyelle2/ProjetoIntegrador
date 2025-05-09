@@ -162,12 +162,12 @@
             this.tableLayoutPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 316F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 661F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
-            this.tableLayoutPanel3.Controls.Add(this.labelNomeUser, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnCadastro, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.labelTextoNaTela, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelNomeUser, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.labelTextoNaTela, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -197,10 +197,10 @@
             // 
             // labelTextoNaTela
             // 
-            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTextoNaTela.AutoSize = true;
             this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(442, 23);
+            this.labelTextoNaTela.Location = new System.Drawing.Point(320, 23);
             this.labelTextoNaTela.Name = "labelTextoNaTela";
             this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
             this.labelTextoNaTela.TabIndex = 32;
@@ -208,11 +208,11 @@
             // 
             // labelNomeUser
             // 
-            this.labelNomeUser.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.labelNomeUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelNomeUser.AutoSize = true;
             this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(126, 24);
+            this.labelNomeUser.Location = new System.Drawing.Point(108, 24);
             this.labelNomeUser.Name = "labelNomeUser";
             this.labelNomeUser.Size = new System.Drawing.Size(25, 22);
             this.labelNomeUser.TabIndex = 34;

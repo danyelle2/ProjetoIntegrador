@@ -45,8 +45,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridViewListaGeralAlunos = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridViewListaGeralAlunos = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
@@ -278,15 +278,6 @@
             this.panel1.Size = new System.Drawing.Size(676, 628);
             this.panel1.TabIndex = 48;
             // 
-            // dataGridViewListaGeralAlunos
-            // 
-            this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(29, 108);
-            this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
-            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 496);
-            this.dataGridViewListaGeralAlunos.TabIndex = 18;
-            // 
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
@@ -298,13 +289,21 @@
             this.textBox1.Size = new System.Drawing.Size(512, 41);
             this.textBox1.TabIndex = 28;
             // 
+            // dataGridViewListaGeralAlunos
+            // 
+            this.dataGridViewListaGeralAlunos.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridViewListaGeralAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListaGeralAlunos.Location = new System.Drawing.Point(29, 108);
+            this.dataGridViewListaGeralAlunos.Name = "dataGridViewListaGeralAlunos";
+            this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 496);
+            this.dataGridViewListaGeralAlunos.TabIndex = 18;
+            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.Padding = new System.Windows.Forms.Padding(0, 60, 20, 0);
@@ -340,6 +339,7 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tableLayoutPanel1.BackgroundImage")));
+            this.tableLayoutPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.0292F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
@@ -389,8 +389,8 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "TelaInicialForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaInicialForm";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaInicialForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).EndInit();
