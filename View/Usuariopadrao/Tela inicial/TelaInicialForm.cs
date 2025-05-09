@@ -248,7 +248,7 @@ namespace ProjetoIntegrador.View
         }
 
             private void pictureBoxVoltar_Click(object sender, EventArgs e)
-        {
+        { //TIRAR O BOTAO E COLOCAR O DIALOG!!!!!!!!!!!!!!!!!!!!!!!
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
             this.Hide(); 
@@ -322,8 +322,8 @@ namespace ProjetoIntegrador.View
         private void pictureBox2Graficos_Click(object sender, EventArgs e)
         {
             var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
-            telaGrafico.Show();
-            this.Hide();
+            telaGrafico.Show();            
+           
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
@@ -335,6 +335,7 @@ namespace ProjetoIntegrador.View
         {
             TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
             telapagamento.Show();
+            this.Hide();
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
