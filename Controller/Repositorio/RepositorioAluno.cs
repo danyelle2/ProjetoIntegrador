@@ -9,6 +9,7 @@ using ProjetoIntegrador.Controller;
 using ProjetoIntegrador.Controller.Aluno;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ProjetoIntegrador.Controller.Aluno
 {//NÃO MEXER MAIS TA OK!!
@@ -53,7 +54,11 @@ namespace ProjetoIntegrador.Controller.Aluno
             new MySqlParameter("@id_modalidade", aluno.IdModalidade)
                 };
 
+               Convert.ToInt32(_databaseService.ExecuteNonQuery(queryAluno, parametrosAluno, transaction));
+
                 int idAluno = Convert.ToInt32(_databaseService.ExecuteScalar(queryAluno, parametrosAluno, transaction));
+
+                
 
                 string queryPagamento = @"
             INSERT INTO pagamento (
@@ -62,21 +67,25 @@ namespace ProjetoIntegrador.Controller.Aluno
                 data_pagamento)
             VALUES (
                 @id_aluno, 
-                false, -- Status inicial como pendente
-                NULL)"; 
+                false,
+                NULL)";
 
                 var parametrosPagamento = new MySqlParameter[]
                 {
             new MySqlParameter("@id_aluno", idAluno)
                 };
 
+
                 _databaseService.ExecuteNonQuery(queryPagamento, parametrosPagamento, transaction);
 
+                _databaseService.OpenConnection();
                 transaction.Commit();
+                _databaseService.CloseConnection();
                 return true;
             }
             catch (Exception ex)
             {
+                _databaseService.OpenConnection();
                 transaction.Rollback();
                 throw new Exception("Erro ao cadastrar aluno e registro de pagamento: " + ex.Message);
             }

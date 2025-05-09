@@ -19,10 +19,15 @@ namespace ProjetoIntegrador.View
     public partial class TelaInicialForm : Form
     {
         private readonly int idModalidadeSelecionada;
+        RepositorioAluno _repositorioAluno;
+        List<Aluno> listaAlunos = new List<Aluno>();
+
         public TelaInicialForm(int idModalidade)
         {
             InitializeComponent();
             idModalidadeSelecionada = idModalidade;
+            _repositorioAluno = new RepositorioAluno(new DatabaseService());
+
 
 
         }   
@@ -44,7 +49,7 @@ namespace ProjetoIntegrador.View
         private void pictureBoxCadastroAlunos_Click(object sender, EventArgs e)
         {
             
-            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada);
+            TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada, this);
             telaCadastroAluno.ShowDialog();
         }
 
@@ -81,8 +86,7 @@ namespace ProjetoIntegrador.View
         }
         private void CarregarAlunos()
         {
-            var repositorioAluno = new RepositorioAluno(new DatabaseService());
-            var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
+            AtualizarDatagrid();
 
             dataGridViewListaGeralAlunos.AutoGenerateColumns = false;
 
@@ -177,6 +181,14 @@ namespace ProjetoIntegrador.View
                     row.DefaultCellStyle.ForeColor = Color.DarkGray;
                 }
             }
+        }
+
+        public void AtualizarDatagrid() {
+
+            
+            listaAlunos = _repositorioAluno.BuscarTodos(idModalidadeSelecionada);
+            dataGridViewListaGeralAlunos.DataSource= listaAlunos;
+
         }
 
         private void TelaInicialForm_Load(object sender, EventArgs e)

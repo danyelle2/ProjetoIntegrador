@@ -128,6 +128,7 @@
             // txtTelefoneALuno
             // 
             this.txtTelefoneALuno.Location = new System.Drawing.Point(217, 193);
+            this.txtTelefoneALuno.MaxLength = 11;
             this.txtTelefoneALuno.Multiline = true;
             this.txtTelefoneALuno.Name = "txtTelefoneALuno";
             this.txtTelefoneALuno.Size = new System.Drawing.Size(140, 23);

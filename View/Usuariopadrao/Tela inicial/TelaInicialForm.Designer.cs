@@ -70,7 +70,7 @@
             this.msgpagamentos.AutoSize = true;
             this.msgpagamentos.BackColor = System.Drawing.Color.Transparent;
             this.msgpagamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.msgpagamentos.Location = new System.Drawing.Point(205, 712);
+            this.msgpagamentos.Location = new System.Drawing.Point(206, 712);
             this.msgpagamentos.Name = "msgpagamentos";
             this.msgpagamentos.Size = new System.Drawing.Size(0, 18);
             this.msgpagamentos.TabIndex = 13;
@@ -88,7 +88,7 @@
             // 
             this.MsgTemporariaPagamento.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.MsgTemporariaPagamento.AutoSize = true;
-            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(86, 951);
+            this.MsgTemporariaPagamento.Location = new System.Drawing.Point(87, 951);
             this.MsgTemporariaPagamento.Name = "MsgTemporariaPagamento";
             this.MsgTemporariaPagamento.Size = new System.Drawing.Size(16, 13);
             this.MsgTemporariaPagamento.TabIndex = 21;
@@ -102,7 +102,7 @@
             this.MsgExplicacaoCadastro.AutoSize = true;
             this.MsgExplicacaoCadastro.BackColor = System.Drawing.Color.Transparent;
             this.MsgExplicacaoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(205, 234);
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(206, 234);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
             this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoCadastro.TabIndex = 31;
@@ -113,7 +113,7 @@
             this.MsgExplicacaoGrafico.AutoSize = true;
             this.MsgExplicacaoGrafico.BackColor = System.Drawing.Color.Transparent;
             this.MsgExplicacaoGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(205, 537);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(206, 537);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoGrafico.TabIndex = 32;
@@ -125,7 +125,7 @@
             this.pictureBoxCadastroAlunos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxCadastroAlunos.ErrorImage = null;
             this.pictureBoxCadastroAlunos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCadastroAlunos.Image")));
-            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(43, 74);
+            this.pictureBoxCadastroAlunos.Location = new System.Drawing.Point(44, 74);
             this.pictureBoxCadastroAlunos.Name = "pictureBoxCadastroAlunos";
             this.pictureBoxCadastroAlunos.Size = new System.Drawing.Size(162, 168);
             this.pictureBoxCadastroAlunos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,7 +142,7 @@
             this.pictureBoxAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBoxAlterar.ErrorImage = null;
             this.pictureBoxAlterar.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAlterar.Image")));
-            this.pictureBoxAlterar.Location = new System.Drawing.Point(43, 248);
+            this.pictureBoxAlterar.Location = new System.Drawing.Point(44, 248);
             this.pictureBoxAlterar.Name = "pictureBoxAlterar";
             this.pictureBoxAlterar.Size = new System.Drawing.Size(162, 168);
             this.pictureBoxAlterar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -159,7 +159,7 @@
             this.pictureBox2Graficos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2Graficos.BackgroundImage")));
             this.pictureBox2Graficos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2Graficos.ErrorImage = null;
-            this.pictureBox2Graficos.Location = new System.Drawing.Point(43, 422);
+            this.pictureBox2Graficos.Location = new System.Drawing.Point(44, 422);
             this.pictureBox2Graficos.Name = "pictureBox2Graficos";
             this.pictureBox2Graficos.Size = new System.Drawing.Size(162, 168);
             this.pictureBox2Graficos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -177,7 +177,7 @@
             this.pictureBox3Pagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3Pagamento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3Pagamento.ErrorImage = null;
-            this.pictureBox3Pagamento.Location = new System.Drawing.Point(43, 596);
+            this.pictureBox3Pagamento.Location = new System.Drawing.Point(44, 596);
             this.pictureBox3Pagamento.Name = "pictureBox3Pagamento";
             this.pictureBox3Pagamento.Size = new System.Drawing.Size(162, 154);
             this.pictureBox3Pagamento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -193,7 +193,7 @@
             this.MsgExplicacaoAlterarDados1.AutoSize = true;
             this.MsgExplicacaoAlterarDados1.BackColor = System.Drawing.Color.Transparent;
             this.MsgExplicacaoAlterarDados1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(205, 398);
+            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(206, 398);
             this.MsgExplicacaoAlterarDados1.Name = "MsgExplicacaoAlterarDados1";
             this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoAlterarDados1.TabIndex = 38;
@@ -319,7 +319,7 @@
             this.labelTituloModalidade.AutoSize = true;
             this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
             this.labelTituloModalidade.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTituloModalidade.Location = new System.Drawing.Point(276, 22);
+            this.labelTituloModalidade.Location = new System.Drawing.Point(278, 22);
             this.labelTituloModalidade.Name = "labelTituloModalidade";
             this.labelTituloModalidade.Size = new System.Drawing.Size(34, 24);
             this.labelTituloModalidade.TabIndex = 37;
@@ -354,7 +354,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.94526F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1370, 68);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1372, 68);
             this.tableLayoutPanel1.TabIndex = 46;
             // 
             // label1UsuarioNome
@@ -364,7 +364,7 @@
             this.label1UsuarioNome.BackColor = System.Drawing.Color.Transparent;
             this.label1UsuarioNome.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1UsuarioNome.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1UsuarioNome.Location = new System.Drawing.Point(1128, 23);
+            this.label1UsuarioNome.Location = new System.Drawing.Point(1130, 23);
             this.label1UsuarioNome.Name = "label1UsuarioNome";
             this.label1UsuarioNome.Size = new System.Drawing.Size(40, 22);
             this.label1UsuarioNome.TabIndex = 41;
@@ -375,7 +375,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1372, 749);
             this.Controls.Add(this.MsgExplicacaoAlterarDados1);
             this.Controls.Add(this.pictureBox3Pagamento);
             this.Controls.Add(this.pictureBox2Graficos);
