@@ -132,7 +132,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             {
                 var telaInicial = new TelaInicialForm(3); 
                 telaInicial.Show();
-                this.Hide();
+                
             }
         }
 
@@ -142,7 +142,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             {
                 var telaInicial = new TelaInicialForm(4); 
                 telaInicial.Show();
-                this.Hide();
+                
             }
         }
 
