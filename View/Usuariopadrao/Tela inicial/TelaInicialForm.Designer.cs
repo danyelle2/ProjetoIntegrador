@@ -311,6 +311,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1370, 749);
             this.tableLayoutPanel3.TabIndex = 49;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // labelTituloModalidade
             // 
@@ -346,8 +347,8 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 852F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.tableLayoutPanel1.Controls.Add(this.pictureBoxVoltar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.labelTituloModalidade, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1UsuarioNome, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.labelTituloModalidade, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";

@@ -36,13 +36,15 @@
             this.BtnMuayThai = new System.Windows.Forms.Button();
             this.BtnFuncional = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCadastro = new System.Windows.Forms.Button();
             this.labelTextoNaTela = new System.Windows.Forms.Label();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -162,12 +164,12 @@
             this.tableLayoutPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 661F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 524F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 409F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 260F));
             this.tableLayoutPanel3.Controls.Add(this.btnCadastro, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.labelNomeUser, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.labelTextoNaTela, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -175,6 +177,17 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 71);
             this.tableLayoutPanel3.TabIndex = 2;
+            // 
+            // labelTextoNaTela
+            // 
+            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTextoNaTela.AutoSize = true;
+            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoNaTela.Location = new System.Drawing.Point(409, 23);
+            this.labelTextoNaTela.Name = "labelTextoNaTela";
+            this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
+            this.labelTextoNaTela.TabIndex = 32;
+            this.labelTextoNaTela.Text = ".....";
             // 
             // btnCadastro
             // 
@@ -195,16 +208,14 @@
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
-            // labelTextoNaTela
+            // panel2
             // 
-            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTextoNaTela.AutoSize = true;
-            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(320, 23);
-            this.labelTextoNaTela.Name = "labelTextoNaTela";
-            this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
-            this.labelTextoNaTela.TabIndex = 32;
-            this.labelTextoNaTela.Text = ".....";
+            this.panel2.Controls.Add(this.labelNomeUser);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(161, 65);
+            this.panel2.TabIndex = 33;
             // 
             // labelNomeUser
             // 
@@ -212,10 +223,10 @@
             this.labelNomeUser.AutoSize = true;
             this.labelNomeUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelNomeUser.ForeColor = System.Drawing.SystemColors.Window;
-            this.labelNomeUser.Location = new System.Drawing.Point(108, 24);
+            this.labelNomeUser.Location = new System.Drawing.Point(82, 21);
             this.labelNomeUser.Name = "labelNomeUser";
             this.labelNomeUser.Size = new System.Drawing.Size(25, 22);
-            this.labelNomeUser.TabIndex = 34;
+            this.labelNomeUser.TabIndex = 35;
             this.labelNomeUser.Text = "...";
             // 
             // TelaModalidadeEscolha
@@ -227,6 +238,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.MaximizeBox = false;
             this.Name = "TelaModalidadeEscolha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaModalidadeEscolha_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -234,6 +246,8 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -245,9 +259,10 @@
         private System.Windows.Forms.Button BtnFuncional;
         private System.Windows.Forms.Button BtnMuayThai;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Label labelTextoNaTela;
-        private System.Windows.Forms.Label labelNomeUser;
         private System.Windows.Forms.Button BtnZumba;
+        private System.Windows.Forms.Button btnCadastro;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelNomeUser;
     }
 }

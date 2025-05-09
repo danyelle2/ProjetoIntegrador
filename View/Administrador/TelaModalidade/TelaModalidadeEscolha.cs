@@ -119,7 +119,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             {
                 var telaInicial = new TelaInicialForm(2); 
                 telaInicial.Show();
-                this.Hide();
+               
 
             }
         

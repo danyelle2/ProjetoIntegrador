@@ -324,6 +324,11 @@ namespace ProjetoIntegrador.View
             TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
             telapagamento.Show();
         }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 

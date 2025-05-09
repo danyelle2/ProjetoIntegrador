@@ -41,15 +41,15 @@ namespace ProjetoIntegrador.View
         {
             try
             {
-                bool resultadoMenorIdade = botoesCadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBoxIdade, textBoxNomeResponsavel, label8, textMsgErroIdade);
+                bool resultadoMenorIdade = botoesCadastroAlunoController.ValidarCadastroAlunoMenorIdade(textBoxIdade, textBoxNomeResponsavel, label8, textMsgErroIdade, textMsgErroResponsavel);
                 bool resultadoIdadeInvalida = botoesCadastroAlunoController.IdadeInvalida(textBoxIdade, textMsgErroIdade);
                 bool resultadoCamposVazios = botoesCadastroAlunoController.ValidarCamposVazios(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, textMsgErroResponsavel, comboBoxStatusAluno);
                 bool resultadoTelefoneValido = botoesCadastroAlunoController.ValidarTelefone(txtTelefoneALuno, textMsgErroTelefone);
                 bool dataValida = botoesCadastroAlunoController.ValidarData(textBoxDataEntrada, textMsgErroData);
-                bool resultadoNomeResponsavel = botoesCadastroAlunoController.ValidarNomeResponsavel(textBoxNomeResponsavel, textMsgErroResponsavel);
+                //bool resultadoNomeResponsavel = botoesCadastroAlunoController.ValidarNomeResponsavel(textBoxNomeResponsavel, textMsgErroResponsavel);
                 bool resultadoComboBox = botoesCadastroAlunoController.ValidarComboBox(txtAssinaturaAluno, comboBoxStatusAluno, labelMsgErroPlano, labelMsgErroStatusAluno);
 
-                if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && dataValida && resultadoNomeResponsavel && resultadoComboBox)
+                if (resultadoMenorIdade && resultadoIdadeInvalida && resultadoCamposVazios && resultadoTelefoneValido && dataValida && resultadoComboBox)
                 {
                     var databaseService = new DatabaseService();
                     var repositorio = new RepositorioAluno(databaseService);
@@ -77,15 +77,9 @@ namespace ProjetoIntegrador.View
                         MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
                     }
-                    else
-                    {
-                        MessageBox.Show("Erro ao cadastrar aluno. Verifique os campos e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                   
                 }
-                else
-                {
-                    MessageBox.Show("Erro ao cadastrar aluno. Verifique os campos e tente novamente.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
             }
             catch (Exception ex)
             {

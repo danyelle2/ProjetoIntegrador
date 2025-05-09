@@ -10,29 +10,42 @@ namespace ProjetoIntegrador.Controller
 {
     internal class BotoesCadastroAlunoController
     {
-        public bool ValidarCadastroAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade)
+        public bool ValidarCadastroAlunoMenorIdade(TextBox idade, TextBox CamponomeResponsavel, Label nomeResponsavel, Label MsgErroIdade, Label MsgErrorNomeReponsavel)
         {
-            if (int.TryParse(idade.Text, out int idadeAluno))
-            {
+            string idadeTexto = idade.Text.Trim().Replace(".", "").Replace(",", ".");
 
+            if (int.TryParse(idadeTexto, out int idadeAluno))
+            {
                 if (idadeAluno > 1 && idadeAluno < 18)
                 {
                     MessageBox.Show("Aluno menor de idade, favor colocar nome do responsável.", "Aviso");
                     nomeResponsavel.Visible = true;
                     CamponomeResponsavel.Visible = true;
 
-                    return false;
+                    if (string.IsNullOrWhiteSpace(CamponomeResponsavel.Text))
+                    {
+                        MsgErrorNomeReponsavel.Text = "Por favor, insira o nome do responsável.";
+                        MsgErrorNomeReponsavel.Visible = true;
+                        return false;
+                    }
+
+                    return true;
                 }
             }
             else
             {
-                MsgErroIdade.Text = "Idade inválida, favor colocar idade correta.";
+                MsgErroIdade.Text = "Idade inválida. Por favor, insira um número inteiro válido.";
+                MsgErroIdade.Visible = true;
                 return false;
             }
 
+            
             return true;
-
         }
+
+
+
+
         public bool IdadeInvalida(TextBox idade, Label MsgErroIdade)
         {
             if (int.TryParse(idade.Text, out int idadeAluno))
@@ -102,21 +115,21 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
-        {
-            while (nomeResponsavel.Visible)
-            {
-                if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
-                {
-                    MsgErroResponsavel.Visible = true;
-                    MsgErroResponsavel.Text = "Preencha o nome do responsável.";
+        //public bool ValidarNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
+        //{
+        //    while (nomeResponsavel.Visible)
+        //    {
+        //        if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
+        //        {
+        //            MsgErroResponsavel.Visible = true;
+        //            MsgErroResponsavel.Text = "Preencha o nome do responsável.";
 
-                    return false;
-                }
-            }
+        //            return false;
+        //        }
+        //    }
 
-            return true;
-        }
+        //    return true;
+        //}
     }
 }
 
