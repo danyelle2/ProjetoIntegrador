@@ -115,7 +115,7 @@
             this.btnAlterarDados.BackColor = System.Drawing.Color.Transparent;
             this.btnAlterarDados.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAlterarDados.BackgroundImage")));
             this.btnAlterarDados.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAlterarDados.FlatAppearance.BorderColor = System.Drawing.SystemColors.AppWorkspace;
+            this.btnAlterarDados.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnAlterarDados.FlatAppearance.BorderSize = 0;
             this.btnAlterarDados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAlterarDados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;

@@ -12,6 +12,8 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
 {
     public partial class TelaPagamentoAlunos : Form
     {
+        private TelaInicialForm telaInicialForm;//teste 
+
         private readonly RepositorioPagamento _repositorioPagamento;
         private readonly int _idModalidade;
         private Aluno alunoSelecionado;
@@ -19,11 +21,24 @@ namespace ProjetoIntegrador.View.Usuariopadrao.Tela_inicial
         public TelaPagamentoAlunos(int idModalidade)
         {
             InitializeComponent();
+            telaInicialForm= new TelaInicialForm(idModalidade);
+            this.FormClosing += TelaPagamentoAlunos_FormClosing;//teste
+
             _idModalidade = idModalidade;
             _repositorioPagamento = new RepositorioPagamento(new DatabaseService());
 
             dataGridViewpagamento.DataError += dataGridViewpagamento_DataError;
         }
+       
+        private void TelaPagamentoAlunos_FormClosing(object sender, FormClosingEventArgs e)  //teste
+        {
+            e.Cancel = true;                       
+
+            telaInicialForm.Show();
+            this.Hide();
+        }
+
+
 
         private void TelaPagamentoAlunos_Load(object sender, EventArgs e)
         {

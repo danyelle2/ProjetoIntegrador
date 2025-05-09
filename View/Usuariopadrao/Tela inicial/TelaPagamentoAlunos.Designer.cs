@@ -42,7 +42,7 @@
             // 
             this.dataGridViewpagamento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewpagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewpagamento.Location = new System.Drawing.Point(107, 94);
+            this.dataGridViewpagamento.Location = new System.Drawing.Point(110, 94);
             this.dataGridViewpagamento.Name = "dataGridViewpagamento";
             this.dataGridViewpagamento.Size = new System.Drawing.Size(582, 463);
             this.dataGridViewpagamento.TabIndex = 22;
@@ -59,7 +59,7 @@
             this.buttonPagamentoRealizado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPagamentoRealizado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPagamentoRealizado.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(167, 580);
+            this.buttonPagamentoRealizado.Location = new System.Drawing.Point(151, 583);
             this.buttonPagamentoRealizado.Name = "buttonPagamentoRealizado";
             this.buttonPagamentoRealizado.Size = new System.Drawing.Size(132, 42);
             this.buttonPagamentoRealizado.TabIndex = 24;
@@ -76,9 +76,9 @@
             this.buttonPendentePagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.buttonPendentePagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPendentePagamento.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPendentePagamento.Location = new System.Drawing.Point(509, 577);
+            this.buttonPendentePagamento.Location = new System.Drawing.Point(515, 583);
             this.buttonPendentePagamento.Name = "buttonPendentePagamento";
-            this.buttonPendentePagamento.Size = new System.Drawing.Size(136, 48);
+            this.buttonPendentePagamento.Size = new System.Drawing.Size(128, 42);
             this.buttonPendentePagamento.TabIndex = 23;
             this.buttonPendentePagamento.UseVisualStyleBackColor = false;
             this.buttonPendentePagamento.Click += new System.EventHandler(this.buttonPendentePagamento_Click);
