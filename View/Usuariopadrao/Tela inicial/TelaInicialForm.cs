@@ -51,7 +51,7 @@ namespace ProjetoIntegrador.View
             
             TelaCadastroAlunos telaCadastroAluno = new TelaCadastroAlunos(idModalidadeSelecionada, this);
             telaCadastroAluno.ShowDialog();
-            this.Hide();
+            
         }
 
         private void pictureBoxAlterarDadosAparece(object sender, EventArgs e)
@@ -324,7 +324,7 @@ namespace ProjetoIntegrador.View
         {
             var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
             telaGrafico.Show();
-            this.Hide();
+           
            
         }
 
@@ -337,7 +337,7 @@ namespace ProjetoIntegrador.View
         {
             TelaPagamentoAlunos telapagamento = new TelaPagamentoAlunos(idModalidadeSelecionada);
             telapagamento.Show();
-            this.Hide();
+            
         }
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
