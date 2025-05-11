@@ -39,10 +39,6 @@
             this.pictureBox2Graficos = new System.Windows.Forms.PictureBox();
             this.pictureBox3Pagamento = new System.Windows.Forms.PictureBox();
             this.MsgExplicacaoAlterarDados1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.labelTituloModalidade = new System.Windows.Forms.Label();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
@@ -53,6 +49,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridViewListaGeralAlunos = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).BeginInit();
@@ -64,15 +68,19 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // msgpagamentos
             // 
-            this.msgpagamentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.msgpagamentos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.msgpagamentos.AutoSize = true;
             this.msgpagamentos.BackColor = System.Drawing.Color.Transparent;
             this.msgpagamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.msgpagamentos.Location = new System.Drawing.Point(206, 712);
+            this.msgpagamentos.Location = new System.Drawing.Point(3, 126);
             this.msgpagamentos.Name = "msgpagamentos";
             this.msgpagamentos.Size = new System.Drawing.Size(0, 18);
             this.msgpagamentos.TabIndex = 13;
@@ -100,22 +108,22 @@
             // 
             // MsgExplicacaoCadastro
             // 
-            this.MsgExplicacaoCadastro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MsgExplicacaoCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MsgExplicacaoCadastro.AutoSize = true;
             this.MsgExplicacaoCadastro.BackColor = System.Drawing.Color.Transparent;
             this.MsgExplicacaoCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(206, 234);
+            this.MsgExplicacaoCadastro.Location = new System.Drawing.Point(24, 131);
             this.MsgExplicacaoCadastro.Name = "MsgExplicacaoCadastro";
             this.MsgExplicacaoCadastro.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoCadastro.TabIndex = 31;
             // 
             // MsgExplicacaoGrafico
             // 
-            this.MsgExplicacaoGrafico.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MsgExplicacaoGrafico.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MsgExplicacaoGrafico.AutoSize = true;
             this.MsgExplicacaoGrafico.BackColor = System.Drawing.Color.Transparent;
             this.MsgExplicacaoGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(206, 537);
+            this.MsgExplicacaoGrafico.Location = new System.Drawing.Point(3, 150);
             this.MsgExplicacaoGrafico.Name = "MsgExplicacaoGrafico";
             this.MsgExplicacaoGrafico.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoGrafico.TabIndex = 32;
@@ -192,76 +200,28 @@
             // 
             // MsgExplicacaoAlterarDados1
             // 
-            this.MsgExplicacaoAlterarDados1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MsgExplicacaoAlterarDados1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.MsgExplicacaoAlterarDados1.AutoSize = true;
             this.MsgExplicacaoAlterarDados1.BackColor = System.Drawing.Color.Transparent;
             this.MsgExplicacaoAlterarDados1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(206, 398);
+            this.MsgExplicacaoAlterarDados1.Location = new System.Drawing.Point(3, 150);
             this.MsgExplicacaoAlterarDados1.Name = "MsgExplicacaoAlterarDados1";
             this.MsgExplicacaoAlterarDados1.Size = new System.Drawing.Size(0, 18);
             this.MsgExplicacaoAlterarDados1.TabIndex = 38;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(371, 69);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(160, 38);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Cadastro";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(333, 244);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(237, 38);
-            this.label2.TabIndex = 43;
-            this.label2.Text = "Alterar Dados";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(331, 418);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(241, 38);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "Dados Visuais";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(345, 584);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(212, 38);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Pagamentos";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 399F));
-            this.tableLayoutPanel2.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox3Pagamento, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox2Graficos, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.pictureBoxAlterar, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label4, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.pictureBoxCadastroAlunos, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pictureBoxAlterar, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 3);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 68);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -388,6 +348,94 @@
             this.dataGridViewListaGeralAlunos.Size = new System.Drawing.Size(622, 496);
             this.dataGridViewListaGeralAlunos.TabIndex = 18;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.MsgExplicacaoCadastro);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(255, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(393, 170);
+            this.panel2.TabIndex = 46;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(116, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 38);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "Cadastro";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.MsgExplicacaoAlterarDados1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(255, 179);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(393, 168);
+            this.panel3.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(90, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(237, 38);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Alterar Dados";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.MsgExplicacaoGrafico);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(255, 353);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(393, 169);
+            this.panel4.TabIndex = 48;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(76, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(241, 38);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "Dados Visuais";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.msgpagamentos);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(255, 528);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(393, 150);
+            this.panel5.TabIndex = 49;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(90, 56);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(212, 38);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "Pagamentos";
+            // 
             // TelaInicialForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -395,11 +443,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1372, 749);
             this.Controls.Add(this.tableLayoutPanel3);
-            this.Controls.Add(this.MsgExplicacaoAlterarDados1);
-            this.Controls.Add(this.MsgExplicacaoGrafico);
-            this.Controls.Add(this.MsgExplicacaoCadastro);
             this.Controls.Add(this.MsgTemporariaPagamento);
-            this.Controls.Add(this.msgpagamentos);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -413,7 +457,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2Graficos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3Pagamento)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -422,6 +465,14 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListaGeralAlunos)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,10 +489,6 @@
         private System.Windows.Forms.PictureBox pictureBox2Graficos;
         private System.Windows.Forms.PictureBox pictureBox3Pagamento;
         private System.Windows.Forms.Label MsgExplicacaoAlterarDados1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label labelTituloModalidade;
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
@@ -452,5 +499,13 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridViewListaGeralAlunos;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label4;
     }
 }
