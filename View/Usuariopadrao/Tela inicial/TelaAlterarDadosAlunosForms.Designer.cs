@@ -327,6 +327,7 @@
             this.textBoxDataSaida.Size = new System.Drawing.Size(140, 20);
             this.textBoxDataSaida.TabIndex = 131;
             this.textBoxDataSaida.ValidatingType = typeof(System.DateTime);
+            this.textBoxDataSaida.Visible = false;
             // 
             // textBoxDataEntrada
             // 
