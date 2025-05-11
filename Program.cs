@@ -22,7 +22,6 @@ namespace ProjetoIntegrador
             
             Application.Run(new TelaLoadForms());
             Application.Run(new TelaLoginForm());
-            //Application.Run(new TelaModalidadeEscolha());
         }
     }
 }
