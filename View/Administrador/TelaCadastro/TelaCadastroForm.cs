@@ -82,10 +82,13 @@ namespace ProjetoIntegrador.View
 
                 try
                 {
+                    txtUsuarioCadastro.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+                    string cpf = txtUsuarioCadastro.Text.Trim();
+
                     Usuario novoUsuario = new Usuario
                     {
                         Nome = textNomeCadastro.Text.Trim(),
-                        Cpf = txtUsuarioCadastro.Text.Trim(),
+                        Cpf = cpf,
                         Senha = txtSenhaCadastro.Text,
                         TipoUsuario = tipoSelecionado.ValorBanco,
                         IdModalidade = (int)comboBoxModalidade1.SelectedValue
