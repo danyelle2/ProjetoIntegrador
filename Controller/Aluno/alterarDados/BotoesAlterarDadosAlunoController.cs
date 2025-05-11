@@ -123,10 +123,11 @@ namespace ProjetoIntegrador.Controller
             bool Inativo = (statusAluno.SelectedItem != null && statusAluno.SelectedItem.ToString() == "Inativo");
             dataSaida.Visible = Inativo;
             nomeDataSaida.Visible = Inativo;
+             
 
             if (Inativo)
             {
-                if (string.IsNullOrWhiteSpace(dataSaida.Text))
+                if (!dataSaida.MaskCompleted)
                 {
                     MsgErrorDataSaida.Text = "Data de saída é obrigatória para alunos inativos.";
                     return false;
@@ -137,7 +138,10 @@ namespace ProjetoIntegrador.Controller
                     MsgErrorDataSaida.Text = "Formato de data inválido. Use dd/MM/aaaa.";
                     return false;
                 }
+                
+
             }
+
 
             return true;
         }

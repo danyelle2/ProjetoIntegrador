@@ -39,14 +39,14 @@ namespace ProjetoIntegrador.View
                 textBoxNomeAluno.Text = alunoSelecionado.Nome;
                 textBoxIdadeAluno.Text = alunoSelecionado.Idade.ToString();
                 textBoxTelefoneAluno.Text = alunoSelecionado.Telefone;
-                textBoxDataEntrada.Text = alunoSelecionado.DataEntrada.ToString("yyyy-MM-dd");
+                textBoxDataEntrada.Text = alunoSelecionado.DataEntrada.ToString("dd-MM-yyyy");
                 textBoxNomeResponsavel.Text = alunoSelecionado.NomeResponsavel;
                 comboBoxPlano.SelectedItem = alunoSelecionado.Assinatura;
                 comboBoxStatusAlunos.SelectedItem = alunoSelecionado.StatusAluno;
 
                 if (alunoSelecionado.DataSaida != null)
                 {
-                    textBoxDataSaida.Text = alunoSelecionado.DataSaida?.ToString("yyyy-MM-dd");
+                    textBoxDataSaida.Text = alunoSelecionado.DataSaida?.ToString("dd-MM-yyyy");
                 }
             }
         }
