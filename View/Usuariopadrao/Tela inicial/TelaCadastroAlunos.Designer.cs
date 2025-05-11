@@ -55,7 +55,7 @@
             // 
             // textBoxNomeResponsavel
             // 
-            this.textBoxNomeResponsavel.Location = new System.Drawing.Point(418, 284);
+            this.textBoxNomeResponsavel.Location = new System.Drawing.Point(456, 284);
             this.textBoxNomeResponsavel.Multiline = true;
             this.textBoxNomeResponsavel.Name = "textBoxNomeResponsavel";
             this.textBoxNomeResponsavel.Size = new System.Drawing.Size(140, 23);
@@ -67,7 +67,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(421, 243);
+            this.label8.Location = new System.Drawing.Point(459, 243);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 24);
             this.label8.TabIndex = 91;
@@ -110,7 +110,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(421, 81);
+            this.label5.Location = new System.Drawing.Point(456, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 24);
             this.label5.TabIndex = 86;
@@ -128,7 +128,8 @@
             // 
             // txtNomeAluno
             // 
-            this.txtNomeAluno.Location = new System.Drawing.Point(217, 107);
+            this.txtNomeAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeAluno.Location = new System.Drawing.Point(217, 110);
             this.txtNomeAluno.Multiline = true;
             this.txtNomeAluno.Name = "txtNomeAluno";
             this.txtNomeAluno.Size = new System.Drawing.Size(140, 23);
@@ -170,7 +171,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(216, 81);
+            this.label1.Location = new System.Drawing.Point(216, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 24);
             this.label1.TabIndex = 79;
@@ -193,7 +194,7 @@
             this.textMsgErroResponsavel.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroResponsavel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMsgErroResponsavel.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroResponsavel.Location = new System.Drawing.Point(422, 312);
+            this.textMsgErroResponsavel.Location = new System.Drawing.Point(460, 312);
             this.textMsgErroResponsavel.Name = "textMsgErroResponsavel";
             this.textMsgErroResponsavel.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroResponsavel.TabIndex = 96;
@@ -215,7 +216,7 @@
             this.textMsgErroData.BackColor = System.Drawing.Color.Transparent;
             this.textMsgErroData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textMsgErroData.ForeColor = System.Drawing.Color.Maroon;
-            this.textMsgErroData.Location = new System.Drawing.Point(422, 133);
+            this.textMsgErroData.Location = new System.Drawing.Point(460, 133);
             this.textMsgErroData.Name = "textMsgErroData";
             this.textMsgErroData.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroData.TabIndex = 98;
@@ -225,7 +226,7 @@
             this.comboBoxStatusAluno.FormattingEnabled = true;
             this.comboBoxStatusAluno.Items.AddRange(new object[] {
             "Ativo"});
-            this.comboBoxStatusAluno.Location = new System.Drawing.Point(418, 193);
+            this.comboBoxStatusAluno.Location = new System.Drawing.Point(456, 193);
             this.comboBoxStatusAluno.Name = "comboBoxStatusAluno";
             this.comboBoxStatusAluno.Size = new System.Drawing.Size(140, 21);
             this.comboBoxStatusAluno.TabIndex = 113;
@@ -236,7 +237,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(421, 154);
+            this.label6.Location = new System.Drawing.Point(459, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(154, 24);
             this.label6.TabIndex = 112;
@@ -259,7 +260,7 @@
             this.labelMsgErroStatusAluno.BackColor = System.Drawing.Color.Transparent;
             this.labelMsgErroStatusAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMsgErroStatusAluno.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroStatusAluno.Location = new System.Drawing.Point(422, 222);
+            this.labelMsgErroStatusAluno.Location = new System.Drawing.Point(460, 222);
             this.labelMsgErroStatusAluno.Name = "labelMsgErroStatusAluno";
             this.labelMsgErroStatusAluno.Size = new System.Drawing.Size(0, 16);
             this.labelMsgErroStatusAluno.TabIndex = 115;
@@ -287,12 +288,14 @@
             // 
             // textBoxDataEntrada
             // 
-            this.textBoxDataEntrada.Location = new System.Drawing.Point(418, 110);
+            this.textBoxDataEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDataEntrada.Location = new System.Drawing.Point(456, 110);
             this.textBoxDataEntrada.Mask = "00/00/0000";
             this.textBoxDataEntrada.Name = "textBoxDataEntrada";
-            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 20);
+            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 22);
             this.textBoxDataEntrada.TabIndex = 116;
             this.textBoxDataEntrada.ValidatingType = typeof(System.DateTime);
+            this.textBoxDataEntrada.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.textBoxDataEntrada_MaskInputRejected);
             // 
             // TelaCadastroAlunos
             // 

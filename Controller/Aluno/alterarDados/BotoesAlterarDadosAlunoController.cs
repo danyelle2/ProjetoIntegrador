@@ -46,7 +46,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, TextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno, TextBox dataSaida)
+        public bool ValidarCamposVazio(TextBox nome, TextBox idade, TextBox telefone, MaskedTextBox dataEntrada, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno, MaskedTextBox dataSaida)
         {
             MsgErroResponsavel.Text = "";
             if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(dataEntrada.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
@@ -76,7 +76,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarDatas(TextBox dataEntrada, Label MsgErroDataEntrada, TextBox dataSaida, Label MsgErroDataSaida)
+        public bool ValidarDatas(MaskedTextBox dataEntrada, Label MsgErroDataEntrada, MaskedTextBox dataSaida, Label MsgErroDataSaida)
         {
             MsgErroDataEntrada.Text = "";
             MsgErroDataSaida.Text = "";
@@ -116,7 +116,7 @@ namespace ProjetoIntegrador.Controller
 
             return true;
         }
-        public bool AparecerDataSaida(ComboBox statusAluno, TextBox dataSaida, Label nomeDataSaida, Label MsgErrorDataSaida)
+        public bool AparecerDataSaida(ComboBox statusAluno, MaskedTextBox dataSaida, Label nomeDataSaida, Label MsgErrorDataSaida)
         {
             MsgErrorDataSaida.Text = "";
 

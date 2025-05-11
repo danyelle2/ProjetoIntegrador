@@ -32,7 +32,6 @@
             this.comboBoxPlano = new System.Windows.Forms.ComboBox();
             this.comboBoxStatusAlunos = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxDataEntrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAlterarDados = new System.Windows.Forms.Button();
             this.textBoxTelefoneAluno = new System.Windows.Forms.TextBox();
@@ -53,8 +52,9 @@
             this.labelMsgErroPlano = new System.Windows.Forms.Label();
             this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
             this.textMsgErroDataSaida = new System.Windows.Forms.Label();
-            this.textBoxDataSaida = new System.Windows.Forms.TextBox();
             this.LabelNomeDataSaida = new System.Windows.Forms.Label();
+            this.textBoxDataSaida = new System.Windows.Forms.MaskedTextBox();
+            this.textBoxDataEntrada = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // comboBoxPlano
@@ -90,14 +90,6 @@
             this.label6.Size = new System.Drawing.Size(154, 24);
             this.label6.TabIndex = 110;
             this.label6.Text = "Status do aluno";
-            // 
-            // textBoxDataEntrada
-            // 
-            this.textBoxDataEntrada.Location = new System.Drawing.Point(223, 385);
-            this.textBoxDataEntrada.Multiline = true;
-            this.textBoxDataEntrada.Name = "textBoxDataEntrada";
-            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 23);
-            this.textBoxDataEntrada.TabIndex = 109;
             // 
             // label5
             // 
@@ -314,15 +306,6 @@
             this.textMsgErroDataSaida.Size = new System.Drawing.Size(0, 16);
             this.textMsgErroDataSaida.TabIndex = 130;
             // 
-            // textBoxDataSaida
-            // 
-            this.textBoxDataSaida.Location = new System.Drawing.Point(457, 284);
-            this.textBoxDataSaida.Multiline = true;
-            this.textBoxDataSaida.Name = "textBoxDataSaida";
-            this.textBoxDataSaida.Size = new System.Drawing.Size(140, 23);
-            this.textBoxDataSaida.TabIndex = 129;
-            this.textBoxDataSaida.Visible = false;
-            // 
             // LabelNomeDataSaida
             // 
             this.LabelNomeDataSaida.AutoSize = true;
@@ -336,6 +319,24 @@
             this.LabelNomeDataSaida.Visible = false;
             this.LabelNomeDataSaida.Click += new System.EventHandler(this.LabelNomeDataSaida_Click);
             // 
+            // textBoxDataSaida
+            // 
+            this.textBoxDataSaida.Location = new System.Drawing.Point(457, 284);
+            this.textBoxDataSaida.Mask = "00/00/0000";
+            this.textBoxDataSaida.Name = "textBoxDataSaida";
+            this.textBoxDataSaida.Size = new System.Drawing.Size(140, 20);
+            this.textBoxDataSaida.TabIndex = 131;
+            this.textBoxDataSaida.ValidatingType = typeof(System.DateTime);
+            // 
+            // textBoxDataEntrada
+            // 
+            this.textBoxDataEntrada.Location = new System.Drawing.Point(226, 388);
+            this.textBoxDataEntrada.Mask = "00/00/0000";
+            this.textBoxDataEntrada.Name = "textBoxDataEntrada";
+            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 20);
+            this.textBoxDataEntrada.TabIndex = 132;
+            this.textBoxDataEntrada.ValidatingType = typeof(System.DateTime);
+            // 
             // TelaAlterarDadosAlunosForms
             // 
             this.AcceptButton = this.btnAlterarDados;
@@ -345,8 +346,9 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(710, 554);
-            this.Controls.Add(this.textMsgErroDataSaida);
+            this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.textBoxDataSaida);
+            this.Controls.Add(this.textMsgErroDataSaida);
             this.Controls.Add(this.LabelNomeDataSaida);
             this.Controls.Add(this.labelMsgErroStatusAluno);
             this.Controls.Add(this.labelMsgErroPlano);
@@ -362,7 +364,6 @@
             this.Controls.Add(this.comboBoxPlano);
             this.Controls.Add(this.comboBoxStatusAlunos);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnAlterarDados);
             this.Controls.Add(this.textBoxTelefoneAluno);
@@ -386,7 +387,6 @@
         private System.Windows.Forms.ComboBox comboBoxPlano;
         private System.Windows.Forms.ComboBox comboBoxStatusAlunos;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBoxDataEntrada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnAlterarDados;
         private System.Windows.Forms.TextBox textBoxTelefoneAluno;
@@ -407,7 +407,8 @@
         private System.Windows.Forms.Label labelMsgErroPlano;
         private System.Windows.Forms.Label labelMsgErroStatusAluno;
         private System.Windows.Forms.Label textMsgErroDataSaida;
-        private System.Windows.Forms.TextBox textBoxDataSaida;
         private System.Windows.Forms.Label LabelNomeDataSaida;
+        private System.Windows.Forms.MaskedTextBox textBoxDataSaida;
+        private System.Windows.Forms.MaskedTextBox textBoxDataEntrada;
     }
 }

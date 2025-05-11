@@ -117,5 +117,10 @@ namespace ProjetoIntegrador.View
         {
 
         }
+
+        private void textBoxDataEntrada_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
