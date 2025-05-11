@@ -28,7 +28,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool CamposVazios(TextBox usuarioCadastro, TextBox confirmaSenhaCadastro, TextBox nomeCadastro, ComboBox tipocadastro, ComboBox modalidade)
+        public bool CamposVazios(MaskedTextBox usuarioCadastro, TextBox confirmaSenhaCadastro, TextBox nomeCadastro, ComboBox tipocadastro, ComboBox modalidade)
         {
             if (usuarioCadastro == null || confirmaSenhaCadastro == null || nomeCadastro == null || tipocadastro == null || modalidade == null)
             {
@@ -78,7 +78,7 @@ namespace ProjetoIntegrador.Controller
             }
             return true;
         }
-        public bool ValidarCpf (TextBox cpf, Label MsgErroCpf)
+        public bool ValidarCpf (MaskedTextBox cpf, Label MsgErroCpf)
         {
             if (cpf == null || MsgErroCpf == null)
             {
@@ -89,7 +89,7 @@ namespace ProjetoIntegrador.Controller
                 MsgErroCpf.Text = "Campo CPF não pode ser vazio";
                 return false;
             }
-            if (cpf.Text.Length != 11)
+            if (cpf.Text.Length != 14)
             {
                 MsgErroCpf.Text = "CPF deve ter 11 dígitos";
                 return false;

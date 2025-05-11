@@ -51,7 +51,7 @@
             this.txtSenhaCadastro = new System.Windows.Forms.TextBox();
             this.textSenhaConfirmada = new System.Windows.Forms.TextBox();
             this.textNomeCadastro = new System.Windows.Forms.TextBox();
-            this.txtUsuarioCadastro = new System.Windows.Forms.TextBox();
+            this.txtUsuarioCadastro = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
             this.SuspendLayout();
@@ -94,6 +94,7 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.txtUsuarioCadastro);
             this.panel1.Controls.Add(this.pictureBoxVoltar);
             this.panel1.Controls.Add(this.labelMsgErroCpf1);
             this.panel1.Controls.Add(this.MsgExplicacaoModalidade1);
@@ -112,7 +113,6 @@
             this.panel1.Controls.Add(this.txtSenhaCadastro);
             this.panel1.Controls.Add(this.textSenhaConfirmada);
             this.panel1.Controls.Add(this.textNomeCadastro);
-            this.panel1.Controls.Add(this.txtUsuarioCadastro);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -139,7 +139,7 @@
             this.labelMsgErroCpf1.BackColor = System.Drawing.Color.Transparent;
             this.labelMsgErroCpf1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMsgErroCpf1.ForeColor = System.Drawing.Color.Maroon;
-            this.labelMsgErroCpf1.Location = new System.Drawing.Point(65, 207);
+            this.labelMsgErroCpf1.Location = new System.Drawing.Point(96, 261);
             this.labelMsgErroCpf1.Name = "labelMsgErroCpf1";
             this.labelMsgErroCpf1.Size = new System.Drawing.Size(0, 16);
             this.labelMsgErroCpf1.TabIndex = 80;
@@ -332,13 +332,14 @@
             // 
             // txtUsuarioCadastro
             // 
-            this.txtUsuarioCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuarioCadastro.Location = new System.Drawing.Point(99, 230);
-            this.txtUsuarioCadastro.MaxLength = 11;
+            this.txtUsuarioCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuarioCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtUsuarioCadastro.Location = new System.Drawing.Point(99, 223);
+            this.txtUsuarioCadastro.Mask = "000,000,000-00";
             this.txtUsuarioCadastro.Name = "txtUsuarioCadastro";
             this.txtUsuarioCadastro.Size = new System.Drawing.Size(432, 35);
-            this.txtUsuarioCadastro.TabIndex = 56;
-            this.txtUsuarioCadastro.TextChanged += new System.EventHandler(this.txtUsuarioCadastro_TextChanged);
+            this.txtUsuarioCadastro.TabIndex = 82;
+            this.txtUsuarioCadastro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TelaCadastroForm
             // 
@@ -370,7 +371,6 @@
         private System.Windows.Forms.TextBox txtSenhaCadastro;
         private System.Windows.Forms.TextBox textSenhaConfirmada;
         private System.Windows.Forms.TextBox textNomeCadastro;
-        private System.Windows.Forms.TextBox txtUsuarioCadastro;
         private System.Windows.Forms.Label MsgErrorSenha;
         private System.Windows.Forms.Panel btnCadastro;
         private System.Windows.Forms.Button msgTemporariaUsuario;
@@ -386,5 +386,6 @@
         private System.Windows.Forms.Label MsgExplicacaoModalidade1;
         private System.Windows.Forms.Label labelMsgErroCpf1;
         private System.Windows.Forms.PictureBox pictureBoxVoltar;
+        private System.Windows.Forms.MaskedTextBox txtUsuarioCadastro;
     }
 }
