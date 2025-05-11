@@ -30,6 +30,7 @@ namespace ProjetoIntegrador.View
             _telaInicial = tela;
 
         }
+
         BotoesCadastroAlunoController cadastroAlunoController = new BotoesCadastroAlunoController();
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -94,7 +95,12 @@ namespace ProjetoIntegrador.View
 
         private void TelaCadastroAlunos_Load(object sender, EventArgs e)
         {
-
+            textBoxIdade.TextChanged += (s, ev) => limparCamposController.LimparMensagensErro(textMsgErroIdade);
+            textBoxNomeResponsavel.TextChanged += (s, ev) => limparCamposController.LimparMensagensErro(textMsgErroResponsavel);
+            txtTelefoneALuno.TextChanged += (s, ev) => limparCamposController.LimparMensagensErro(textMsgErroTelefone);
+            textBoxDataEntrada.TextChanged += (s, ev) => limparCamposController.LimparMensagensErro(textMsgErroData);
+            txtAssinaturaAluno.SelectedIndexChanged += (s, ev) => limparCamposController.LimparMensagensErro(labelMsgErroPlano);
+            comboBoxStatusAluno.SelectedIndexChanged += (s, ev) => limparCamposController.LimparMensagensErro(labelMsgErroStatusAluno);
         }
 
         private void label2_Click(object sender, EventArgs e)

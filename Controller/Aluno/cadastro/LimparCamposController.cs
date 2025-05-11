@@ -25,6 +25,15 @@ namespace ProjetoIntegrador.Controller
             StatusAluno.SelectedItem = null;
             return true;
         }
+        public void LimparMensagensErro(params Label[] labels)
+        {
+            foreach (var label in labels)
+            {
+                label.Text = string.Empty;
+                label.Visible = false;
+            }
+        }
+
 
     }
 }
