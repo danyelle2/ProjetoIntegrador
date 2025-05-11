@@ -249,7 +249,7 @@ namespace ProjetoIntegrador.View
         }
 
             private void pictureBoxVoltar_Click(object sender, EventArgs e)
-        { //TIRAR O BOTAO E COLOCAR O DIALOG!!!!!!!!!!!!!!!!!!!!!!!
+        { 
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
             this.Close(); 
@@ -266,12 +266,21 @@ namespace ProjetoIntegrador.View
                 return;
             }
 
+            Aluno alunoSelecionado = dataGridViewListaGeralAlunos.SelectedRows[0].DataBoundItem as Aluno;
+
+            if (alunoSelecionado == null)
+            {
+                MessageBox.Show("Erro ao obter os dados do aluno.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             var telaAlterarDados = new TelaAlterarDadosAlunosForms(alunoSelecionado);
             if (telaAlterarDados.ShowDialog() == DialogResult.OK)
             {
-                CarregarAlunos(); 
+                CarregarAlunos();
             }
         }
+
 
 
 

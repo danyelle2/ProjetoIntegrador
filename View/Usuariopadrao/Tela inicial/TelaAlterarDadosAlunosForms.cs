@@ -52,9 +52,7 @@ namespace ProjetoIntegrador.View
         }
 
 
-        public TelaAlterarDadosAlunosForms()
-        {
-        }
+       
 
         BotoesAlterarDadosAlunoController alterarDadosAlunoController =new BotoesAlterarDadosAlunoController();
         private void btnAlterarDados_Click(object sender, EventArgs e)
