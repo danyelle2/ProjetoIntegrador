@@ -20,9 +20,8 @@ namespace ProjetoIntegrador
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            //Application.Run(new TelaLoadForms());
+            Application.Run(new TelaLoadForms());
             Application.Run(new TelaLoginForm());
-            //Application.Run(new TelaModalidadeEscolha());
         }
     }
 }
