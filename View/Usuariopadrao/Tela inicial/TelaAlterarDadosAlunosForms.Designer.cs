@@ -346,7 +346,7 @@
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(710, 554);
+            this.ClientSize = new System.Drawing.Size(755, 554);
             this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.textBoxDataSaida);
             this.Controls.Add(this.textMsgErroDataSaida);

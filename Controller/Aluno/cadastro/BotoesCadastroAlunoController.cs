@@ -92,9 +92,10 @@ namespace ProjetoIntegrador.Controller
                 MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
                 return false;
             }
-            else if (dataEntrada > DateTime.Now)
+              if (dataEntrada > DateTime.Now)
             {
-                MsgErroData.Text = "Data inválida. Favor inserir uma data válida.";
+                MsgErroData.Text = "Data inválida. A data não pode ser futura.";
+                MsgErroData.Visible = true;
                 return false;
             }
             return true;

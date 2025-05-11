@@ -279,7 +279,7 @@
             this.btnCadastrarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarAluno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnCadastrarAluno.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarAluno.Location = new System.Drawing.Point(561, 430);
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(583, 430);
             this.btnCadastrarAluno.Name = "btnCadastrarAluno";
             this.btnCadastrarAluno.Size = new System.Drawing.Size(137, 59);
             this.btnCadastrarAluno.TabIndex = 85;
@@ -304,7 +304,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(710, 554);
+            this.ClientSize = new System.Drawing.Size(755, 554);
             this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.labelMsgErroStatusAluno);
             this.Controls.Add(this.labelMsgErroPlano);
