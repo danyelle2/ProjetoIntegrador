@@ -277,6 +277,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(676, 628);
             this.panel1.TabIndex = 48;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox1
             // 
@@ -288,6 +289,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(512, 41);
             this.textBox1.TabIndex = 28;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // dataGridViewListaGeralAlunos
             // 
@@ -318,10 +320,10 @@
             this.labelTituloModalidade.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.labelTituloModalidade.AutoSize = true;
             this.labelTituloModalidade.BackColor = System.Drawing.Color.Transparent;
-            this.labelTituloModalidade.Font = new System.Drawing.Font("Arial Narrow", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTituloModalidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTituloModalidade.Location = new System.Drawing.Point(278, 21);
             this.labelTituloModalidade.Name = "labelTituloModalidade";
-            this.labelTituloModalidade.Size = new System.Drawing.Size(32, 25);
+            this.labelTituloModalidade.Size = new System.Drawing.Size(40, 25);
             this.labelTituloModalidade.TabIndex = 37;
             this.labelTituloModalidade.Text = "....";
             // 

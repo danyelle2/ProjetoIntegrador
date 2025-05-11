@@ -221,6 +221,7 @@ namespace ProjetoIntegrador.View
                     break;
 
             }
+
         }
         
         private void MsgTemporariaPagamento_Aparece(object sender, EventArgs e)
@@ -248,7 +249,7 @@ namespace ProjetoIntegrador.View
 
         }
 
-            private void pictureBoxVoltar_Click(object sender, EventArgs e)
+        private void pictureBoxVoltar_Click(object sender, EventArgs e)
         { 
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
@@ -291,7 +292,7 @@ namespace ProjetoIntegrador.View
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            FiltrarAlunos();
+           
 
         }
 
@@ -303,13 +304,14 @@ namespace ProjetoIntegrador.View
             var listaAlunos = repositorioAluno.BuscarTodos(idModalidadeSelecionada);
 
             var alunosFiltrados = listaAlunos
-                .Where(a => a.Nome != null && 
-                            a.Nome != null &&
+                .Where(a => !string.IsNullOrEmpty(a.Nome) &&
                             a.Nome.IndexOf(pesquisa, StringComparison.OrdinalIgnoreCase) >= 0)
                 .ToList();
 
             dataGridViewListaGeralAlunos.DataSource = alunosFiltrados;
         }
+
+
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -351,6 +353,17 @@ namespace ProjetoIntegrador.View
 
         private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+            FiltrarAlunos();
 
         }
     }
