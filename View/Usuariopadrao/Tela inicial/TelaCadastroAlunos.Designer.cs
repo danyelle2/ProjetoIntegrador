@@ -34,7 +34,6 @@
             this.textBoxIdade = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAssinaturaAluno = new System.Windows.Forms.ComboBox();
-            this.textBoxDataEntrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTelefoneALuno = new System.Windows.Forms.TextBox();
             this.txtNomeAluno = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.labelMsgErroPlano = new System.Windows.Forms.Label();
             this.labelMsgErroStatusAluno = new System.Windows.Forms.Label();
             this.btnCadastrarAluno = new System.Windows.Forms.Button();
+            this.textBoxDataEntrada = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textBoxNomeResponsavel
@@ -104,14 +104,6 @@
             this.txtAssinaturaAluno.Name = "txtAssinaturaAluno";
             this.txtAssinaturaAluno.Size = new System.Drawing.Size(140, 21);
             this.txtAssinaturaAluno.TabIndex = 88;
-            // 
-            // textBoxDataEntrada
-            // 
-            this.textBoxDataEntrada.Location = new System.Drawing.Point(418, 107);
-            this.textBoxDataEntrada.Multiline = true;
-            this.textBoxDataEntrada.Name = "textBoxDataEntrada";
-            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 23);
-            this.textBoxDataEntrada.TabIndex = 87;
             // 
             // label5
             // 
@@ -293,6 +285,15 @@
             this.btnCadastrarAluno.UseVisualStyleBackColor = false;
             this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
+            // textBoxDataEntrada
+            // 
+            this.textBoxDataEntrada.Location = new System.Drawing.Point(418, 110);
+            this.textBoxDataEntrada.Mask = "00/00/0000";
+            this.textBoxDataEntrada.Name = "textBoxDataEntrada";
+            this.textBoxDataEntrada.Size = new System.Drawing.Size(140, 20);
+            this.textBoxDataEntrada.TabIndex = 116;
+            this.textBoxDataEntrada.ValidatingType = typeof(System.DateTime);
+            // 
             // TelaCadastroAlunos
             // 
             this.AcceptButton = this.btnCadastrarAluno;
@@ -301,6 +302,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(710, 554);
+            this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.labelMsgErroStatusAluno);
             this.Controls.Add(this.labelMsgErroPlano);
             this.Controls.Add(this.comboBoxStatusAluno);
@@ -314,7 +316,6 @@
             this.Controls.Add(this.textBoxIdade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAssinaturaAluno);
-            this.Controls.Add(this.textBoxDataEntrada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCadastrarAluno);
             this.Controls.Add(this.txtTelefoneALuno);
@@ -340,7 +341,6 @@
         private System.Windows.Forms.TextBox textBoxIdade;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox txtAssinaturaAluno;
-        private System.Windows.Forms.TextBox textBoxDataEntrada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTelefoneALuno;
         private System.Windows.Forms.TextBox txtNomeAluno;
@@ -357,5 +357,6 @@
         private System.Windows.Forms.Label labelMsgErroPlano;
         private System.Windows.Forms.Label labelMsgErroStatusAluno;
         private System.Windows.Forms.Button btnCadastrarAluno;
+        private System.Windows.Forms.MaskedTextBox textBoxDataEntrada;
     }
 }

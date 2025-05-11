@@ -57,7 +57,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
+        public bool ValidarCamposVazios(TextBox nome, TextBox idade, TextBox telefone, MaskedTextBox data, ComboBox plano, TextBox nomeResponsavel, Label MsgErroResponsavel, ComboBox statusAluno)
         {
             if (string.IsNullOrWhiteSpace(nome.Text) || string.IsNullOrWhiteSpace(idade.Text) || string.IsNullOrWhiteSpace(telefone.Text) && string.IsNullOrWhiteSpace(data.Text) && plano.SelectedItem == null && statusAluno.SelectedItem == null)
             {
@@ -84,7 +84,7 @@ namespace ProjetoIntegrador.Controller
             return true;
         }
 
-        public bool ValidarData(TextBox data, Label MsgErroData)
+        public bool ValidarData(MaskedTextBox data, Label MsgErroData)
         {
             DateTime dataEntrada;
             if (!DateTime.TryParse(data.Text, out dataEntrada))

@@ -11,7 +11,7 @@ namespace ProjetoIntegrador.Controller
 {
     public class LimparCamposController
     {
-        public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, TextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
+        public bool LimparCampos(TextBox nome, TextBox idade, TextBox telefone, MaskedTextBox data, ComboBox plano, TextBox nomeResponsavel, ComboBox StatusAluno)
         {
 
             MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
