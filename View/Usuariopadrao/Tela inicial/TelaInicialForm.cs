@@ -28,12 +28,12 @@ namespace ProjetoIntegrador.View
             idModalidadeSelecionada = idModalidade;
             _repositorioAluno = new RepositorioAluno(new DatabaseService());
 
-            //teste para efeito 
+            //teste para efeito piscando sair
             this.DoubleBuffered = true;
 
         }
 
-        protected override CreateParams CreateParams
+        protected override CreateParams CreateParams // Funcao para os botoes nao piscarem no formulario
         {
             get
             {

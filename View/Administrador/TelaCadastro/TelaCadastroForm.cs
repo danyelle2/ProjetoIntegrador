@@ -30,11 +30,11 @@ namespace ProjetoIntegrador.View
             repositorioModalidade = new RepositorioModalidade(new DatabaseService());
             tipoUsuarioItem = new TipoUsuarioItem();
             
-            this.DoubleBuffered = true; //efeito para não ficar piscando a tela 
+            this.DoubleBuffered = true; //efeito para não ficar piscando a tela ok
 
         }
 
-        protected override CreateParams CreateParams
+        protected override CreateParams CreateParams//fórmula para os icones não picarem na tela. ok
         {
             get
             {

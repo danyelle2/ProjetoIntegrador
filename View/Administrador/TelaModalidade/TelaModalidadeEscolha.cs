@@ -18,12 +18,12 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             InitializeComponent();
             this.FormClosing += AppClose;
-            //teste para efeito 
+            //teste para efeito ok
             this.DoubleBuffered = true;
 
         }
 
-        protected override CreateParams CreateParams
+        protected override CreateParams CreateParams // para os botoes não piscarem na tela ok
         {
             get { CreateParams cp = base.CreateParams;
                 cp.ExStyle |= 0x02000000;
