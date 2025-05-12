@@ -18,7 +18,18 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             InitializeComponent();
             this.FormClosing += AppClose;
+            //teste para efeito 
+            this.DoubleBuffered = true;
 
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get { CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                    return cp;
+
+            }
         }
         public void AppClose(object sender, FormClosingEventArgs e)
         {
