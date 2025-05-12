@@ -33,6 +33,7 @@
             this.comboBoxModalidade = new System.Windows.Forms.ComboBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUsuarioCadastro = new System.Windows.Forms.MaskedTextBox();
             this.pictureBoxVoltar = new System.Windows.Forms.PictureBox();
             this.labelMsgErroCpf1 = new System.Windows.Forms.Label();
             this.MsgExplicacaoModalidade1 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.txtSenhaCadastro = new System.Windows.Forms.TextBox();
             this.textSenhaConfirmada = new System.Windows.Forms.TextBox();
             this.textNomeCadastro = new System.Windows.Forms.TextBox();
-            this.txtUsuarioCadastro = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxVoltar)).BeginInit();
             this.SuspendLayout();
@@ -119,6 +119,17 @@
             this.panel1.Size = new System.Drawing.Size(1370, 749);
             this.panel1.TabIndex = 76;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtUsuarioCadastro
+            // 
+            this.txtUsuarioCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsuarioCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.txtUsuarioCadastro.Location = new System.Drawing.Point(99, 223);
+            this.txtUsuarioCadastro.Mask = "000,000,000-00";
+            this.txtUsuarioCadastro.Name = "txtUsuarioCadastro";
+            this.txtUsuarioCadastro.Size = new System.Drawing.Size(432, 35);
+            this.txtUsuarioCadastro.TabIndex = 82;
+            this.txtUsuarioCadastro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // pictureBoxVoltar
             // 
@@ -293,6 +304,7 @@
             this.btnCadastro.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastro.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastro.BackgroundImage")));
             this.btnCadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCadastro.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCadastro.Location = new System.Drawing.Point(992, 486);
             this.btnCadastro.Name = "btnCadastro";
@@ -329,17 +341,6 @@
             this.textNomeCadastro.Name = "textNomeCadastro";
             this.textNomeCadastro.Size = new System.Drawing.Size(432, 35);
             this.textNomeCadastro.TabIndex = 58;
-            // 
-            // txtUsuarioCadastro
-            // 
-            this.txtUsuarioCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUsuarioCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.txtUsuarioCadastro.Location = new System.Drawing.Point(99, 223);
-            this.txtUsuarioCadastro.Mask = "000,000,000-00";
-            this.txtUsuarioCadastro.Name = "txtUsuarioCadastro";
-            this.txtUsuarioCadastro.Size = new System.Drawing.Size(432, 35);
-            this.txtUsuarioCadastro.TabIndex = 82;
-            this.txtUsuarioCadastro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TelaCadastroForm
             // 
