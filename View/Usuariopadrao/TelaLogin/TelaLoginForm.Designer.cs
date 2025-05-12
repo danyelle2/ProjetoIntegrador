@@ -40,7 +40,7 @@ namespace ProjetoIntegrador
             this.TxtSenha = new System.Windows.Forms.TextBox();
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.MsgErro = new System.Windows.Forms.Label();
-            this.labelSobreDesenvolvedor = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,18 +141,15 @@ namespace ProjetoIntegrador
             this.MsgErro.Size = new System.Drawing.Size(0, 15);
             this.MsgErro.TabIndex = 22;
             // 
-            // labelSobreDesenvolvedor
+            // button1
             // 
-            this.labelSobreDesenvolvedor.AutoSize = true;
-            this.labelSobreDesenvolvedor.BackColor = System.Drawing.Color.Transparent;
-            this.labelSobreDesenvolvedor.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSobreDesenvolvedor.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.labelSobreDesenvolvedor.Location = new System.Drawing.Point(12, 22);
-            this.labelSobreDesenvolvedor.Name = "labelSobreDesenvolvedor";
-            this.labelSobreDesenvolvedor.Size = new System.Drawing.Size(100, 25);
-            this.labelSobreDesenvolvedor.TabIndex = 29;
-            this.labelSobreDesenvolvedor.Text = "Créditos";
-            this.labelSobreDesenvolvedor.Click += new System.EventHandler(this.labelSobreDesenvolvedor);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(38, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // TelaLoginForm
             // 
@@ -162,7 +159,7 @@ namespace ProjetoIntegrador
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1354, 710);
-            this.Controls.Add(this.labelSobreDesenvolvedor);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -189,7 +186,8 @@ namespace ProjetoIntegrador
         private System.Windows.Forms.Label MsgErro;
         private Button btnLogin;
         private Label MsgErro1;
-        private Label labelSobreDesenvolvedor;
+        private Button button1;
+        //private Label labelSobreDesenvolvedor;
         //private PaintEventHandler panel1_Paint;
         //private EventHandler btnCadastro_Click;
     }

@@ -118,21 +118,13 @@ namespace ProjetoIntegrador
         }
         private void TxtUsuarioSenha_KeyDown(object sender, KeyEventArgs e)
         {
-            //COLOQUEI O ENTER PARA O BOTÃO LOGIN!!! FAZER ISSO SE DER EM ALGUMAS TELAS
             if (e.KeyCode == Keys.Enter)
             {
                 btnLogin.PerformClick(); 
             }
         }
 
-        private void labelSobreDesenvolvedor(object sender, EventArgs e)
-        {
-            TelaCreditos
-            Show
-        }
-        //private void btnCadastro_Click_1(object sender, EventArgs e)
-        //{
-
-        //}
+       
+       
     }
 }
