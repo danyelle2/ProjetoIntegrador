@@ -124,6 +124,12 @@ namespace ProjetoIntegrador
                 btnLogin.PerformClick(); 
             }
         }
+
+        private void labelSobreDesenvolvedor(object sender, EventArgs e)
+        {
+            TelaCreditos
+            Show
+        }
         //private void btnCadastro_Click_1(object sender, EventArgs e)
         //{
 
