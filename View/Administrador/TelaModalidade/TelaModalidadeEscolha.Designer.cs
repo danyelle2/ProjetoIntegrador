@@ -36,8 +36,8 @@
             this.BtnMuayThai = new System.Windows.Forms.Button();
             this.BtnFuncional = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
+            this.labelTextoNaTela = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.labelNomeUser = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
@@ -178,17 +178,6 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1360, 71);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // labelTextoNaTela
-            // 
-            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTextoNaTela.AutoSize = true;
-            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTextoNaTela.Location = new System.Drawing.Point(438, 23);
-            this.labelTextoNaTela.Name = "labelTextoNaTela";
-            this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
-            this.labelTextoNaTela.TabIndex = 32;
-            this.labelTextoNaTela.Text = ".....";
-            // 
             // btnCadastro
             // 
             this.btnCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -207,6 +196,17 @@
             this.btnCadastro.Text = "Cadastrar Usuário";
             this.btnCadastro.UseVisualStyleBackColor = false;
             this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
+            // 
+            // labelTextoNaTela
+            // 
+            this.labelTextoNaTela.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTextoNaTela.AutoSize = true;
+            this.labelTextoNaTela.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTextoNaTela.Location = new System.Drawing.Point(438, 23);
+            this.labelTextoNaTela.Name = "labelTextoNaTela";
+            this.labelTextoNaTela.Size = new System.Drawing.Size(40, 24);
+            this.labelTextoNaTela.TabIndex = 32;
+            this.labelTextoNaTela.Text = ".....";
             // 
             // tableLayoutPanel4
             // 
@@ -241,6 +241,7 @@
             this.ClientSize = new System.Drawing.Size(1366, 745);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "TelaModalidadeEscolha";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
