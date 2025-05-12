@@ -29,6 +29,20 @@ namespace ProjetoIntegrador.View
             botoesCadastroController = new BotoesCadastroUsuarioController();
             repositorioModalidade = new RepositorioModalidade(new DatabaseService());
             tipoUsuarioItem = new TipoUsuarioItem();
+            
+            this.DoubleBuffered = true; //efeito para não ficar piscando a tela 
+
+        }
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;
+                return cp;
+
+            }
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
