@@ -151,11 +151,11 @@ namespace ProjetoIntegrador
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1232, 2);
+            this.button1.Location = new System.Drawing.Point(1249, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 62);
+            this.button1.Size = new System.Drawing.Size(108, 40);
             this.button1.TabIndex = 30;
             this.button1.Text = "Créditos";
             this.button1.UseVisualStyleBackColor = false;
