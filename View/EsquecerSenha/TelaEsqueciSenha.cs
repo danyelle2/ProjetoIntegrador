@@ -16,5 +16,10 @@ namespace ProjetoIntegrador.View.EsquecerSenha
         {
             InitializeComponent();
         }
+
+        private void TelaEsqueciSenha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

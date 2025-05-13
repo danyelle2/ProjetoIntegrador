@@ -14,6 +14,7 @@ using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.Controller.Usuario;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.View.Desenvolvedor;
+using ProjetoIntegrador.View.EsquecerSenha;
 
 namespace ProjetoIntegrador
 {
@@ -133,7 +134,8 @@ namespace ProjetoIntegrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            TelaEsqueciSenha telaEsqueciSenha = new TelaEsqueciSenha();
+            telaEsqueciSenha.ShowDialog();
         }
     }
 }
