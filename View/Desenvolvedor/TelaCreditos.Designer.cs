@@ -88,7 +88,7 @@
             this.textBox2.Location = new System.Drawing.Point(12, 94);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(204, 24);
+            this.textBox2.Size = new System.Drawing.Size(229, 24);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Danyelle Alves Brito";
             // 
