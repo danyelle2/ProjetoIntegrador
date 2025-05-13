@@ -130,5 +130,10 @@ namespace ProjetoIntegrador
             TelaCreditos telaCreditos = new TelaCreditos();
             telaCreditos.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
