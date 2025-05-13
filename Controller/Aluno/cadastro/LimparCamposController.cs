@@ -34,6 +34,11 @@ namespace ProjetoIntegrador.Controller
             }
         }
 
-
+       public void OcultarCampoResponsavel (TextBox nomeResponsavel, Label labelResponsavel)
+        {
+            nomeResponsavel.Visible = false;
+            labelResponsavel.Visible = false;
+        }
+      
     }
 }

@@ -72,6 +72,7 @@ namespace ProjetoIntegrador.View
                     {
                         MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         limparCamposController.LimparCampos(txtNomeAluno, textBoxIdade, txtTelefoneALuno, textBoxDataEntrada, txtAssinaturaAluno, textBoxNomeResponsavel, comboBoxStatusAluno);
+                        limparCamposController.OcultarCampoResponsavel(textBoxNomeResponsavel, label8);
                         _telaInicial.AtualizarDatagrid();
                     }
                     else
