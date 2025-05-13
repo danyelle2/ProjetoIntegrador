@@ -19,7 +19,7 @@ namespace ProjetoIntegrador.View.EsquecerSenha
 
         private void TelaEsqueciSenha_Load(object sender, EventArgs e)
         {
-
+            //colocar função esqueci senha aqui e abrir um controller para senhas iguais e preencher o repositório
         }
     }
 }
