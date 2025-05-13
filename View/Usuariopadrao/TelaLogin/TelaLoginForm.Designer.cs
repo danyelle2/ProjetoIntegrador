@@ -143,13 +143,23 @@ namespace ProjetoIntegrador
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(38, 43);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Verdana", 18F);
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "button1";
+            this.button1.Size = new System.Drawing.Size(152, 50);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Créditos";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TelaLoginForm
             // 
@@ -187,9 +197,6 @@ namespace ProjetoIntegrador
         private Button btnLogin;
         private Label MsgErro1;
         private Button button1;
-        //private Label labelSobreDesenvolvedor;
-        //private PaintEventHandler panel1_Paint;
-        //private EventHandler btnCadastro_Click;
     }
 }
 

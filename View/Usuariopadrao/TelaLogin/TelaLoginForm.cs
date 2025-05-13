@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using ProjetoIntegrador.View.Administrador.TelaModalidade;
 using ProjetoIntegrador.Controller.Usuario;
 using MySql.Data.MySqlClient;
+using ProjetoIntegrador.View.Desenvolvedor;
 
 namespace ProjetoIntegrador
 {
@@ -124,7 +125,10 @@ namespace ProjetoIntegrador
             }
         }
 
-       
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TelaCreditos telaCreditos = new TelaCreditos();
+            telaCreditos.ShowDialog();
+        }
     }
 }
