@@ -395,7 +395,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaInicialForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TelaInicialForm";
+            this.Text = "SGA academic";
             this.Load += new System.EventHandler(this.TelaInicialForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCadastroAlunos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAlterar)).EndInit();

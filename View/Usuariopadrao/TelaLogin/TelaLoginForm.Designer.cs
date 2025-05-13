@@ -177,7 +177,7 @@ namespace ProjetoIntegrador
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaLoginForm";
-            this.Text = "login";
+            this.Text = "SGA academic";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaLoginForm_Load);
             this.panel1.ResumeLayout(false);
