@@ -115,9 +115,9 @@
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(51, 60);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(443, 18);
+            this.label3.Size = new System.Drawing.Size(490, 36);
             this.label3.TabIndex = 29;
-            this.label3.Text = "Digite os dados cadastrados para recuperar a senha.";
+            this.label3.Text = "Digite os dados exatamente como foram cadastrados para\r\n recuperar a senha.\r\n";
             // 
             // label4
             // 
@@ -143,8 +143,10 @@
             // 
             // TelaEsqueciSenha
             // 
+            this.AcceptButton = this.buttonConfirmarDados;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(674, 399);
