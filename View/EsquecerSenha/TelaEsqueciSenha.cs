@@ -40,6 +40,7 @@ namespace ProjetoIntegrador.View.EsquecerSenha
                 if (repositorio.AtualizarSenha(nome, cpf, novaSenha))
                 {
                     MessageBox.Show("Senha atualizada com sucesso!");
+                    this.Close();
                 }
                 else
                 {
@@ -54,4 +55,4 @@ namespace ProjetoIntegrador.View.EsquecerSenha
 
     }
 }
-}
+

@@ -53,6 +53,7 @@
             // 
             this.textBoxCpfUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCpfUser.Location = new System.Drawing.Point(54, 292);
+            this.textBoxCpfUser.MaxLength = 11;
             this.textBoxCpfUser.Name = "textBoxCpfUser";
             this.textBoxCpfUser.Size = new System.Drawing.Size(232, 26);
             this.textBoxCpfUser.TabIndex = 1;
@@ -78,7 +79,7 @@
             this.buttonConfirmarDados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonConfirmarDados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConfirmarDados.ForeColor = System.Drawing.Color.Black;
-            this.buttonConfirmarDados.Location = new System.Drawing.Point(475, 310);
+            this.buttonConfirmarDados.Location = new System.Drawing.Point(475, 323);
             this.buttonConfirmarDados.Name = "buttonConfirmarDados";
             this.buttonConfirmarDados.Size = new System.Drawing.Size(152, 50);
             this.buttonConfirmarDados.TabIndex = 26;
@@ -112,7 +113,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(39, 68);
+            this.label3.Location = new System.Drawing.Point(51, 60);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(443, 18);
             this.label3.TabIndex = 29;
@@ -146,7 +147,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(674, 372);
+            this.ClientSize = new System.Drawing.Size(674, 399);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,6 +160,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TelaEsqueciSenha";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SGA Academy";
             this.Load += new System.EventHandler(this.TelaEsqueciSenha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

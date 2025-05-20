@@ -31,8 +31,6 @@ namespace ProjetoIntegrador.View
             int idmodalidade = SessionUser.EhAdministrador
               ? idModalidadeSelecionada
              : SessionUser.IdModalidade;
-            //USAR UM CORINGA, não esquecer 
-
             var repositorio = new RepositorioGrafico(new DatabaseService());
 
             var movimentacoesMes = repositorio.ObterMovimentacaoPorMes(idmodalidade);
@@ -120,7 +118,7 @@ namespace ProjetoIntegrador.View
         {
             TelaInicialForm telainicial = new TelaInicialForm(idModalidadeSelecionada);
             telainicial.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void chart1_Click(object sender, EventArgs e)
