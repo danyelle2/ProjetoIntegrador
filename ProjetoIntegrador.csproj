@@ -114,11 +114,12 @@
   <ItemGroup>
     <Compile Include="Controller\Aluno\cadastro\LimparCamposController.cs" />
     <Compile Include="Controller\Aluno\graficos\CarregarGraficosController.cs" />
-    <Compile Include="Controller\Repositorio\RepositorioAluno.cs" />
-    <Compile Include="Controller\Repositorio\RepositorioGrafico.cs" />
-    <Compile Include="Controller\Repositorio\RepositorioModalidade.cs" />
-    <Compile Include="Controller\Repositorio\RepositorioPagamento.cs" />
-    <Compile Include="Controller\Repositorio\UsuarioRepositorio.cs" />
+    <Compile Include="Controller\Repositorio\DadosSobreAlunos\RepositorioAluno.cs" />
+    <Compile Include="Controller\Repositorio\DadosSobreAlunos\RepositorioGrafico.cs" />
+    <Compile Include="Controller\Repositorio\DadosSobreAlunos\RepositorioModalidade.cs" />
+    <Compile Include="Controller\Repositorio\DadosSobreAlunos\RepositorioPagamento.cs" />
+    <Compile Include="Controller\Repositorio\RecuperarSenha\RepositorioRecuperarSenha.cs" />
+    <Compile Include="Controller\Repositorio\Usuario\UsuarioRepositorio.cs" />
     <Compile Include="Model\Criptografia.cs" />
     <Compile Include="Model\EntradaSaidaAlunos.cs" />
     <Compile Include="Model\Modalidade.cs" />
@@ -216,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Desenvolvedor\TelaCreditos.resx">
       <DependentUpon>TelaCreditos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EsquecerSenha\TelaEsqueciSenha.resx">
+      <DependentUpon>TelaEsqueciSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.resx">
       <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>
