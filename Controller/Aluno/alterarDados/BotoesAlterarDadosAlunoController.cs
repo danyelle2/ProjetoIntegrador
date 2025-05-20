@@ -19,6 +19,8 @@ namespace ProjetoIntegrador.Controller
                 if (idadeAluno > 1 && idadeAluno < 18)
                 {
                     MessageBox.Show("Aluno menor de idade, favor colocar nome do responsável.", "Aviso");
+                    MessageBox.Show($"Nome do responsável atual: '{nomeResponsavel.Text}'"); // <- DEBUG AQUI
+
                     nomeResponsavel.Visible = true;
                     CamponomeResponsavel.Visible = true;
 
@@ -145,11 +147,13 @@ namespace ProjetoIntegrador.Controller
 
             return true;
         }
-        
+
         public bool VisibilidadeNomeResponsavel(TextBox nomeResponsavel, Label MsgErroResponsavel)
         {
             MsgErroResponsavel.Text = "";
-            while (nomeResponsavel.Visible)
+
+
+            if (nomeResponsavel.Visible)
             {
                 if (string.IsNullOrWhiteSpace(nomeResponsavel.Text))
                 {
@@ -158,8 +162,12 @@ namespace ProjetoIntegrador.Controller
                     return false;
                 }
             }
+
+            MsgErroResponsavel.Visible = false;
             return true;
         }
+
+        
 
         public bool ValidarComboBox(ComboBox plano, ComboBox statusAluno, Label MsgErroPlano, Label MsgErroStatusAluno) 
         {

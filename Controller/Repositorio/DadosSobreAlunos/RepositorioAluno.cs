@@ -147,7 +147,7 @@ namespace ProjetoIntegrador.Controller.Aluno
                                 Nome = reader["nome"].ToString(),
                                 Idade = Convert.ToInt32(reader["idade"]),
                                 Telefone = reader["telefone"].ToString(),
-                                NomeResponsavel = reader["responsavel"].ToString(),
+                                NomeResponsavel = reader["responsavel"] != DBNull.Value ? reader["responsavel"].ToString() : "",
                                 DataEntrada = Convert.ToDateTime(reader["data_entrada"]),
                                 DataSaida = reader["data_saida"] != DBNull.Value ? (DateTime?)Convert.ToDateTime(reader["data_saida"]) : null,
                                 StatusAluno = Convert.ToBoolean(reader["status_aluno"]),

@@ -60,7 +60,7 @@ namespace ProjetoIntegrador.View
             try
             {                
                 bool todasAsValidoesPassaram =
-                    botoesAlterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade) &&
+                    //botoesAlterarDadosAlunoController.AparecerCampoResponsavel(textBoxIdadeAluno, textBoxNomeResponsavel, labelNomeResponsavel1, textMsgErroIdade) &&
                     botoesAlterarDadosAlunoController.IdadeInvalida(textBoxIdadeAluno, textMsgErroIdade) &&
                     botoesAlterarDadosAlunoController.ValidarCamposVazio(textBoxNomeAluno, textBoxIdadeAluno, textBoxTelefoneAluno,
                         textBoxDataEntrada, comboBoxPlano, textBoxNomeResponsavel, labelMsgErroResponsavel,
@@ -97,6 +97,17 @@ namespace ProjetoIntegrador.View
                 else
                 {
                     alunoSelecionado.DataSaida = null;
+                }
+
+                if (alunoSelecionado.Idade < 18)
+                {
+                    labelNomeResponsavel1.Visible = true;
+                    textBoxNomeResponsavel.Visible = true;
+                }
+                else
+                {
+                    labelNomeResponsavel1.Visible = false;
+                    textBoxNomeResponsavel.Visible = false;
                 }
 
                 var repositorio = new RepositorioAluno(new DatabaseService());
