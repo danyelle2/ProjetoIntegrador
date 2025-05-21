@@ -127,7 +127,7 @@
             this.txtUsuarioCadastro.Location = new System.Drawing.Point(99, 223);
             this.txtUsuarioCadastro.Mask = "000,000,000-00";
             this.txtUsuarioCadastro.Name = "txtUsuarioCadastro";
-            this.txtUsuarioCadastro.Size = new System.Drawing.Size(432, 35);
+            this.txtUsuarioCadastro.Size = new System.Drawing.Size(419, 35);
             this.txtUsuarioCadastro.TabIndex = 82;
             this.txtUsuarioCadastro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -210,7 +210,7 @@
             "Usuário Padrão"});
             this.comboBoxModalidade1.Location = new System.Drawing.Point(99, 617);
             this.comboBoxModalidade1.Name = "comboBoxModalidade1";
-            this.comboBoxModalidade1.Size = new System.Drawing.Size(432, 33);
+            this.comboBoxModalidade1.Size = new System.Drawing.Size(419, 33);
             this.comboBoxModalidade1.TabIndex = 73;
             this.comboBoxModalidade1.SelectedIndexChanged += new System.EventHandler(this.comboBoxModalidade1_SelectedIndexChanged);
             // 
@@ -285,7 +285,7 @@
             this.comboBoxTipoUsuario.FormattingEnabled = true;
             this.comboBoxTipoUsuario.Location = new System.Drawing.Point(99, 501);
             this.comboBoxTipoUsuario.Name = "comboBoxTipoUsuario";
-            this.comboBoxTipoUsuario.Size = new System.Drawing.Size(432, 33);
+            this.comboBoxTipoUsuario.Size = new System.Drawing.Size(419, 33);
             this.comboBoxTipoUsuario.TabIndex = 62;
             // 
             // MsgErrorSenha
@@ -317,20 +317,20 @@
             // 
             this.txtSenhaCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenhaCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenhaCadastro.Location = new System.Drawing.Point(831, 282);
+            this.txtSenhaCadastro.Location = new System.Drawing.Point(857, 282);
             this.txtSenhaCadastro.Name = "txtSenhaCadastro";
             this.txtSenhaCadastro.PasswordChar = '*';
-            this.txtSenhaCadastro.Size = new System.Drawing.Size(426, 35);
+            this.txtSenhaCadastro.Size = new System.Drawing.Size(400, 35);
             this.txtSenhaCadastro.TabIndex = 57;
             // 
             // textSenhaConfirmada
             // 
             this.textSenhaConfirmada.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textSenhaConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textSenhaConfirmada.Location = new System.Drawing.Point(831, 425);
+            this.textSenhaConfirmada.Location = new System.Drawing.Point(857, 425);
             this.textSenhaConfirmada.Name = "textSenhaConfirmada";
             this.textSenhaConfirmada.PasswordChar = '*';
-            this.textSenhaConfirmada.Size = new System.Drawing.Size(426, 35);
+            this.textSenhaConfirmada.Size = new System.Drawing.Size(400, 35);
             this.textSenhaConfirmada.TabIndex = 59;
             // 
             // textNomeCadastro
@@ -339,7 +339,7 @@
             this.textNomeCadastro.Location = new System.Drawing.Point(99, 321);
             this.textNomeCadastro.MaxLength = 50;
             this.textNomeCadastro.Name = "textNomeCadastro";
-            this.textNomeCadastro.Size = new System.Drawing.Size(432, 35);
+            this.textNomeCadastro.Size = new System.Drawing.Size(419, 35);
             this.textNomeCadastro.TabIndex = 58;
             // 
             // TelaCadastroForm
