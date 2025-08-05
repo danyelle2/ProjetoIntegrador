@@ -152,6 +152,12 @@
     <Compile Include="View\EsquecerSenha\TelaEsqueciSenha.Designer.cs">
       <DependentUpon>TelaEsqueciSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Tutorial\TelaTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaTutorial.Designer.cs">
+      <DependentUpon>TelaTutorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EsquecerSenha\TelaEsqueciSenha.resx">
       <DependentUpon>TelaEsqueciSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Tutorial\TelaTutorial.resx">
+      <DependentUpon>TelaTutorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Usuariopadrao\Tela inicial\TelaAlterarDadosAlunosForms.resx">
       <DependentUpon>TelaAlterarDadosAlunosForms.cs</DependentUpon>

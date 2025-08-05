@@ -15,6 +15,7 @@ using ProjetoIntegrador.Controller.Usuario;
 using MySql.Data.MySqlClient;
 using ProjetoIntegrador.View.Desenvolvedor;
 using ProjetoIntegrador.View.EsquecerSenha;
+using ProjetoIntegrador.View.Tutorial;
 
 namespace ProjetoIntegrador
 {
@@ -136,6 +137,12 @@ namespace ProjetoIntegrador
         {
             TelaEsqueciSenha telaEsqueciSenha = new TelaEsqueciSenha();
             telaEsqueciSenha.ShowDialog();
+        }
+
+        private void buttonTutorial_Click(object sender, EventArgs e)
+        {
+            TelaTutorial telaTutorial = new TelaTutorial();
+            telaTutorial.ShowDialog();
         }
     }
 }
