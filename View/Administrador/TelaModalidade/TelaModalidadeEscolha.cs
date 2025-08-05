@@ -114,7 +114,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             TelaCadastroForm telaCadastro = new TelaCadastroForm();
             telaCadastro.Show();
-            
+            this.Hide();
 
         }
 
