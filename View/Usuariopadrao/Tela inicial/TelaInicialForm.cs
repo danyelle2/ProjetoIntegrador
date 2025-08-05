@@ -345,8 +345,7 @@ namespace ProjetoIntegrador.View
         {
             var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
             telaGrafico.Show();
-           
-           
+            this.Hide();
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
