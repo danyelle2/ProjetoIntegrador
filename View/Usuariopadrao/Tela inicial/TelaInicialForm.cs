@@ -260,10 +260,8 @@ namespace ProjetoIntegrador.View
         }
 
         private void pictureBoxVoltar_Click(object sender, EventArgs e)
-        { 
-            var telaModalidadeEscolha = new TelaModalidadeEscolha();
-            telaModalidadeEscolha.Show();
-            this.Close(); 
+        {
+            this.Hide(); 
         }
 
 
