@@ -114,7 +114,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
         {
             TelaCadastroForm telaCadastro = new TelaCadastroForm();
             telaCadastro.Show();
-            
+            this.Hide();
 
         }
 
@@ -129,7 +129,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             {
                 var telaInicial = new TelaInicialForm(2); 
                 telaInicial.Show();
-               
+                this.Hide();
 
             }
         
@@ -142,7 +142,8 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             {
                 var telaInicial = new TelaInicialForm(3); 
                 telaInicial.Show();
-                
+                this.Hide();
+
             }
         }
 
@@ -152,7 +153,7 @@ namespace ProjetoIntegrador.View.Administrador.TelaModalidade
             {
                 var telaInicial = new TelaInicialForm(4); 
                 telaInicial.Show();
-                
+                this.Hide();
             }
         }
 

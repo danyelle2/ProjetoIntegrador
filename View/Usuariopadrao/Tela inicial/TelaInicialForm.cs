@@ -263,7 +263,7 @@ namespace ProjetoIntegrador.View
         { 
             var telaModalidadeEscolha = new TelaModalidadeEscolha();
             telaModalidadeEscolha.Show();
-            this.Close(); 
+            this.Hide(); 
         }
 
 
@@ -345,8 +345,7 @@ namespace ProjetoIntegrador.View
         {
             var telaGrafico = new TelaGraficoForms(idModalidadeSelecionada);
             telaGrafico.Show();
-           
-           
+            this.Hide();
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)

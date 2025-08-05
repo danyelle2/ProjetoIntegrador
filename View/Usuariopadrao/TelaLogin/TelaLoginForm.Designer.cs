@@ -42,6 +42,7 @@ namespace ProjetoIntegrador
             this.TxtUsuario = new System.Windows.Forms.TextBox();
             this.MsgErro = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonTutorial = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -175,13 +176,33 @@ namespace ProjetoIntegrador
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(1210, 676);
+            this.button1.Location = new System.Drawing.Point(1090, 213);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 40);
             this.button1.TabIndex = 30;
             this.button1.Text = "Desenvolvedor";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonTutorial
+            // 
+            this.buttonTutorial.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonTutorial.BackColor = System.Drawing.Color.Transparent;
+            this.buttonTutorial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.buttonTutorial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTutorial.FlatAppearance.BorderSize = 0;
+            this.buttonTutorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.buttonTutorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonTutorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTutorial.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTutorial.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonTutorial.Location = new System.Drawing.Point(1237, 12);
+            this.buttonTutorial.Name = "buttonTutorial";
+            this.buttonTutorial.Size = new System.Drawing.Size(117, 40);
+            this.buttonTutorial.TabIndex = 31;
+            this.buttonTutorial.Text = "Ver Tutorial";
+            this.buttonTutorial.UseVisualStyleBackColor = false;
+            this.buttonTutorial.Click += new System.EventHandler(this.buttonTutorial_Click);
             // 
             // TelaLoginForm
             // 
@@ -191,6 +212,7 @@ namespace ProjetoIntegrador
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1354, 710);
+            this.Controls.Add(this.buttonTutorial);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -220,6 +242,7 @@ namespace ProjetoIntegrador
         private Label MsgErro1;
         private Button button1;
         private Button button2;
+        private Button buttonTutorial;
     }
 }
 
