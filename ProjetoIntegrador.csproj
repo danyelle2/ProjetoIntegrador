@@ -152,6 +152,30 @@
     <Compile Include="View\EsquecerSenha\TelaEsqueciSenha.Designer.cs">
       <DependentUpon>TelaEsqueciSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Tutorial\TelaCadastroUsuarioTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaCadastroUsuarioTutorial.Designer.cs">
+      <DependentUpon>TelaCadastroUsuarioTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaDeLoginTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaDeLoginTutorial.Designer.cs">
+      <DependentUpon>TelaDeLoginTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaEsquecerSenhaTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaEsquecerSenhaTutorial.Designer.cs">
+      <DependentUpon>TelaEsquecerSenhaTutorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaInicialTutorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Tutorial\TelaInicialTutorial.Designer.cs">
+      <DependentUpon>TelaInicialTutorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Tutorial\TelaTutorial.cs">
       <SubType>Form</SubType>
     </Compile>
