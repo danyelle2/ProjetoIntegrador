@@ -53,6 +53,7 @@
             this.Name = "TelaInicialTutorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaInicialTutorial";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

@@ -52,6 +52,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "TelaEsquecerSenhaTutorial";
             this.Text = "TelaEsquecerSenhaTutorial";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
