@@ -158,10 +158,10 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(290, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 20);
+            this.label1.Size = new System.Drawing.Size(462, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Bem-vindo(a) ao sistema de gestão de alunos do Studio!";
             // 
@@ -179,10 +179,10 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(290, 246);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(575, 60);
+            this.label4.Size = new System.Drawing.Size(655, 60);
             this.label4.TabIndex = 8;
             this.label4.Text = resources.GetString("label4.Text");
             // 
@@ -190,10 +190,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(290, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(475, 40);
+            this.label3.Size = new System.Drawing.Size(537, 40);
             this.label3.TabIndex = 7;
             this.label3.Text = "->Cadastrar, editar e gerenciar dados dos alunos. \r\n->Controlar mensalidades, reg" +
     "istrando pendências de pagamento.";
@@ -202,6 +202,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1354, 710);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TelaTutorial";
