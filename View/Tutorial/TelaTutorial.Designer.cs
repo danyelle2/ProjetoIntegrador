@@ -140,6 +140,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TelaTutorial";
             this.Text = "TelaTutorial";
+            this.Load += new System.EventHandler(this.TelaTutorial_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

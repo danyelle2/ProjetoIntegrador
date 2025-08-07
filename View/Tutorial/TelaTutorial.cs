@@ -22,14 +22,14 @@ namespace ProjetoIntegrador.View.Tutorial
         {
             //Botao de tela de esquecer senha tutorial
             TelaEsquecerSenhaTutorial telaEsquecerSenha = new TelaEsquecerSenhaTutorial();
-            telaEsquecerSenha.Show();
+            telaEsquecerSenha.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             // botão de tela inicial da tela tutorial
             TelaInicialTutorial telaInicialTutorial = new TelaInicialTutorial();
-            telaInicialTutorial.Show();
+            telaInicialTutorial.ShowDialog();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -41,14 +41,14 @@ namespace ProjetoIntegrador.View.Tutorial
         {
             //Botão da Tela de login Tutorial
             var telaLogin = new TelaLoginForm();
-            telaLogin.Show();
+            telaLogin.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             // Botão da Tela cadastro de usuário Tutorial
             var telaCadastroUsuario = new TelaCadastroUsuarioTutorial();
-            telaCadastroUsuario.Show();
+            telaCadastroUsuario.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -56,6 +56,11 @@ namespace ProjetoIntegrador.View.Tutorial
             //Botao sobre desenvolvedor
             TelaCreditos telaCreditos = new TelaCreditos();
             telaCreditos.ShowDialog();
+        }
+
+        private void TelaTutorial_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
