@@ -254,6 +254,9 @@
     <EmbeddedResource Include="View\Tutorial\TelaDeLoginTutorial.resx">
       <DependentUpon>TelaDeLoginTutorial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Tutorial\TelaEsquecerSenhaTutorial.resx">
+      <DependentUpon>TelaEsquecerSenhaTutorial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Tutorial\TelaInicialTutorial.resx">
       <DependentUpon>TelaInicialTutorial.cs</DependentUpon>
     </EmbeddedResource>
