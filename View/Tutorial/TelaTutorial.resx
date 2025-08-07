@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>    Esta aplicação foi desenvolvida para facilitar e automatizar o controle de alunos no ambiente do Studio Acadêmico, centralizando as informações em uma única máquina acessível pelos funcionários.
+Com ela, é possível:</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>-&gt;Visualizar gráficos mensais e anuais com o fluxo de entrada e saída de alunos;
+-&gt;Acompanhar todas as modalidades (para administradores);
+-&gt;Permitir que cada professor visualize apenas seus próprios alunos.</value>
+  </data>
 </root>
