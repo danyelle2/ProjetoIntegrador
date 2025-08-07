@@ -95,7 +95,7 @@
             this.button1.Size = new System.Drawing.Size(281, 72);
             this.button1.TabIndex = 0;
             this.button1.Text = "Tela Inicial";
-            this.button1.UseVisualStyleBackColor = false;
+            this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
@@ -207,6 +207,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TelaTutorial";
             this.Text = "TelaTutorial";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.TelaTutorial_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

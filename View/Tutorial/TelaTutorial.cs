@@ -40,8 +40,8 @@ namespace ProjetoIntegrador.View.Tutorial
         private void button2_Click(object sender, EventArgs e)
         {
             //Botão da Tela de login Tutorial
-            var telaLogin = new TelaLoginForm();
-            telaLogin.ShowDialog();
+            TelaDeLoginTutorial telaDeLoginTutorial = new TelaDeLoginTutorial();
+            telaDeLoginTutorial.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)

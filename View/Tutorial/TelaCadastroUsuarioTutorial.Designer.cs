@@ -52,6 +52,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "TelaCadastroUsuarioTutorial";
             this.Text = "TelaCadastroUsuarioTutorial";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
